@@ -1,0 +1,348 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>20210814 정성진.송민정</title>
+</head>
+<body>
+
+    <!-- main image #1-->
+    <div class="ui mainimg-1">
+        <div class="caption" data-aos="fade up">
+            <h1>
+                결혼합니다
+            </h1>
+            <!-- <h2>
+                정성진 <span class="small-space">그리고</span> 송민정
+            </h2> -->
+            <p>2021.8.14 토요일 오후2시</p>
+            엘타워 7층 그랜드홀
+        </div>
+    </div>
+
+    <!-- main image #2 -->
+    <div class="ui mainimg-2">
+        <div class="caption" data-aos="fade up">
+            <div class="shortbar"></div>
+            <h2>싱그러운 여름,
+                <br/>우리 결혼해요
+            </h2>
+        </div>
+    </div>
+
+    <!-- letter & introduce (modal) -->
+    <div class="ui letter">
+        <div class="ui equal width stackable internally celled grid">
+            <div class="center aligned row">
+                <div class="column" data-aos="fade up">
+                    <strong>Groom</strong>
+                    <img class="ui tiny circular image introduce" src="images/sj-2.jpg">
+                    <p>정 성 진</p>
+                    <span>
+                        "<strong>정성</strong>과 <strong>진</strong>심을 다하는 사람, 정성진입니다."<br/><br/>
+                        제가 만들어준 이름 삼행시에요. <br/> 
+                        정말 이름처럼 모든 일에 늘 정성과 진심을 다하는 <br/>세심하고 다정한 사람이거든요. <br/><br/>
+                        언제나 만남이 편하고 즐거워 <strong>평생 좋은 친구</strong>가 <br/>
+                        될 수 있을 거란 확신이 들었지요.<br/><br/>
+                        우리가 함께할 미래는 <br/>
+                        늘 <strong>웃음과 행복</strong>이 넘칠거예요. <br/><br/>
+                        - 민정
+                    </span>
+                </div>
+                <div class="column" data-aos="fade up">
+                    <strong>Bride</strong>
+                    <img class="ui tiny circular image introduce" src="images/mj-2.jpg">
+                    <p>송 민 정</p>
+                    <span>
+                        함께 이야기를 하면 마음이 편안해지는 <br/>참 긍정적이고 속이 깊은 사람이에요. <br/><br/>
+                        20대의 모든 낭만과 기쁨, 좌절, 환희 <br/>
+                        그 <strong>뜨거웠던 매순간을 함께</strong>한 <br/>
+                        민정이는 <strong>제 삶에 너무나 소중한 일부</strong>가 되었어요. <br/><br/>
+                        우리가 함께할 미래는 <br/>
+                        분명 <strong>사랑</strong>이 가득할 거예요.<br/><br/>
+                        - 성진
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- main title (when, where) -->
+    <div class="ui containter date">
+        함께 한 나날이 고맙고 <br/>
+        함께 할 나날이 설레어 <br/>
+        모든 사람들 앞에서 사랑을 맹세하려 합니다. <br/><br/>
+
+        저희 두 사람의 새로운 시작을<br/>
+        따뜻한 마음으로 축복해주시면 감사하겠습니다. <br/><br/><br/><br/><br/>
+
+        <p>2021.8.14 토요일 오후2시</p>
+        엘타워 7층 그랜드홀<br/><br/>
+
+        <button class="ui button guide">오시는 길</button>
+    </div>
+
+    <!-- 오시는 길 modal -->
+    <div class="ui modal guidedetail">
+        <div class="header">오시는 길</div>
+        <div class="content">
+            <div id="map" style="width:70vw;height:250px;"></div>
+            <a id="navi" href="#" onclick="navi();">
+                <img
+                    src="https://developers.kakao.com/assets/img/about/buttons/navi/kakaonavi_btn_medium.png"
+                />
+            </a>
+            서울 서초구 강남대로 213 
+            엘타워 7층 컨벤션홀
+
+            지하철
+            3호선/신분당선 양재역 9번 출구 도보 1분
+            
+            버스
+            양재역태워빌딩 하차. 도보 1분
+        </div>
+    </div>
+
+    <!-- notice -->
+    <div class="ui containter notice">
+        <p>수도권 거리두기 2단계에 따른 안내</p>
+        <p>안내</p>
+        <p>안내</p>
+        <p>안내</p>
+        <p>안내</p>
+        <p>안내</p>
+        <p>안내</p>
+        <p>안내</p>
+        <p>안내</p>
+    </div>
+
+    <!-- photos -->
+    <div class="ui containter photos">
+        <!-- Root element of PhotoSwipe. Must have class pswp. -->
+        <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+            <!-- Background of PhotoSwipe. 
+                It's a separate element as animating opacity is faster than rgba(). -->
+            <div class="pswp__bg"></div>
+    
+            <!-- Slides wrapper with overflow:hidden. -->
+            <div class="pswp__scroll-wrap">
+        
+                <!-- Container that holds slides. 
+                    PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                    Don't modify these 3 pswp__item elements, data is added later on. -->
+                <div class="pswp__container">
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                </div>
+        
+                <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+                <div class="pswp__ui pswp__ui--hidden">
+        
+                    <div class="pswp__top-bar">
+        
+                        <!--  Controls are self-explanatory. Order can be changed. -->
+        
+                        <div class="pswp__counter"></div>
+        
+                        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+        
+                        <button class="pswp__button pswp__button--share" title="Share"></button>
+        
+                        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+        
+                        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+        
+                        <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                        <!-- element will get class pswp__preloader--active when preloader is running -->
+                        <div class="pswp__preloader">
+                            <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                        <div class="pswp__share-tooltip"></div> 
+                    </div>
+        
+                    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                    </button>
+        
+                    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                    </button>
+        
+                    <div class="pswp__caption">
+                        <div class="pswp__caption__center"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- attendance -->
+    <div class="ui placeholder segment">
+        <div class="ui two column very relaxed unstackable grid">
+            <div class="column">
+                <div class="ui form">
+                    <div class="field">
+                        <label>성함</label>
+                        <div class="ui left icon input">
+                            <input type="text" placeholder="Username">
+                            <i class="user icon"></i>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>Password</label>
+                        <div class="ui left icon input">
+                            <input type="password">
+                            <i class="lock icon"></i>
+                        </div>
+                    </div>
+                    <div class="ui blue submit button">참석</div>
+                </div>
+            </div>
+            <div class="middle aligned column">
+                <div class="ui form">
+                    <div class="field">
+                        <label>전화번호(선택)</label>
+                        <div class="ui left icon input">
+                            <input type="text" placeholder="Username">
+                            <i class="user icon"></i>
+                        </div>
+                    </div>
+                    <div class="ui blue submit button">비대면 참석</div>
+                </div>
+            </div>
+        </div>
+        <div class="ui vertical divider">
+            Or
+        </div>
+    </div>
+
+    <!-- money -->
+
+    <div class="ui top attached tabular menu">
+        <a class="item active" data-tab="groom">신랑</a>
+        <a class="item" data-tab="bride">신부</a>
+    </div>
+    <div class="ui bottom attached tab segment items active" data-tab="groom">
+        <a class="item">
+            <div class="ui tiny">
+                <img class="ui tiny circular image" src="images/sj-2.jpg">
+            </div>
+            <div class="content">
+                <div class="header">정성진</div>
+                <div class="meta">
+                    <span>신랑</span>
+                </div>
+            </div>
+        </a>
+        <a class="item">
+            <div class="ui tiny">
+                <img class="ui tiny circular image" src="images/mj-2.jpg">
+            </div>
+            <div class="content">
+                <div class="header">정수영</div>
+                <div class="meta">
+                    <span>신랑 아버지</span>
+                </div>
+            </div>
+        </a>
+        <a class="item">
+            <div class="ui tiny">
+                <img class="ui tiny circular image" src="images/sj-2.jpg">
+            </div>
+            <div class="content">
+                <div class="header">김옥배</div>
+                <div class="meta">
+                    <span>신랑 어머니</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="ui bottom attached tab segment" data-tab="bride">
+        Second
+    </div>
+    <!-- <div class="ui bottom attached tab segment active" data-tab="groom">
+        
+    </div>
+
+    <div class="ui bottom attached tab segment" data-tap="bride">
+        <div class="item">
+            <div class="ui tiny">
+                <img class="ui tiny circular image" src="images/sj-2.jpg">
+            </div>
+            <div class="content">
+                <div class="header">송민정</div>
+                <div class="meta">
+                    <span>신부</span>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="ui tiny">
+                <img class="ui tiny circular image" src="images/mj-2.jpg">
+            </div>
+            <div class="content">
+                <div class="header">송태명</div>
+                <div class="meta">
+                    <span>신부 아버지</span>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="ui tiny">
+                <img class="ui tiny circular image" src="images/sj-2.jpg">
+            </div>
+            <div class="content">
+                <div class="header">김용길</div>
+                <div class="meta">
+                    <span>신부 어머니</span>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="longbar"></div>
+
+
+    <!-- guest book -->
+    <div class="ui containter form guestbook">
+        <div class="field">
+            <textarea rows="2"></textarea>
+        </div>
+        <button class="ui button">등록</button>
+    </div>
+
+    <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Song+Myung&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/story.css">
+    <link rel="stylesheet" type="text/css" href="css/photoswipe.css"> 
+    <link rel="stylesheet" type="text/css" href="css/default-skin.css"> 
+
+    <script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=780292524a3db3ce37f3fa6fa5754481"></script>
+    <script type="text/javascript" src="js/kakao.js"></script>
+    <script src="js/semantic.min.js"></script>
+    <script src="js/photoswipe.min.js"></script> 
+    <script src="js/photoswipe-ui-default.min.js"></script>
+    <script src="js/story.js"></script>
+    <script>
+    
+        $(".guide").click(function() {
+            $(".guidedetail").modal("show");
+        });
+
+        $(".menu .item").tab();
+    </script>
+</body>

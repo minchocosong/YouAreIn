@@ -1,141 +1,193 @@
-.intro-section {
+.text-section {
 	text-align: center;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	flex-direction: column;
+	-webkit-box-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	justify-content: center;
+}
+
+.invite-section {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: white;
+	font-size: 12px;
+}
+
+.name-section{
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.introdue-section {
 	min-height: 70vh;
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
-			flex-direction: column;
+	flex-direction: column;
 	-webkit-box-align: center;
-			align-items: center;
+	align-items: center;
 	-webkit-box-pack: center;
-			justify-content: center;
-  }
-  
-  .content-section {
+	justify-content: center;
+}
+
+.content-section {
 	--scroll-length: 1.5;
 	height: calc( var(--scroll-length) * 100vh );
 	width: 100%;
 	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  }
-  .content-section .content .subheading,
-  .content-section .content .paragraph {
+}
+.content-section .content .subheading,
+.content-section .content .paragraph {
 	opacity: 0.1;
-	opacity: calc( 0.1 + var(--viewport-y) );
-  }
-  
-  .figure {
+	opacity: calc( 0.3 + var(--viewport-y) );
+}
+
+.figure {
 	width: 100%;
 	height: 100vh;
 	margin: 0;
 	position: absolute;
 	top: 0;
 	left: 0;
-  }
-  .figure > img {
+}
+.figure > img {
 	display: block;
 	width: 100%;
 	height: 100%;
 	max-width: 100%;
 	-o-object-fit: cover;
-	   object-fit: cover;
+	object-fit: cover;
 	-o-object-position: center center;
-	   object-position: center center;
-  }
-  
-  .content {
+	object-position: center center;
+}
+.main-image{
+	width: 100%;
+	margin: 0;
+	top: 0;
+	left: 0;
+}
+.main-image > img {
+	width: 100%;
+}
+
+.main-image > .hero {
+	max-width: 100%;
+	opacity: 0.6
+}
+
+.content {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	max-width: 35em;
 	display: grid;
 	grid-template-rows: 1fr 1fr;
 	color: white;
 	padding: 2em;
 	font-size: 4vmin;
-  }
-  
-  @media (min-width: 769px){
-	.content{
-		font-size: 2.5vmin;
-	}
-  }
+}
 
-  .content * {
+@media (min-width: 769px){
+.content{
+	font-size: 2.5vmin;
+}
+}
+
+.content * {
 	text-shadow: 0 0 4vmin rgba(0, 0, 0, 0.25);
-  }
-  .content > .header {
+}
+.content > .header {
 	grid-row: 1 / 2;
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
-			flex-direction: column;
+	flex-direction: column;
 	-webkit-box-pack: end;
-			justify-content: flex-end;
-  }
-  .content > .paragraph {
+	justify-content: flex-end;
+}
+.content > .paragraph {
 	grid-row: 2 / 3;
 	line-height: 1.5;
 	top: 15px;
-  }
+}
 
-  .content > .paragraph-introduce {
-	grid-row: 2 / 3;
+.content > .introduce-paragraph {
 	line-height: 1.5;
-	top: 200px;
-  }
+}
 
-  .header > .parent {
+.name {
+	text-align: right;
+}
+
+.header > .parent {
 	text-align: right;
 	line-height: 1.5;
-  }
+}
 
-  .content > .vertical-paragraph {
+.content > .vertical-paragraph {
 	writing-mode: vertical-rl;
 	text-orientation: mixed;
 	line-height: 1.4;
 	text-align: right;
-  }
-  
-  .heading {
+}
+
+.heading {
 	font-size: 2.75em;
 	margin: 0;
 	line-height: 1.5;
-  }
-  
-  .subheading {
+}
+
+.subheading {
 	font-size: 1.25em;
 	font-weight: 600;
-  }
-  
-  .photo-section{
+}
+
+.introduce-section .main-image > img{
+	--scale: calc(.8 +
+		(.2 * var(--scroll-length) * var(--visible-y))
+	);
+	-webkit-transform: scale(calc(1 / var(--scale)));
+	transform: scale(calc(1 / var(--scale)));
+}
+
+.introduce-section .content {
+	opacity: 0.1;
+	opacity: calc( 0.7 + var(--viewport-y) );
+}
+
+.photo-section{
 	position: relative; 
 	/* 1:1 ratio */ 
 	overflow: hidden;
-  }
+}
 
-  .photo-figure {
+.photo-figure {
 	position: relative; 
 	width: 100%; 
 	height: 100%;
-  }
+}
 
-  .photo-figure img {
+.photo-figure img {
 	top: 0; 
 	left: 0; 
 	right: 0; 
 	bottom: 0; 
 	max-width: 100%; 
 	height: auto;
-  }
-  
-  /* ---------------------------------- */
-  .figure {
+}
+
+/* ---------------------------------- */
+.figure {
 	--scale: calc(.8 +
-	  (.2 * var(--scroll-length) * var(--visible-y))
+		(.2 * var(--scroll-length) * var(--visible-y))
 	);
 	position: -webkit-sticky;
 	position: sticky;
@@ -147,8 +199,8 @@
 	will-change: transform;
 	-webkit-transform: scale(var(--scale));
 			transform: scale(var(--scale));
-  }
-  .figure:before {
+}
+.figure:before {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -158,74 +210,74 @@
 	z-index: 1;
 	background-color: black;
 	opacity: calc( var(--visible-y) );
-  }
-  .figure > img {
+}
+.figure > img {
 	display: block;
 	will-change: transform;
 	-webkit-transform: scale(calc(1 / var(--scale)));
-			transform: scale(calc(1 / var(--scale)));
-  }
-  
-  .photo-content{
-	  width: 100%;
-	  height: 100%;
-  }
+	transform: scale(calc(1 / var(--scale)));
+}
 
-  /* ---------------------------------- */
-  .char {
-	display: inline-block;
-	opacity: calc(  1 + (  ( var(--viewport-y) * 1.5 ) - var(--char-percent) ) );
-  }
-  
-  *,
-  *:before,
-  *:after {
+.photo-content{
+	width: 100%;
+	height: 100%;
+}
+
+.navigation{
+	width: 50%;
+}
+
+/* ---------------------------------- */
+
+*,
+*:before,
+*:after {
 	position: relative;
 	box-sizing: border-box;
 	font-family: 'Nanum Myeongjo', serif;
-  }
+}
 
-  html{
+h2{
+	font-family: 'Nanum Myeongjo', serif;
+
+}
+
+html{
 	background-color: #ecebeb
-  }
-  
-  .intro-image{
-	width: 30%;
-  }
+}
 
-
-  @media (min-width: 769px){
-	.intro-image{
-		width: 20%;
-	}
-  }
-
-
-  .heading,
-  .intro-heading {
+.heading,
+.text-heading {
 	font-weight: 900;
 	font-size: 1.5em;
 	width: 100%;
 	padding-top: 50px;
-  }
+}
 
-  .intro-subheading {
+.text-subheading {
 	font-weight: 500;
 	font-size: 1.2em;
 	width: 100%;
-	padding-bottom: 35px;
-  }
-  
-  .small-space{
-	font-size: 0.7em;
-  }
+	line-height: 2;
+}
 
-  .long-contents{
+.text-subheading span{
+	font-size: 13px;
+}
+.small-space{
+	font-size: 0.7em;
+}
+
+.long-contents{
 	font-size: 1em;
 	padding-top: 3em;
-  }
-  
-  body, html {
+}
+
+.calendar{
+	padding-bottom: 40px;
+}
+
+body, html {
 	height: 100%;
 	width: 100%;
 	margin: 0;
@@ -234,4 +286,4 @@
 	font-weight: 400;
 	letter-spacing: -.015em;
 	font-family: "SF Pro Display","Helvetica Neue","Helvetica","Arial",sans-serif;
-  }
+}

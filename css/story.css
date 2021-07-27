@@ -1,0 +1,111 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    color: #777;
+    font-family: 'Nanum Myeongjo', serif;
+}
+  
+.mainimg-1, .mainimg-2{
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mainimg-1 {
+    background-image: url("../images/main-2.jpg");
+    background-attachment: fixed;
+    /* opacity: 0.65; */
+    min-height: 100%;
+}
+
+.mainimg-2 {
+    background-image: url("../images/rain.png");
+    min-height: 100%;
+    margin: 10em 2em 4em 0em!important;
+}
+/* 
+.groom {
+    background-image: url("../images/groom.jpg");
+    min-height: 400px;
+}
+
+.bride {
+    background-image: url("../images/bride-2.jpg");
+    min-height: 400px;
+} */
+
+.caption{
+    position: absolute;
+    width: 100%;
+    color: #000;
+}
+
+.mainimg-1 > .caption {
+    left: 0;
+    top: 10%;
+    text-align: center;
+}
+
+.mainimg-2 > .caption {
+    right: 0;
+    top: 8%;
+    margin-right: -1em;
+    text-align: right;
+}
+
+.mainimg-2 > .caption > h2 {
+    margin-top: 15px;
+}
+
+.shortbar{
+    background-color: black;
+    width: 80px;
+    height: 4px;
+    position: absolute;
+    right: 0;
+}
+
+.longbar{
+    background-color: black;
+    width: 80%;
+    height: 4px;
+    position: absolute;
+}
+
+.date {
+    text-align: center;
+    font-weight: 300;
+    font-size: 1em;
+    margin: 5em 1em;
+}
+
+.letter {
+    background-color: whitesmoke;
+    padding: 1em 0em 1em 0em;
+    background-attachment: fixed;
+}
+
+.circular.image {
+    -webkit-filter: grayscale(100%);
+    filter: gray;
+    margin: auto;
+}
+
+.notice {
+    background-color: whitesmoke;
+    text-align: center;
+    font-weight: 300;
+    font-size: 1em;
+}
+
+.photos {
+}
+
+
+  /* Turn off parallax scrolling for tablets and phones */
+/* @media only screen and (max-device-width: 1024px) {
+    .mainimg-1, .mainimg-2 {
+        background-attachment: scroll;
+    }
+} */

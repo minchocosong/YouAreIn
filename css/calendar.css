@@ -82,7 +82,7 @@
         font-size: 12px;
       }
       .cld-number:hover .cld-title{
-        display: block;
+        display: none;
       }
       .cld-title::before{
         content: '';

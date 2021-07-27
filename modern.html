@@ -2,29 +2,22 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>20200815 정성진.송민정</title>
+    <title>20210814 정성진.송민정</title>
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Song+Myung&display=swap" rel="stylesheet">
     <link href="css/modern.css" rel="stylesheet" type="text/css">
     <link href="css/calendar.css" rel="stylesheet" type="text/css">
     <link href="css/nanogallery.min.css" rel="stylesheet" type="text/css">
-<body>
+<body leftmargin="0" rightmargin="0">
     
-    <section class="intro-section">
-      <h1 class="intro-heading">
+    <section class="text-section">
+      <h1 class="text-heading">
         결혼합니다
-        <!-- 꽃잎 흩날리는<br/>
-        어느 봄날,<br/>
-        소중한 당신을<br/>
-        초대합니다 -->
-        <!-- 12월의 웨딩마치 -->
       </h1>
-      <h2 class="intro-subheading">
+      <h2 class="text-subheading">
         정성진 <span class="small-space">그리고</span> 송민정</h2>
-      <p>2020.8.15 오후2시</p>
-      <button type="button" onclick="window.open('http://naver.me/GpaFrFcd')">서울 엘타워 7층 그랜드홀</button>
-
-      <div id="calendar"></div>
+      <p>2021.8.14 토요일 오후2시</p>
+      엘타워 7층 그랜드홀
 
     </section>
     
@@ -33,7 +26,7 @@
       <figure class="figure"><img src="images/prepare.jpeg"/></figure>
       <div class="content">
         <header class="header">
-          <div class="subheading">2020년 8월 15일</div>
+          <div class="subheading">2021년 8월 14일</div>
           <h2 class="heading">
             <!-- 싱그러운 봄날, -->
             <!-- 산들바람 설레는 여름, -->
@@ -57,79 +50,101 @@
       </div>
     </section>
 
-    <section class="content-section" data-scroll>
-      <figure class="figure"><img src="images/rain.jpg" /></figure>
-      <div class="content">
-        <header class="header">
-          <div class="subheading">부디 오셔서 축하해주세요</div>
-          <h2 class="heading">양재 엘타워<br/>7층 그랜드홀</h2>
-        </header>
-        <p class="paragraph">
-          8월 15일 토요일 오후 2시 <br/>
-          <button type="button" onclick="window.open('http://naver.me/GpaFrFcd')">서울 서초구 강남대로 213 엘타워</button>
-        </p>
-      </div>
+    <section class="text-section invite-section">
+      <!-- <h1 class="text-heading">
+        부디 오셔서 축하해주세요
+      </h1> -->
+      <div class="calendar" id="calendar"></div>
+      <h2 class="text-subheading date">
+          8월 15일 토요일 낮 2시 <br/>
+          양재 엘타워 7층 그랜드홀
+      </h2>
+    </section>
+
+    <section>
+      <div class="main-image"><img src="images/rain.jpg" /></div>
+    </section>
+
+    <section class="text-section name-section">
+      <h2 class="text-subheading">
+        정수영 김옥배 <span>의 아들</span> 성진<br/>
+        송태명 김용길 <span>의 딸&nbsp;&nbsp;&nbsp;</span> 민정
+      </h2>
     </section>
     
-    <section class="content-section" data-scroll>
-      <figure class="figure"><img src="images/groom.jpg" /></figure>
+    <section class="introduce-section" data-scroll>
+      <div class="main-image"><img class="hero" src="images/groom.jpg" /></div>
       <div class="content">
-        <header class="header">
-          <div class="subheading">신랑</div>
-          <h2 class="heading">정성진</h2>
-          <span class='parent'>
-            아버지 정수영 <br/>
-            어머지 김옥배
-          </span>
-        </header>
-        
-        <p class="paragraph-introduce">
-
-          오랜 시간 곁에서 지켜보면서 <br/>
+        <p class="introduce-paragraph">
+          <!-- 오랜 시간 곁에서 지켜보면서 <br/>
           항상 겸손하고 성실하고 상대를 배려해주는 <br/>
-          한결같은 사람이라고 생각했습니다.<br/><br/>
-
+          한결같은 사람이라고 생각했습니다.<br/><br/> -->
           언제나 만남이 편하고 즐거워 평생 좋은 친구가 <br/>
           될 수 있을 거란 확신이 들었지요.<br/><br/>
-
           우리가 함께할 미래는 <br/>
-          늘 웃음과 행복이 넘칠거예요. <br/>
-          - 민정<br/>
-
+          늘 웃음과 행복이 넘칠거예요. <br/><br/>
         </p>
-
+        <span class="name">- 민정</span>
       </div>
     </section>
 
-    <section class="content-section" data-scroll>
-      <figure class="figure"><img src="images/bride.jpg" /></figure>
+    <section class="introduce-section" data-scroll>
+      <div class="main-image"><img class="hero" src="images/bride-3.jpg" /></div>
       <div class="content">
-        <header class="header">
-          <div class="subheading">신부</div>
-          <h2 class="heading">송민정</h2>
-          <span class='parent'>
-            아버지 송태명 <br/>
-            어머니 김용길 
-          </span>
-        </header>
-       
-        <p class="paragraph-introduce">
-
+        <p class="introduce-paragraph">
           20대의 모든 낭만과 기쁨, 좌절, 환희 <br/>
           그 뜨거웠던 매순간을 함께한 <br/>
           민정이는 제 삶에 너무나 소중한 일부가 되었어요. <br/><br/>
-
           우리가 함께할 미래는 <br/>
           생각만해도 너무 행복할 것 같아요.<br/><br/>
-          - 성진
         </p>
+        <span class="name">- 성진</span>
       </div>
     </section>
 
     <section class="photo-section">
       <div id="nanoGallery"></div>
     </section>
+
+    <section class="invitation">
+
+      
+      비대면 참석이 준비되어 있습니다.
+      행사 당일 인스타그램 (<a href="https://instagram.com/_bara.bom_?igshid=vijvt5jw28u">b.party_live01</a>) 에서 라이브 방송을 보실 수 있습니다.
+
+      당일 문자 알림을 받으시겠습니까?
+      <button>알림 받기</button>
+
+    </section>
+
+    <section class="navigation">
+      오시는 길
+      <div id="map" style="width:70vw;height:250px;"></div>
+
+      <a id="navi" href="#" onclick="navi();">
+        <img
+          src="https://developers.kakao.com/assets/img/about/buttons/navi/kakaonavi_btn_medium.png"
+        />
+      </a>
+      서울 서초구 강남대로 213 
+      엘타워 7층 컨벤션홀
+
+      지하철
+      3호선/신분당선 양재역 9번 출구 도보 1분
+      
+      버스
+      양재역태워빌딩 하차. 도보 1분
+      
+    </section>
     
+
+    <section class="send_money">
+      마음 전하실 곳
+
+
+    </section>
+
+      
     <section class="content-section" data-scroll>
       <figure class="figure"><img src="images/kiss.JPG" /></figure>
       <div class="content">
@@ -159,12 +174,67 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.nanogallery.min.js"></script>
 
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=780292524a3db3ce37f3fa6fa5754481"></script>
+    <script type="text/javascript" src="js/kakao.js"></script>
     <script  src="js/modern.js"></script>
     <script  src="js/calendar.js"></script>
     <script type="text/javascript">
+
+      function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+        return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+      }
+
+      var name = getParameterByName("name");
+      console.log(name)
+
+      var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+      var options = { //지도를 생성할 때 필요한 기본 옵션
+        center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
+        level: 3 //지도의 레벨(확대, 축소 정도)
+      };
+
+      var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
     
+      // 마커가 표시될 위치입니다 
+      var markerPosition  = new kakao.maps.LatLng(33.450701, 126.570667); 
+      // 마커를 생성합니다
+      var marker = new kakao.maps.Marker({
+          position: markerPosition
+      });
+
+      // 마커가 지도 위에 표시되도록 설정합니다
+      marker.setMap(map);
+
+      // 마커를 클릭했을 때 마커 위에 표시할 인포윈도우를 생성합니다
+      var iwContent = '<div style="padding:5px;">양재 엘타워 2시</div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+          iwRemoveable = true; // removeable 속성을 ture 로 설정하면 인포윈도우를 닫을 수 있는 x버튼이 표시됩니다
+
+      // 인포윈도우를 생성합니다
+      var infowindow = new kakao.maps.InfoWindow({
+          content : iwContent,
+          removable : iwRemoveable
+      });
+
+      // 마커에 클릭이벤트를 등록합니다
+      kakao.maps.event.addListener(marker, 'click', function() {
+            // 마커 위에 인포윈도우를 표시합니다
+            infowindow.open(map, marker);  
+      });
+
+      function navi() {
+        Kakao.Navi.start({
+          name: '양재엘타워',
+          x: 127.11205203011632,
+          y: 37.39279717586919,
+          coordType: 'wgs84',
+        })
+      }
+
       var events = [
-          {'Date': new Date(2020, 7, 15), 'Title': '오후2시 신라호텔 영빈관', 'Link': 'http://naver.me/GvrIxNef'},
+          {'Date': new Date(2021, 7, 14), 'Link': 'http://naver.me/GvrIxNef'},
       ];
 
       var settings = {};
@@ -181,6 +251,7 @@
           colorScheme: 'none',
           thumbnailGutterWidth : 0,
           thumbnailGutterHeight : 0,
+          viewerToolbar: { display: false},
           items: [
                 {
                     src: 'images/main.jpg',		
