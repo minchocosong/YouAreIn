@@ -24,16 +24,6 @@ body, html {
     min-height: 100%;
     margin: 10em 2em 4em 0em!important;
 }
-/* 
-.groom {
-    background-image: url("../images/groom.jpg");
-    min-height: 400px;
-}
-
-.bride {
-    background-image: url("../images/bride-2.jpg");
-    min-height: 400px;
-} */
 
 .caption{
     position: absolute;
@@ -99,9 +89,19 @@ body, html {
     font-size: 1em;
 }
 
-.photos {
+.pay {
+    width: 50px;
+    vertical-align: middle;
 }
 
+.gallery img{
+    width: 32%;
+}
+@media screen and (min-width:769px) {
+    .gallery img{
+        width: 24%;
+    }
+}
 
   /* Turn off parallax scrolling for tablets and phones */
 /* @media only screen and (max-device-width: 1024px) {

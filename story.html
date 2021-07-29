@@ -47,7 +47,7 @@
                         언제나 만남이 편하고 즐거워 <strong>평생 좋은 친구</strong>가 <br/>
                         될 수 있을 거란 확신이 들었지요.<br/><br/>
                         우리가 함께할 미래는 <br/>
-                        늘 <strong>웃음과 행복</strong>이 넘칠거예요. <br/><br/>
+                        늘 <strong>웃음과 행복</strong>이 넘칠 거예요. <br/><br/>
                         - 민정
                     </span>
                 </div>
@@ -56,9 +56,9 @@
                     <img class="ui tiny circular image introduce" src="images/mj-2.jpg">
                     <p>송 민 정</p>
                     <span>
-                        함께 이야기를 하면 마음이 편안해지는 <br/>참 긍정적이고 속이 깊은 사람이에요. <br/><br/>
+                        함께 이야기하면 마음이 편안해지는 <br/>참 긍정적이고 속이 깊은 사람이에요. <br/><br/>
                         20대의 모든 낭만과 기쁨, 좌절, 환희 <br/>
-                        그 <strong>뜨거웠던 매순간을 함께</strong>한 <br/>
+                        그 <strong>뜨거웠던 매 순간을 함께</strong>한 <br/>
                         민정이는 <strong>제 삶에 너무나 소중한 일부</strong>가 되었어요. <br/><br/>
                         우리가 함께할 미래는 <br/>
                         분명 <strong>사랑</strong>이 가득할 거예요.<br/><br/>
@@ -119,70 +119,18 @@
     </div>
 
     <!-- photos -->
-    <div class="ui containter photos">
-        <!-- Root element of PhotoSwipe. Must have class pswp. -->
-        <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-            <!-- Background of PhotoSwipe. 
-                It's a separate element as animating opacity is faster than rgba(). -->
-            <div class="pswp__bg"></div>
+    <div class="gallery"> 
+        <img class="lightboxed" 
+            rel="group1" 
+            src="images/kiss.JPG" />
+       <img class="lightboxed" 
+            rel="group1" 
+            src="images/prepare.png" />
+       <img class="lightboxed" 
+            rel="group1" 
+            src="images/couple.jpeg" />
+    </div> 
     
-            <!-- Slides wrapper with overflow:hidden. -->
-            <div class="pswp__scroll-wrap">
-        
-                <!-- Container that holds slides. 
-                    PhotoSwipe keeps only 3 of them in the DOM to save memory.
-                    Don't modify these 3 pswp__item elements, data is added later on. -->
-                <div class="pswp__container">
-                    <div class="pswp__item"></div>
-                    <div class="pswp__item"></div>
-                    <div class="pswp__item"></div>
-                </div>
-        
-                <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-                <div class="pswp__ui pswp__ui--hidden">
-        
-                    <div class="pswp__top-bar">
-        
-                        <!--  Controls are self-explanatory. Order can be changed. -->
-        
-                        <div class="pswp__counter"></div>
-        
-                        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-        
-                        <button class="pswp__button pswp__button--share" title="Share"></button>
-        
-                        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-        
-                        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-        
-                        <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
-                        <!-- element will get class pswp__preloader--active when preloader is running -->
-                        <div class="pswp__preloader">
-                            <div class="pswp__preloader__icn">
-                            <div class="pswp__preloader__cut">
-                                <div class="pswp__preloader__donut"></div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                        <div class="pswp__share-tooltip"></div> 
-                    </div>
-        
-                    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-                    </button>
-        
-                    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-                    </button>
-        
-                    <div class="pswp__caption">
-                        <div class="pswp__caption__center"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- attendance -->
     <div class="ui placeholder segment">
@@ -225,117 +173,161 @@
     </div>
 
     <!-- money -->
-
-    <div class="ui top attached tabular menu">
+    <div class="ui fluid two item top attached tabular menu">
         <a class="item active" data-tab="groom">신랑</a>
         <a class="item" data-tab="bride">신부</a>
     </div>
-    <div class="ui bottom attached tab segment items active" data-tab="groom">
-        <a class="item">
-            <div class="ui tiny">
-                <img class="ui tiny circular image" src="images/sj-2.jpg">
+    <div class="ui unstackable attached tab segment items divided active" data-tab="groom">
+        <div class="item">
+            <div class="ui tiny image circular">
+                <img src="images/sj-2.jpg">
             </div>
-            <div class="content">
+            <div class="middle aligned content">
                 <div class="header">정성진</div>
                 <div class="meta">
                     <span>신랑</span>
                 </div>
+                <div class="description">
+                    <p><a href="tel:010-3329-1062">010-3329-1062</a></p>
+                </div>
+                <div class="middle extra">
+                    우리은행 1000-222-123456
+                    <a href="">
+                        <img class="pay" src="images/kakaopay.png" >
+                    </a>
+                </div>
             </div>
-        </a>
-        <a class="item">
-            <div class="ui tiny">
-                <img class="ui tiny circular image" src="images/mj-2.jpg">
+        </div>
+        <div class="item">
+            <div class="ui tiny image circular">
+                <img src="images/mj-2.jpg">
             </div>
-            <div class="content">
+            <div class="middle aligned content">
                 <div class="header">정수영</div>
                 <div class="meta">
                     <span>신랑 아버지</span>
                 </div>
+                <div class="description">
+                    <p><a href="tel:010-3329-1062">010-3329-1062</a></p>
+                </div>
+                <div class="extra">
+                    우리은행 1000-222-123456
+                    <a href="">
+                        <img class="pay" src="images/kakaopay.png" >
+                    </a>
+                </div>
             </div>
-        </a>
-        <a class="item">
-            <div class="ui tiny">
-                <img class="ui tiny circular image" src="images/sj-2.jpg">
+        </div>
+        <div class="item">
+            <div class="ui tiny image circular">
+                <img src="images/sj-2.jpg">
             </div>
-            <div class="content">
+            <div class="middle aligned content">
                 <div class="header">김옥배</div>
                 <div class="meta">
                     <span>신랑 어머니</span>
                 </div>
+                <div class="description">
+                    <p><a href="tel:010-3329-1062">010-3329-1062</a></p>
+                </div>
+                <div class="extra">
+                    우리은행 1000-222-123456
+                    <a href="">
+                        <img class="pay" src="images/kakaopay.png" >
+                    </a>
+                </div>
             </div>
-        </a>
+        </div>
     </div>
-    <div class="ui bottom attached tab segment" data-tab="bride">
-        Second
-    </div>
-    <!-- <div class="ui bottom attached tab segment active" data-tab="groom">
-        
-    </div>
-
-    <div class="ui bottom attached tab segment" data-tap="bride">
+    <div class="ui unstackable attached tab segment items divided" data-tab="bride">
         <div class="item">
-            <div class="ui tiny">
-                <img class="ui tiny circular image" src="images/sj-2.jpg">
+            <div class="ui tiny image circular">
+                <img src="images/sj-2.jpg">
             </div>
-            <div class="content">
+            <div class="middle aligned content">
                 <div class="header">송민정</div>
                 <div class="meta">
                     <span>신부</span>
                 </div>
+                <div class="description">
+                    <p><a href="tel:010-3329-1062">010-3329-1062</a></p>
+                </div>
+                <div class="extra">
+                    우리은행 1000-222-123456
+                    <a href="">
+                        <img class="pay" src="images/kakaopay.png" >
+                    </a>
+                </div>
             </div>
         </div>
         <div class="item">
-            <div class="ui tiny">
-                <img class="ui tiny circular image" src="images/mj-2.jpg">
+            <div class="ui tiny image circular">
+                <img src="images/mj-2.jpg">
             </div>
-            <div class="content">
+            <div class="middle aligned content">
                 <div class="header">송태명</div>
                 <div class="meta">
                     <span>신부 아버지</span>
                 </div>
+                <div class="description">
+                    <p><a href="tel:010-3329-1062">010-3329-1062</a></p>
+                </div>
+                <div class="extra">
+                    우리은행 1000-222-123456
+                    <a href="">
+                        <img class="pay" src="images/kakaopay.png" >
+                    </a>
+                </div>
             </div>
         </div>
         <div class="item">
-            <div class="ui tiny">
-                <img class="ui tiny circular image" src="images/sj-2.jpg">
+            <div class="ui tiny image circular">
+                <img src="images/sj-2.jpg">
             </div>
-            <div class="content">
+            <div class="middle aligned content">
                 <div class="header">김용길</div>
                 <div class="meta">
                     <span>신부 어머니</span>
                 </div>
+                <div class="description">
+                    <p><a href="tel:010-3329-1062">010-3329-1062</a></p>
+                </div>
+                <div class="extra">
+                    우리은행 1000-222-123456
+                    <a href="">
+                        <img class="pay" src="images/kakaopay.png" >
+                    </a>
+                </div>
             </div>
         </div>
-    </div> -->
-
-    <div class="longbar"></div>
-
+    </div>
 
     <!-- guest book -->
-    <div class="ui containter form guestbook">
+    <!-- <div class="ui containter form guestbook">
         <div class="field">
             <textarea rows="2"></textarea>
         </div>
         <button class="ui button">등록</button>
-    </div>
+    </div> -->
 
     <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Song+Myung&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/story.css">
-    <link rel="stylesheet" type="text/css" href="css/photoswipe.css"> 
     <link rel="stylesheet" type="text/css" href="css/default-skin.css"> 
+    <link rel="stylesheet" type="text/css" href="css/lightboxed.css" />
 
     <script
         src="https://code.jquery.com/jquery-3.1.1.min.js"
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=780292524a3db3ce37f3fa6fa5754481"></script>
+    <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=780292524a3db3ce37f3fa6fa5754481"></script>
     <script type="text/javascript" src="js/kakao.js"></script>
     <script src="js/semantic.min.js"></script>
-    <script src="js/photoswipe.min.js"></script> 
-    <script src="js/photoswipe-ui-default.min.js"></script>
+    
+    <!-- As A jQuery Plugin -->
+    <script src="js/lightboxed.js"></script>
     <script src="js/story.js"></script>
     <script>
     
@@ -344,5 +336,6 @@
         });
 
         $(".menu .item").tab();
+
     </script>
 </body>
