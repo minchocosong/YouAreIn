@@ -1,5 +1,5 @@
 /**
- * Kakao SDK for JavaScript - v1.40.6
+ * Kakao SDK for JavaScript - v1.40.7
  *
  * Copyright 2017 Kakao Corp.
  *
@@ -105,4 +105,7289 @@
  * ``````````
  */
 
-!function(e,t){"object"==typeof exports&&"undefined"!=typeof module?t(exports):"function"==typeof define&&define.amd?define(["exports"],t):t((e="undefined"!=typeof globalThis?globalThis:e||self).Kakao=e.Kakao||{})}(this,(function(e){"use strict";var t="object"==typeof global&&global&&global.Object===Object&&global,n="object"==typeof self&&self&&self.Object===Object&&self,r=t||n||Function("return this")(),o=r.Symbol,i=Object.prototype,a=i.hasOwnProperty,c=i.toString,s=o?o.toStringTag:void 0;var u=Object.prototype.toString;var l=o?o.toStringTag:void 0;function p(e){return null==e?void 0===e?"[object Undefined]":"[object Null]":l&&l in Object(e)?function(e){var t=a.call(e,s),n=e[s];try{e[s]=void 0;var r=!0}catch(e){}var o=c.call(e);return r&&(t?e[s]=n:delete e[s]),o}(e):function(e){return u.call(e)}(e)}function d(e){return null!=e&&"object"==typeof e}var f=Array.isArray,h=/\s/;var m=/^\s+/;function v(e){return e?e.slice(0,function(e){for(var t=e.length;t--&&h.test(e.charAt(t)););return t}(e)+1).replace(m,""):e}function g(e){var t=typeof e;return null!=e&&("object"==t||"function"==t)}var y=/^[-+]0x[0-9a-f]+$/i,_=/^0b[01]+$/i,b=/^0o[0-7]+$/i,k=parseInt;function w(e){if("number"==typeof e)return e;if(function(e){return"symbol"==typeof e||d(e)&&"[object Symbol]"==p(e)}(e))return NaN;if(g(e)){var t="function"==typeof e.valueOf?e.valueOf():e;e=g(t)?t+"":t}if("string"!=typeof e)return 0===e?e:+e;e=v(e);var n=_.test(e);return n||b.test(e)?k(e.slice(2),n?2:8):y.test(e)?NaN:+e}var S=1/0;function x(e){var t=function(e){return e?(e=w(e))===S||e===-1/0?17976931348623157e292*(e<0?-1:1):e==e?e:0:0===e?e:0}(e),n=t%1;return t==t?n?t-n:t:0}function O(e){return e}function A(e){if(!g(e))return!1;var t=p(e);return"[object Function]"==t||"[object GeneratorFunction]"==t||"[object AsyncFunction]"==t||"[object Proxy]"==t}var T,j=r["__core-js_shared__"],C=(T=/[^.]+$/.exec(j&&j.keys&&j.keys.IE_PROTO||""))?"Symbol(src)_1."+T:"";var I=Function.prototype.toString;var P=/^\[object .+?Constructor\]$/,F=Function.prototype,B=Object.prototype,L=F.toString,E=B.hasOwnProperty,R=RegExp("^"+L.call(E).replace(/[\\^$.*+?()[\]{}|]/g,"\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g,"$1.*?")+"$");function M(e){return!(!g(e)||(t=e,C&&C in t))&&(A(e)?R:P).test(function(e){if(null!=e){try{return I.call(e)}catch(e){}try{return e+""}catch(e){}}return""}(e));var t}function z(e,t,n){switch(n.length){case 0:return e.call(t);case 1:return e.call(t,n[0]);case 2:return e.call(t,n[0],n[1]);case 3:return e.call(t,n[0],n[1],n[2])}return e.apply(t,n)}var U=Date.now;var D,q,N,K=function(){try{var e=M(t=function(e,t){return null==e?void 0:e[t]}(Object,"defineProperty"))?t:void 0;return e({},"",{}),e}catch(e){}var t}(),H=(D=K?function(e,t){return K(e,"toString",{configurable:!0,enumerable:!1,value:(n=t,function(){return n}),writable:!0});var n}:O,q=0,N=0,function(){var e=U(),t=16-(e-N);if(N=e,t>0){if(++q>=800)return arguments[0]}else q=0;return D.apply(void 0,arguments)});function W(e,t){for(var n=-1,r=null==e?0:e.length;++n<r&&!1!==t(e[n],n,e););return e}var J=/^(?:0|[1-9]\d*)$/;function X(e,t){var n=typeof e;return!!(t=null==t?9007199254740991:t)&&("number"==n||"symbol"!=n&&J.test(e))&&e>-1&&e%1==0&&e<t}function $(e,t,n){"__proto__"==t&&K?K(e,t,{configurable:!0,enumerable:!0,value:n,writable:!0}):e[t]=n}function G(e,t){return e===t||e!=e&&t!=t}var V=Object.prototype.hasOwnProperty;function Y(e,t,n){var r=e[t];V.call(e,t)&&G(r,n)&&(void 0!==n||t in e)||$(e,t,n)}var Q=Math.max;function Z(e,t){return H(function(e,t,n){return t=Q(void 0===t?e.length-1:t,0),function(){for(var r=arguments,o=-1,i=Q(r.length-t,0),a=Array(i);++o<i;)a[o]=r[t+o];o=-1;for(var c=Array(t+1);++o<t;)c[o]=r[o];return c[t]=n(a),z(e,this,c)}}(e,t,O),e+"")}function ee(e){return"number"==typeof e&&e>-1&&e%1==0&&e<=9007199254740991}function te(e){return null!=e&&ee(e.length)&&!A(e)}function ne(e,t,n){if(!g(n))return!1;var r=typeof t;return!!("number"==r?te(n)&&X(t,n.length):"string"==r&&t in n)&&G(n[t],e)}var re=Object.prototype;function oe(e){var t=e&&e.constructor;return e===("function"==typeof t&&t.prototype||re)}function ie(e){return d(e)&&"[object Arguments]"==p(e)}var ae=Object.prototype,ce=ae.hasOwnProperty,se=ae.propertyIsEnumerable,ue=ie(function(){return arguments}())?ie:function(e){return d(e)&&ce.call(e,"callee")&&!se.call(e,"callee")};var le="object"==typeof e&&e&&!e.nodeType&&e,pe=le&&"object"==typeof module&&module&&!module.nodeType&&module,de=pe&&pe.exports===le?r.Buffer:void 0,fe=(de?de.isBuffer:void 0)||function(){return!1},he={};he["[object Float32Array]"]=he["[object Float64Array]"]=he["[object Int8Array]"]=he["[object Int16Array]"]=he["[object Int32Array]"]=he["[object Uint8Array]"]=he["[object Uint8ClampedArray]"]=he["[object Uint16Array]"]=he["[object Uint32Array]"]=!0,he["[object Arguments]"]=he["[object Array]"]=he["[object ArrayBuffer]"]=he["[object Boolean]"]=he["[object DataView]"]=he["[object Date]"]=he["[object Error]"]=he["[object Function]"]=he["[object Map]"]=he["[object Number]"]=he["[object Object]"]=he["[object RegExp]"]=he["[object Set]"]=he["[object String]"]=he["[object WeakMap]"]=!1;var me="object"==typeof e&&e&&!e.nodeType&&e,ve=me&&"object"==typeof module&&module&&!module.nodeType&&module,ge=ve&&ve.exports===me&&t.process,ye=function(){try{var e=ve&&ve.require&&ve.require("util").types;return e||ge&&ge.binding&&ge.binding("util")}catch(e){}}(),_e=ye&&ye.isTypedArray,be=_e?function(e){return function(t){return e(t)}}(_e):function(e){return d(e)&&ee(e.length)&&!!he[p(e)]},ke=Object.prototype.hasOwnProperty;function we(e,t){var n=f(e),r=!n&&ue(e),o=!n&&!r&&fe(e),i=!n&&!r&&!o&&be(e),a=n||r||o||i,c=a?function(e,t){for(var n=-1,r=Array(e);++n<e;)r[n]=t(n);return r}(e.length,String):[],s=c.length;for(var u in e)!t&&!ke.call(e,u)||a&&("length"==u||o&&("offset"==u||"parent"==u)||i&&("buffer"==u||"byteLength"==u||"byteOffset"==u)||X(u,s))||c.push(u);return c}function Se(e,t){return function(n){return e(t(n))}}var xe=Se(Object.keys,Object),Oe=Object.prototype.hasOwnProperty;function Ae(e){return te(e)?we(e):function(e){if(!oe(e))return xe(e);var t=[];for(var n in Object(e))Oe.call(e,n)&&"constructor"!=n&&t.push(n);return t}(e)}var Te=Object.prototype.hasOwnProperty;function je(e){if(!g(e))return function(e){var t=[];if(null!=e)for(var n in Object(e))t.push(n);return t}(e);var t=oe(e),n=[];for(var r in e)("constructor"!=r||!t&&Te.call(e,r))&&n.push(r);return n}function Ce(e){return te(e)?we(e,!0):je(e)}var Ie,Pe=(Ie=function(e,t){!function(e,t,n,r){var o=!n;n||(n={});for(var i=-1,a=t.length;++i<a;){var c=t[i],s=r?r(n[c],e[c],c,n,e):void 0;void 0===s&&(s=e[c]),o?$(n,c,s):Y(n,c,s)}}(t,Ce(t),e)},Z((function(e,t){var n=-1,r=t.length,o=r>1?t[r-1]:void 0,i=r>2?t[2]:void 0;for(o=Ie.length>3&&"function"==typeof o?(r--,o):void 0,i&&ne(t[0],t[1],i)&&(o=r<3?void 0:o,r=1),e=Object(e);++n<r;){var a=t[n];a&&Ie(e,a,n,o)}return e}))),Fe=Se(Object.getPrototypeOf,Object),Be=Function.prototype,Le=Object.prototype,Ee=Be.toString,Re=Le.hasOwnProperty,Me=Ee.call(Object);var ze,Ue=function(e,t,n){for(var r=-1,o=Object(e),i=n(e),a=i.length;a--;){var c=i[ze?a:++r];if(!1===t(o[c],c,o))break}return e};var De=function(e,t){return function(n,r){if(null==n)return n;if(!te(n))return e(n,r);for(var o=n.length,i=t?o:-1,a=Object(n);(t?i--:++i<o)&&!1!==r(a[i],i,a););return n}}((function(e,t){return e&&Ue(e,t,Ae)})),qe=Object.prototype,Ne=qe.hasOwnProperty,Ke=Z((function(e,t){e=Object(e);var n=-1,r=t.length,o=r>2?t[2]:void 0;for(o&&ne(t[0],t[1],o)&&(r=1);++n<r;)for(var i=t[n],a=Ce(i),c=-1,s=a.length;++c<s;){var u=a[c],l=e[u];(void 0===l||G(l,qe[u])&&!Ne.call(e,u))&&(e[u]=i[u])}return e}));function He(e,t){var n;return(f(e)?W:De)(e,"function"==typeof(n=t)?n:O)}function We(e){return"string"==typeof e||!f(e)&&d(e)&&"[object String]"==p(e)}function Je(e){return!0===e||!1===e||d(e)&&"[object Boolean]"==p(e)}function Xe(e){return d(e)&&1===e.nodeType&&!function(e){if(!d(e)||"[object Object]"!=p(e))return!1;var t=Fe(e);if(null===t)return!0;var n=Re.call(t,"constructor")&&t.constructor;return"function"==typeof n&&n instanceof n&&Ee.call(n)==Me}(e)}function $e(e){return"number"==typeof e&&e==x(e)}function Ge(e){return"number"==typeof e||d(e)&&"[object Number]"==p(e)}function Ve(e){return function(t){return Object.prototype.toString.call(t)==="[object ".concat(e,"]")}}function Ye(e){return Ve("Blob")(e)}function Qe(e){return Ve("File")(e)}function Ze(e){return Ve("FileList")(e)}function et(e,t){return Array.prototype.slice.call(e).map(t)}function tt(e,t){return Array.prototype.slice.call(e).every(t)}function nt(e,t){return[e,t].reduce((function(e,t){return e.filter((function(e){return-1===t.indexOf(e)}))}))}function rt(e){return Object.keys(e||{})}function ot(){}function it(){return Math.random().toString(36).slice(2)}function at(e){return Xe(e)?e:We(e)?document.querySelector(e):null}function ct(e,t,n){e.addEventListener&&e.addEventListener(t,n,!1)}function st(e,t,n){e.removeEventListener&&e.removeEventListener(t,n,!1)}function ut(e){var t=!(arguments.length>1&&void 0!==arguments[1])||arguments[1],n=t?encodeURIComponent:function(e){return e},r=et(rt(e),(function(t){var r=e[t];return n(t)+"="+n(g(r)?JSON.stringify(r):r)}));return r.join("&")}function lt(e){if(!f(e))throw new Error("elements should be an Array");return function(t){return e.indexOf(t)>-1}}function pt(e){if(!f(e))throw new Error("validators should be an Array");return function(t){return e.some((function(e){return e(t)}))}}var dt=function(){var e={_data:{},setItem:function(e,t){return this._data[e]=String(t)},getItem:function(e){return this._data.hasOwnProperty(e)?this._data[e]:null},removeItem:function(e){return delete this._data[e]},clear:function(){return this._data={}}};try{return"localStorage"in window&&null!==window.localStorage?(window.localStorage.setItem("store",""),window.localStorage.removeItem("store"),window.localStorage):e}catch(t){return e}}();function ft(e){return(ft="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e})(e)}function ht(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function mt(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}function vt(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function gt(e,t){var n=Object.keys(e);if(Object.getOwnPropertySymbols){var r=Object.getOwnPropertySymbols(e);t&&(r=r.filter((function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable}))),n.push.apply(n,r)}return n}function yt(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function");e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,writable:!0,configurable:!0}}),t&&bt(e,t)}function _t(e){return(_t=Object.setPrototypeOf?Object.getPrototypeOf:function(e){return e.__proto__||Object.getPrototypeOf(e)})(e)}function bt(e,t){return(bt=Object.setPrototypeOf||function(e,t){return e.__proto__=t,e})(e,t)}function kt(e,t){return!t||"object"!=typeof t&&"function"!=typeof t?function(e){if(void 0===e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return e}(e):t}function wt(e){var t=function(){if("undefined"==typeof Reflect||!Reflect.construct)return!1;if(Reflect.construct.sham)return!1;if("function"==typeof Proxy)return!0;try{return Boolean.prototype.valueOf.call(Reflect.construct(Boolean,[],(function(){}))),!0}catch(e){return!1}}();return function(){var n,r=_t(e);if(t){var o=_t(this).constructor;n=Reflect.construct(r,arguments,o)}else n=r.apply(this,arguments);return kt(this,n)}}function St(e,t){return function(e){if(Array.isArray(e))return e}(e)||function(e,t){if("undefined"==typeof Symbol||!(Symbol.iterator in Object(e)))return;var n=[],r=!0,o=!1,i=void 0;try{for(var a,c=e[Symbol.iterator]();!(r=(a=c.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){o=!0,i=e}finally{try{r||null==c.return||c.return()}finally{if(o)throw i}}return n}(e,t)||Ot(e,t)||function(){throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}()}function xt(e){return function(e){if(Array.isArray(e))return At(e)}(e)||function(e){if("undefined"!=typeof Symbol&&Symbol.iterator in Object(e))return Array.from(e)}(e)||Ot(e)||function(){throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}()}function Ot(e,t){if(e){if("string"==typeof e)return At(e,t);var n=Object.prototype.toString.call(e).slice(8,-1);return"Object"===n&&e.constructor&&(n=e.constructor.name),"Map"===n||"Set"===n?Array.from(e):"Arguments"===n||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)?At(e,t):void 0}}function At(e,t){(null==t||t>e.length)&&(t=e.length);for(var n=0,r=new Array(t);n<t;n++)r[n]=e[n];return r}var Tt=function(){function e(e){var n={},r=/(dolfin)[ \/]([\w.]+)/.exec(e)||/(edge)[ \/]([\w.]+)/.exec(e)||/(chrome)[ \/]([\w.]+)/.exec(e)||/(tizen)[ \/]([\w.]+)/.exec(e)||/(opera)(?:.*version)?[ \/]([\w.]+)/.exec(e)||/(webkit)(?:.*version)?[ \/]([\w.]+)/.exec(e)||/(msie) ([\w.]+)/.exec(e)||e.indexOf("compatible")<0&&/(mozilla)(?:.*? rv:([\w.]+))?/.exec(e)||["","unknown"];return"webkit"===r[1]?r=/(iphone|ipad|ipod)[\S\s]*os ([\w._\-]+) like/.exec(e)||/(android)[ \/]([\w._\-]+);/.exec(e)||[r[0],"safari",r[2]]:"mozilla"===r[1]?/trident/.test(e)?r[1]="msie":r[1]="firefox":/polaris|natebrowser|([010|011|016|017|018|019]{3}\d{3,4}\d{4}$)/.test(e)&&(r[1]="polaris"),n[r[1]]=!0,n.name=r[1],n.version=t(r[2]),n}function t(e){var t={},n=e?e.split(/\.|-|_/):["0","0","0"];return t.info=n.join("."),t.major=n[0]||"0",t.minor=n[1]||"0",t.patch=n[2]||"0",t}function n(e){return function(e){if(e.match(/ipad/)||e.match(/android/)&&!e.match(/mobi|mini|fennec/)||e.match(/macintosh/)&&window.navigator.maxTouchPoints>1)return!0;return!1}(e)?"tablet":function(e){if(e.match(/linux|windows (nt|98)|macintosh|cros/)&&!e.match(/android|mobile|polaris|lgtelecom|uzard|natebrowser|ktf;|skt;/))return!0;return!1}(e)?"pc":function(e){return!!e.match(/ip(hone|od)|android.+mobile|windows (ce|phone)|blackberry|bb10|symbian|webos|firefox.+fennec|opera m(ob|in)i|tizen.+mobile|polaris|iemobile|lgtelecom|nokia|sonyericsson|dolfin|uzard|natebrowser|ktf;|skt;/)}(e)?"mobile":""}function r(e){var n={},r=/(iphone|ipad|ipod)[\S\s]*os ([\w._\-]+) like/.exec(e)||!!/polaris|natebrowser|([010|011|016|017|018|019]{3}\d{3,4}\d{4}$)/.test(e)&&["","polaris","0.0.0"]||/(windows)(?: nt | phone(?: os){0,1} | )([\w._\-]+)/.exec(e)||/(android)[ \/]([\w._\-]+);/.exec(e)||!!/android/.test(e)&&["","android","0.0.0"]||!!/(windows)/.test(e)&&["","windows","0.0.0"]||/(mac) os x ([\w._\-]+)/.exec(e)||/(tizen)[ \/]([\w._\-]+);/.exec(e)||!!/(linux)/.test(e)&&["","linux","0.0.0"]||!!/webos/.test(e)&&["","webos","0.0.0"]||/(cros)(?:\s[\w]+\s)([\d._\-]+)/.exec(e)||/(bada)[ \/]([\w._\-]+)/.exec(e)||!!/bada/.test(e)&&["","bada","0.0.0"]||!!/(rim|blackberry|bb10)/.test(e)&&["","blackberry","0.0.0"]||["","unknown","0.0.0"];return"iphone"===r[1]||"ipad"===r[1]||"ipod"===r[1]?r[1]="ios":"windows"===r[1]&&"98"===r[2]&&(r[2]="0.98.0"),"mac"===r[1]&&"undefined"!=typeof window&&window.navigator.maxTouchPoints>1&&(r[1]="ios"),"cros"===r[1]&&(r[1]="chrome"),n[r[1]]=!0,n.name=r[1],n.version=t(r[2]),n}Array.isArray||(Array.isArray=function(e){return"[object Array]"===Object.prototype.toString.call(e)});var o=["crios","fxios","daumapps"];function i(e,n){var r={},i=null,a=o;Array.isArray(n)?a=o.concat(n):"string"==typeof n&&(a=o.concat([n]));for(var c=0,s=a.length;c<s;c+=1){var u=a[c];if(i=new RegExp("("+u+")[ \\/]([\\w._\\-]+)").exec(e))break}return i||(i=["",""]),i[1]?(r.isApp=!0,r.name=i[1],r.version=t(i[2])):r.isApp=!1,r}return function(t,o){var a=function(e){return e?e.toLowerCase():"undefined"!=typeof window&&window.navigator&&"string"==typeof window.navigator.userAgent?window.navigator.userAgent.toLowerCase():""}(t);return{ua:a,browser:e(a),platform:n(a),os:r(a),app:i(a,o)}}}(),jt=Tt();var Ct,It,Pt,Ft,Bt="https://kauth.kakao.com",Lt="https://story.kakao.com",Et="kakaonavi-sdk://",Rt="https://developers.kakao.com",Mt=navigator,zt=(Ct=location,It=Ct.protocol,Pt=Ct.hostname,Ft=Ct.port,"".concat(It,"//").concat(Pt).concat(Ft?":"+Ft:"")),Ut=jt,Dt="1.40.6".concat(""),qt=["sdk/".concat(Dt),"os/javascript","sdk_type/javascript","lang/".concat(Mt.userLanguage||Mt.language),"device/".concat(Mt.platform.replace(/ /g,"_")),"origin/".concat(encodeURIComponent(zt))].join(" "),Nt={authDomain:Bt,authorize:"".concat(Bt,"/oauth/authorize"),loginWidget:"".concat(Bt,"/public/widget/login/kakaoLoginWidget.html"),redirectUri:"JS-SDK",universalKakaoLink:"".concat("https://talk-apps.kakao.com","/scheme/"),talkLoginScheme:"kakaokompassauth://authorize",talkLoginRedirectUri:"https://kapi.kakao.com/cors/afterlogin.html",talkInappScheme:"kakaotalk://inappbrowser",talkSyncpluginScheme:"kakaotalk://bizplugin?plugin_id=6011263b74fc2b49c73a7298",apiRemote:"".concat("https://kapi.kakao.com","/cors/"),sharerDomain:"https://sharer.kakao.com",pickerDomain:"https://friend-picker.kakao.com",talkLinkScheme:"kakaolink://send",talkAndroidPackage:"com.kakao.talk",channel:"https://pf.kakao.com",channelIcon:"".concat(Rt,"/assets/img/about/logos"),storyShare:"".concat(Lt,"/s/share"),storyChannelFollow:"".concat(Lt,"/s/follow"),storyIcon:"".concat(Rt,"/sdk/js/resources/story/icon_small.png"),storyPostScheme:"storylink://posting",naviStartScheme:"".concat(Et,"navigate"),naviShareScheme:"".concat(Et,"sharePoi"),naviWeb:"https://kakaonavi-wguide.kakao.com/openapi"},Kt=null;function Ht(){return Kt}function Wt(e){Kt=e}function Jt(e){Error.prototype.constructor.apply(this,arguments),this.name="KakaoError",this.message=e}function Xt(e){return Pe.apply(void 0,[{cleanup:function(){He(e,(function(e){return e.cleanup&&e.cleanup()}))}}].concat(xt(e)))}function $t(e){He(e,(function(e){e()})),e.length=0}function Gt(e,t,n){if(!1===t(e))throw new Jt("Illegal argument for ".concat(n))}function Vt(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},t=arguments.length>1?arguments[1]:void 0,n=arguments.length>2?arguments[2]:void 0;if(!g(e))throw new Error("params should be an Object");A(t.before)&&t.before(e),A(t.defaults)?Ke(e,t.defaults(e)):Ke(e,t.defaults);var r=t.required,o=void 0===r?{}:r,i=t.optional,a=void 0===i?{}:i,c=nt(rt(o),rt(e));if(c.length>0)throw new Jt("Missing required keys: ".concat(c.join(",")," at ").concat(n));var s=Pe({},o,a),u=nt(rt(e),rt(s));if(u.length>0)throw new Jt("Invalid parameter keys: ".concat(u.join(",")," at ").concat(n));return He(e,(function(e,t){Gt(e,s[t],'"'.concat(t,'" in ').concat(n))})),A(t.after)&&t.after(e),e}function Yt(){return(Math.random().toString(36).slice(2)+Ht()+Date.now().toString(36)).slice(0,60)}function Qt(e,t){if(Ut.os.android){var n=JSON.stringify({appKey:Kt,KA:qt});return"market://details?id=".concat(e,"&referrer=").concat(n)}return Ut.os.ios?"https://itunes.apple.com/app/id".concat(t):location.href}function Zt(e){try{return e()}catch(e){throw e instanceof TypeError?new Jt("kakao.js should be loaded from a web server"):new Jt("EasyXDM - ".concat(e.message))}}Jt.prototype=new Error;var en={};function tn(e,t,n){var r=en[t];return r&&r.close&&!r.closed&&r.close(),en[t]=window.open(e,t,n),en[t]}function nn(e,t,n){He(n,(function(n,r){var o=t.getAttribute(n);null!==o&&(e[r]="true"===o||"false"===o?"true"===o:o)}))}function rn(e,t){var n=t.url,r=t.popupName,o=t.popupFeatures,i=Ut.browser.msie?{}:tn("",r,o);i.focus&&i.focus();var a=document.createElement("form");return a.setAttribute("accept-charset","utf-8"),a.setAttribute("method","post"),a.setAttribute("action",n),a.setAttribute("target",r),a.setAttribute("style","display:none"),He(e,(function(e,t){var n=document.createElement("input");n.type="hidden",n.name=t,n.value=We(e)?e:JSON.stringify(e),a.appendChild(n)})),document.body.appendChild(a),a.submit(),document.body.removeChild(a),i}var on={};var an={subscribe:function(e,t){on[e]=on[e]||[],on[e].push(t)},unsubscribe:function(e,t){for(var n=on[e],r=0;r<n.length;r++)if(n[r]===t)return void n.splice(r,1)},dispatch:function(e){He(on[e],(function(e){e()}))}},cn=function(){function e(t,n){ht(this,e),this._interval=t,this._maxCount=n,this._count=0,this._stopped=!1,this._timeout=null}var t,n,r;return t=e,(n=[{key:"start",value:function(e,t){this._count=0,this._stopped=!1,this._doPolling(e,t)}},{key:"_doPolling",value:function(e,t){var n=this;this._stopped||(this._timeout=setTimeout((function(){++n._count>n._maxCount?t():(e(),n._doPolling(e,t))}),this._interval))}},{key:"stop",value:function(){this._stopped=!0,clearTimeout(this._timeout)}}])&&mt(t.prototype,n),r&&mt(t,r),e}(),sn={success:ot,fail:ot,always:ot},un=Pe({throughTalk:!0,persistAccessToken:!0,persistRefreshToken:!1},sn),ln={success:A,fail:A,always:A,persistAccessToken:Je,persistRefreshToken:Je,approvalType:lt(["project"]),scope:We,throughTalk:Je,plusFriendPublicId:We,channelPublicId:We,serviceTerms:We,redirectUri:We,state:We,deviceType:lt(["watch","tv"])},pn={createLoginButton:{required:{container:pt([Xe,We])},optional:Pe({lang:lt(["en","kr"]),size:lt(["small","medium","large"])},ln),defaults:Pe({lang:"kr",size:"medium"},un)},login:{optional:ln,defaults:un},authorize:{optional:{redirectUri:We,approvalType:lt(["project"]),scope:We,throughTalk:Je,plusFriendPublicId:We,channelPublicId:We,serviceTerms:We,isPopup:Je,state:We,autoLogin:Je,deviceType:lt(["watch","tv"]),prompts:lt(["login","none"]),reauthenticate:Je,throughSyncplugin:Je,success:A,fail:A,always:A},defaults:{throughTalk:!0,isPopup:!1,reauthenticate:!1,throughSyncplugin:!0,success:ot,fail:ot,always:ot}},autoLogin:{optional:{success:A,fail:A,always:A},defaults:sn},issueAccessToken:{required:{code:We,redirectUri:We},optional:{success:A,fail:A,always:A},defaults:sn}};function dn(e){var t,n,r,o,i,a;return tn(e,"_blank",(t=480,n=700,r=window.screenLeft?window.screenLeft:window.screenX?window.screenX:0,o=window.screenTop?window.screenTop:window.screenY?window.screenY:0,i=screen.width/2-t/2+r,a=screen.height/2-n/2+o,["width=".concat(t),"height=".concat(n),"left=".concat(i),"top=".concat(a),"scrollbars=yes","resizable=1"].join(",")))}function fn(e){return"".concat(Nt.authorize,"?").concat(ut(e))}function hn(e){var t={client_id:Ht()};return e.approvalType&&(t.approval_type=e.approvalType),e.scope&&(t.scope=e.scope),e.state&&(t.state=e.state),t}function mn(e){var t={};return e.plusFriendPublicId&&(t["extra.plus_friend_public_id"]=e.plusFriendPublicId),e.channelPublicId&&(t.channel_public_id=e.channelPublicId),e.serviceTerms&&(t["extra.service_terms"]=e.serviceTerms),e.autoLogin&&(t.prompt="none"),e.reauthenticate&&(t.prompt="login"),e.prompts&&(t.prompt=e.prompts),e.deviceType&&(t.device_type=e.deviceType),t}function vn(e,t){t.error?(e.fail(t),e.always(t)):(e.success(t),e.always(t))}function gn(e,t){!function(e,t){var n=e.url,r=e.method,o=e.data,i=new XMLHttpRequest;if(void 0!==i.withCredentials)i.open(r,n),i.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),i.onreadystatechange=function(){i.readyState===XMLHttpRequest.DONE&&200===i.status&&t(i)},i.send(o);else{var a=new XDomainRequest;a.open(r.toLowerCase(),n),a.onload=function(){t({status:a.responseText?200:"error",response:a.responseText})},setTimeout((function(){a.send(o)}),0)}}({method:"GET",url:e},t)}var yn=new cn(1e3,600);function _n(e,t){e.state&&(t.state=e.state),e.redirectUri?location.href="".concat(e.redirectUri,"?").concat(ut(t)):vn(e,t)}var bn=Object.freeze({__proto__:null,authorize:function(e){if((e=Vt(e,pn.authorize,"Auth.authorize")).autoLogin&&!/KAKAOTALK/i.test(Ut.ua))return _n(e,{error:"auto_login",error_description:"NOT_SUPPORTED_BROWSER"}),!1;var t=Yt(),n=Pe({},hn(e),mn(e),{redirect_uri:e.redirectUri||Nt.redirectUri,response_type:"code",auth_tran_id:t}),r=Pe({},n,{ka:qt,is_popup:e.isPopup}),o=function(e){var t=!(!Ut.os.ios&&!Ut.os.android)&&!/KAKAOTALK/i.test(Ut.ua),n=!e.reauthenticate&&"login"!==e.prompts;return t&&n&&e.throughTalk&&!e.autoLogin}(e),i=function(e){return e.throughSyncplugin&&/KAKAOTALK/i.test(Ut.ua)&&/ch-home/i.test(Ut.ua)}(e),a=fn(r),c=o?function(e,t,n){var r=Pe({},t,{is_popup:!0}),o=function(){var t=["intent:#Intent","action=com.kakao.talk.intent.action.CAPRI_LOGGED_IN_ACTIVITY","launchFlags=0x08880000","S.com.kakao.sdk.talk.appKey=".concat(Ht()),"S.com.kakao.sdk.talk.redirectUri=".concat(r.redirect_uri),"S.com.kakao.sdk.talk.kaHeader=".concat(qt),"S.com.kakao.sdk.talk.extraparams=".concat(encodeURIComponent(JSON.stringify(r)))];return e.state&&t.push("S.com.kakao.sdk.talk.state=".concat(e.state)),t.concat(["S.browser_fallback_url=".concat(encodeURIComponent(n)),"end;"]).join(";")},i=function(){var t=fn(r),o=e.isPopup?t:n,i="".concat(t,"&ka=").concat(encodeURIComponent(qt)),a="".concat(Nt.talkInappScheme,"?url=").concat(encodeURIComponent(i));return"".concat(Nt.universalKakaoLink).concat(encodeURIComponent(a),"&web=").concat(encodeURIComponent(o))};return Ut.os.android?o():i()}(e,n,a):a,s=null;i?function(e){var t=Pe({},e,{ka:qt,is_popup:!0,approval_window_type:"v4_bizplugin"}),n=encodeURIComponent(ut(t));location.href="".concat(Nt.talkSyncpluginScheme,"&query=").concat(n)}(n):e.isPopup?s=dn(c):location.href=c,(o||i||e.isPopup)&&yn.start((function(){var n={client_id:Ht(),auth_tran_id:t,ka:qt};gn("".concat(Nt.authDomain,"/apiweb/code.json?").concat(ut(n)),(function(t){(function(e,t){if(200===t.status&&t.response){var n=JSON.parse(t.response);if("ok"===n.status&&n.code)return _n(e,{code:n.code}),!0;if("error"===n.status&&("500"===n.error_code||"600"===n.error_code||"700"===n.error_code))return _n(e,{error:n.error,error_description:n.error_description}),"700"===n.error_code&&(location.href="".concat(Nt.authDomain,"/error/network")),!0}return!1})(e,t)&&(yn.stop(),s&&s.close&&s.close()),!o&&s&&s.closed&&yn.stop()}))}),(function(){_n(e,{error:"timeout",error_description:"LOGIN_TIMEOUT"})})),an.dispatch("LOGIN_START")}});function kn(){return Ut.os.android&&(2==Ut.os.version.major&&/Version\/\d+.\d+|/i.test(Ut.ua)||4==Ut.os.version.major&&Ut.os.version.minor<4&&/Version\/\d+.\d+|/i.test(Ut.ua)||/Version\/\d+\.\d+/i.test(Ut.ua)&&(/Chrome\/\d+\.\d+\.\d+\.\d+ Mobile/i.test(Ut.ua)||/; wv\)/i.test(Ut.ua)))}function wn(){return Ut.os.ios&&/KAKAOTALK/i.test(Ut.ua)}var Sn="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof window?window:"undefined"!=typeof global?global:"undefined"!=typeof self?self:{};var xn=function(e){var t={exports:{}};return e(t,t.exports),t.exports}((function(e,t){e.exports=function(){function e(e){var t=typeof e;return null!==e&&("object"===t||"function"===t)}function t(e){return"function"==typeof e}var n=Array.isArray?Array.isArray:function(e){return"[object Array]"===Object.prototype.toString.call(e)},r=0,o=void 0,i=void 0,a=function(e,t){_[r]=e,_[r+1]=t,2===(r+=2)&&(i?i(b):w())};function c(e){i=e}function s(e){a=e}var u="undefined"!=typeof window?window:void 0,l=u||{},p=l.MutationObserver||l.WebKitMutationObserver,d="undefined"==typeof self&&"undefined"!=typeof process&&"[object process]"==={}.toString.call(process),f="undefined"!=typeof Uint8ClampedArray&&"undefined"!=typeof importScripts&&"undefined"!=typeof MessageChannel;function h(){return function(){return process.nextTick(b)}}function m(){return void 0!==o?function(){o(b)}:y()}function v(){var e=0,t=new p(b),n=document.createTextNode("");return t.observe(n,{characterData:!0}),function(){n.data=e=++e%2}}function g(){var e=new MessageChannel;return e.port1.onmessage=b,function(){return e.port2.postMessage(0)}}function y(){var e=setTimeout;return function(){return e(b,1)}}var _=new Array(1e3);function b(){for(var e=0;e<r;e+=2)(0,_[e])(_[e+1]),_[e]=void 0,_[e+1]=void 0;r=0}function k(){try{var e=Function("return this")().require("vertx");return o=e.runOnLoop||e.runOnContext,m()}catch(e){return y()}}var w=void 0;function S(e,t){var n=this,r=new this.constructor(A);void 0===r[O]&&J(r);var o=n._state;if(o){var i=arguments[o-1];a((function(){return N(o,r,i,n._result)}))}else D(n,r,e,t);return r}function x(e){var t=this;if(e&&"object"==typeof e&&e.constructor===t)return e;var n=new t(A);return R(n,e),n}w=d?h():p?v():f?g():void 0===u?k():y();var O=Math.random().toString(36).substring(2);function A(){}var T=void 0,j=1,C=2;function I(){return new TypeError("You cannot resolve a promise with itself")}function P(){return new TypeError("A promises callback cannot return that same promise.")}function F(e,t,n,r){try{e.call(t,n,r)}catch(e){return e}}function B(e,t,n){a((function(e){var r=!1,o=F(n,t,(function(n){r||(r=!0,t!==n?R(e,n):z(e,n))}),(function(t){r||(r=!0,U(e,t))}),"Settle: "+(e._label||" unknown promise"));!r&&o&&(r=!0,U(e,o))}),e)}function L(e,t){t._state===j?z(e,t._result):t._state===C?U(e,t._result):D(t,void 0,(function(t){return R(e,t)}),(function(t){return U(e,t)}))}function E(e,n,r){n.constructor===e.constructor&&r===S&&n.constructor.resolve===x?L(e,n):void 0===r?z(e,n):t(r)?B(e,n,r):z(e,n)}function R(t,n){if(t===n)U(t,I());else if(e(n)){var r=void 0;try{r=n.then}catch(e){return void U(t,e)}E(t,n,r)}else z(t,n)}function M(e){e._onerror&&e._onerror(e._result),q(e)}function z(e,t){e._state===T&&(e._result=t,e._state=j,0!==e._subscribers.length&&a(q,e))}function U(e,t){e._state===T&&(e._state=C,e._result=t,a(M,e))}function D(e,t,n,r){var o=e._subscribers,i=o.length;e._onerror=null,o[i]=t,o[i+j]=n,o[i+C]=r,0===i&&e._state&&a(q,e)}function q(e){var t=e._subscribers,n=e._state;if(0!==t.length){for(var r=void 0,o=void 0,i=e._result,a=0;a<t.length;a+=3)r=t[a],o=t[a+n],r?N(n,r,o,i):o(i);e._subscribers.length=0}}function N(e,n,r,o){var i=t(r),a=void 0,c=void 0,s=!0;if(i){try{a=r(o)}catch(e){s=!1,c=e}if(n===a)return void U(n,P())}else a=o;n._state!==T||(i&&s?R(n,a):!1===s?U(n,c):e===j?z(n,a):e===C&&U(n,a))}function K(e,t){try{t((function(t){R(e,t)}),(function(t){U(e,t)}))}catch(t){U(e,t)}}var H=0;function W(){return H++}function J(e){e[O]=H++,e._state=void 0,e._result=void 0,e._subscribers=[]}function X(){return new Error("Array Methods must be provided an Array")}var $=function(){function e(e,t){this._instanceConstructor=e,this.promise=new e(A),this.promise[O]||J(this.promise),n(t)?(this.length=t.length,this._remaining=t.length,this._result=new Array(this.length),0===this.length?z(this.promise,this._result):(this.length=this.length||0,this._enumerate(t),0===this._remaining&&z(this.promise,this._result))):U(this.promise,X())}return e.prototype._enumerate=function(e){for(var t=0;this._state===T&&t<e.length;t++)this._eachEntry(e[t],t)},e.prototype._eachEntry=function(e,t){var n=this._instanceConstructor,r=n.resolve;if(r===x){var o=void 0,i=void 0,a=!1;try{o=e.then}catch(e){a=!0,i=e}if(o===S&&e._state!==T)this._settledAt(e._state,t,e._result);else if("function"!=typeof o)this._remaining--,this._result[t]=e;else if(n===ee){var c=new n(A);a?U(c,i):E(c,e,o),this._willSettleAt(c,t)}else this._willSettleAt(new n((function(t){return t(e)})),t)}else this._willSettleAt(r(e),t)},e.prototype._settledAt=function(e,t,n){var r=this.promise;r._state===T&&(this._remaining--,e===C?U(r,n):this._result[t]=n),0===this._remaining&&z(r,this._result)},e.prototype._willSettleAt=function(e,t){var n=this;D(e,void 0,(function(e){return n._settledAt(j,t,e)}),(function(e){return n._settledAt(C,t,e)}))},e}();function G(e){return new $(this,e).promise}function V(e){var t=this;return n(e)?new t((function(n,r){for(var o=e.length,i=0;i<o;i++)t.resolve(e[i]).then(n,r)})):new t((function(e,t){return t(new TypeError("You must pass an array to race."))}))}function Y(e){var t=new this(A);return U(t,e),t}function Q(){throw new TypeError("You must pass a resolver function as the first argument to the promise constructor")}function Z(){throw new TypeError("Failed to construct 'Promise': Please use the 'new' operator, this object constructor cannot be called as a function.")}var ee=function(){function e(t){this[O]=W(),this._result=this._state=void 0,this._subscribers=[],A!==t&&("function"!=typeof t&&Q(),this instanceof e?K(this,t):Z())}return e.prototype.catch=function(e){return this.then(null,e)},e.prototype.finally=function(e){var n=this,r=n.constructor;return t(e)?n.then((function(t){return r.resolve(e()).then((function(){return t}))}),(function(t){return r.resolve(e()).then((function(){throw t}))})):n.then(e,e)},e}();function te(){var e=void 0;if(void 0!==Sn)e=Sn;else if("undefined"!=typeof self)e=self;else try{e=Function("return this")()}catch(e){throw new Error("polyfill failed because global object is unavailable in this environment")}var t=e.Promise;if(t){var n=null;try{n=Object.prototype.toString.call(t.resolve())}catch(e){}if("[object Promise]"===n&&!t.cast)return}e.Promise=ee}return ee.prototype.then=S,ee.all=G,ee.race=V,ee.resolve=x,ee.reject=Y,ee._setScheduler=c,ee._setAsap=s,ee._asap=a,ee.polyfill=te,ee.Promise=ee,ee}()})),On=(function(e,t,n,r,o,i){var a,c,s,u,l,p=this||e,d=Math.floor(1e4*Math.random()),f=Function.prototype,h=/^((http.?:)\/\/([^:\/\s]+)(:\d+)*)/,m=/[\-\w]+\/\.\.\//,v=/([^:])\/\//g,g="",y={},_=e.easyXDM,b="easyXDM_",k=!1;function w(e,t){var n=ft(e[t]);return"function"==n||!("object"!=n||!e[t])||"unknown"==n}function S(){var e,t="Shockwave Flash",n="application/x-shockwave-flash";if(!L(navigator.plugins)&&"object"==ft(navigator.plugins[t])){var r=navigator.plugins[t].description;r&&!L(navigator.mimeTypes)&&navigator.mimeTypes[n]&&navigator.mimeTypes[n].enabledPlugin&&(c=r.match(/\d+/g))}if(!c)try{e=new ActiveXObject("ShockwaveFlash.ShockwaveFlash"),c=Array.prototype.slice.call(e.GetVariable("$version").match(/(\d+),(\d+),(\d+),(\d+)/),1),e=null}catch(e){}if(!c)return!1;var o=parseInt(c[0],10),i=parseInt(c[1],10);return s=o>9&&i>0,!0}if(w(e,"addEventListener"))u=function(e,t,n){e.addEventListener(t,n,!1)},l=function(e,t,n){e.removeEventListener(t,n,!1)};else{if(!w(e,"attachEvent"))throw new Error("Browser not supported");u=function(e,t,n){e.attachEvent("on"+t,n)},l=function(e,t,n){e.detachEvent("on"+t,n)}}var x,O=!1,A=[];function T(){if(!O){O=!0;for(var e=0;e<A.length;e++)A[e]();A.length=0}}function j(e,t){O?e.call(t):A.push((function(){e.call(t)}))}function C(e){return e.match(h)[3]}function I(e){if(e.indexOf("file://")>=0)return"file://";var t=e.toLowerCase().match(h);if(!t)return"";var n=t[2],r=t[3],o=t[4]||"";return("http:"==n&&":80"==o||"https:"==n&&":443"==o)&&(o=""),n+"//"+r+o}function P(e){if(!(e=e.replace(v,"$1/")).match(/^(http||https):\/\//)){var t="/"===e.substring(0,1)?"":n.pathname;"/"!==t.substring(t.length-1)&&(t=t.substring(0,t.lastIndexOf("/")+1)),e=n.protocol+"//"+n.host+t+e}for(;m.test(e);)e=e.replace(m,"");return e}function F(e,t){var n="",r=e.indexOf("#");-1!==r&&(n=e.substring(r),e=e.substring(0,r));var o=[];for(var a in t)t.hasOwnProperty(a)&&o.push(a+"="+i(t[a]));return e+(k?"#":-1==e.indexOf("?")?"?":"&")+o.join("&")+n}"readyState"in t?(x=t.readyState,O="complete"==x||~navigator.userAgent.indexOf("AppleWebKit/")&&("loaded"==x||"interactive"==x)):O=!!t.body,O||(w(e,"addEventListener")?u(t,"DOMContentLoaded",T):(u(t,"readystatechange",(function(){"complete"==t.readyState&&T()})),t.documentElement.doScroll&&e===top&&function e(){if(!O){try{t.documentElement.doScroll("left")}catch(t){return void r(e,1)}T()}}()),u(e,"load",T));var B=function(e){for(var t,n={},r=(e=e.substring(1).split("&")).length;r--;)n[(t=e[r].split("="))[0]]=o(t[1]);return n}(/xdm_e=/.test(n.search)?n.search:n.hash);function L(e){return void 0===e}var E,R=function(){var e={},t={a:[1,2,3]},n='{"a":[1,2,3]}';return"undefined"!=typeof JSON&&"function"==typeof JSON.stringify&&JSON.stringify(t).replace(/\s/g,"")===n?JSON:(Object.toJSON&&Object.toJSON(t).replace(/\s/g,"")===n&&(e.stringify=Object.toJSON),"function"==typeof String.prototype.evalJSON&&(t=n.evalJSON()).a&&3===t.a.length&&3===t.a[2]&&(e.parse=function(e){return e.evalJSON()}),e.stringify&&e.parse?(R=function(){return e},e):null)};function M(e,t,n){var r;for(var o in t)t.hasOwnProperty(o)&&(o in e?"object"===ft(r=t[o])?M(e[o],r,n):n||(e[o]=t[o]):e[o]=t[o]);return e}function z(e){var n;L(a)&&function(){var e=t.body.appendChild(t.createElement("form")),n=e.appendChild(t.createElement("input"));n.name=b+"TEST"+d,a=n!==e.elements[n.name],t.body.removeChild(e)}(),a?n=t.createElement('<iframe name="'+e.props.name+'"/>'):(n=t.createElement("IFRAME")).name=e.props.name,n.id=n.name=e.props.name,delete e.props.name,"string"==typeof e.container&&(e.container=t.getElementById(e.container)),e.container||(M(n.style,{position:"absolute",top:"-2000px",left:"0px"}),e.container=t.body);var r=e.props.src;if(e.props.src="javascript:false",M(n,e.props),n.border=n.frameBorder=0,n.allowTransparency=!0,e.container.appendChild(n),e.onLoad&&u(n,"load",e.onLoad),e.usePost){var o,i=e.container.appendChild(t.createElement("form"));if(i.target=n.name,i.action=r,i.method="POST","object"===ft(e.usePost))for(var c in e.usePost)e.usePost.hasOwnProperty(c)&&(a?o=t.createElement('<input name="'+c+'"/>'):(o=t.createElement("INPUT")).name=c,o.value=e.usePost[c],i.appendChild(o));i.submit(),i.parentNode.removeChild(i)}else n.src=r;return e.props.src=r,n}function U(e){return e.replace(/[-[\]/{}()+.\^$|]/g,"\\$&").replace(/(\*)/g,".$1").replace(/\?/g,".")}function D(r){var o,i=r.protocol;if(r.isHost=r.isHost||L(B.xdm_p),k=r.hash||!1,r.props||(r.props={}),r.isHost)r.remote=P(r.remote),r.channel=r.channel||"default"+d++,r.secret=Math.random().toString(16).substring(2),L(i)&&(i=I(n.href)==I(r.remote)?"4":w(e,"postMessage")||w(t,"postMessage")?"1":r.swf&&w(e,"ActiveXObject")&&S()?"6":"Gecko"===navigator.product&&"frameElement"in e&&-1==navigator.userAgent.indexOf("WebKit")?"5":r.remoteHelper?"2":"0");else if(r.channel=B.xdm_c.replace(/["'<>\\]/g,""),r.secret=B.xdm_s,r.remote=B.xdm_e.replace(/["'<>\\]/g,""),i=B.xdm_p,r.acl&&!function(e,t){"string"==typeof e&&(e=[e]);for(var n,r=e.length;r--;)if(n="^"===e[r].substr(0,1)&&"$"===e[r].substr(e[r].length-1,1)?e[r]:"^"+U(e[r])+"$",(n=new RegExp(n)).test(t))return!0;return!1}(r.acl,r.remote))throw new Error("Access denied for "+r.remote);switch(r.protocol=i,i){case"0":if(M(r,{interval:100,delay:2e3,useResize:!0,useParent:!1,usePolling:!1},!0),r.isHost){if(!r.local){for(var a,s=n.protocol+"//"+n.host,u=t.body.getElementsByTagName("img"),l=u.length;l--;)if((a=u[l]).src.substring(0,s.length)===s){r.local=a.src;break}r.local||(r.local=e)}var p={xdm_c:r.channel,xdm_p:0};r.local===e?(r.usePolling=!0,r.useParent=!0,r.local=n.protocol+"//"+n.host+n.pathname+n.search,p.xdm_e=r.local,p.xdm_pa=1):p.xdm_e=P(r.local),r.container&&(r.useResize=!1,p.xdm_po=1),r.remote=F(r.remote,p)}else M(r,{useParent:!L(B.xdm_pa),usePolling:!L(B.xdm_po),useResize:!r.useParent&&r.useResize});o=[new y.stack.HashTransport(r),new y.stack.ReliableBehavior({}),new y.stack.QueueBehavior({encode:!0,maxLength:4e3-r.remote.length}),new y.stack.VerifyBehavior({initiate:r.isHost})];break;case"1":o=[new y.stack.PostMessageTransport(r)];break;case"2":r.isHost&&(r.remoteHelper=P(r.remoteHelper)),o=[new y.stack.NameTransport(r),new y.stack.QueueBehavior,new y.stack.VerifyBehavior({initiate:r.isHost})];break;case"3":o=[new y.stack.NixTransport(r)];break;case"4":o=[new y.stack.SameOriginTransport(r)];break;case"5":o=[new y.stack.FrameElementTransport(r)];break;case"6":c||S(),o=[new y.stack.FlashTransport(r)]}return o.push(new y.stack.QueueBehavior({lazy:r.lazy,remove:!0})),o}function q(e){for(var t,n={incoming:function(e,t){this.up.incoming(e,t)},outgoing:function(e,t){this.down.outgoing(e,t)},callback:function(e){this.up.callback(e)},init:function(){this.down.init()},destroy:function(){this.down.destroy()}},r=0,o=e.length;r<o;r++)M(t=e[r],n,!0),0!==r&&(t.down=e[r-1]),r!==o-1&&(t.up=e[r+1]);return t}M(y,{version:"2.5.00.1",query:B,stack:{},apply:M,getJSONObject:R,whenReady:j,noConflict:function(t){return e.easyXDM=_,(g=t)&&(b="easyXDM_"+g.replace(".","_")+"_"),y}}),y.DomHelper={on:u,un:l,requiresJSON:function(n){(function(e,t){return!("object"!=ft(e[t])||!e[t])})(e,"JSON")||t.write('<script type="text/javascript" src="'+n+'"><\/script>')}},E={},y.Fn={set:function(e,t){E[e]=t},get:function(e,t){if(E.hasOwnProperty(e)){var n=E[e];return t&&delete E[e],n}}},y.Socket=function(e){var t=q(D(e).concat([{incoming:function(t,n){e.onMessage(t,n)},callback:function(t){e.onReady&&e.onReady(t)}}])),n=I(e.remote);this.origin=I(e.remote),this.destroy=function(){t.destroy()},this.postMessage=function(e){t.outgoing(e,n)},t.init()},y.Rpc=function(e,t){if(t.local)for(var n in t.local)if(t.local.hasOwnProperty(n)){var r=t.local[n];"function"==typeof r&&(t.local[n]={method:r})}var o=q(D(e).concat([new y.stack.RpcBehavior(this,t),{callback:function(t){e.onReady&&e.onReady(t)}}]));this.origin=I(e.remote),this.context=e.context||null,this.destroy=function(){o.destroy()},o.init()},y.stack.SameOriginTransport=function(e){var t,o,i,a;return t={outgoing:function(e,t,n){i(e),n&&n()},destroy:function(){o&&(o.parentNode.removeChild(o),o=null)},onDOMReady:function(){a=I(e.remote),e.isHost?(M(e.props,{src:F(e.remote,{xdm_e:n.protocol+"//"+n.host+n.pathname,xdm_c:e.channel,xdm_p:4}),name:b+e.channel+"_provider"}),o=z(e),y.Fn.set(e.channel,(function(e){return i=e,r((function(){t.up.callback(!0)}),0),function(e){t.up.incoming(e,a)}}))):(i=function(){var e=parent;if(""!==g)for(var t=0,n=g.split(".");t<n.length;t++)e=e[n[t]];return e.easyXDM}().Fn.get(e.channel,!0)((function(e){t.up.incoming(e,a)})),r((function(){t.up.callback(!0)}),0))},init:function(){j(t.onDOMReady,t)}}},y.stack.FlashTransport=function(e){var o,a,c,u,l;function d(e,t){r((function(){o.up.incoming(e,c)}),0)}function f(n){var r=e.swf+"?host="+e.isHost,o="easyXDM_swf_"+Math.floor(1e4*Math.random());y.Fn.set("flash_loaded"+n.replace(/[\-.]/g,"_"),(function(){y.stack.FlashTransport[n].swf=u=l.firstChild;for(var e=y.stack.FlashTransport[n].queue,t=0;t<e.length;t++)e[t]();e.length=0})),e.swfContainer?l="string"==typeof e.swfContainer?t.getElementById(e.swfContainer):e.swfContainer:(M((l=t.createElement("div")).style,s&&e.swfNoThrottle?{height:"20px",width:"20px",position:"fixed",right:0,top:0}:{height:"1px",width:"1px",position:"absolute",overflow:"hidden",right:0,top:0}),t.body.appendChild(l));var a="callback=flash_loaded"+i(n.replace(/[\-.]/g,"_"))+"&proto="+p.location.protocol+"&domain="+i(C(p.location.href))+"&port="+i(function(e){return e.match(h)[4]||""}(p.location.href))+"&ns="+i(g);l.innerHTML="<object height='20' width='20' type='application/x-shockwave-flash' id='"+o+"' data='"+r+"'><param name='allowScriptAccess' value='always'></param><param name='wmode' value='transparent'><param name='movie' value='"+r+"'></param><param name='flashvars' value='"+a+"'></param><embed type='application/x-shockwave-flash' FlashVars='"+a+"' allowScriptAccess='always' wmode='transparent' src='"+r+"' height='1' width='1'></embed></object>"}return o={outgoing:function(t,n,r){u.postMessage(e.channel,t.toString()),r&&r()},destroy:function(){try{u.destroyChannel(e.channel)}catch(e){}u=null,a&&(a.parentNode.removeChild(a),a=null)},onDOMReady:function(){c=e.remote,y.Fn.set("flash_"+e.channel+"_init",(function(){r((function(){o.up.callback(!0)}))})),y.Fn.set("flash_"+e.channel+"_onMessage",d),e.swf=P(e.swf);var t=C(e.swf),i=function(){y.stack.FlashTransport[t].init=!0,(u=y.stack.FlashTransport[t].swf).createChannel(e.channel,e.secret,I(e.remote),e.isHost),e.isHost&&(s&&e.swfNoThrottle&&M(e.props,{position:"fixed",right:0,top:0,height:"20px",width:"20px"}),M(e.props,{src:F(e.remote,{xdm_e:I(n.href),xdm_c:e.channel,xdm_p:6,xdm_s:e.secret}),name:b+e.channel+"_provider"}),a=z(e))};y.stack.FlashTransport[t]&&y.stack.FlashTransport[t].init?i():y.stack.FlashTransport[t]?y.stack.FlashTransport[t].queue.push(i):(y.stack.FlashTransport[t]={queue:[i]},f(t))},init:function(){j(o.onDOMReady,o)}}},y.stack.PostMessageTransport=function(t){var o,i,a,c;function s(e){if("string"==typeof e.data){var r=function(e){if(e.origin)return I(e.origin);if(e.uri)return I(e.uri);if(e.domain)return n.protocol+"//"+e.domain;throw"Unable to retrieve the origin of the event"}(e);r==c&&"string"==typeof e.data&&e.data.substring(0,t.channel.length+1)==t.channel+" "&&o.up.incoming(e.data.substring(t.channel.length+1),r)}}function p(n){n.data==t.channel+"-ready"&&(a="postMessage"in i.contentWindow?i.contentWindow:i.contentWindow.document,l(e,"message",p),u(e,"message",s),r((function(){o.up.callback(!0)}),0))}return o={outgoing:function(e,n,r){a.postMessage(t.channel+" "+e,n||c),r&&r()},destroy:function(){l(e,"message",p),l(e,"message",s),i&&(a=null,i.parentNode.removeChild(i),i=null)},onDOMReady:function(){"file://"===(c=I(t.remote))&&(c="*"),t.isHost?(u(e,"message",p),M(t.props,{src:F(t.remote,{xdm_e:I(n.href),xdm_c:t.channel,xdm_p:1}),name:b+t.channel+"_provider"}),i=z(t)):(u(e,"message",s),(a="postMessage"in e.parent?e.parent:e.parent.document).postMessage(t.channel+"-ready",c),r((function(){o.up.callback(!0)}),0))},init:function(){j(o.onDOMReady,o)}}},y.stack.FrameElementTransport=function(o){var i,a,c,s;return i={outgoing:function(e,t,n){c.call(this,e),n&&n()},destroy:function(){a&&(a.parentNode.removeChild(a),a=null)},onDOMReady:function(){s=I(o.remote),o.isHost?(M(o.props,{src:F(o.remote,{xdm_e:I(n.href),xdm_c:o.channel,xdm_p:5}),name:b+o.channel+"_provider"}),(a=z(o)).fn=function(e){return delete a.fn,c=e,r((function(){i.up.callback(!0)}),0),function(e){i.up.incoming(e,s)}}):(t.referrer&&I(t.referrer)!=B.xdm_e&&(e.top.location=B.xdm_e),c=e.frameElement.fn((function(e){i.up.incoming(e,s)})),i.up.callback(!0))},init:function(){j(i.onDOMReady,i)}}},y.stack.NameTransport=function(e){var t,n,o,i,a,c,s,u;function p(t){var r=e.remoteHelper+(n?"#_3":"#_2")+e.channel;o.contentWindow.sendMessage(t,r)}function d(){n?2!=++a&&n||t.up.callback(!0):(p("ready"),t.up.callback(!0))}function f(e){t.up.incoming(e,s)}function h(){c&&r((function(){c(!0)}),0)}return t={outgoing:function(e,t,n){c=n,p(e)},destroy:function(){o.parentNode.removeChild(o),o=null,n&&(i.parentNode.removeChild(i),i=null)},onDOMReady:function(){n=e.isHost,a=0,s=I(e.remote),e.local=P(e.local),n?(y.Fn.set(e.channel,(function(t){n&&"ready"===t&&(y.Fn.set(e.channel,f),d())})),u=F(e.remote,{xdm_e:e.local,xdm_c:e.channel,xdm_p:2}),M(e.props,{src:u+"#"+e.channel,name:b+e.channel+"_provider"}),i=z(e)):(e.remoteHelper=e.remote,y.Fn.set(e.channel,f)),o=z({props:{src:e.local+"#_4"+e.channel},onLoad:function t(){var n=o||this;l(n,"load",t),y.Fn.set(e.channel+"_load",h),function e(){"function"==typeof n.contentWindow.sendMessage?d():r(e,50)}()}})},init:function(){j(t.onDOMReady,t)}}},y.stack.HashTransport=function(t){var n,o,i,a,c,s,u,l,p,d;function f(){if(u){var e=u.location.href,t="",r=e.indexOf("#");-1!=r&&(t=e.substring(r)),t&&t!=c&&function(e){c=e,n.up.incoming(c.substring(c.indexOf("_")+1),d)}(t)}}function h(){i=setInterval(f,a)}return n={outgoing:function(e,n){!function(e){if(l){var n=t.remote+"#"+s+++"_"+e;(o||!p?l.contentWindow:l).location=n}}(e)},destroy:function(){e.clearInterval(i),!o&&p||l.parentNode.removeChild(l),l=null},onDOMReady:function(){if(o=t.isHost,a=t.interval,c="#"+t.channel,s=0,p=t.useParent,d=I(t.remote),o){if(M(t.props,{src:t.remote,name:b+t.channel+"_provider"}),p)t.onLoad=function(){u=e,h(),n.up.callback(!0)};else{var i=0,f=t.delay/50;!function e(){if(++i>f)throw new Error("Unable to reference listenerwindow");try{u=l.contentWindow.frames[b+t.channel+"_consumer"]}catch(e){}u?(h(),n.up.callback(!0)):r(e,50)}()}l=z(t)}else u=e,h(),p?(l=parent,n.up.callback(!0)):(M(t,{props:{src:t.remote+"#"+t.channel+new Date,name:b+t.channel+"_consumer"},onLoad:function(){n.up.callback(!0)}}),l=z(t))},init:function(){j(n.onDOMReady,n)}}},y.stack.ReliableBehavior=function(e){var t,n,r=0,o=0,i="";return t={incoming:function(e,a){var c=e.indexOf("_"),s=e.substring(0,c).split(",");e=e.substring(c+1),s[0]==r&&(i="",n&&n(!0)),e.length>0&&(t.down.outgoing(s[1]+","+r+"_"+i,a),o!=s[1]&&(o=s[1],t.up.incoming(e,a)))},outgoing:function(e,a,c){i=e,n=c,t.down.outgoing(o+","+ ++r+"_"+e,a)}}},y.stack.QueueBehavior=function(e){var t,n,a=[],c=!0,s="",u=0,l=!1,p=!1;function d(){if(e.remove&&0===a.length)!function(e){e.up.down=e.down,e.down.up=e.up,e.up=e.down=null}(t);else if(!c&&0!==a.length&&!n){c=!0;var o=a.shift();t.down.outgoing(o.data,o.origin,(function(e){c=!1,o.callback&&r((function(){o.callback(e)}),0),d()}))}}return t={init:function(){L(e)&&(e={}),e.maxLength&&(u=e.maxLength,p=!0),e.lazy?l=!0:t.down.init()},callback:function(e){c=!1;var n=t.up;d(),n.callback(e)},incoming:function(n,r){if(p){var i=n.indexOf("_"),a=parseInt(n.substring(0,i),10);s+=n.substring(i+1),0===a&&(e.encode&&(s=o(s)),t.up.incoming(s,r),s="")}else t.up.incoming(n,r)},outgoing:function(n,r,o){e.encode&&(n=i(n));var c,s=[];if(p){for(;0!==n.length;)c=n.substring(0,u),n=n.substring(c.length),s.push(c);for(;c=s.shift();)a.push({data:s.length+"_"+c,origin:r,callback:0===s.length?o:null})}else a.push({data:n,origin:r,callback:o});l?t.down.init():d()},destroy:function(){n=!0,t.down.destroy()}}},y.stack.VerifyBehavior=function(e){var t,n,r;function o(){n=Math.random().toString(16).substring(2),t.down.outgoing(n)}return t={incoming:function(i,a){var c=i.indexOf("_");-1===c?i===n?t.up.callback(!0):r||(r=i,e.initiate||o(),t.down.outgoing(i)):i.substring(0,c)===r&&t.up.incoming(i.substring(c+1),a)},outgoing:function(e,r,o){t.down.outgoing(n+"_"+e,r,o)},callback:function(t){e.initiate&&o()}}},y.stack.RpcBehavior=function(e,t){var n,r=t.serializer||R(),o=0,i={};function a(e){e.jsonrpc="2.0",n.down.outgoing(r.stringify(e))}function c(e,t){var n=Array.prototype.slice;return function(){var r,c=arguments.length,s={method:t};c>0&&"function"==typeof arguments[c-1]?(c>1&&"function"==typeof arguments[c-2]?(r={success:arguments[c-2],error:arguments[c-1]},s.params=n.call(arguments,0,c-2)):(r={success:arguments[c-1]},s.params=n.call(arguments,0,c-1)),i[""+ ++o]=r,s.id=o):s.params=n.call(arguments,0),e.namedParams&&1===s.params.length&&(s.params=s.params[0]),a(s)}}function s(t,n,r,o){if(r){var i,c;n?(i=function(e){i=f,a({id:n,result:e})},c=function(e,t){c=f;var r={id:n,error:{code:-32099,message:e}};t&&(r.error.data=t),a(r)}):i=c=f,function(e){return"[object Array]"===Object.prototype.toString.call(e)}(o)||(o=[o]);try{var s=e.context||r.scope,u=r.method.apply(s,o.concat([i,c]));L(u)||i(u)}catch(e){c(e.message)}}else n&&a({id:n,error:{code:-32601,message:"Procedure not found."}})}return n={incoming:function(e,n){var o=r.parse(e);if(o.method)t.handle?t.handle(o,a):s(o.method,o.id,t.local[o.method],o.params);else{var c=i[o.id];o.error?c.error&&c.error(o.error):c.success&&c.success(o.result),delete i[o.id]}},init:function(){if(t.remote)for(var r in t.remote)t.remote.hasOwnProperty(r)&&(e[r]=c(t.remote[r],r));n.down.init()},destroy:function(){for(var r in t.remote)t.remote.hasOwnProperty(r)&&e.hasOwnProperty(r)&&delete e[r];n.down.destroy()}}},p.easyXDM=y}(window,document,location,window.setTimeout,decodeURIComponent,encodeURIComponent),easyXDM.noConflict("Kakao")),An=function(){var e,t,n=n||function(e,t){var n={},r=n.lib={},o=function(){},i=r.Base={extend:function(e){o.prototype=this;var t=new o;return e&&t.mixIn(e),t.hasOwnProperty("init")||(t.init=function(){t.$super.init.apply(this,arguments)}),t.init.prototype=t,t.$super=this,t},create:function(){var e=this.extend();return e.init.apply(e,arguments),e},init:function(){},mixIn:function(e){for(var t in e)e.hasOwnProperty(t)&&(this[t]=e[t]);e.hasOwnProperty("toString")&&(this.toString=e.toString)},clone:function(){return this.init.prototype.extend(this)}},a=r.WordArray=i.extend({init:function(e,t){e=this.words=e||[],this.sigBytes=null!=t?t:4*e.length},toString:function(e){return(e||s).stringify(this)},concat:function(e){var t=this.words,n=e.words,r=this.sigBytes;if(e=e.sigBytes,this.clamp(),r%4)for(var o=0;o<e;o++)t[r+o>>>2]|=(n[o>>>2]>>>24-o%4*8&255)<<24-(r+o)%4*8;else if(65535<n.length)for(o=0;o<e;o+=4)t[r+o>>>2]=n[o>>>2];else t.push.apply(t,n);return this.sigBytes+=e,this},clamp:function(){var t=this.words,n=this.sigBytes;t[n>>>2]&=4294967295<<32-n%4*8,t.length=e.ceil(n/4)},clone:function(){var e=i.clone.call(this);return e.words=this.words.slice(0),e},random:function(t){for(var n=[],r=0;r<t;r+=4)n.push(4294967296*e.random()|0);return new a.init(n,t)}}),c=n.enc={},s=c.Hex={stringify:function(e){var t=e.words;e=e.sigBytes;for(var n=[],r=0;r<e;r++){var o=t[r>>>2]>>>24-r%4*8&255;n.push((o>>>4).toString(16)),n.push((15&o).toString(16))}return n.join("")},parse:function(e){for(var t=e.length,n=[],r=0;r<t;r+=2)n[r>>>3]|=parseInt(e.substr(r,2),16)<<24-r%8*4;return new a.init(n,t/2)}},u=c.Latin1={stringify:function(e){var t=e.words;e=e.sigBytes;for(var n=[],r=0;r<e;r++)n.push(String.fromCharCode(t[r>>>2]>>>24-r%4*8&255));return n.join("")},parse:function(e){for(var t=e.length,n=[],r=0;r<t;r++)n[r>>>2]|=(255&e.charCodeAt(r))<<24-r%4*8;return new a.init(n,t)}},l=c.Utf8={stringify:function(e){try{return decodeURIComponent(escape(u.stringify(e)))}catch(e){throw Error("Malformed UTF-8 data")}},parse:function(e){return u.parse(unescape(encodeURIComponent(e)))}},p=r.BufferedBlockAlgorithm=i.extend({reset:function(){this._data=new a.init,this._nDataBytes=0},_append:function(e){"string"==typeof e&&(e=l.parse(e)),this._data.concat(e),this._nDataBytes+=e.sigBytes},_process:function(t){var n=this._data,r=n.words,o=n.sigBytes,i=this.blockSize,c=o/(4*i);if(t=(c=t?e.ceil(c):e.max((0|c)-this._minBufferSize,0))*i,o=e.min(4*t,o),t){for(var s=0;s<t;s+=i)this._doProcessBlock(r,s);s=r.splice(0,t),n.sigBytes-=o}return new a.init(s,o)},clone:function(){var e=i.clone.call(this);return e._data=this._data.clone(),e},_minBufferSize:0});r.Hasher=p.extend({cfg:i.extend(),init:function(e){this.cfg=this.cfg.extend(e),this.reset()},reset:function(){p.reset.call(this),this._doReset()},update:function(e){return this._append(e),this._process(),this},finalize:function(e){return e&&this._append(e),this._doFinalize()},blockSize:16,_createHelper:function(e){return function(t,n){return new e.init(n).finalize(t)}},_createHmacHelper:function(e){return function(t,n){return new d.HMAC.init(e,n).finalize(t)}}});var d=n.algo={};return n}(Math);return t=(e=n).lib.WordArray,e.enc.Base64={stringify:function(e){var t=e.words,n=e.sigBytes,r=this._map;e.clamp(),e=[];for(var o=0;o<n;o+=3)for(var i=(t[o>>>2]>>>24-o%4*8&255)<<16|(t[o+1>>>2]>>>24-(o+1)%4*8&255)<<8|t[o+2>>>2]>>>24-(o+2)%4*8&255,a=0;4>a&&o+.75*a<n;a++)e.push(r.charAt(i>>>6*(3-a)&63));if(t=r.charAt(64))for(;e.length%4;)e.push(t);return e.join("")},parse:function(e){var n=e.length,r=this._map;(o=r.charAt(64))&&-1!=(o=e.indexOf(o))&&(n=o);for(var o=[],i=0,a=0;a<n;a++)if(a%4){var c=r.indexOf(e.charAt(a-1))<<a%4*2,s=r.indexOf(e.charAt(a))>>>6-a%4*2;o[i>>>2]|=(c|s)<<24-i%4*8,i++}return t.create(o,i)},_map:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="},function(e){function t(e,t,n,r,o,i,a){return((e=e+(t&n|~t&r)+o+a)<<i|e>>>32-i)+t}function r(e,t,n,r,o,i,a){return((e=e+(t&r|n&~r)+o+a)<<i|e>>>32-i)+t}function o(e,t,n,r,o,i,a){return((e=e+(t^n^r)+o+a)<<i|e>>>32-i)+t}function i(e,t,n,r,o,i,a){return((e=e+(n^(t|~r))+o+a)<<i|e>>>32-i)+t}for(var a=n,c=(u=a.lib).WordArray,s=u.Hasher,u=a.algo,l=[],p=0;64>p;p++)l[p]=4294967296*e.abs(e.sin(p+1))|0;u=u.MD5=s.extend({_doReset:function(){this._hash=new c.init([1732584193,4023233417,2562383102,271733878])},_doProcessBlock:function(e,n){for(var a=0;16>a;a++){var c=e[s=n+a];e[s]=16711935&(c<<8|c>>>24)|4278255360&(c<<24|c>>>8)}a=this._hash.words;var s=e[n+0],u=(c=e[n+1],e[n+2]),p=e[n+3],d=e[n+4],f=e[n+5],h=e[n+6],m=e[n+7],v=e[n+8],g=e[n+9],y=e[n+10],_=e[n+11],b=e[n+12],k=e[n+13],w=e[n+14],S=e[n+15],x=t(x=a[0],T=a[1],A=a[2],O=a[3],s,7,l[0]),O=t(O,x,T,A,c,12,l[1]),A=t(A,O,x,T,u,17,l[2]),T=t(T,A,O,x,p,22,l[3]);x=t(x,T,A,O,d,7,l[4]),O=t(O,x,T,A,f,12,l[5]),A=t(A,O,x,T,h,17,l[6]),T=t(T,A,O,x,m,22,l[7]),x=t(x,T,A,O,v,7,l[8]),O=t(O,x,T,A,g,12,l[9]),A=t(A,O,x,T,y,17,l[10]),T=t(T,A,O,x,_,22,l[11]),x=t(x,T,A,O,b,7,l[12]),O=t(O,x,T,A,k,12,l[13]),A=t(A,O,x,T,w,17,l[14]),x=r(x,T=t(T,A,O,x,S,22,l[15]),A,O,c,5,l[16]),O=r(O,x,T,A,h,9,l[17]),A=r(A,O,x,T,_,14,l[18]),T=r(T,A,O,x,s,20,l[19]),x=r(x,T,A,O,f,5,l[20]),O=r(O,x,T,A,y,9,l[21]),A=r(A,O,x,T,S,14,l[22]),T=r(T,A,O,x,d,20,l[23]),x=r(x,T,A,O,g,5,l[24]),O=r(O,x,T,A,w,9,l[25]),A=r(A,O,x,T,p,14,l[26]),T=r(T,A,O,x,v,20,l[27]),x=r(x,T,A,O,k,5,l[28]),O=r(O,x,T,A,u,9,l[29]),A=r(A,O,x,T,m,14,l[30]),x=o(x,T=r(T,A,O,x,b,20,l[31]),A,O,f,4,l[32]),O=o(O,x,T,A,v,11,l[33]),A=o(A,O,x,T,_,16,l[34]),T=o(T,A,O,x,w,23,l[35]),x=o(x,T,A,O,c,4,l[36]),O=o(O,x,T,A,d,11,l[37]),A=o(A,O,x,T,m,16,l[38]),T=o(T,A,O,x,y,23,l[39]),x=o(x,T,A,O,k,4,l[40]),O=o(O,x,T,A,s,11,l[41]),A=o(A,O,x,T,p,16,l[42]),T=o(T,A,O,x,h,23,l[43]),x=o(x,T,A,O,g,4,l[44]),O=o(O,x,T,A,b,11,l[45]),A=o(A,O,x,T,S,16,l[46]),x=i(x,T=o(T,A,O,x,u,23,l[47]),A,O,s,6,l[48]),O=i(O,x,T,A,m,10,l[49]),A=i(A,O,x,T,w,15,l[50]),T=i(T,A,O,x,f,21,l[51]),x=i(x,T,A,O,b,6,l[52]),O=i(O,x,T,A,p,10,l[53]),A=i(A,O,x,T,y,15,l[54]),T=i(T,A,O,x,c,21,l[55]),x=i(x,T,A,O,v,6,l[56]),O=i(O,x,T,A,S,10,l[57]),A=i(A,O,x,T,h,15,l[58]),T=i(T,A,O,x,k,21,l[59]),x=i(x,T,A,O,d,6,l[60]),O=i(O,x,T,A,_,10,l[61]),A=i(A,O,x,T,u,15,l[62]),T=i(T,A,O,x,g,21,l[63]);a[0]=a[0]+x|0,a[1]=a[1]+T|0,a[2]=a[2]+A|0,a[3]=a[3]+O|0},_doFinalize:function(){var t=this._data,n=t.words,r=8*this._nDataBytes,o=8*t.sigBytes;n[o>>>5]|=128<<24-o%32;var i=e.floor(r/4294967296);for(n[15+(o+64>>>9<<4)]=16711935&(i<<8|i>>>24)|4278255360&(i<<24|i>>>8),n[14+(o+64>>>9<<4)]=16711935&(r<<8|r>>>24)|4278255360&(r<<24|r>>>8),t.sigBytes=4*(n.length+1),this._process(),n=(t=this._hash).words,r=0;4>r;r++)o=n[r],n[r]=16711935&(o<<8|o>>>24)|4278255360&(o<<24|o>>>8);return t},clone:function(){var e=s.clone.call(this);return e._hash=this._hash.clone(),e}}),a.MD5=s._createHelper(u),a.HmacMD5=s._createHmacHelper(u)}(Math),function(){var e,t=n,r=(e=t.lib).Base,o=e.WordArray,i=(e=t.algo).EvpKDF=r.extend({cfg:r.extend({keySize:4,hasher:e.MD5,iterations:1}),init:function(e){this.cfg=this.cfg.extend(e)},compute:function(e,t){for(var n=(c=this.cfg).hasher.create(),r=o.create(),i=r.words,a=c.keySize,c=c.iterations;i.length<a;){s&&n.update(s);var s=n.update(e).finalize(t);n.reset();for(var u=1;u<c;u++)s=n.finalize(s),n.reset();r.concat(s)}return r.sigBytes=4*a,r}});t.EvpKDF=function(e,t,n){return i.create(n).compute(e,t)}}(),n.lib.Cipher||function(e){var t=(h=n).lib,r=t.Base,o=t.WordArray,i=t.BufferedBlockAlgorithm,a=h.enc.Base64,c=h.algo.EvpKDF,s=t.Cipher=i.extend({cfg:r.extend(),createEncryptor:function(e,t){return this.create(this._ENC_XFORM_MODE,e,t)},createDecryptor:function(e,t){return this.create(this._DEC_XFORM_MODE,e,t)},init:function(e,t,n){this.cfg=this.cfg.extend(n),this._xformMode=e,this._key=t,this.reset()},reset:function(){i.reset.call(this),this._doReset()},process:function(e){return this._append(e),this._process()},finalize:function(e){return e&&this._append(e),this._doFinalize()},keySize:4,ivSize:4,_ENC_XFORM_MODE:1,_DEC_XFORM_MODE:2,_createHelper:function(e){return{encrypt:function(t,n,r){return("string"==typeof n?m:f).encrypt(e,t,n,r)},decrypt:function(t,n,r){return("string"==typeof n?m:f).decrypt(e,t,n,r)}}}});t.StreamCipher=s.extend({_doFinalize:function(){return this._process(!0)},blockSize:1});var u=h.mode={},l=function(e,t,n){var r=this._iv;r?this._iv=undefined:r=this._prevBlock;for(var o=0;o<n;o++)e[t+o]^=r[o]},p=(t.BlockCipherMode=r.extend({createEncryptor:function(e,t){return this.Encryptor.create(e,t)},createDecryptor:function(e,t){return this.Decryptor.create(e,t)},init:function(e,t){this._cipher=e,this._iv=t}})).extend();p.Encryptor=p.extend({processBlock:function(e,t){var n=this._cipher,r=n.blockSize;l.call(this,e,t,r),n.encryptBlock(e,t),this._prevBlock=e.slice(t,t+r)}}),p.Decryptor=p.extend({processBlock:function(e,t){var n=this._cipher,r=n.blockSize,o=e.slice(t,t+r);n.decryptBlock(e,t),l.call(this,e,t,r),this._prevBlock=o}}),u=u.CBC=p,p=(h.pad={}).Pkcs7={pad:function(e,t){for(var n,r=(n=(n=4*t)-e.sigBytes%n)<<24|n<<16|n<<8|n,i=[],a=0;a<n;a+=4)i.push(r);n=o.create(i,n),e.concat(n)},unpad:function(e){e.sigBytes-=255&e.words[e.sigBytes-1>>>2]}},t.BlockCipher=s.extend({cfg:s.cfg.extend({mode:u,padding:p}),reset:function(){s.reset.call(this);var e=(t=this.cfg).iv,t=t.mode;if(this._xformMode==this._ENC_XFORM_MODE)var n=t.createEncryptor;else n=t.createDecryptor,this._minBufferSize=1;this._mode=n.call(t,this,e&&e.words)},_doProcessBlock:function(e,t){this._mode.processBlock(e,t)},_doFinalize:function(){var e=this.cfg.padding;if(this._xformMode==this._ENC_XFORM_MODE){e.pad(this._data,this.blockSize);var t=this._process(!0)}else t=this._process(!0),e.unpad(t);return t},blockSize:4});var d=t.CipherParams=r.extend({init:function(e){this.mixIn(e)},toString:function(e){return(e||this.formatter).stringify(this)}}),f=(u=(h.format={}).OpenSSL={stringify:function(e){var t=e.ciphertext;return((e=e.salt)?o.create([1398893684,1701076831]).concat(e).concat(t):t).toString(a)},parse:function(e){var t=(e=a.parse(e)).words;if(1398893684==t[0]&&1701076831==t[1]){var n=o.create(t.slice(2,4));t.splice(0,4),e.sigBytes-=16}return d.create({ciphertext:e,salt:n})}},t.SerializableCipher=r.extend({cfg:r.extend({format:u}),encrypt:function(e,t,n,r){r=this.cfg.extend(r);var o=e.createEncryptor(n,r);return t=o.finalize(t),o=o.cfg,d.create({ciphertext:t,key:n,iv:o.iv,algorithm:e,mode:o.mode,padding:o.padding,blockSize:e.blockSize,formatter:r.format})},decrypt:function(e,t,n,r){return r=this.cfg.extend(r),t=this._parse(t,r.format),e.createDecryptor(n,r).finalize(t.ciphertext)},_parse:function(e,t){return"string"==typeof e?t.parse(e,this):e}})),h=(h.kdf={}).OpenSSL={execute:function(e,t,n,r){return r||(r=o.random(8)),e=c.create({keySize:t+n}).compute(e,r),n=o.create(e.words.slice(t),4*n),e.sigBytes=4*t,d.create({key:e,iv:n,salt:r})}},m=t.PasswordBasedCipher=f.extend({cfg:f.cfg.extend({kdf:h}),encrypt:function(e,t,n,r){return n=(r=this.cfg.extend(r)).kdf.execute(n,e.keySize,e.ivSize),r.iv=n.iv,(e=f.encrypt.call(this,e,t,n.key,r)).mixIn(n),e},decrypt:function(e,t,n,r){return r=this.cfg.extend(r),t=this._parse(t,r.format),n=r.kdf.execute(n,e.keySize,e.ivSize,t.salt),r.iv=n.iv,f.decrypt.call(this,e,t,n.key,r)}})}(),function(){for(var e=n,t=e.lib.BlockCipher,r=e.algo,o=[],i=[],a=[],c=[],s=[],u=[],l=[],p=[],d=[],f=[],h=[],m=0;256>m;m++)h[m]=128>m?m<<1:m<<1^283;var v=0,g=0;for(m=0;256>m;m++){var y=(y=g^g<<1^g<<2^g<<3^g<<4)>>>8^255&y^99;o[v]=y,i[y]=v;var _=h[v],b=h[_],k=h[b],w=257*h[y]^16843008*y;a[v]=w<<24|w>>>8,c[v]=w<<16|w>>>16,s[v]=w<<8|w>>>24,u[v]=w,w=16843009*k^65537*b^257*_^16843008*v,l[y]=w<<24|w>>>8,p[y]=w<<16|w>>>16,d[y]=w<<8|w>>>24,f[y]=w,v?(v=_^h[h[h[k^_]]],g^=h[h[g]]):v=g=1}var S=[0,1,2,4,8,16,32,64,128,27,54];r=r.AES=t.extend({_doReset:function(){for(var e=(n=this._key).words,t=n.sigBytes/4,n=4*((this._nRounds=t+6)+1),r=this._keySchedule=[],i=0;i<n;i++)if(i<t)r[i]=e[i];else{var a=r[i-1];i%t?6<t&&4==i%t&&(a=o[a>>>24]<<24|o[a>>>16&255]<<16|o[a>>>8&255]<<8|o[255&a]):(a=o[(a=a<<8|a>>>24)>>>24]<<24|o[a>>>16&255]<<16|o[a>>>8&255]<<8|o[255&a],a^=S[i/t|0]<<24),r[i]=r[i-t]^a}for(e=this._invKeySchedule=[],t=0;t<n;t++)i=n-t,a=t%4?r[i]:r[i-4],e[t]=4>t||4>=i?a:l[o[a>>>24]]^p[o[a>>>16&255]]^d[o[a>>>8&255]]^f[o[255&a]]},encryptBlock:function(e,t){this._doCryptBlock(e,t,this._keySchedule,a,c,s,u,o)},decryptBlock:function(e,t){var n=e[t+1];e[t+1]=e[t+3],e[t+3]=n,this._doCryptBlock(e,t,this._invKeySchedule,l,p,d,f,i),n=e[t+1],e[t+1]=e[t+3],e[t+3]=n},_doCryptBlock:function(e,t,n,r,o,i,a,c){for(var s=this._nRounds,u=e[t]^n[0],l=e[t+1]^n[1],p=e[t+2]^n[2],d=e[t+3]^n[3],f=4,h=1;h<s;h++){var m=r[u>>>24]^o[l>>>16&255]^i[p>>>8&255]^a[255&d]^n[f++],v=r[l>>>24]^o[p>>>16&255]^i[d>>>8&255]^a[255&u]^n[f++],g=r[p>>>24]^o[d>>>16&255]^i[u>>>8&255]^a[255&l]^n[f++];d=r[d>>>24]^o[u>>>16&255]^i[l>>>8&255]^a[255&p]^n[f++],u=m,l=v,p=g}m=(c[u>>>24]<<24|c[l>>>16&255]<<16|c[p>>>8&255]<<8|c[255&d])^n[f++],v=(c[l>>>24]<<24|c[p>>>16&255]<<16|c[d>>>8&255]<<8|c[255&u])^n[f++],g=(c[p>>>24]<<24|c[d>>>16&255]<<16|c[u>>>8&255]<<8|c[255&l])^n[f++],d=(c[d>>>24]<<24|c[u>>>16&255]<<16|c[l>>>8&255]<<8|c[255&p])^n[f++],e[t]=m,e[t+1]=v,e[t+2]=g,e[t+3]=d},keySize:8});e.AES=t._createHelper(r)}(),n}();function Tn(){return Ht()}var jn=null;function Cn(){var e,t,n,r;return null===jn&&(e=Ln(),t=dt.getItem(e),jn=t?(n=t,r=Tn(),An.AES.decrypt(n,r).toString(An.enc.Utf8)):null),jn}function In(e){var t=!(arguments.length>1&&void 0!==arguments[1])||arguments[1];jn=e,null===e||!1===t?Fn(Ln()):Pn(Ln(),e)}function Pn(e,t){var n,r,o=(n=t,r=Tn(),An.AES.encrypt(n,r).toString());dt.setItem(e,o)}function Fn(e){dt.removeItem(e)}var Bn={};function Ln(){var e;return Bn.accessTokenKey||(Bn.accessTokenKey="kakao_"+(e="kat"+Tn(),An.MD5(e).toString())),Bn.accessTokenKey}var En=Object.freeze({__proto__:null,getAppKey:Tn,getAccessToken:Cn,setAccessToken:In,getRefreshToken:function(){return console.error("unsupported operation: Auth.getRefreshToken()"),""},setRefreshToken:function(e){console.error("unsupported operation: Auth.setRefreshToken()")}});function Rn(){return"Bearer ".concat(Cn())}function Mn(){return"KakaoAK ".concat(Tn())}var zn={permission:lt(["A","F","M"]),enable_share:Je,android_exec_param:We,ios_exec_param:We,android_market_param:We,ios_market_param:We},Un={secure_resource:Je};function Dn(e){!1===e.secure_resource&&(console&&console.warn("KakaoWarning: The secure_resource parameter is deprecated."),e.secure_resource=!0)}function qn(e){if(!We(e))return!1;if(0===e.length||e.length>2048)throw new Jt("content length should be between 0 and 2048");return!0}function Nn(e){if((e.header_image_url||e.header_image_width||e.header_image_height)&&(delete e.header_image_url,delete e.header_image_width,delete e.header_image_height,console)){console.warn("KakaoWarning: The parameters (".concat(["header_image_url","header_image_width","header_image_height"].join(", "),") for header background image are deprecated."))}return!0}var Kn={"/v1/user/signup":{method:"post",data:{optional:{properties:g}}},"/v1/user/unlink":{method:"post"},"/v2/user/me":{method:"get",data:{optional:Pe({property_keys:f},Un)}},"/v1/user/logout":{method:"post",data:{}},"/v1/user/update_profile":{method:"post",data:{required:{properties:g}}},"/v1/user/access_token_info":{method:"get",data:{}},"/v2/user/scopes":{method:"get",data:{optional:{scopes:f}}},"/v2/user/revoke/scopes":{method:"post",data:{required:{scopes:f}}},"/v1/user/service/terms":{method:"get"},"/v1/user/shipping_address":{method:"get",data:{optional:{address_id:$e,from_updated_at:$e,page_size:$e}}},"/v1/api/talk/profile":{method:"get",data:{optional:Un,after:Dn}},"/v1/api/talk/friends":{method:"get",data:{optional:Pe({offset:$e,limit:$e,order:We},Un),after:Dn}},"/v1/friends":{method:"get",data:{optional:Pe({offset:$e,limit:$e,order:We,friend_order:We},Un),after:Dn}},"/v2/api/talk/memo/send":{method:"post",data:{required:{template_id:$e},optional:{template_args:g}}},"/v2/api/talk/memo/scrap/send":{method:"post",data:{required:{request_url:We},optional:{template_id:$e,template_args:g}}},"/v2/api/talk/memo/default/send":{method:"post",data:{required:{template_object:function(e){return g(e)&&Nn(e)}}}},"/v1/api/talk/friends/message/send":{method:"post",data:{required:{template_id:$e,receiver_uuids:f,receiver_id_type:We},optional:{template_args:g},defaults:function(){return{receiver_id_type:"uuid"}}}},"/v1/api/talk/friends/message/scrap/send":{method:"post",data:{required:{request_url:We,receiver_uuids:f,receiver_id_type:We},optional:{template_id:$e,template_args:g},defaults:function(){return{receiver_id_type:"uuid"}}}},"/v1/api/talk/friends/message/default/send":{method:"post",data:{required:{template_object:function(e){return g(e)&&Nn(e)},receiver_uuids:f,receiver_id_type:We},defaults:function(){return{receiver_id_type:"uuid"}}}},"/v2/api/kakaolink/talk/template/validate":{method:"get",data:{required:{link_ver:We,template_id:$e},optional:{template_args:g}},authType:Mn},"/v2/api/kakaolink/talk/template/scrap":{method:"get",data:{required:{link_ver:We,request_url:We},optional:{template_id:$e,template_args:g}},authType:Mn},"/v2/api/kakaolink/talk/template/default":{method:"get",data:{required:{link_ver:We,template_object:g}},authType:Mn},"/v2/api/talk/message/image/upload":{method:"post",data:{required:{file:g}},authType:Mn},"/v2/api/talk/message/image/delete":{method:"delete",data:{required:{image_url:We}},authType:Mn},"/v2/api/talk/message/image/scrap":{method:"post",data:{required:{image_url:We}},authType:Mn},"/v1/api/story/profile":{method:"get",data:{optional:Un}},"/v1/api/story/isstoryuser":{method:"get"},"/v1/api/story/mystory":{method:"get",data:{required:{id:We}}},"/v1/api/story/mystories":{method:"get",data:{optional:{last_id:We}}},"/v1/api/story/linkinfo":{method:"get",data:{required:{url:We}}},"/v1/api/story/post/note":{method:"post",data:{required:{content:qn},optional:zn}},"/v1/api/story/post/photo":{method:"post",data:{required:{image_url_list:function(e){return!!f(e)&&tt(e,(function(e){if(!We(e))return!1;if(/(http|ftp|https):\/\/[\w-]+(\.[\w-]+)+([\w.,@?^=%&amp;:\/~+#-]*[\w@?^=%&amp;\/~+#-])?/.test(e))throw new Jt("url in image_url_list should be a kage url, obtained from '/v1/api/story/upload/multi'.");return!0}))}},optional:Pe({content:qn},zn)}},"/v1/api/story/post/link":{method:"post",data:{required:{link_info:g},optional:Pe({content:qn},zn)}},"/v1/api/story/upload/multi":{method:"post",data:{}},"/v1/api/story/delete/mystory":{method:"delete",data:{required:{id:We}}},"/v1/api/talk/channels":{method:"get",data:{optional:{channel_public_ids:f}}},"/v1/api/talk/plusfriends":{method:"get",data:{optional:{plus_friend_public_ids:f}}}},Hn={request:{required:{url:function(e){return lt(rt(Kn))(e)}},optional:{data:g,files:function(e){return pt([f,Ze])(e)&&tt(e,pt([Qe,Ye]))},file:Qe,success:A,fail:A,always:A},defaults:{data:{},success:ot,fail:ot,always:ot}},api:Kn},Wn=null;function Jn(e){var t=(e=Vt(e,Hn.request,"API.request")).url,n=Hn.api[t].data;return n&&(e.data=Vt(e.data,n,"API.request - ".concat(t))),Wn||(Wn=Zt((function(){return new On.Rpc({remote:Nt.apiRemote},{remote:{request:{}}})})),Xn.push((function(){Wn.destroy(),Wn=null}))),new xn.Promise((function(t,n){(function(e){var t=e.url,n=Hn.api[t],r={};He(e.data,(function(e,t){r[t]=We(e)?e:JSON.stringify(e)}));var o={url:t,method:n.method,headers:{KA:qt,Authorization:(n.authType||Rn)(),"Cache-Control":"no-cache",Pragma:"no-cache"},data:r};return new xn.Promise((function(n,i){if(function(e){return"/v1/api/story/upload/multi"===e||"/v2/api/talk/message/image/upload"===e}(t)||e.data.file){var a=e.files||e.data.file;if(!a)throw new Jt("'files' parameter should be set for ".concat(t));(function(e){var t=et(e,(function(e){return function(e){return new xn.Promise((function(t,n){"undefined"==typeof FileReader&&n(new Jt("File API is not supported for this browser."));var r=new FileReader;r.onload=function(e){try{t((r=e.target.result,Array.prototype.slice.call(new Uint8Array(r)).reduce((function(e,t){return e+String.fromCharCode.apply(null,[t])}),"")))}catch(e){n(e)}var r},r.onerror=function(t){n(new Jt("Cannot read file: ".concat(e.name)))},r.readAsArrayBuffer(e)}))}(e).then((function(t){return{name:e.name,type:e.type,str:t}}))}));return new xn.Promise((function(e,n){xn.Promise.all(t).then((function(t){e({paramName:"file",data:t})}),(function(e){n(e)}))}))})(a).then((function(e){var t=[];for(var i in r)"file"!==i&&t.push("".concat(i,"=").concat(encodeURIComponent(r[i])));t.length>0&&(o.url+="?".concat(t.join("&"))),o.file=e,n(o)}),(function(e){i(e)}))}else n(o)}))})(e).then((function(r){Wn.request(r,(function(n){e.success(n),e.always(n),t(n)}),(function(t){var r=function(e){try{return JSON.parse(e.message.responseText)}catch(e){return{code:-777,msg:"Unknown error"}}}(t);e.fail(r),e.always(r),n(r)}))}),(function(e){n(e)}))}))}var Xn=[];var $n=Object.freeze({__proto__:null,request:Jn,cleanup:function(){$t(Xn)}});function Gn(e,t){return Pe(e,{remote:Nt.loginWidget,channel:it()}),Zt((function(){var n=new On.Rpc(e,{local:{postResponse:t,getKakaoAgent:function(){return qt}},remote:{getCode:{},getAccessToken:{},setClient:{},setStateToken:{},deleteAuthCookie:{}}});return n.channel=e.channel,n}))}var Vn="_blank",Yn="width=380, height=520, scrollbars=yes",Qn=/Version\/4.0/i.test(Ut.ua)||/; wv\)/i.test(Ut.ua),Zn=/naver\(inapp|fb_iab|daumapps|instagram|ebay/g.test(Ut.ua);function er(){if(Ut.os.ios){var e=/safari|FxiOS|CriOS/.test(Ut.ua),t=!/KAKAOTALK/i.test(Ut.ua);return e||t}return!!Ut.os.android&&(Ut.browser.chrome&&!/opr\//i.test(Ut.ua)&&Ut.browser.version.major>=30&&(!Qn||Qn&&Zn))}var tr={login:function(e,t,n,r){if(er()){var o=null;if(Ut.os.ios){var i=function(e,t){t.state=e;var n={client_id:Ht(),redirect_uri:Nt.redirectUri,params:JSON.stringify(t)};return"".concat(Nt.talkLoginScheme,"?").concat(ut(n))}(e,n),a="".concat(Nt.universalKakaoLink).concat(encodeURIComponent(i),"&web=").concat(encodeURIComponent(t));r?location.href=a:o=tn(a,Vn,Yn)}else if(Ut.os.android){var c=function(e,t,n){return["intent:#Intent","action=com.kakao.talk.intent.action.CAPRI_LOGGED_IN_ACTIVITY","launchFlags=0x08880000","S.com.kakao.sdk.talk.appKey=".concat(Ht()),"S.com.kakao.sdk.talk.redirectUri=".concat(Nt.talkLoginRedirectUri),"S.com.kakao.sdk.talk.state=".concat(e),"S.com.kakao.sdk.talk.kaHeader=".concat(qt),"S.com.kakao.sdk.talk.extraparams=".concat(encodeURIComponent(JSON.stringify(n))),"S.browser_fallback_url=".concat(encodeURIComponent(t)),"end;"].join(";")}(e,t,n);r?location.href=c:Ut.browser.version.major>40&&(!Qn||Qn&&Zn)?o=tn(c,Vn,Yn):(o=tn("",Vn,Yn))&&(o.addEventListener("unload",(function(){setTimeout((function(){o&&o.location&&(o.location.href=t)}),10)})),o.location.href=c)}return o}},isSupport:er},nr=new cn(1e3,600);function rr(e){var t=it()+it();if(tr.isSupport()&&e.throughTalk)sr(e,t);else if(e.redirectUri)location.href=dr(e);else if(Ut.os.android&&/KAKAOTALK/i.test(Ut.ua)&&Ut.browser.chrome&&Ut.browser.version.major>=71){sr(e,t,fn(Pe({},hn(e),mn(e),{redirect_uri:Nt.talkLoginRedirectUri,response_type:"code",state:t,ka:qt,origin:zt})))}else{Ut.browser.msie&&parseInt(Ut.browser.version.major)<=9||function(e){var t=function t(n){var r=n.origin,o=n.data;if(/\.kakao\.com$/.test(r)&&o&&"string"==typeof o){var i=o.split(" ");if("postResponse"===i[1]){var a=JSON.parse(decodeURIComponent(i[2]));fr(e,a),st(window,"message",t)}}};ct(window,"message",t),mr.push((function(){st(window,"message",t)}))}(e),dn(pr(e,t))}an.dispatch("LOGIN_START")}var or=null,ir=function(){or&&or.close&&or.close(),or=null},ar=null,cr=null;function sr(e,t,n){ar||(ar=Gn({},(function(t){if("error"!==t.status||"500"!==t.error_code&&"600"!==t.error_code&&"700"!==t.error_code||(nr.stop(),"700"===t.error_code&&(location.href="".concat(Nt.authDomain,"/error/network")),fr(e,{error:t.error,error_description:t.error_description})),t.status)if("ok"===t.status){if(nr.stop(),cr===t.code)return;cr=t.code,ar.getAccessToken(t.code,Ht(),Ut.os.ios&&!n?Nt.redirectUri:Nt.talkLoginRedirectUri,e.approvalType),ir()}else Ut.os.ios&&"about:blank"===or.location.href&&ir();else fr(e,t)})),mr.push((function(){ar.destroy(),ar=null})));var r="";if(n)e.redirectUri?location.href=n:dn(n);else{r=e.redirectUri?dr(e):pr(e,t,Ut.os.ios?Nt.redirectUri:Nt.talkLoginRedirectUri);var o=Pe({},hn(e),mn(e));setTimeout((function(){or=tr.login(t,r,o,e.redirectUri)}),500)}nr.start((function(){t&&ar.getCode(t,Ht(),qt)}),(function(){fr(e,{error:"timeout",description:"Account login timed out. Please login again.",error_description:"Account login timed out. Please login again."}),e.redirectUri?location.href=r:dn(r)}))}var ur=null,lr={};function pr(e,t,n){ur||(ur=Gn({},(function(e){fr(function(e,t){if(!t[e.stateToken])throw new Jt("security error: #CST2");var n=t[e.stateToken];return delete t[e.stateToken],delete e.stateToken,n}(e,lr),e)})),mr.push((function(){ur.destroy(),ur=null}))),lr[t]=e;var r=e.redirectUri?e.redirectUri:n||"kakaojs";return fn(Pe({},hn(e),mn(e),{redirect_uri:r,response_type:"code",state:t,proxy:"easyXDM_Kakao_".concat(ur.channel,"_provider"),ka:qt,origin:zt}))}function dr(e){return fn(Pe({},hn(e),mn(e),{redirect_uri:e.redirectUri,response_type:"code",ka:qt,origin:zt}))}function fr(e,t){t.error?"access_denied"!==t.error&&In(null):(In(t.access_token,e.persistAccessToken),an.dispatch("LOGIN")),vn(e,t)}var hr=null;var mr=[];var vr=Xt([bn,Object.freeze({__proto__:null,createLoginButton:function(e){var t=at((e=Vt(e,pn.createLoginButton,"Auth.createLoginButton")).container);if(!t)throw new Jt("container is required for Kakao login button: pass in element or id");var n="medium"===e.size?"02":"small"===e.size?"03":"01",r="".concat(Nt.authDomain,"/public/widget/login/").concat(e.lang,"/").concat(e.lang,"_").concat(n,"_medium"),o="".concat(r,".png"),i="".concat(r,"_press.png");t.innerHTML='<img\n    id="kakao-login-btn"\n    src='.concat(o,"\n    onmouseover=this.src='").concat(i,"'\n    onmouseout=this.src='").concat(o,'\'\n    style="cursor: pointer"\n  />');var a=function(){rr(e)};ct(t,"click",a),mr.push((function(){st(t,"click",a)}))},login:function(e){rr(e=Vt(e,pn.login,"Auth.login"))},loginForm:function(e){e=Vt(e,pn.login,"Auth.loginForm");var t=it()+it(),n="&prompt=login";e.redirectUri?location.href="".concat(dr(e)).concat(n):dn("".concat(pr(e,t)).concat(n))},autoLogin:function(e){if(e=Vt(e,pn.autoLogin,"Auth.autoLogin"),wn()||Ut.os.android&&/KAKAOTALK/i.test(Ut.ua)){var t=it()+it();sr(e,t,fn(Pe({},hn(e),{redirect_uri:Nt.talkLoginRedirectUri,response_type:"code",state:t,ka:qt,origin:zt,prompt:"none"})))}else vn(e,{error:"auto_login",error_description:"Kakao.Auth.autoLogin is only supported by KakaoTalk InAppBrowser",error_code:"400",status:"error"});an.dispatch("LOGIN_START")},logout:function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:ot;Gt(e,A,"Auth.logout"),Jn({url:"/v1/user/logout",always:function(){In(null),an.dispatch("LOGOUT"),e(!0)}})},issueAccessToken:function(e){e=Vt(e,pn.issueAccessToken,"Auth.issueAccessToken"),hr||(hr=Gn({},(function(t){fr(e,t)})),mr.push((function(){hr.destroy(),hr=null}))),hr.getAccessToken(e.code,Ht(),e.redirectUri)},cleanup:function(){$t(mr)}}),En,Object.freeze({__proto__:null,getStatusInfo:function(e){Gt(e,A,"Auth.getStatusInfo"),Cn()?Jn({url:"/v2/user/me",success:function(t){e({status:"connected",user:t})},fail:function(){e({status:"not_connected"})}}):e({status:"not_connected"})}})]),gr=Xt([$n]);function yr(e){return e.charAt(0).toUpperCase()+e.slice(1)}function _r(e){return g(e)?JSON.stringify(e):e}function br(e,t){return Jn({url:e,data:t})}function kr(e,t,n){return Vt(e,t,'parameter "'.concat(n,'" in Link')),!0}var wr={optional:{webUrl:We,mobileWebUrl:We,androidExecutionParams:We,androidExecParams:We,iosExecutionParams:We,iosExecParams:We},builder:Sr};function Sr(e){return{web_url:e.webUrl,mobile_web_url:e.mobileWebUrl,android_execution_params:e.androidExecutionParams||e.androidExecParams,ios_execution_params:e.iosExecutionParams||e.iosExecParams}}function xr(e){return{title:e.title,link:Sr(e.link)}}function Or(e){return{title:e.title,image_url:e.imageUrl,link:Sr(e.link),image_width:e.imageWidth,image_height:e.imageHeight,description:e.description}}var Ar={headerLink:wr,link:wr,button:{required:{title:We,link:function(e){kr(e,wr,"link")}},builder:xr},buttons:{optional:{0:function(e){kr(e,Ar.button,"button")},1:function(e){kr(e,Ar.button,"button")}},builder:function(e){return et(e,xr)}},content:{required:{title:We,imageUrl:We,link:function(e){kr(e,wr,"link")}},optional:{imageWidth:$e,imageHeight:$e,description:We},builder:Or},contents:{optional:{0:function(e){kr(e,Ar.content,"content")},1:function(e){kr(e,Ar.content,"content")},2:function(e){kr(e,Ar.content,"content")}},builder:function(e){return et(e,Or)}},commerce:{required:{regularPrice:$e},optional:{discountPrice:$e,discountRate:$e,fixedDiscountPrice:$e,productName:We},builder:function(e){return{regular_price:e.regularPrice,discount_price:e.discountPrice,discount_rate:e.discountRate,fixed_discount_price:e.fixedDiscountPrice,product_name:e.productName}}},social:{optional:{likeCount:$e,commentCount:$e,sharedCount:$e,viewCount:$e,subscriberCount:$e},builder:function(e){return{like_count:e.likeCount,comment_count:e.commentCount,shared_count:e.sharedCount,view_count:e.viewCount,subscriber_count:e.subscriberCount}}}};var Tr={create:function(e,t,n){var r=Ar[t];if(r)return e=Vt(e,r,'parameter "'.concat(t,'" in ').concat(n||"Link")),r.builder(e)}},jr=function e(t,n){ht(this,e),this.appkey=Ht(),this.appver="1.0",this.linkver="4.0",this.extras=Pe({KA:qt},t.extras),t.serverCallbackArgs&&(this.extras.lcba=_r(t.serverCallbackArgs)),this.template_json=n.template_msg,this.template_args=n.template_args,this.template_id=n.template_id};var Cr=function e(t){var n=this;ht(this,e),this.link_ver="4.0",this.template_object={object_type:t.objectType,button_title:t.buttonTitle||""},He(t,(function(e,t){var r=Tr.create(e,t,"defaultObject");r&&(n.template_object[t]=r)}))},Ir={FeedLink:Cr,CommerceLink:Cr};Ir.ListLink=function(e){yt(n,e);var t=wt(n);function n(e){var r;ht(this,n);var o=(r=t.call(this,e)).template_object;if(o.header_title=e.headerTitle||"",o.header_link=o.headerLink||{},delete o.headerLink,console&&(e.headerImageUrl||e.headerImageWidth||e.headerImageHeight)){console.warn("KakaoWarning: The parameters (".concat(["headerImageUrl","headerImageWidth","headerImageHeight"].join(", "),") for header background image are deprecated."))}return r}return n}(Cr),Ir.LocationLink=function(e){yt(n,e);var t=wt(n);function n(e){var r;ht(this,n);var o=(r=t.call(this,e)).template_object;return o.address=e.address||"",o.address_title=e.addressTitle||"",r}return n}(Cr),Ir.TextLink=function(e){yt(n,e);var t=wt(n);function n(e){var r;return ht(this,n),(r=t.call(this,e)).template_object.text=e.text||"",r}return n}(Cr);var Pr=function e(t){ht(this,e),this.link_ver="4.0",this.request_url=t.requestUrl,t.templateId&&(this.template_id=t.templateId),t.templateArgs&&(this.template_args=t.templateArgs)},Fr=function e(t){ht(this,e),this.link_ver="4.0",this.template_id=t.templateId,this.template_args=t.templateArgs};var Br="kakao_link_web_sharer",Lr="location=no,resizable=no,status=no,scrollbars=no,width=460,height=608";var Er={send:function(e,t,n){var r={app_key:Ht(),ka:qt,validation_action:t,validation_params:JSON.stringify(n)};e.serverCallbackArgs&&(r.lcba=_r(e.serverCallbackArgs));var o="".concat(Nt.sharerDomain,"/talk/friends/picker/easylink?").concat(ut(r)),i=null;!Ut.browser.msie&&!Ut.browser.spartan&&o.length<2084?(i=tn(o,Br,Lr)).focus():i=rn(r,{url:"".concat(Nt.sharerDomain,"/talk/friends/picker/link"),popupName:Br,popupFeatures:Lr}),e.callback&&function(e,t){if(Ut.browser.msie)return void(console&&console.warn("KakaoWarning: The callback parameter does not support the IE browser."));var n=function(e){"sent"===e.data&&e.origin===Nt.sharerDomain&&t()};ct(window,"message",n);var r=setInterval((function(){e.closed&&(clearInterval(r),st(window,"message",n))}),1e3)}(i,e.callback)}},Rr=function(){var e=Tt(),t=e.os,n=["firefox","opr/"],r=["KAKAOTALK"];function o(e){window.top.location.replace(e)}function i(e,t,n){var r=(new Date).getTime();return setTimeout((function(){var o=(new Date).getTime();a()&&o-r<e+100&&n(t)}),e)}function a(){for(var e=["hidden","webkitHidden"],t=0,n=e.length;t<n;t++)if(void 0!==document[e[t]])return!document[e[t]];return!0}function c(e){setTimeout((function(){(function(e){var t=document.createElement("iframe");return t.id=e,t.style.border="none",t.style.width="0",t.style.height="0",t.style.display="none",t.style.overflow="hidden",document.body.appendChild(t),t}("appLauncher")).src=e}),100)}return function(s){var u,l,p,d,f="function"==typeof s.willInvokeApp?s.willInvokeApp:function(){},h="function"==typeof s.onAppMissing?s.onAppMissing:o,m="function"==typeof s.onUnsupportedEnvironment?s.onUnsupportedEnvironment:function(){};f(),t.android?(l=e.browser.chrome&&+e.browser.version.major>=25,p=new RegExp(n.join("|"),"i"),d=new RegExp(r.join("|"),"i"),(l&&!p.test(e.ua)||d.test(e.ua))&&s.intentURI&&!s.useUrlScheme?function(t){e.browser.chrome?n():setTimeout(n,100);function n(){top.location.href=t}}(s.intentURI):s.storeURL&&(u=s.urlScheme,i(300,s.storeURL,h),c(u))):t.ios&&s.storeURL?function(t,n,r,o){var s=i(5e3,n,r);parseInt(e.os.version.major,10)<8?function(e){window.addEventListener("pagehide",(function t(){a()&&(clearTimeout(e),window.removeEventListener("pagehide",t))}))}(s):function(e){document.addEventListener("visibilitychange",(function t(){a()&&(clearTimeout(e),document.removeEventListener("visibilitychange",t))}))}(s);parseInt(e.os.version.major,10)>8&&e.os.ios?(void 0===o?o=t:clearTimeout(s),function(e){window.top.location.replace(e)}(o)):c(t)}(s.urlScheme,s.storeURL,h,s.universalLink):setTimeout((function(){m()}),100)}}(),Mr=new cn(100,100),zr="362057947";function Ur(e,t){!function(e,t,n){var r=["intent:".concat(e,"#Intent"),"launchFlags=0x14008000","".concat(!0===n?"package=".concat(Nt.talkAndroidPackage,";"):"","end;")].join(";"),o={urlScheme:e,intentURI:r,appName:"KakaoTalk",storeURL:Qt(Nt.talkAndroidPackage,zr),onUnsupportedEnvironment:function(){t(e)}};(!n||wn()||kn())&&(o.onAppMissing=ot);wn()&&(o.universalLink=void 0);try{Rr(o)}catch(e){}}(function(e,t){var n=new jr(e,t);if(JSON.stringify(n).length>1e4)throw new Jt("Failed to send message because it exceeds the message size limit. Please contact the app administrator.");var r=Ut.os.ios?Nt.talkLinkScheme:"kakaolink://send";return"".concat(r,"?").concat(ut(n))}(t,e),t.fail,t.installTalk);var n={template_msg:e.template_msg||{},warning_msg:e.warning_msg||{},argument_msg:e.argument_msg||{}};t.success(n),t.always(n)}var Dr={send:function(e,t,n){var r=null;if(Ut.browser.iphone&&/version/.test(Ut.ua.toLowerCase())){var o=null;r=function(e){o=e},Mr.start((function(){null!==o&&(Mr.stop(),Ur(o,e))}),(function(){var t={error:"timeout",error_description:"LINK_TIMEOUT"};e.fail(t),e.always(t)}))}else r=Ur;return br(t,n).then((function(t){r(t,e)}),(function(t){e.fail(t),e.always(t)}))}},qr={success:A,fail:A,always:A,callback:A,installTalk:Je,throughTalk:Je,extras:g,serverCallbackArgs:pt([function(e){try{JSON.parse(e)}catch(e){return!1}return!0},g])},Nr={success:ot,fail:ot,always:ot,installTalk:!1,throughTalk:!0};function Kr(e){if(!f(e))return!1;if(e.length>2)throw new Jt('Illegal argument for "buttons" in Link: size of buttons should be up to 2');return!0}var Hr={required:{objectType:function(e){return"feed"===e},content:g},optional:Pe({social:g,buttonTitle:We,buttons:Kr},qr),defaults:Nr},Wr={required:{objectType:function(e){return"list"===e},headerTitle:We,headerLink:g,contents:function(e){if(!f(e))return!1;if(e.length<2||e.length>3)throw new Jt('Illegal argument for "contents" in Link: size of contents should be more than 1 and up to 3');return!0}},optional:Pe({buttonTitle:We,buttons:Kr,headerImageUrl:We,headerImageWidth:$e,headerImageHeight:$e},qr),defaults:Nr},Jr={required:{objectType:function(e){return"commerce"===e},content:g,commerce:g},optional:Pe({buttonTitle:We,buttons:Kr},qr),defaults:Nr},Xr={required:{objectType:function(e){return"location"===e},content:g,address:We},optional:Pe({addressTitle:We,social:g,buttonTitle:We,buttons:Kr},qr),defaults:Nr},$r={required:{objectType:function(e){return"text"===e},text:We,link:g},optional:Pe({buttonTitle:We,buttons:Kr},qr),defaults:Nr},Gr={required:{requestUrl:We},optional:Pe({templateId:$e,templateArgs:g},qr),defaults:Pe({templateArgs:{}},Nr)},Vr={required:{templateId:$e},optional:Pe({templateArgs:g},qr),defaults:Pe({templateArgs:{}},Nr)};function Yr(e){return Ke({required:Pe({container:pt([Xe,We])},e.required)},e)}var Qr={defaultObjectTypes:["feed","list","commerce","location","text"],sendFeed:Hr,createFeedButton:Yr(Hr),sendList:Wr,createListButton:Yr(Wr),sendCommerce:Jr,createCommerceButton:Yr(Jr),sendLocation:Xr,createLocationButton:Yr(Xr),sendText:$r,createTextButton:Yr($r),sendScrap:Gr,createScrapButton:Yr(Gr),sendCustom:Vr,createCustomButton:Yr(Vr),uploadImage:{required:{file:g}},deleteImage:{required:{imageUrl:We}},scrapImage:{required:{imageUrl:We}}};function Zr(e,t){var n=at(e.container);if(!n)throw new Jt("container is required for KakaoTalk Link: pass in element or id");var r=function(n){n.preventDefault(),n.stopPropagation(),to(e,t)};ct(n,"click",r),no.push((function(){st(n,"click",r)}))}var eo={default:{makeLinkFunc:function(e){return new(0,Ir["".concat(yr(e.objectType),"Link")])(e)},requestUrl:"/v2/api/kakaolink/talk/template/default"},scrap:{makeLinkFunc:function(e){return new Pr(e)},requestUrl:"/v2/api/kakaolink/talk/template/scrap"},custom:{makeLinkFunc:function(e){return new Fr(e)},requestUrl:"/v2/api/kakaolink/talk/template/validate"}};function to(e,t){var n=eo[t],r=n.makeLinkFunc,o=n.requestUrl,i=r(e),a=Ut.os.ios&&"tablet"===Ut.platform;!e.throughTalk||"mobile"!==Ut.platform&&!a?Er.send(e,t,i):Dr.send(e,o,i)}var no=[];var ro=Xt([Object.freeze({__proto__:null,createDefaultButton:function(e){if(!e.objectType||!lt(Qr.defaultObjectTypes)(e.objectType))throw new Jt("objectType should be one of (".concat(Qr.defaultObjectTypes.join(", "),")"));Zr(e=Vt(e,Qr["create".concat(yr(e.objectType),"Button")],"Link.createDefaultButton"),"default")},sendDefault:function(e){if(!e.objectType||!lt(Qr.defaultObjectTypes)(e.objectType))throw new Jt("objectType should be one of (".concat(Qr.defaultObjectTypes.join(", "),")"));to(e=Vt(e,Qr["send".concat(yr(e.objectType))],"Link.sendDefault"),"default")},createScrapButton:function(e){Zr(e=Vt(e,Qr.createScrapButton,"Link.createScrapButton"),"scrap")},sendScrap:function(e){to(e=Vt(e,Qr.sendScrap,"Link.sendScrap"),"scrap")},createCustomButton:function(e){Zr(e=Vt(e,Qr.createCustomButton,"Link.createCustomButton"),"custom")},sendCustom:function(e){to(e=Vt(e,Qr.sendCustom,"Link.sendCustom"),"custom")},cleanup:function(){$t(no)}}),Object.freeze({__proto__:null,uploadImage:function(e){return br("/v2/api/talk/message/image/upload",{file:(e=Vt(e,Qr.uploadImage,"Link.uploadImage")).file})},deleteImage:function(e){return br("/v2/api/talk/message/image/delete",{image_url:(e=Vt(e,Qr.deleteImage,"Link.deleteImage")).imageUrl})},scrapImage:function(e){return br("/v2/api/talk/message/image/scrap",{image_url:(e=Vt(e,Qr.scrapImage,"Link.scrapImage")).imageUrl})}})]),oo="width=350, height=510";function io(e,t,n){var r=document.createElement("a");r.setAttribute("href","#");var o=document.createElement("img");return o.setAttribute("src",t),o.setAttribute("title",n),o.setAttribute("alt",n),e.supportMultipleDensities&&o.setAttribute("srcset",[t.replace(".png","_2X.png 2x"),t.replace(".png","_3X.png 3x")].join(", ")),r.appendChild(o),r}function ao(e){return ut({api_ver:e,kakao_agent:qt,app_key:Ht(),referer:zt+location.pathname+location.search})}var co=["small","large"],so=["yellow","mono"],uo=["pc","mobile"],lo=["consult","question"],po={createAddChannelButton:{required:{container:pt([Xe,We]),channelPublicId:We},optional:{size:lt(co),supportMultipleDensities:Je},defaults:{size:co[0],supportMultipleDensities:!1}},addChannel:{required:{channelPublicId:We}},createChatButton:{required:{container:pt([Xe,We]),channelPublicId:We},optional:{size:lt(co),color:lt(so),shape:lt(uo),title:lt(lo),supportMultipleDensities:Je},defaults:{size:co[0],color:so[0],shape:uo[0],title:lo[0],supportMultipleDensities:!1}},chat:{required:{channelPublicId:We}}};function fo(e){var t="".concat(Nt.channel,"/").concat(e.channelPublicId,"/friend");null!==Ht()&&(t+="?".concat(ao("1.1"))),tn(t,"channel_add_social_plugin",oo)}function ho(e){var t="".concat(Nt.channel,"/").concat(e.channelPublicId,"/chat");null!==Ht()&&(t+="?".concat(ao("1.1"))),tn(t,"channel_chat_social_plugin",oo)}var mo=[];var vo=Xt([Object.freeze({__proto__:null,createAddChannelButton:function(e){var t=at(e.container);if(!t)throw new Jt("container is required for Channel.createAddChannelButton: pass in element or id");nn(e,t,{channelPublicId:"data-channel-public-id",size:"data-size",supportMultipleDensities:"data-support-multiple-densities"});var n=function(e){var t="friendadd_".concat(e.size,"_yellow_rect.png");return"".concat(Nt.channelIcon,"/channel/").concat(t)}(e=Vt(e,po.createAddChannelButton,"Channel.createAddChannelButton")),r=io(e,n,"카카오톡 채널 추가 버튼");t.appendChild(r);var o=function(t){t.preventDefault(),fo(e)};ct(r,"click",o),mo.push((function(){st(r,"click",o),t.removeChild(r)}))},addChannel:function(e){fo(e=Vt(e,po.addChannel,"Channel.addChannel"))},createChatButton:function(e){var t=at(e.container);if(!t)throw new Jt("container is required for Channel.createChatButton: pass in element or id");nn(e,t,{channelPublicId:"data-channel-public-id",size:"data-size",color:"data-color",shape:"data-shape",title:"data-title",supportMultipleDensities:"data-support-multiple-densities"});var n=function(e){var t="".concat(e.title,"_").concat(e.size,"_").concat(e.color,"_").concat(e.shape,".png");return"".concat(Nt.channelIcon,"/channel/").concat(t)}(e=Vt(e,po.createChatButton,"Channel.createChatButton")),r=io(e,n,"카카오톡 채널 1:1 채팅 버튼");t.appendChild(r);var o=function(t){t.preventDefault(),ho(e)};ct(r,"click",o),mo.push((function(){st(r,"click",o),t.removeChild(r)}))},chat:function(e){ho(e=Vt(e,po.chat,"Channel.chat"))},cleanup:function(){$t(mo)}})]),go={createAddFriendButton:{required:{container:pt([Xe,We]),plusFriendId:We},optional:{size:lt(["small","large"]),color:lt(["yellow","black"]),shape:lt(["rect","round"]),supportMultipleDensities:Je},defaults:{size:"small",color:"yellow",shape:"rect",supportMultipleDensities:!1}},addFriend:{required:{plusFriendId:We}},createChatButton:{required:{container:pt([Xe,We]),plusFriendId:We},optional:{size:lt(["small","large"]),color:lt(["yellow","mono"]),shape:lt(["pc","mobile"]),title:lt(["consult","question"]),supportMultipleDensities:Je},defaults:{size:"small",color:"yellow",shape:"pc",title:"consult",supportMultipleDensities:!1}},chat:{required:{plusFriendId:We}}};function yo(){console&&console.warn("KakaoWarning: Kakao.PlusFriend is deprecated. Please use Kakao.Channel instead.")}function _o(e){var t="".concat(Nt.channel,"/").concat(e.plusFriendId,"/friend");null!==Ht()&&(t+="?".concat(ao("1.0"))),tn(t,"plus_friend_add_social_plugin",oo)}function bo(e){var t="".concat(Nt.channel,"/").concat(e.plusFriendId,"/chat");null!==Ht()&&(t+="?".concat(ao("1.0"))),tn(t,"plus_friend_chat_social_plugin",oo)}var ko=[];var wo=Xt([Object.freeze({__proto__:null,createAddFriendButton:function(e){yo();var t=at(e.container);if(!t)throw new Jt("container is required for PlusFriend.createAddFriendButton: pass in element or id");nn(e,t,{plusFriendId:"data-plusfriend-id",size:"data-size",color:"data-color",shape:"data-shape",supportMultipleDensities:"data-support-multiple-densities"});var n=function(e){var t="friendadd_".concat(e.size,"_").concat(e.color,"_").concat(e.shape,".png");return"".concat(Nt.channelIcon,"/plusfriend/").concat(t)}(e=Vt(e,go.createAddFriendButton,"PlusFriend.createAddFriendButton")),r=io(e,n,"플러스친구 친구 추가 버튼");t.appendChild(r);var o=function(t){t.preventDefault(),_o(e)};ct(r,"click",o),ko.push((function(){st(r,"click",o),t.removeChild(r)}))},addFriend:function(e){yo(),_o(e=Vt(e,go.addFriend,"PlusFriend.addFriend"))},createChatButton:function(e){yo();var t=at(e.container);if(!t)throw new Jt("container is required for PlusFriend.createChatButton: pass in element or id");nn(e,t,{plusFriendId:"data-plusfriend-id",size:"data-size",color:"data-color",shape:"data-shape",title:"data-title",supportMultipleDensities:"data-support-multiple-densities"});var n=function(e){var t="".concat(e.title,"_").concat(e.size,"_").concat(e.color,"_").concat(e.shape,".png");return"".concat(Nt.channelIcon,"/plusfriend/").concat(t)}(e=Vt(e,go.createChatButton,"PlusFriend.createChatButton")),r=io(e,n,"플러스친구 1:1 채팅 버튼");t.appendChild(r);var o=function(t){t.preventDefault(),bo(e)};ct(r,"click",o),ko.push((function(){st(r,"click",o),t.removeChild(r)}))},chat:function(e){yo(),bo(e=Vt(e,go.chat,"PlusFriend.chat"))},cleanup:function(){$t(ko)}})]),So={required:{title:We},optional:{desc:We,name:We,images:f,type:We},defaults:{type:"website"},after:function(e){e.images&&(e.imageurl=e.images,delete e.images)}},xo={createShareButton:{required:{container:pt([Xe,We])},optional:{url:We,text:We},defaults:{url:location.href}},share:{optional:{url:We,text:We},defaults:{url:location.href}},open:{optional:{url:We,text:We,urlInfo:function(e){return g(e)&&!!Vt(e,So,"Story.open")},install:Je},defaults:{url:location.href,install:!1}},createFollowButton:{required:{container:pt([Xe,We]),id:We},optional:{showFollowerCount:Je,type:lt(["horizontal","vertical"])},defaults:{showFollowerCount:!0,type:"horizontal"},after:function(e){"@"!==e.id[0]&&(e.id="@".concat(e.id))}}};function Oo(e){var t=Pe({url:e.url},To());e.text&&(t.text=e.text),tn("".concat(Nt.storyShare,"?").concat(ut(t)),"kakaostory_social_plugin","width=670, height=800, scrollbars=yes")}var Ao=0;function To(){var e={kakao_agent:qt};return null!==Ht()&&(e.app_key=Ht()),e}var jo=[];var Co=Xt([Object.freeze({__proto__:null,createShareButton:function(e){var t=at(e.container);if(!t)throw new Jt("container is required for Story.createShareButton: pass in element or id");nn(e,t,{url:"data-url"}),e=Vt(e,xo.createShareButton,"Story.createShareButton");var n=function(e,t){var n=document.createElement("a");n.setAttribute("href","#");var r=document.createElement("img");return r.setAttribute("src",e),r.setAttribute("title",t),r.setAttribute("alt",t),n.appendChild(r),n}(Nt.storyIcon,"카카오스토리 웹 공유 버튼");t.appendChild(n);var r=function(t){t.preventDefault(),Oo(e)};ct(n,"click",r),jo.push((function(){st(n,"click",r),t.removeChild(n)}))},share:function(e){Oo(e=Vt(e,xo.share,"Story.share"))},open:function(e){var t=function(e){var t=location.hostname||"",n=Pe({apiver:"1.0",appver:Dt,appid:t,appname:t,post:e.text?"".concat(e.text,"\n").concat(e.url):e.url},To());e.urlInfo&&(n.urlinfo=JSON.stringify(e.urlInfo),n.appname=e.urlInfo.name||n.appname);return"".concat(Nt.storyPostScheme,"?").concat(ut(n))}(e=Vt(e,xo.open,"Story.open")),n={urlScheme:t,intentURI:["intent:".concat(t,"#Intent"),"".concat(e.install?"package=com.kakao.story;":"","end;")].join(";"),appName:"KakaoStory",storeURL:Qt("com.kakao.story","486244601"),onUnsupportedEnvironment:function(){e.fail&&e.fail()}};try{Rr(n)}catch(e){}},createFollowButton:function(e){var t=at(e.container);if(!t)throw new Jt("container is required for Story.createFollowButton: pass in element or id");nn(e,t,{id:"data-id",showFollowerCount:"data-show-follower-count",type:"data-type"});var n=function(e){var t=Ao++,n=e.showFollowerCount&&"horizontal"===e.type?85:59,r=e.showFollowerCount&&"vertical"===e.type?46:20,o=document.createElement("iframe");o.src=function(e,t){var n=Pe({id:e.id,type:e.type,hideFollower:!e.showFollowerCount,frameId:t},To());return"".concat(Nt.storyChannelFollow,"?").concat(ut(n))}(e,t),o.setAttribute("frameborder","0"),o.setAttribute("marginwidth","0"),o.setAttribute("marginheight","0"),o.setAttribute("scrolling","no"),o.setAttribute("style","width:".concat(n,"px; height:").concat(r,"px;"));var i=function(e){if(e.data&&/\.kakao\.com$/.test(e.origin)&&"string"==typeof e.data){var i=St(et(e.data.split(","),(function(e){return parseInt(e,10)})),3),a=i[0],c=i[1],s=i[2];a===t&&(n!==c&&(o.style.width="".concat(c,"px")),r!==s&&(o.style.height="".concat(s,"px")))}};return{iframe$:o,messageHandler:i}}(e=Vt(e,xo.createFollowButton,"Story.createFollowButton")),r=n.iframe$,o=n.messageHandler;t.appendChild(r),ct(window,"message",o),jo.push((function(){st(window,"message",o),t.removeChild(r)}))},cleanup:function(){$t(jo)}})]),Io=["wgs84","katec"],Po={required:{name:We,x:Ge,y:Ge},optional:{rpflag:We,cid:We}},Fo={start:{required:{name:We,x:Ge,y:Ge},optional:{coordType:lt(Io),vehicleType:lt([1,2,3,4,5,6,7]),rpOption:lt([1,2,3,4,5,6,8,100]),routeInfo:Je,sX:Ge,sY:Ge,sAngle:Ge,returnUri:We,rpflag:We,cid:We,guideId:Ge,viaPoints:function(e){if(f(e)){if(e.length>3)throw new Jt("Invalid parameter keys: via points should not be exceed 3. at Navi.start");return He(e,(function(e){return Vt(e,Po,"Navi.start")})),!0}return!1}},defaults:{coordType:"katec",vehicleType:1,rpOption:100,routeInfo:!1}},share:{required:{name:We,x:Ge,y:Ge},optional:{coordType:lt(Io),rpflag:We,cid:We,guideId:Ge},defaults:{coordType:"katec"}}};function Bo(){return{appkey:Ht(),apiver:"1.0",extras:{KA:qt}}}function Lo(e,t){var n={urlScheme:e,intentURI:["intent:".concat(e,"#Intent"),"package=com.locnall.KimGiSa","S.browser_fallback_url=".concat(encodeURIComponent(t)),"end;"].join(";"),storeURL:t,universalLink:t};try{Rr(n)}catch(e){}}var Eo=Xt([Object.freeze({__proto__:null,start:function(e){var t=ut(function(e){var t={name:e.name,x:e.x,y:e.y,rpflag:e.rpflag,cid:e.cid,guide_id:e.guideId},n={coord_type:e.coordType,vehicle_type:e.vehicleType,rpoption:e.rpOption,route_info:e.routeInfo,s_x:e.sX,s_y:e.sY,s_angle:e.sAngle,return_uri:e.returnUri},r=Bo();return r.param={destination:t,option:n,via_list:e.viaPoints},r}(e=Vt(e,Fo.start,"Navi.start")));Lo("".concat(Nt.naviStartScheme,"?").concat(t),"".concat(Nt.naviWeb,"?").concat(t))},share:function(e){var t=ut(function(e){var t={name:e.name,x:e.x,y:e.y,rpflag:e.rpflag,cid:e.cid,guide_id:e.guideId},n={coord_type:e.coordType},r=Bo();return r.param={destination:t,option:n},r.scheme_type="sharePoi",r}(e=Vt(e,Fo.share,"Navi.share")));Lo("".concat(Nt.naviShareScheme,"?").concat(t),"".concat(Nt.naviWeb,"?").concat(t))}})]),Ro=["none","invitable","registered"],Mo=["talk","story","talkstory"],zo={optional:{title:We,enableSearch:Je,searchPlaceHolderText:We,countryCodes:f,usingOsFilter:lt(["all","ios","android"]),showMyProfile:Je,showFavorite:Je,disableSelectReasons:f,displayAllProfile:Je},after:function(e){e.countryCodes&&(e.countryCodes=e.countryCodes.join(",")),e.disableSelectReasons&&(e.disableSelectReasons=e.disableSelectReasons.join(","))}},Uo={optional:Pe({showPickedFriend:Je,maxPickableCount:$e,minPickableCount:$e},zo.optional),after:zo.after},Do={success:A,fail:A,always:A,pickerFriendFilter:lt(Ro),pickerFriendType:lt(Mo),pickerFriendOrder:lt(["age"])},qo={success:ot,fail:ot,always:ot,pickerFriendFilter:Ro[0],pickerFriendType:Mo[0]},No={selectMultiple:{optional:Pe({properties:function(e){return g(e)&&!!Vt(e,Uo,"FriendPicker.selectMultiple")}},Do),defaults:qo},selectSingle:{optional:Pe({properties:function(e){return g(e)&&!!Vt(e,zo,"FriendPicker.selectSingle")}},Do),defaults:qo}};function Ko(e,t){Jo();var n=Cn();if(n){var r=Yt();!function(e){var t=document.createElement("iframe");t.id=t.name=e,t.src="".concat(Nt.pickerDomain,"/proxy?transId=").concat(e),t.setAttribute("style","border:none; width:0; height:0; display:none; overflow:hidden;"),document.body.appendChild(t),Wo.push((function(){document.body.removeChild(t)}))}(r),function(e){var t=function(t){var n=t.data,r=t.origin;if(n&&r===Nt.pickerDomain){var o=JSON.parse(n);Ho(e,o)}};ct(window,"message",t),Wo.push((function(){st(window,"message",t)}))}(e);var o=function(e){for(var t=1;t<arguments.length;t++){var n=null!=arguments[t]?arguments[t]:{};t%2?gt(Object(n),!0).forEach((function(t){vt(e,t,n[t])})):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(n)):gt(Object(n)).forEach((function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(n,t))}))}return e}({transId:r,token:n,appKey:Ht(),ka:qt,pickerFriendFilter:e.pickerFriendFilter,pickerFriendType:e.pickerFriendType},e.properties);e.pickerFriendOrder&&(o.pickerFriendOrder=e.pickerFriendOrder),rn(o,{url:"".concat(Nt.pickerDomain,"/select/").concat(t),popupName:"friend_picker",popupFeatures:"location=no,resizable=no,status=no,scrollbars=no,width=460,height=608"})}else Ho(e,{code:-401,msg:"InvalidTokenException"})}function Ho(e,t){t.code?e.fail(t):e.success(t),e.always(t)}var Wo=[];function Jo(){$t(Wo)}var Xo=Xt([Object.freeze({__proto__:null,selectMultiple:function(e){Ko(Vt(e,No.selectMultiple,"FriendPicker.selectMultiple"),"multiple")},selectSingle:function(e){Ko(Vt(e,No.selectSingle,"FriendPicker.selectSingle"),"single")},cleanup:Jo})]);function $o(){return null!==Ht()}"function"==typeof define&&define.amd&&(window.Kakao=e),"function"==typeof window.kakaoAsyncInit&&setTimeout((function(){window.kakaoAsyncInit()}),0),e.VERSION=Dt,e.cleanup=function(){var e=this;He(["Auth","API","Link","Channel","PlusFriend","Story","Navi","FriendPicker"],(function(t){return e[t]&&e[t].cleanup()})),Wt(null)},e.init=function(e){if(Ut.browser.msie&&Ut.browser.version.major<9)throw new Jt("Kakao.init: Unsupported browser");if($o())throw new Jt("Kakao.init: Already initialized");if(!We(e))throw new Jt("Kakao.init: App key must be provided");Wt(e),this.Auth=vr,this.API=gr,this.Link=ro,this.Channel=vo,this.PlusFriend=wo,this.Story=Co,this.Navi=Eo,this.FriendPicker=Xo},e.isInitialized=$o,Object.defineProperty(e,"__esModule",{value:!0})}));
+(function (global, factory) {
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
+    typeof define === 'function' && define.amd ? define(['exports'], factory) :
+    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.Kakao = global.Kakao || {}));
+  }(this, (function (exports) { 'use strict';
+  
+    var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
+  
+    var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
+    var root = freeGlobal || freeSelf || Function('return this')();
+  
+    var Symbol$1 = root.Symbol;
+  
+    var objectProto$a = Object.prototype;
+    var hasOwnProperty$8 = objectProto$a.hasOwnProperty;
+    var nativeObjectToString$1 = objectProto$a.toString;
+    var symToStringTag$1 = Symbol$1 ? Symbol$1.toStringTag : undefined;
+    function getRawTag(value) {
+      var isOwn = hasOwnProperty$8.call(value, symToStringTag$1),
+          tag = value[symToStringTag$1];
+      try {
+        value[symToStringTag$1] = undefined;
+        var unmasked = true;
+      } catch (e) {}
+      var result = nativeObjectToString$1.call(value);
+      if (unmasked) {
+        if (isOwn) {
+          value[symToStringTag$1] = tag;
+        } else {
+          delete value[symToStringTag$1];
+        }
+      }
+      return result;
+    }
+  
+    var objectProto$9 = Object.prototype;
+    var nativeObjectToString = objectProto$9.toString;
+    function objectToString(value) {
+      return nativeObjectToString.call(value);
+    }
+  
+    var nullTag = '[object Null]',
+        undefinedTag = '[object Undefined]';
+    var symToStringTag = Symbol$1 ? Symbol$1.toStringTag : undefined;
+    function baseGetTag(value) {
+      if (value == null) {
+        return value === undefined ? undefinedTag : nullTag;
+      }
+      return symToStringTag && symToStringTag in Object(value) ? getRawTag(value) : objectToString(value);
+    }
+  
+    function isObjectLike(value) {
+      return value != null && typeof value == 'object';
+    }
+  
+    var symbolTag = '[object Symbol]';
+    function isSymbol(value) {
+      return typeof value == 'symbol' || isObjectLike(value) && baseGetTag(value) == symbolTag;
+    }
+  
+    var isArray = Array.isArray;
+  
+    var reWhitespace = /\s/;
+    function trimmedEndIndex(string) {
+      var index = string.length;
+      while (index-- && reWhitespace.test(string.charAt(index))) {}
+      return index;
+    }
+  
+    var reTrimStart = /^\s+/;
+    function baseTrim(string) {
+      return string ? string.slice(0, trimmedEndIndex(string) + 1).replace(reTrimStart, '') : string;
+    }
+  
+    function isObject(value) {
+      var type = typeof value;
+      return value != null && (type == 'object' || type == 'function');
+    }
+  
+    var NAN = 0 / 0;
+    var reIsBadHex = /^[-+]0x[0-9a-f]+$/i;
+    var reIsBinary = /^0b[01]+$/i;
+    var reIsOctal = /^0o[0-7]+$/i;
+    var freeParseInt = parseInt;
+    function toNumber(value) {
+      if (typeof value == 'number') {
+        return value;
+      }
+      if (isSymbol(value)) {
+        return NAN;
+      }
+      if (isObject(value)) {
+        var other = typeof value.valueOf == 'function' ? value.valueOf() : value;
+        value = isObject(other) ? other + '' : other;
+      }
+      if (typeof value != 'string') {
+        return value === 0 ? value : +value;
+      }
+      value = baseTrim(value);
+      var isBinary = reIsBinary.test(value);
+      return isBinary || reIsOctal.test(value) ? freeParseInt(value.slice(2), isBinary ? 2 : 8) : reIsBadHex.test(value) ? NAN : +value;
+    }
+  
+    var INFINITY = 1 / 0,
+        MAX_INTEGER = 1.7976931348623157e+308;
+    function toFinite(value) {
+      if (!value) {
+        return value === 0 ? value : 0;
+      }
+      value = toNumber(value);
+      if (value === INFINITY || value === -INFINITY) {
+        var sign = value < 0 ? -1 : 1;
+        return sign * MAX_INTEGER;
+      }
+      return value === value ? value : 0;
+    }
+  
+    function toInteger(value) {
+      var result = toFinite(value),
+          remainder = result % 1;
+      return result === result ? remainder ? result - remainder : result : 0;
+    }
+  
+    function identity(value) {
+      return value;
+    }
+  
+    var asyncTag = '[object AsyncFunction]',
+        funcTag$1 = '[object Function]',
+        genTag = '[object GeneratorFunction]',
+        proxyTag = '[object Proxy]';
+    function isFunction(value) {
+      if (!isObject(value)) {
+        return false;
+      }
+      var tag = baseGetTag(value);
+      return tag == funcTag$1 || tag == genTag || tag == asyncTag || tag == proxyTag;
+    }
+  
+    var coreJsData = root['__core-js_shared__'];
+  
+    var maskSrcKey = function () {
+      var uid = /[^.]+$/.exec(coreJsData && coreJsData.keys && coreJsData.keys.IE_PROTO || '');
+      return uid ? 'Symbol(src)_1.' + uid : '';
+    }();
+    function isMasked(func) {
+      return !!maskSrcKey && maskSrcKey in func;
+    }
+  
+    var funcProto$2 = Function.prototype;
+    var funcToString$2 = funcProto$2.toString;
+    function toSource(func) {
+      if (func != null) {
+        try {
+          return funcToString$2.call(func);
+        } catch (e) {}
+        try {
+          return func + '';
+        } catch (e) {}
+      }
+      return '';
+    }
+  
+    var reRegExpChar = /[\\^$.*+?()[\]{}|]/g;
+    var reIsHostCtor = /^\[object .+?Constructor\]$/;
+    var funcProto$1 = Function.prototype,
+        objectProto$8 = Object.prototype;
+    var funcToString$1 = funcProto$1.toString;
+    var hasOwnProperty$7 = objectProto$8.hasOwnProperty;
+    var reIsNative = RegExp('^' + funcToString$1.call(hasOwnProperty$7).replace(reRegExpChar, '\\$&').replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') + '$');
+    function baseIsNative(value) {
+      if (!isObject(value) || isMasked(value)) {
+        return false;
+      }
+      var pattern = isFunction(value) ? reIsNative : reIsHostCtor;
+      return pattern.test(toSource(value));
+    }
+  
+    function getValue(object, key) {
+      return object == null ? undefined : object[key];
+    }
+  
+    function getNative(object, key) {
+      var value = getValue(object, key);
+      return baseIsNative(value) ? value : undefined;
+    }
+  
+    function apply(func, thisArg, args) {
+      switch (args.length) {
+        case 0:
+          return func.call(thisArg);
+        case 1:
+          return func.call(thisArg, args[0]);
+        case 2:
+          return func.call(thisArg, args[0], args[1]);
+        case 3:
+          return func.call(thisArg, args[0], args[1], args[2]);
+      }
+      return func.apply(thisArg, args);
+    }
+  
+    var HOT_COUNT = 800,
+        HOT_SPAN = 16;
+    var nativeNow = Date.now;
+    function shortOut(func) {
+      var count = 0,
+          lastCalled = 0;
+      return function () {
+        var stamp = nativeNow(),
+            remaining = HOT_SPAN - (stamp - lastCalled);
+        lastCalled = stamp;
+        if (remaining > 0) {
+          if (++count >= HOT_COUNT) {
+            return arguments[0];
+          }
+        } else {
+          count = 0;
+        }
+        return func.apply(undefined, arguments);
+      };
+    }
+  
+    function constant(value) {
+      return function () {
+        return value;
+      };
+    }
+  
+    var defineProperty = function () {
+      try {
+        var func = getNative(Object, 'defineProperty');
+        func({}, '', {});
+        return func;
+      } catch (e) {}
+    }();
+  
+    var baseSetToString = !defineProperty ? identity : function (func, string) {
+      return defineProperty(func, 'toString', {
+        'configurable': true,
+        'enumerable': false,
+        'value': constant(string),
+        'writable': true
+      });
+    };
+  
+    var setToString = shortOut(baseSetToString);
+  
+    function arrayEach(array, iteratee) {
+      var index = -1,
+          length = array == null ? 0 : array.length;
+      while (++index < length) {
+        if (iteratee(array[index], index, array) === false) {
+          break;
+        }
+      }
+      return array;
+    }
+  
+    var MAX_SAFE_INTEGER$1 = 9007199254740991;
+    var reIsUint = /^(?:0|[1-9]\d*)$/;
+    function isIndex(value, length) {
+      var type = typeof value;
+      length = length == null ? MAX_SAFE_INTEGER$1 : length;
+      return !!length && (type == 'number' || type != 'symbol' && reIsUint.test(value)) && value > -1 && value % 1 == 0 && value < length;
+    }
+  
+    function baseAssignValue(object, key, value) {
+      if (key == '__proto__' && defineProperty) {
+        defineProperty(object, key, {
+          'configurable': true,
+          'enumerable': true,
+          'value': value,
+          'writable': true
+        });
+      } else {
+        object[key] = value;
+      }
+    }
+  
+    function eq(value, other) {
+      return value === other || value !== value && other !== other;
+    }
+  
+    var objectProto$7 = Object.prototype;
+    var hasOwnProperty$6 = objectProto$7.hasOwnProperty;
+    function assignValue(object, key, value) {
+      var objValue = object[key];
+      if (!(hasOwnProperty$6.call(object, key) && eq(objValue, value)) || value === undefined && !(key in object)) {
+        baseAssignValue(object, key, value);
+      }
+    }
+  
+    function copyObject(source, props, object, customizer) {
+      var isNew = !object;
+      object || (object = {});
+      var index = -1,
+          length = props.length;
+      while (++index < length) {
+        var key = props[index];
+        var newValue = customizer ? customizer(object[key], source[key], key, object, source) : undefined;
+        if (newValue === undefined) {
+          newValue = source[key];
+        }
+        if (isNew) {
+          baseAssignValue(object, key, newValue);
+        } else {
+          assignValue(object, key, newValue);
+        }
+      }
+      return object;
+    }
+  
+    var nativeMax = Math.max;
+    function overRest(func, start, transform) {
+      start = nativeMax(start === undefined ? func.length - 1 : start, 0);
+      return function () {
+        var args = arguments,
+            index = -1,
+            length = nativeMax(args.length - start, 0),
+            array = Array(length);
+        while (++index < length) {
+          array[index] = args[start + index];
+        }
+        index = -1;
+        var otherArgs = Array(start + 1);
+        while (++index < start) {
+          otherArgs[index] = args[index];
+        }
+        otherArgs[start] = transform(array);
+        return apply(func, this, otherArgs);
+      };
+    }
+  
+    function baseRest(func, start) {
+      return setToString(overRest(func, start, identity), func + '');
+    }
+  
+    var MAX_SAFE_INTEGER = 9007199254740991;
+    function isLength(value) {
+      return typeof value == 'number' && value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER;
+    }
+  
+    function isArrayLike(value) {
+      return value != null && isLength(value.length) && !isFunction(value);
+    }
+  
+    function isIterateeCall(value, index, object) {
+      if (!isObject(object)) {
+        return false;
+      }
+      var type = typeof index;
+      if (type == 'number' ? isArrayLike(object) && isIndex(index, object.length) : type == 'string' && index in object) {
+        return eq(object[index], value);
+      }
+      return false;
+    }
+  
+    function createAssigner(assigner) {
+      return baseRest(function (object, sources) {
+        var index = -1,
+            length = sources.length,
+            customizer = length > 1 ? sources[length - 1] : undefined,
+            guard = length > 2 ? sources[2] : undefined;
+        customizer = assigner.length > 3 && typeof customizer == 'function' ? (length--, customizer) : undefined;
+        if (guard && isIterateeCall(sources[0], sources[1], guard)) {
+          customizer = length < 3 ? undefined : customizer;
+          length = 1;
+        }
+        object = Object(object);
+        while (++index < length) {
+          var source = sources[index];
+          if (source) {
+            assigner(object, source, index, customizer);
+          }
+        }
+        return object;
+      });
+    }
+  
+    var objectProto$6 = Object.prototype;
+    function isPrototype(value) {
+      var Ctor = value && value.constructor,
+          proto = typeof Ctor == 'function' && Ctor.prototype || objectProto$6;
+      return value === proto;
+    }
+  
+    function baseTimes(n, iteratee) {
+      var index = -1,
+          result = Array(n);
+      while (++index < n) {
+        result[index] = iteratee(index);
+      }
+      return result;
+    }
+  
+    var argsTag$1 = '[object Arguments]';
+    function baseIsArguments(value) {
+      return isObjectLike(value) && baseGetTag(value) == argsTag$1;
+    }
+  
+    var objectProto$5 = Object.prototype;
+    var hasOwnProperty$5 = objectProto$5.hasOwnProperty;
+    var propertyIsEnumerable = objectProto$5.propertyIsEnumerable;
+    var isArguments = baseIsArguments(function () {
+      return arguments;
+    }()) ? baseIsArguments : function (value) {
+      return isObjectLike(value) && hasOwnProperty$5.call(value, 'callee') && !propertyIsEnumerable.call(value, 'callee');
+    };
+  
+    function stubFalse() {
+      return false;
+    }
+  
+    var freeExports$1 = typeof exports == 'object' && exports && !exports.nodeType && exports;
+    var freeModule$1 = freeExports$1 && typeof module == 'object' && module && !module.nodeType && module;
+    var moduleExports$1 = freeModule$1 && freeModule$1.exports === freeExports$1;
+    var Buffer = moduleExports$1 ? root.Buffer : undefined;
+    var nativeIsBuffer = Buffer ? Buffer.isBuffer : undefined;
+    var isBuffer = nativeIsBuffer || stubFalse;
+  
+    var argsTag = '[object Arguments]',
+        arrayTag = '[object Array]',
+        boolTag$1 = '[object Boolean]',
+        dateTag = '[object Date]',
+        errorTag = '[object Error]',
+        funcTag = '[object Function]',
+        mapTag = '[object Map]',
+        numberTag$1 = '[object Number]',
+        objectTag$1 = '[object Object]',
+        regexpTag = '[object RegExp]',
+        setTag = '[object Set]',
+        stringTag$1 = '[object String]',
+        weakMapTag = '[object WeakMap]';
+    var arrayBufferTag = '[object ArrayBuffer]',
+        dataViewTag = '[object DataView]',
+        float32Tag = '[object Float32Array]',
+        float64Tag = '[object Float64Array]',
+        int8Tag = '[object Int8Array]',
+        int16Tag = '[object Int16Array]',
+        int32Tag = '[object Int32Array]',
+        uint8Tag = '[object Uint8Array]',
+        uint8ClampedTag = '[object Uint8ClampedArray]',
+        uint16Tag = '[object Uint16Array]',
+        uint32Tag = '[object Uint32Array]';
+    var typedArrayTags = {};
+    typedArrayTags[float32Tag] = typedArrayTags[float64Tag] = typedArrayTags[int8Tag] = typedArrayTags[int16Tag] = typedArrayTags[int32Tag] = typedArrayTags[uint8Tag] = typedArrayTags[uint8ClampedTag] = typedArrayTags[uint16Tag] = typedArrayTags[uint32Tag] = true;
+    typedArrayTags[argsTag] = typedArrayTags[arrayTag] = typedArrayTags[arrayBufferTag] = typedArrayTags[boolTag$1] = typedArrayTags[dataViewTag] = typedArrayTags[dateTag] = typedArrayTags[errorTag] = typedArrayTags[funcTag] = typedArrayTags[mapTag] = typedArrayTags[numberTag$1] = typedArrayTags[objectTag$1] = typedArrayTags[regexpTag] = typedArrayTags[setTag] = typedArrayTags[stringTag$1] = typedArrayTags[weakMapTag] = false;
+    function baseIsTypedArray(value) {
+      return isObjectLike(value) && isLength(value.length) && !!typedArrayTags[baseGetTag(value)];
+    }
+  
+    function baseUnary(func) {
+      return function (value) {
+        return func(value);
+      };
+    }
+  
+    var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
+    var freeModule = freeExports && typeof module == 'object' && module && !module.nodeType && module;
+    var moduleExports = freeModule && freeModule.exports === freeExports;
+    var freeProcess = moduleExports && freeGlobal.process;
+    var nodeUtil = function () {
+      try {
+        var types = freeModule && freeModule.require && freeModule.require('util').types;
+        if (types) {
+          return types;
+        }
+        return freeProcess && freeProcess.binding && freeProcess.binding('util');
+      } catch (e) {}
+    }();
+  
+    var nodeIsTypedArray = nodeUtil && nodeUtil.isTypedArray;
+    var isTypedArray = nodeIsTypedArray ? baseUnary(nodeIsTypedArray) : baseIsTypedArray;
+  
+    var objectProto$4 = Object.prototype;
+    var hasOwnProperty$4 = objectProto$4.hasOwnProperty;
+    function arrayLikeKeys(value, inherited) {
+      var isArr = isArray(value),
+          isArg = !isArr && isArguments(value),
+          isBuff = !isArr && !isArg && isBuffer(value),
+          isType = !isArr && !isArg && !isBuff && isTypedArray(value),
+          skipIndexes = isArr || isArg || isBuff || isType,
+          result = skipIndexes ? baseTimes(value.length, String) : [],
+          length = result.length;
+      for (var key in value) {
+        if ((inherited || hasOwnProperty$4.call(value, key)) && !(skipIndexes && (
+        key == 'length' ||
+        isBuff && (key == 'offset' || key == 'parent') ||
+        isType && (key == 'buffer' || key == 'byteLength' || key == 'byteOffset') ||
+        isIndex(key, length)))) {
+          result.push(key);
+        }
+      }
+      return result;
+    }
+  
+    function overArg(func, transform) {
+      return function (arg) {
+        return func(transform(arg));
+      };
+    }
+  
+    var nativeKeys = overArg(Object.keys, Object);
+  
+    var objectProto$3 = Object.prototype;
+    var hasOwnProperty$3 = objectProto$3.hasOwnProperty;
+    function baseKeys(object) {
+      if (!isPrototype(object)) {
+        return nativeKeys(object);
+      }
+      var result = [];
+      for (var key in Object(object)) {
+        if (hasOwnProperty$3.call(object, key) && key != 'constructor') {
+          result.push(key);
+        }
+      }
+      return result;
+    }
+  
+    function keys$1(object) {
+      return isArrayLike(object) ? arrayLikeKeys(object) : baseKeys(object);
+    }
+  
+    function nativeKeysIn(object) {
+      var result = [];
+      if (object != null) {
+        for (var key in Object(object)) {
+          result.push(key);
+        }
+      }
+      return result;
+    }
+  
+    var objectProto$2 = Object.prototype;
+    var hasOwnProperty$2 = objectProto$2.hasOwnProperty;
+    function baseKeysIn(object) {
+      if (!isObject(object)) {
+        return nativeKeysIn(object);
+      }
+      var isProto = isPrototype(object),
+          result = [];
+      for (var key in object) {
+        if (!(key == 'constructor' && (isProto || !hasOwnProperty$2.call(object, key)))) {
+          result.push(key);
+        }
+      }
+      return result;
+    }
+  
+    function keysIn(object) {
+      return isArrayLike(object) ? arrayLikeKeys(object, true) : baseKeysIn(object);
+    }
+  
+    var assignIn = createAssigner(function (object, source) {
+      copyObject(source, keysIn(source), object);
+    });
+  
+    var getPrototype = overArg(Object.getPrototypeOf, Object);
+  
+    var objectTag = '[object Object]';
+    var funcProto = Function.prototype,
+        objectProto$1 = Object.prototype;
+    var funcToString = funcProto.toString;
+    var hasOwnProperty$1 = objectProto$1.hasOwnProperty;
+    var objectCtorString = funcToString.call(Object);
+    function isPlainObject(value) {
+      if (!isObjectLike(value) || baseGetTag(value) != objectTag) {
+        return false;
+      }
+      var proto = getPrototype(value);
+      if (proto === null) {
+        return true;
+      }
+      var Ctor = hasOwnProperty$1.call(proto, 'constructor') && proto.constructor;
+      return typeof Ctor == 'function' && Ctor instanceof Ctor && funcToString.call(Ctor) == objectCtorString;
+    }
+  
+    function createBaseFor(fromRight) {
+      return function (object, iteratee, keysFunc) {
+        var index = -1,
+            iterable = Object(object),
+            props = keysFunc(object),
+            length = props.length;
+        while (length--) {
+          var key = props[fromRight ? length : ++index];
+          if (iteratee(iterable[key], key, iterable) === false) {
+            break;
+          }
+        }
+        return object;
+      };
+    }
+  
+    var baseFor = createBaseFor();
+  
+    function baseForOwn(object, iteratee) {
+      return object && baseFor(object, iteratee, keys$1);
+    }
+  
+    function createBaseEach(eachFunc, fromRight) {
+      return function (collection, iteratee) {
+        if (collection == null) {
+          return collection;
+        }
+        if (!isArrayLike(collection)) {
+          return eachFunc(collection, iteratee);
+        }
+        var length = collection.length,
+            index = fromRight ? length : -1,
+            iterable = Object(collection);
+        while (fromRight ? index-- : ++index < length) {
+          if (iteratee(iterable[index], index, iterable) === false) {
+            break;
+          }
+        }
+        return collection;
+      };
+    }
+  
+    var baseEach = createBaseEach(baseForOwn);
+  
+    var objectProto = Object.prototype;
+    var hasOwnProperty = objectProto.hasOwnProperty;
+    var defaults = baseRest(function (object, sources) {
+      object = Object(object);
+      var index = -1;
+      var length = sources.length;
+      var guard = length > 2 ? sources[2] : undefined;
+      if (guard && isIterateeCall(sources[0], sources[1], guard)) {
+        length = 1;
+      }
+      while (++index < length) {
+        var source = sources[index];
+        var props = keysIn(source);
+        var propsIndex = -1;
+        var propsLength = props.length;
+        while (++propsIndex < propsLength) {
+          var key = props[propsIndex];
+          var value = object[key];
+          if (value === undefined || eq(value, objectProto[key]) && !hasOwnProperty.call(object, key)) {
+            object[key] = source[key];
+          }
+        }
+      }
+      return object;
+    });
+  
+    function castFunction(value) {
+      return typeof value == 'function' ? value : identity;
+    }
+  
+    function forEach(collection, iteratee) {
+      var func = isArray(collection) ? arrayEach : baseEach;
+      return func(collection, castFunction(iteratee));
+    }
+  
+    var stringTag = '[object String]';
+    function isString(value) {
+      return typeof value == 'string' || !isArray(value) && isObjectLike(value) && baseGetTag(value) == stringTag;
+    }
+  
+    var boolTag = '[object Boolean]';
+    function isBoolean(value) {
+      return value === true || value === false || isObjectLike(value) && baseGetTag(value) == boolTag;
+    }
+  
+    function isElement(value) {
+      return isObjectLike(value) && value.nodeType === 1 && !isPlainObject(value);
+    }
+  
+    function isInteger(value) {
+      return typeof value == 'number' && value == toInteger(value);
+    }
+  
+    var numberTag = '[object Number]';
+    function isNumber(value) {
+      return typeof value == 'number' || isObjectLike(value) && baseGetTag(value) == numberTag;
+    }
+  
+    function checkObjType(type) {
+      return function (e) {
+        return Object.prototype.toString.call(e) === "[object ".concat(type, "]");
+      };
+    }
+    function isBlob(b) {
+      return checkObjType('Blob')(b);
+    }
+    function isFile(f) {
+      return checkObjType('File')(f);
+    }
+    function isFileList(fl) {
+      return checkObjType('FileList')(fl);
+    }
+    function isURL(u) {
+      var urlRegex = /(http|ftp|https):\/\/[\w-]+(\.[\w-]+)+([\w.,@?^=%&amp;:\/~+#-]*[\w@?^=%&amp;\/~+#-])?/;
+      return urlRegex.test(u);
+    }
+    function isJSONString(s) {
+      try {
+        JSON.parse(s);
+      } catch (e) {
+        return false;
+      }
+      return true;
+    }
+    function map(arr, fn) {
+      return Array.prototype.slice.call(arr).map(fn);
+    }
+    function every(arr, fn) {
+      return Array.prototype.slice.call(arr).every(fn);
+    }
+    function difference(a0, a1) {
+      var arrays = [a0, a1];
+      return arrays.reduce(function (a, b) {
+        return a.filter(function (c) {
+          return b.indexOf(c) === -1;
+        });
+      });
+    }
+    function keys(e) {
+      return Object.keys(e || {});
+    }
+    function emptyFunc() {
+    }
+    function getRandomString() {
+      return Math.random().toString(36).slice(2);
+    }
+    function getElement(e) {
+      if (isElement(e)) {
+        return e;
+      } else if (isString(e)) {
+        return document.querySelector(e);
+      } else {
+        return null;
+      }
+    }
+    function addEvent(target, type, callback) {
+      if (target.addEventListener) {
+        target.addEventListener(type, callback, false);
+      }
+    }
+    function removeEvent(target, type, callback) {
+      if (target.removeEventListener) {
+        target.removeEventListener(type, callback, false);
+      }
+    }
+    function buildQueryString(params) {
+      var encode = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+      var esc = encode ? encodeURIComponent : function (e) {
+        return e;
+      };
+      var ret = map(keys(params), function (k) {
+        var v = params[k];
+        return esc(k) + '=' + esc(isObject(v) ? JSON.stringify(v) : v);
+      });
+      return ret.join('&');
+    }
+    function ab2str(buf) {
+      var bytes = Array.prototype.slice.call(new Uint8Array(buf));
+      return bytes.reduce(function (acc, b) {
+        return acc + String.fromCharCode.apply(null, [b]);
+      }, '');
+    }
+    function isOneOf(elements) {
+      if (!isArray(elements)) {
+        throw new Error('elements should be an Array');
+      }
+      return function (e) {
+        return elements.indexOf(e) > -1;
+      };
+    }
+    function passesOneOf(validators) {
+      if (!isArray(validators)) {
+        throw new Error('validators should be an Array');
+      }
+      return function (e) {
+        return validators.some(function (v) {
+          return v(e);
+        });
+      };
+    }
+    var localStorage = function () {
+      var polyfill = {
+        _data: {},
+        setItem: function setItem(id, val) {
+          return this._data[id] = String(val);
+        },
+        getItem: function getItem(id) {
+          return this._data.hasOwnProperty(id) ? this._data[id] : null;
+        },
+        removeItem: function removeItem(id) {
+          return delete this._data[id];
+        },
+        clear: function clear() {
+          return this._data = {};
+        }
+      };
+      try {
+        if ('localStorage' in window && window['localStorage'] !== null) {
+          window.localStorage.setItem('store', '');
+          window.localStorage.removeItem('store');
+          return window.localStorage;
+        } else {
+          return polyfill;
+        }
+      } catch (e) {
+        return polyfill;
+      }
+    }();
+  
+    function ownKeys(object, enumerableOnly) {
+      var keys = Object.keys(object);
+  
+      if (Object.getOwnPropertySymbols) {
+        var symbols = Object.getOwnPropertySymbols(object);
+  
+        if (enumerableOnly) {
+          symbols = symbols.filter(function (sym) {
+            return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+          });
+        }
+  
+        keys.push.apply(keys, symbols);
+      }
+  
+      return keys;
+    }
+  
+    function _objectSpread2(target) {
+      for (var i = 1; i < arguments.length; i++) {
+        var source = arguments[i] != null ? arguments[i] : {};
+  
+        if (i % 2) {
+          ownKeys(Object(source), true).forEach(function (key) {
+            _defineProperty(target, key, source[key]);
+          });
+        } else if (Object.getOwnPropertyDescriptors) {
+          Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+        } else {
+          ownKeys(Object(source)).forEach(function (key) {
+            Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+          });
+        }
+      }
+  
+      return target;
+    }
+  
+    function _typeof(obj) {
+      "@babel/helpers - typeof";
+  
+      if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+        _typeof = function (obj) {
+          return typeof obj;
+        };
+      } else {
+        _typeof = function (obj) {
+          return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+        };
+      }
+  
+      return _typeof(obj);
+    }
+  
+    function _classCallCheck(instance, Constructor) {
+      if (!(instance instanceof Constructor)) {
+        throw new TypeError("Cannot call a class as a function");
+      }
+    }
+  
+    function _defineProperties(target, props) {
+      for (var i = 0; i < props.length; i++) {
+        var descriptor = props[i];
+        descriptor.enumerable = descriptor.enumerable || false;
+        descriptor.configurable = true;
+        if ("value" in descriptor) descriptor.writable = true;
+        Object.defineProperty(target, descriptor.key, descriptor);
+      }
+    }
+  
+    function _createClass(Constructor, protoProps, staticProps) {
+      if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+      if (staticProps) _defineProperties(Constructor, staticProps);
+      return Constructor;
+    }
+  
+    function _defineProperty(obj, key, value) {
+      if (key in obj) {
+        Object.defineProperty(obj, key, {
+          value: value,
+          enumerable: true,
+          configurable: true,
+          writable: true
+        });
+      } else {
+        obj[key] = value;
+      }
+  
+      return obj;
+    }
+  
+    function _inherits(subClass, superClass) {
+      if (typeof superClass !== "function" && superClass !== null) {
+        throw new TypeError("Super expression must either be null or a function");
+      }
+  
+      subClass.prototype = Object.create(superClass && superClass.prototype, {
+        constructor: {
+          value: subClass,
+          writable: true,
+          configurable: true
+        }
+      });
+      if (superClass) _setPrototypeOf(subClass, superClass);
+    }
+  
+    function _getPrototypeOf(o) {
+      _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+        return o.__proto__ || Object.getPrototypeOf(o);
+      };
+      return _getPrototypeOf(o);
+    }
+  
+    function _setPrototypeOf(o, p) {
+      _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+        o.__proto__ = p;
+        return o;
+      };
+  
+      return _setPrototypeOf(o, p);
+    }
+  
+    function _isNativeReflectConstruct() {
+      if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+      if (Reflect.construct.sham) return false;
+      if (typeof Proxy === "function") return true;
+  
+      try {
+        Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));
+        return true;
+      } catch (e) {
+        return false;
+      }
+    }
+  
+    function _assertThisInitialized(self) {
+      if (self === void 0) {
+        throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+      }
+  
+      return self;
+    }
+  
+    function _possibleConstructorReturn(self, call) {
+      if (call && (typeof call === "object" || typeof call === "function")) {
+        return call;
+      }
+  
+      return _assertThisInitialized(self);
+    }
+  
+    function _createSuper(Derived) {
+      var hasNativeReflectConstruct = _isNativeReflectConstruct();
+  
+      return function _createSuperInternal() {
+        var Super = _getPrototypeOf(Derived),
+            result;
+  
+        if (hasNativeReflectConstruct) {
+          var NewTarget = _getPrototypeOf(this).constructor;
+  
+          result = Reflect.construct(Super, arguments, NewTarget);
+        } else {
+          result = Super.apply(this, arguments);
+        }
+  
+        return _possibleConstructorReturn(this, result);
+      };
+    }
+  
+    function _slicedToArray(arr, i) {
+      return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
+    }
+  
+    function _toConsumableArray(arr) {
+      return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
+    }
+  
+    function _arrayWithoutHoles(arr) {
+      if (Array.isArray(arr)) return _arrayLikeToArray(arr);
+    }
+  
+    function _arrayWithHoles(arr) {
+      if (Array.isArray(arr)) return arr;
+    }
+  
+    function _iterableToArray(iter) {
+      if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter);
+    }
+  
+    function _iterableToArrayLimit(arr, i) {
+      var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"];
+  
+      if (_i == null) return;
+      var _arr = [];
+      var _n = true;
+      var _d = false;
+  
+      var _s, _e;
+  
+      try {
+        for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) {
+          _arr.push(_s.value);
+  
+          if (i && _arr.length === i) break;
+        }
+      } catch (err) {
+        _d = true;
+        _e = err;
+      } finally {
+        try {
+          if (!_n && _i["return"] != null) _i["return"]();
+        } finally {
+          if (_d) throw _e;
+        }
+      }
+  
+      return _arr;
+    }
+  
+    function _unsupportedIterableToArray(o, minLen) {
+      if (!o) return;
+      if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+      var n = Object.prototype.toString.call(o).slice(8, -1);
+      if (n === "Object" && o.constructor) n = o.constructor.name;
+      if (n === "Map" || n === "Set") return Array.from(o);
+      if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
+    }
+  
+    function _arrayLikeToArray(arr, len) {
+      if (len == null || len > arr.length) len = arr.length;
+  
+      for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
+  
+      return arr2;
+    }
+  
+    function _nonIterableSpread() {
+      throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+    }
+  
+    function _nonIterableRest() {
+      throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+    }
+  
+    var ua_parser = function () {
+      if (!Array.isArray) {
+        Array.isArray = function (arg) {
+          return Object.prototype.toString.call(arg) === '[object Array]';
+        };
+      }
+      function checkUserAgent(ua) {
+        var browser = {};
+        var match = /(dolfin)[ \/]([\w.]+)/.exec(ua) || /(edge)[ \/]([\w.]+)/.exec(ua) || /(chrome)[ \/]([\w.]+)/.exec(ua) || /(tizen)[ \/]([\w.]+)/.exec(ua) || /(opera)(?:.*version)?[ \/]([\w.]+)/.exec(ua) || /(webkit)(?:.*version)?[ \/]([\w.]+)/.exec(ua) || /(msie) ([\w.]+)/.exec(ua) || ua.indexOf("compatible") < 0 && /(mozilla)(?:.*? rv:([\w.]+))?/.exec(ua) || ["", "unknown"];
+        if (match[1] === "webkit") {
+          match = /(iphone|ipad|ipod)[\S\s]*os ([\w._\-]+) like/.exec(ua) || /(android)[ \/]([\w._\-]+);/.exec(ua) || [match[0], "safari", match[2]];
+        } else if (match[1] === "mozilla") {
+          if (/trident/.test(ua)) {
+            match[1] = "msie";
+          } else {
+            match[1] = "firefox";
+          }
+        } else if (/polaris|natebrowser|([010|011|016|017|018|019]{3}\d{3,4}\d{4}$)/.test(ua)) {
+          match[1] = "polaris";
+        }
+        browser[match[1]] = true;
+        browser.name = match[1];
+        browser.version = setVersion(match[2]);
+        return browser;
+      }
+      function setVersion(versionString) {
+        var version = {};
+        var versions = versionString ? versionString.split(/\.|-|_/) : ["0", "0", "0"];
+        version.info = versions.join(".");
+        version.major = versions[0] || "0";
+        version.minor = versions[1] || "0";
+        version.patch = versions[2] || "0";
+        return version;
+      }
+      function checkPlatform(ua) {
+        if (isTablet(ua)) {
+          return "tablet";
+        } else if (isPc(ua)) {
+          return "pc";
+        } else if (isMobile(ua)) {
+          return "mobile";
+        } else {
+          return "";
+        }
+      }
+      function isPc(ua) {
+        if (ua.match(/linux|windows (nt|98)|macintosh|cros/) && !ua.match(/android|mobile|polaris|lgtelecom|uzard|natebrowser|ktf;|skt;/)) {
+          return true;
+        }
+        return false;
+      }
+      function isTablet(ua) {
+        if (ua.match(/ipad/) || ua.match(/android/) && !ua.match(/mobi|mini|fennec/) || ua.match(/macintosh/) && window.navigator.maxTouchPoints > 1) {
+          return true;
+        }
+        return false;
+      }
+      function isMobile(ua) {
+        if (!!ua.match(/ip(hone|od)|android.+mobile|windows (ce|phone)|blackberry|bb10|symbian|webos|firefox.+fennec|opera m(ob|in)i|tizen.+mobile|polaris|iemobile|lgtelecom|nokia|sonyericsson|dolfin|uzard|natebrowser|ktf;|skt;/)) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+      function checkOs(ua) {
+        var os = {},
+            match = /(iphone|ipad|ipod)[\S\s]*os ([\w._\-]+) like/.exec(ua) || (/polaris|natebrowser|([010|011|016|017|018|019]{3}\d{3,4}\d{4}$)/.test(ua) ? ["", "polaris", "0.0.0"] : false) || /(windows)(?: nt | phone(?: os){0,1} | )([\w._\-]+)/.exec(ua) || /(android)[ \/]([\w._\-]+);/.exec(ua) || (/android/.test(ua) ? ["", "android", "0.0.0"] : false) || (/(windows)/.test(ua) ? ["", "windows", "0.0.0"] : false) || /(mac) os x ([\w._\-]+)/.exec(ua) || /(tizen)[ \/]([\w._\-]+);/.exec(ua) || (/(linux)/.test(ua) ? ["", "linux", "0.0.0"] : false) || (/webos/.test(ua) ? ["", "webos", "0.0.0"] : false) || /(cros)(?:\s[\w]+\s)([\d._\-]+)/.exec(ua) || /(bada)[ \/]([\w._\-]+)/.exec(ua) || (/bada/.test(ua) ? ["", "bada", "0.0.0"] : false) || (/(rim|blackberry|bb10)/.test(ua) ? ["", "blackberry", "0.0.0"] : false) || ["", "unknown", "0.0.0"];
+        if (match[1] === "iphone" || match[1] === "ipad" || match[1] === "ipod") {
+          match[1] = "ios";
+        } else if (match[1] === "windows" && match[2] === "98") {
+          match[2] = "0.98.0";
+        }
+        if (match[1] === "mac" && typeof window !== 'undefined' && window.navigator.maxTouchPoints > 1) {
+          match[1] = "ios";
+        }
+        if (match[1] === 'cros') {
+          match[1] = "chrome";
+        }
+        os[match[1]] = true;
+        os.name = match[1];
+        os.version = setVersion(match[2]);
+        return os;
+      }
+      var baseAppList = ['crios', 'fxios', 'daumapps'];
+      function checkApp(ua, customAppList) {
+        var app = {},
+            match = null,
+            checkAppList = baseAppList;
+        if (Array.isArray(customAppList)) {
+          checkAppList = baseAppList.concat(customAppList);
+        } else if (typeof customAppList === 'string') {
+          checkAppList = baseAppList.concat([customAppList]);
+        }
+        for (var i = 0, len = checkAppList.length; i < len; i += 1) {
+          var appname = checkAppList[i];
+          var regex = new RegExp('(' + appname + ')[ \\/]([\\w._\\-]+)');
+          match = regex.exec(ua);
+          if (match) {
+            break;
+          }
+        }
+        if (!match) {
+          match = ["", ""];
+        }
+        if (match[1]) {
+          app.isApp = true;
+          app.name = match[1];
+          app.version = setVersion(match[2]);
+        } else {
+          app.isApp = false;
+        }
+        return app;
+      }
+      function getLowerUserAgent(ua) {
+        var lowerUa = '';
+        if (!ua) {
+          if (typeof window !== 'undefined' && window.navigator && typeof window.navigator.userAgent === 'string') {
+            lowerUa = window.navigator.userAgent.toLowerCase();
+          } else {
+            lowerUa = '';
+          }
+        } else {
+          lowerUa = ua.toLowerCase();
+        }
+        return lowerUa;
+      }
+      var userAgent = function userAgent(ua, customAppList) {
+        var lowerUa = getLowerUserAgent(ua);
+        return {
+          ua: lowerUa,
+          browser: checkUserAgent(lowerUa),
+          platform: checkPlatform(lowerUa),
+          os: checkOs(lowerUa),
+          app: checkApp(lowerUa, customAppList)
+        };
+      };
+      return userAgent;
+    }();
+  
+    var UA$1 = ua_parser();
+    function getOrigin() {
+      var _location = location,
+          protocol = _location.protocol,
+          hostname = _location.hostname,
+          port = _location.port;
+      return "".concat(protocol, "//").concat(hostname).concat(port ? ':' + port : '');
+    }
+    function getNavigator() {
+      return navigator;
+    }
+    function getUA() {
+      return UA$1;
+    }
+  
+    var AUTH = "https://kauth.kakao.com";
+    var API$1 = "https://kapi.kakao.com";
+    var SHARER_DOMAIN = "https://sharer.kakao.com";
+    var PICKER_DOMAIN = "https://friend-picker.kakao.com";
+    var CHANNEL = "https://pf.kakao.com";
+    var STORY = "https://story.kakao.com";
+    var STORY_POST_SCHEME = "storylink://posting";
+    var REDIRECT_URI = "JS-SDK";
+    var UNIVERSAL_LINK = "https://talk-apps.kakao.com";
+    var TALK_LOGIN_SCHEME = "kakaokompassauth://authorize";
+    var TALK_LOGIN_REDIRECT_URI = "https://kapi.kakao.com/cors/afterlogin.html";
+    var TALK_INAPP_SCHEME = "kakaotalk://inappbrowser";
+    var TALK_SYNCPLUGIN_SCHEME = "kakaotalk://bizplugin?plugin_id=6011263b74fc2b49c73a7298";
+    var TALK_LINK_SCHEME = "kakaolink://send";
+    var TALK_ANDROID_PACKAGE = "com.kakao.talk";
+    var NAVI_SCHEME = "kakaonavi-sdk://";
+    var NAVI_WEB_URL = "https://kakaonavi-wguide.kakao.com/openapi";
+    var DEVELOPERS = "https://developers.kakao.com";
+  
+    var navigator$1 = getNavigator();
+    var origin = getOrigin();
+    var UA = getUA();
+    var VERSION = "1.40.7".concat('');
+    var KAKAO_AGENT = ["sdk/".concat(VERSION), 'os/javascript', 'sdk_type/javascript', "lang/".concat(navigator$1.userLanguage || navigator$1.language), "device/".concat(navigator$1.platform.replace(/ /g, '_')), "origin/".concat(encodeURIComponent(origin))].join(' ');
+    var URL = {
+      authDomain: AUTH,
+      authorize: "".concat(AUTH, "/oauth/authorize"),
+      loginWidget: "".concat(AUTH, "/public/widget/login/kakaoLoginWidget.html"),
+      redirectUri: REDIRECT_URI,
+      universalKakaoLink: "".concat(UNIVERSAL_LINK, "/scheme/"),
+      talkLoginScheme: TALK_LOGIN_SCHEME,
+      talkLoginRedirectUri: TALK_LOGIN_REDIRECT_URI,
+      talkInappScheme: TALK_INAPP_SCHEME,
+      talkSyncpluginScheme: TALK_SYNCPLUGIN_SCHEME,
+      apiRemote: "".concat(API$1, "/cors/"),
+      sharerDomain: SHARER_DOMAIN,
+      pickerDomain: PICKER_DOMAIN,
+      talkLinkScheme: TALK_LINK_SCHEME,
+      talkAndroidPackage: TALK_ANDROID_PACKAGE,
+      channel: CHANNEL,
+      channelIcon: "".concat(DEVELOPERS, "/assets/img/about/logos"),
+      storyShare: "".concat(STORY, "/s/share"),
+      storyChannelFollow: "".concat(STORY, "/s/follow"),
+      storyIcon: "".concat(DEVELOPERS, "/sdk/js/resources/story/icon_small.png"),
+      storyPostScheme: STORY_POST_SCHEME,
+      naviStartScheme: "".concat(NAVI_SCHEME, "navigate"),
+      naviShareScheme: "".concat(NAVI_SCHEME, "sharePoi"),
+      naviWeb: NAVI_WEB_URL
+    };
+    var appKey$1 = null;
+    function getAppKey$1() {
+      return appKey$1;
+    }
+    function setAppKey(_appKey) {
+      appKey$1 = _appKey;
+    }
+    function KakaoError(message) {
+      Error.prototype.constructor.apply(this, arguments);
+      this.name = 'KakaoError';
+      this.message = message;
+    }
+    KakaoError.prototype = new Error();
+    function logDebug(obj) {
+    }
+    function makeModule(subModules) {
+      var module = assignIn.apply(void 0, [{
+        cleanup: function cleanup() {
+          forEach(subModules, function (e) {
+            return e.cleanup && e.cleanup();
+          });
+        }
+      }].concat(_toConsumableArray(subModules)));
+      return module;
+    }
+    function emptyCleanups(cleanups) {
+      forEach(cleanups, function (fn) {
+        fn();
+      });
+      cleanups.length = 0;
+    }
+    function validate(target, validator, callerMsg) {
+      if (validator(target) === false) {
+        throw new KakaoError("Illegal argument for ".concat(callerMsg));
+      }
+    }
+    function processRules() {
+      var params = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+      var rules = arguments.length > 1 ? arguments[1] : undefined;
+      var callerMsg = arguments.length > 2 ? arguments[2] : undefined;
+      if (!isObject(params)) {
+        throw new Error('params should be an Object');
+      }
+      if (isFunction(rules.before)) {
+        rules.before(params);
+      }
+      if (isFunction(rules.defaults)) {
+        defaults(params, rules.defaults(params));
+      } else {
+        defaults(params, rules.defaults);
+      }
+      var _rules$required = rules.required,
+          required = _rules$required === void 0 ? {} : _rules$required,
+          _rules$optional = rules.optional,
+          optional = _rules$optional === void 0 ? {} : _rules$optional;
+      var missingRequiredKeys = difference(keys(required), keys(params));
+      if (missingRequiredKeys.length > 0) {
+        throw new KakaoError("Missing required keys: ".concat(missingRequiredKeys.join(','), " at ").concat(callerMsg));
+      }
+      var allowed = assignIn({}, required, optional);
+      var invalidKeys = difference(keys(params), keys(allowed));
+      if (invalidKeys.length > 0) {
+        throw new KakaoError("Invalid parameter keys: ".concat(invalidKeys.join(','), " at ").concat(callerMsg));
+      }
+      forEach(params, function (value, key) {
+        validate(value, allowed[key], "\"".concat(key, "\" in ").concat(callerMsg));
+      });
+      if (isFunction(rules.after)) {
+        rules.after(params);
+      }
+      return params;
+    }
+    function generateTxId() {
+      var tranId = Math.random().toString(36).slice(2) + getAppKey$1() + Date.now().toString(36);
+      return tranId.slice(0, 60);
+    }
+    function getInstallUrl(androidAppId, iOSAppId) {
+      if (UA.os.android) {
+        var referrer = JSON.stringify({
+          appKey: appKey$1,
+          KA: KAKAO_AGENT
+        });
+        return "market://details?id=".concat(androidAppId, "&referrer=").concat(referrer);
+      } else if (UA.os.ios) {
+        return "https://itunes.apple.com/app/id".concat(iOSAppId);
+      } else {
+        return location.href;
+      }
+    }
+    function guardCreateEasyXDM(createEasyXDM) {
+      try {
+        return createEasyXDM();
+      } catch (e) {
+        if (e instanceof TypeError) {
+          throw new KakaoError('kakao.js should be loaded from a web server');
+        } else {
+          throw new KakaoError("EasyXDM - ".concat(e.message));
+        }
+      }
+    }
+    var popupWindows = {};
+    function windowOpen(url, name, feature) {
+      var popupWindow = popupWindows[name];
+      if (popupWindow && popupWindow.close && !popupWindow.closed) {
+        popupWindow.close();
+      }
+      popupWindows[name] = window.open(url, name, feature);
+      return popupWindows[name];
+    }
+    function applyAttributes(settings, container$, mapper) {
+      forEach(mapper, function (value, key) {
+        var attr = container$.getAttribute(value);
+        if (attr !== null) {
+          settings[key] = attr === 'true' || attr === 'false' ? attr === 'true' : attr;
+        }
+      });
+    }
+    function openPopupAndSubmitForm(params, popupParams) {
+      var url = popupParams.url,
+          popupName = popupParams.popupName,
+          popupFeatures = popupParams.popupFeatures;
+      var popup = UA.browser.msie ? {} : windowOpen('', popupName, popupFeatures);
+      if (popup.focus) {
+        popup.focus();
+      }
+      createAndSubmitForm(params, url, popupName);
+      return popup;
+    }
+    function createAndSubmitForm(params, url) {
+      var popupName = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '';
+      var form = document.createElement('form');
+      form.setAttribute('accept-charset', 'utf-8');
+      form.setAttribute('method', 'post');
+      form.setAttribute('action', url);
+      form.setAttribute('target', popupName);
+      form.setAttribute('style', 'display:none');
+      forEach(params, function (value, key) {
+        var input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = key;
+        input.value = isString(value) ? value : JSON.stringify(value);
+        form.appendChild(input);
+      });
+      document.body.appendChild(form);
+      form.submit();
+      document.body.removeChild(form);
+    }
+  
+    var eventObserverMap = {};
+    function subscribe(eventName, observer) {
+      eventObserverMap[eventName] = eventObserverMap[eventName] || [];
+      eventObserverMap[eventName].push(observer);
+    }
+    function unsubscribe(eventName, observer) {
+      var observers = eventObserverMap[eventName];
+      for (var i = 0; i < observers.length; i++) {
+        if (observers[i] === observer) {
+          observers.splice(i, 1);
+          return;
+        }
+      }
+    }
+    function dispatch(eventName) {
+      forEach(eventObserverMap[eventName], function (observer) {
+        observer();
+      });
+    }
+    var eventObserver = {
+      subscribe: subscribe,
+      unsubscribe: unsubscribe,
+      dispatch: dispatch
+    };
+  
+    var Poller = function () {
+      function Poller(interval, maxCount) {
+        _classCallCheck(this, Poller);
+        this._interval = interval;
+        this._maxCount = maxCount;
+        this._count = 0;
+        this._stopped = false;
+        this._timeout = null;
+      }
+      _createClass(Poller, [{
+        key: "start",
+        value: function start(pollFunc, failFunc) {
+          this._count = 0;
+          this._stopped = false;
+          this._doPolling(pollFunc, failFunc);
+        }
+      }, {
+        key: "_doPolling",
+        value: function _doPolling(pollFunc, failFunc) {
+          var _this = this;
+          if (this._stopped) return;
+          this._timeout = setTimeout(function () {
+            if (++_this._count > _this._maxCount) {
+              failFunc();
+            } else {
+              pollFunc();
+              _this._doPolling(pollFunc, failFunc);
+            }
+          }, this._interval);
+        }
+      }, {
+        key: "stop",
+        value: function stop() {
+          this._stopped = true;
+          clearTimeout(this._timeout);
+        }
+      }]);
+      return Poller;
+    }();
+  
+    var defaultCallbacks = {
+      success: emptyFunc,
+      fail: emptyFunc,
+      always: emptyFunc
+    };
+    var loginDefaultSettings = assignIn({
+      throughTalk: true,
+      persistAccessToken: true,
+      persistRefreshToken: false
+    }, defaultCallbacks);
+    var loginCommonSettings = {
+      success: isFunction,
+      fail: isFunction,
+      always: isFunction,
+      persistAccessToken: isBoolean,
+      persistRefreshToken: isBoolean,
+      approvalType: isOneOf(['project']),
+      scope: isString,
+      throughTalk: isBoolean,
+      plusFriendPublicId: isString,
+      channelPublicId: isString,
+      serviceTerms: isString,
+      redirectUri: isString,
+      state: isString,
+      deviceType: isOneOf(['watch', 'tv'])
+    };
+    var rules$8 = {
+      createLoginButton: {
+        required: {
+          container: passesOneOf([isElement, isString])
+        },
+        optional: assignIn({
+          lang: isOneOf(['en', 'kr']),
+          size: isOneOf(['small', 'medium', 'large'])
+        }, loginCommonSettings),
+        defaults: assignIn({
+          lang: 'kr',
+          size: 'medium'
+        }, loginDefaultSettings)
+      },
+      login: {
+        optional: loginCommonSettings,
+        defaults: loginDefaultSettings
+      },
+      authorize: {
+        optional: {
+          redirectUri: isString,
+          approvalType: isOneOf(['project']),
+          scope: isString,
+          throughTalk: isBoolean,
+          plusFriendPublicId: isString,
+          channelPublicId: isString,
+          serviceTerms: isString,
+          isPopup: isBoolean,
+          state: isString,
+          autoLogin: isBoolean,
+          deviceType: isOneOf(['watch', 'tv']),
+          prompts: isOneOf(['login', 'none']),
+          reauthenticate: isBoolean,
+          throughSyncplugin: isBoolean,
+          success: isFunction,
+          fail: isFunction,
+          always: isFunction
+        },
+        defaults: {
+          throughTalk: true,
+          isPopup: false,
+          reauthenticate: false,
+          throughSyncplugin: true,
+          success: emptyFunc,
+          fail: emptyFunc,
+          always: emptyFunc
+        }
+      },
+      autoLogin: {
+        optional: {
+          success: isFunction,
+          fail: isFunction,
+          always: isFunction
+        },
+        defaults: defaultCallbacks
+      },
+      issueAccessToken: {
+        required: {
+          code: isString,
+          redirectUri: isString
+        },
+        optional: {
+          success: isFunction,
+          fail: isFunction,
+          always: isFunction
+        },
+        defaults: defaultCallbacks
+      }
+    };
+  
+    function openLoginPopup(url) {
+      var LOGIN_POPUP_NAME = '_blank';
+      return windowOpen(url, LOGIN_POPUP_NAME, getLoginPopupFeatures());
+    }
+    function getLoginPopupFeatures() {
+      var popupWidth = 480;
+      var popupHeight = 700;
+      var sLeft = window.screenLeft ? window.screenLeft : window.screenX ? window.screenX : 0;
+      var sTop = window.screenTop ? window.screenTop : window.screenY ? window.screenY : 0;
+      var popupLeft = screen.width / 2 - popupWidth / 2 + sLeft;
+      var popupTop = screen.height / 2 - popupHeight / 2 + sTop;
+      return ["width=".concat(popupWidth), "height=".concat(popupHeight), "left=".concat(popupLeft), "top=".concat(popupTop), 'scrollbars=yes', 'resizable=1'].join(',');
+    }
+    function makeAuthUrl(params) {
+      return "".concat(URL.authorize, "?").concat(buildQueryString(params));
+    }
+    function makeAuthParams(settings) {
+      var params = {
+        client_id: getAppKey$1()
+      };
+      if (settings.approvalType) {
+        params['approval_type'] = settings.approvalType;
+      }
+      if (settings.scope) {
+        params['scope'] = settings.scope;
+      }
+      if (settings.state) {
+        params['state'] = settings.state;
+      }
+      return params;
+    }
+    function makeAuthExtraParams(settings) {
+      var params = {};
+      if (settings.plusFriendPublicId) {
+        params['extra.plus_friend_public_id'] = settings.plusFriendPublicId;
+      }
+      if (settings.channelPublicId) {
+        params['channel_public_id'] = settings.channelPublicId;
+      }
+      if (settings.serviceTerms) {
+        params['extra.service_terms'] = settings.serviceTerms;
+      }
+      if (settings.autoLogin) {
+        params['prompt'] = 'none';
+      }
+      if (settings.reauthenticate) {
+        params['prompt'] = 'login';
+      }
+      if (settings.prompts) {
+        params['prompt'] = settings.prompts;
+      }
+      if (settings.deviceType) {
+        params['device_type'] = settings.deviceType;
+      }
+      return params;
+    }
+    function runAuthCallback(settings, resp) {
+      if (resp.error) {
+        settings.fail(resp);
+        settings.always(resp);
+      } else {
+        settings.success(resp);
+        settings.always(resp);
+      }
+    }
+  
+    function checkAuthorize(url, onResponse) {
+      request$7({
+        method: 'GET',
+        url: url
+      }, onResponse);
+    }
+    function request$7(req, onResponse) {
+      var url = req.url,
+          method = req.method,
+          data = req.data;
+      var xhr = new XMLHttpRequest();
+      if (typeof xhr.withCredentials !== 'undefined') {
+        xhr.open(method, url);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+            onResponse(xhr);
+          }
+        };
+        xhr.send(data);
+      } else {
+        var xdr = new XDomainRequest();
+        xdr.open(method.toLowerCase(), url);
+        xdr.onload = function () {
+          onResponse({
+            status: xdr.responseText ? 200 : 'error',
+            response: xdr.responseText
+          });
+        };
+        setTimeout(function () {
+          xdr.send(data);
+        }, 0);
+      }
+    }
+  
+    var poller$2 = new Poller(1000, 600);
+    function authorize(settings) {
+      settings = processRules(settings, rules$8.authorize, 'Auth.authorize');
+      if (settings.autoLogin && !/KAKAOTALK/i.test(UA.ua)) {
+        handleResponse(settings, {
+          error: 'auto_login',
+          error_description: 'NOT_SUPPORTED_BROWSER'
+        });
+        return false;
+      }
+      var authTranId = generateTxId();
+      var baseAuthParams = assignIn({}, makeAuthParams(settings), makeAuthExtraParams(settings), {
+        redirect_uri: settings.redirectUri || URL.redirectUri,
+        response_type: 'code',
+        auth_tran_id: authTranId
+      });
+      var webAuthParams = assignIn({}, baseAuthParams, {
+        ka: KAKAO_AGENT,
+        is_popup: settings.isPopup
+      });
+      var isEasyLogin = isSupportEasyLogin(settings);
+      var isSupportSyncplugin = isTalkChannelHome(settings);
+      var webAuthUrl = makeAuthUrl(webAuthParams);
+      var loginUrl = isEasyLogin ? makeEasyLoginUrl(settings, baseAuthParams, webAuthUrl) : webAuthUrl;
+      var popup = null;
+      if (isSupportSyncplugin) {
+        executeSyncpluginScheme(baseAuthParams);
+      } else if (settings.isPopup) {
+        popup = openLoginPopup(loginUrl);
+      } else {
+        location.href = loginUrl;
+      }
+      if (isEasyLogin || isSupportSyncplugin || settings.isPopup) {
+        poller$2.start(function () {
+          var params = {
+            client_id: getAppKey$1(),
+            auth_tran_id: authTranId,
+            ka: KAKAO_AGENT
+          };
+          checkAuthorize("".concat(URL.authDomain, "/apiweb/code.json?").concat(buildQueryString(params)), function (httpResp) {
+            var isValidResp = onResponse(settings, httpResp);
+            if (isValidResp) {
+              poller$2.stop();
+              popup && popup.close && popup.close();
+            }
+            if (!isEasyLogin && popup && popup.closed) {
+              poller$2.stop();
+            }
+          });
+        }, function () {
+          handleResponse(settings, {
+            error: 'timeout',
+            error_description: 'LOGIN_TIMEOUT'
+          });
+        });
+      }
+      eventObserver.dispatch('LOGIN_START');
+    }
+    function isSupportEasyLogin(settings) {
+      var isNotInAppBrowser = UA.os.ios || UA.os.android ? !/KAKAOTALK/i.test(UA.ua) : false;
+      var isNotAccountLogin = !settings.reauthenticate && settings.prompts !== 'login';
+      return isNotInAppBrowser && isNotAccountLogin && settings.throughTalk && !settings.autoLogin;
+    }
+    function onResponse(settings, httpResp) {
+      if (httpResp.status === 200 && httpResp.response) {
+        var resp = JSON.parse(httpResp.response);
+        if (resp.status === 'ok' && resp.code) {
+          handleResponse(settings, {
+            code: resp.code
+          });
+          return true;
+        } else if (resp.status === 'error' && (resp.error_code === '500' || resp.error_code === '600' || resp.error_code === '700')) {
+          handleResponse(settings, {
+            error: resp.error,
+            error_description: resp.error_description
+          });
+          if (resp.error_code === '700') {
+            location.href = "".concat(URL.authDomain, "/error/network");
+          }
+          return true;
+        }
+      }
+      return false;
+    }
+    function handleResponse(settings, respObj) {
+      if (settings.state) {
+        respObj.state = settings.state;
+      }
+      if (settings.redirectUri) {
+        location.href = "".concat(settings.redirectUri, "?").concat(buildQueryString(respObj));
+      } else {
+        runAuthCallback(settings, respObj);
+      }
+    }
+    function makeEasyLoginUrl(settings, baseAuthParams, fallbackUrl) {
+      var easyLoginAuthParams = assignIn({}, baseAuthParams, {
+        is_popup: true
+      });
+      var getAndroidLoginIntent = function getAndroidLoginIntent() {
+        var intent = ['intent:#Intent', 'action=com.kakao.talk.intent.action.CAPRI_LOGGED_IN_ACTIVITY', 'launchFlags=0x08880000', "S.com.kakao.sdk.talk.appKey=".concat(getAppKey$1()), "S.com.kakao.sdk.talk.redirectUri=".concat(easyLoginAuthParams.redirect_uri), "S.com.kakao.sdk.talk.kaHeader=".concat(KAKAO_AGENT), "S.com.kakao.sdk.talk.extraparams=".concat(encodeURIComponent(JSON.stringify(easyLoginAuthParams)))];
+        if (settings.state) {
+          intent.push("S.com.kakao.sdk.talk.state=".concat(settings.state));
+        }
+        return intent.concat(["S.browser_fallback_url=".concat(encodeURIComponent(fallbackUrl)), 'end;']).join(';');
+      };
+      var getIosLoginUniversalLink = function getIosLoginUniversalLink() {
+        var iosLoginUrl = makeAuthUrl(easyLoginAuthParams);
+        var iosFallbackUrl = settings.isPopup ? iosLoginUrl : fallbackUrl;
+        var iosEasyLoginUrl = "".concat(iosLoginUrl, "&ka=").concat(encodeURIComponent(KAKAO_AGENT));
+        var talkWebviewUrl = "".concat(URL.talkInappScheme, "?url=").concat(encodeURIComponent(iosEasyLoginUrl));
+        return "".concat(URL.universalKakaoLink).concat(encodeURIComponent(talkWebviewUrl), "&web=").concat(encodeURIComponent(iosFallbackUrl));
+      };
+      return UA.os.android ? getAndroidLoginIntent() : getIosLoginUniversalLink();
+    }
+    function isTalkChannelHome(settings) {
+      return settings.throughSyncplugin && /KAKAOTALK/i.test(UA.ua) && /ch-home/i.test(UA.ua);
+    }
+    function executeSyncpluginScheme(baseAuthParams) {
+      var bizpluginParams = assignIn({}, baseAuthParams, {
+        ka: KAKAO_AGENT,
+        is_popup: true,
+        approval_window_type: 'v4_bizplugin'
+      });
+      var query = encodeURIComponent(buildQueryString(bizpluginParams));
+      location.href = "".concat(URL.talkSyncpluginScheme, "&query=").concat(query);
+    }
+  
+    var oauth = /*#__PURE__*/Object.freeze({
+      __proto__: null,
+      authorize: authorize
+    });
+  
+    function isAndroidWebView() {
+      return UA.os.android && (olderAndroidWebView() || oldAndroidWebView() || newerAndroidWebView());
+    }
+    function olderAndroidWebView() {
+      return UA.os.version.major == 2 && /Version\/\d+.\d+|/i.test(UA.ua);
+    }
+    function oldAndroidWebView() {
+      return UA.os.version.major == 4 && UA.os.version.minor < 4 && /Version\/\d+.\d+|/i.test(UA.ua);
+    }
+    function newerAndroidWebView() {
+      return /Version\/\d+\.\d+/i.test(UA.ua) && (/Chrome\/\d+\.\d+\.\d+\.\d+ Mobile/i.test(UA.ua) || /; wv\)/i.test(UA.ua));
+    }
+    function isIOSKakaoTalkWebView() {
+      return UA.os.ios && /KAKAOTALK/i.test(UA.ua);
+    }
+    function isAndroidKakaoTalkWebView() {
+      return UA.os.android && /KAKAOTALK/i.test(UA.ua);
+    }
+    function isNewerAndroidKakaoTalkWebView() {
+      return UA.os.android && /KAKAOTALK/i.test(UA.ua) && UA.browser.chrome && UA.browser.version.major >= 71;
+    }
+  
+    var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
+  
+    function createCommonjsModule(fn) {
+      var module = { exports: {} };
+        return fn(module, module.exports), module.exports;
+    }
+  
+    function commonjsRequire (target) {
+        throw new Error('Could not dynamically require "' + target + '". Please configure the dynamicRequireTargets option of @rollup/plugin-commonjs appropriately for this require call to behave properly.');
+    }
+  
+    var es6Promise = createCommonjsModule(function (module, exports) {
+      (function (global, factory) {
+        module.exports = factory() ;
+      })(commonjsGlobal, function () {
+        function objectOrFunction(x) {
+          var type = typeof x;
+          return x !== null && (type === 'object' || type === 'function');
+        }
+        function isFunction(x) {
+          return typeof x === 'function';
+        }
+        var _isArray = void 0;
+        if (Array.isArray) {
+          _isArray = Array.isArray;
+        } else {
+          _isArray = function (x) {
+            return Object.prototype.toString.call(x) === '[object Array]';
+          };
+        }
+        var isArray = _isArray;
+        var len = 0;
+        var vertxNext = void 0;
+        var customSchedulerFn = void 0;
+        var asap = function asap(callback, arg) {
+          queue[len] = callback;
+          queue[len + 1] = arg;
+          len += 2;
+          if (len === 2) {
+            if (customSchedulerFn) {
+              customSchedulerFn(flush);
+            } else {
+              scheduleFlush();
+            }
+          }
+        };
+        function setScheduler(scheduleFn) {
+          customSchedulerFn = scheduleFn;
+        }
+        function setAsap(asapFn) {
+          asap = asapFn;
+        }
+        var browserWindow = typeof window !== 'undefined' ? window : undefined;
+        var browserGlobal = browserWindow || {};
+        var BrowserMutationObserver = browserGlobal.MutationObserver || browserGlobal.WebKitMutationObserver;
+        var isNode = typeof self === 'undefined' && typeof process !== 'undefined' && {}.toString.call(process) === '[object process]';
+        var isWorker = typeof Uint8ClampedArray !== 'undefined' && typeof importScripts !== 'undefined' && typeof MessageChannel !== 'undefined';
+        function useNextTick() {
+          return function () {
+            return process.nextTick(flush);
+          };
+        }
+        function useVertxTimer() {
+          if (typeof vertxNext !== 'undefined') {
+            return function () {
+              vertxNext(flush);
+            };
+          }
+          return useSetTimeout();
+        }
+        function useMutationObserver() {
+          var iterations = 0;
+          var observer = new BrowserMutationObserver(flush);
+          var node = document.createTextNode('');
+          observer.observe(node, {
+            characterData: true
+          });
+          return function () {
+            node.data = iterations = ++iterations % 2;
+          };
+        }
+        function useMessageChannel() {
+          var channel = new MessageChannel();
+          channel.port1.onmessage = flush;
+          return function () {
+            return channel.port2.postMessage(0);
+          };
+        }
+        function useSetTimeout() {
+          var globalSetTimeout = setTimeout;
+          return function () {
+            return globalSetTimeout(flush, 1);
+          };
+        }
+        var queue = new Array(1000);
+        function flush() {
+          for (var i = 0; i < len; i += 2) {
+            var callback = queue[i];
+            var arg = queue[i + 1];
+            callback(arg);
+            queue[i] = undefined;
+            queue[i + 1] = undefined;
+          }
+          len = 0;
+        }
+        function attemptVertx() {
+          try {
+            var vertx = Function('return this')().require('vertx');
+            vertxNext = vertx.runOnLoop || vertx.runOnContext;
+            return useVertxTimer();
+          } catch (e) {
+            return useSetTimeout();
+          }
+        }
+        var scheduleFlush = void 0;
+        if (isNode) {
+          scheduleFlush = useNextTick();
+        } else if (BrowserMutationObserver) {
+          scheduleFlush = useMutationObserver();
+        } else if (isWorker) {
+          scheduleFlush = useMessageChannel();
+        } else if (browserWindow === undefined && typeof commonjsRequire === 'function') {
+          scheduleFlush = attemptVertx();
+        } else {
+          scheduleFlush = useSetTimeout();
+        }
+        function then(onFulfillment, onRejection) {
+          var parent = this;
+          var child = new this.constructor(noop);
+          if (child[PROMISE_ID] === undefined) {
+            makePromise(child);
+          }
+          var _state = parent._state;
+          if (_state) {
+            var callback = arguments[_state - 1];
+            asap(function () {
+              return invokeCallback(_state, child, callback, parent._result);
+            });
+          } else {
+            subscribe(parent, child, onFulfillment, onRejection);
+          }
+          return child;
+        }
+        function resolve$1(object) {
+          var Constructor = this;
+          if (object && typeof object === 'object' && object.constructor === Constructor) {
+            return object;
+          }
+          var promise = new Constructor(noop);
+          resolve(promise, object);
+          return promise;
+        }
+        var PROMISE_ID = Math.random().toString(36).substring(2);
+        function noop() {}
+        var PENDING = void 0;
+        var FULFILLED = 1;
+        var REJECTED = 2;
+        function selfFulfillment() {
+          return new TypeError("You cannot resolve a promise with itself");
+        }
+        function cannotReturnOwn() {
+          return new TypeError('A promises callback cannot return that same promise.');
+        }
+        function tryThen(then$$1, value, fulfillmentHandler, rejectionHandler) {
+          try {
+            then$$1.call(value, fulfillmentHandler, rejectionHandler);
+          } catch (e) {
+            return e;
+          }
+        }
+        function handleForeignThenable(promise, thenable, then$$1) {
+          asap(function (promise) {
+            var sealed = false;
+            var error = tryThen(then$$1, thenable, function (value) {
+              if (sealed) {
+                return;
+              }
+              sealed = true;
+              if (thenable !== value) {
+                resolve(promise, value);
+              } else {
+                fulfill(promise, value);
+              }
+            }, function (reason) {
+              if (sealed) {
+                return;
+              }
+              sealed = true;
+              reject(promise, reason);
+            }, 'Settle: ' + (promise._label || ' unknown promise'));
+            if (!sealed && error) {
+              sealed = true;
+              reject(promise, error);
+            }
+          }, promise);
+        }
+        function handleOwnThenable(promise, thenable) {
+          if (thenable._state === FULFILLED) {
+            fulfill(promise, thenable._result);
+          } else if (thenable._state === REJECTED) {
+            reject(promise, thenable._result);
+          } else {
+            subscribe(thenable, undefined, function (value) {
+              return resolve(promise, value);
+            }, function (reason) {
+              return reject(promise, reason);
+            });
+          }
+        }
+        function handleMaybeThenable(promise, maybeThenable, then$$1) {
+          if (maybeThenable.constructor === promise.constructor && then$$1 === then && maybeThenable.constructor.resolve === resolve$1) {
+            handleOwnThenable(promise, maybeThenable);
+          } else {
+            if (then$$1 === undefined) {
+              fulfill(promise, maybeThenable);
+            } else if (isFunction(then$$1)) {
+              handleForeignThenable(promise, maybeThenable, then$$1);
+            } else {
+              fulfill(promise, maybeThenable);
+            }
+          }
+        }
+        function resolve(promise, value) {
+          if (promise === value) {
+            reject(promise, selfFulfillment());
+          } else if (objectOrFunction(value)) {
+            var then$$1 = void 0;
+            try {
+              then$$1 = value.then;
+            } catch (error) {
+              reject(promise, error);
+              return;
+            }
+            handleMaybeThenable(promise, value, then$$1);
+          } else {
+            fulfill(promise, value);
+          }
+        }
+        function publishRejection(promise) {
+          if (promise._onerror) {
+            promise._onerror(promise._result);
+          }
+          publish(promise);
+        }
+        function fulfill(promise, value) {
+          if (promise._state !== PENDING) {
+            return;
+          }
+          promise._result = value;
+          promise._state = FULFILLED;
+          if (promise._subscribers.length !== 0) {
+            asap(publish, promise);
+          }
+        }
+        function reject(promise, reason) {
+          if (promise._state !== PENDING) {
+            return;
+          }
+          promise._state = REJECTED;
+          promise._result = reason;
+          asap(publishRejection, promise);
+        }
+        function subscribe(parent, child, onFulfillment, onRejection) {
+          var _subscribers = parent._subscribers;
+          var length = _subscribers.length;
+          parent._onerror = null;
+          _subscribers[length] = child;
+          _subscribers[length + FULFILLED] = onFulfillment;
+          _subscribers[length + REJECTED] = onRejection;
+          if (length === 0 && parent._state) {
+            asap(publish, parent);
+          }
+        }
+        function publish(promise) {
+          var subscribers = promise._subscribers;
+          var settled = promise._state;
+          if (subscribers.length === 0) {
+            return;
+          }
+          var child = void 0,
+              callback = void 0,
+              detail = promise._result;
+          for (var i = 0; i < subscribers.length; i += 3) {
+            child = subscribers[i];
+            callback = subscribers[i + settled];
+            if (child) {
+              invokeCallback(settled, child, callback, detail);
+            } else {
+              callback(detail);
+            }
+          }
+          promise._subscribers.length = 0;
+        }
+        function invokeCallback(settled, promise, callback, detail) {
+          var hasCallback = isFunction(callback),
+              value = void 0,
+              error = void 0,
+              succeeded = true;
+          if (hasCallback) {
+            try {
+              value = callback(detail);
+            } catch (e) {
+              succeeded = false;
+              error = e;
+            }
+            if (promise === value) {
+              reject(promise, cannotReturnOwn());
+              return;
+            }
+          } else {
+            value = detail;
+          }
+          if (promise._state !== PENDING) ; else if (hasCallback && succeeded) {
+            resolve(promise, value);
+          } else if (succeeded === false) {
+            reject(promise, error);
+          } else if (settled === FULFILLED) {
+            fulfill(promise, value);
+          } else if (settled === REJECTED) {
+            reject(promise, value);
+          }
+        }
+        function initializePromise(promise, resolver) {
+          try {
+            resolver(function resolvePromise(value) {
+              resolve(promise, value);
+            }, function rejectPromise(reason) {
+              reject(promise, reason);
+            });
+          } catch (e) {
+            reject(promise, e);
+          }
+        }
+        var id = 0;
+        function nextId() {
+          return id++;
+        }
+        function makePromise(promise) {
+          promise[PROMISE_ID] = id++;
+          promise._state = undefined;
+          promise._result = undefined;
+          promise._subscribers = [];
+        }
+        function validationError() {
+          return new Error('Array Methods must be provided an Array');
+        }
+        var Enumerator = function () {
+          function Enumerator(Constructor, input) {
+            this._instanceConstructor = Constructor;
+            this.promise = new Constructor(noop);
+            if (!this.promise[PROMISE_ID]) {
+              makePromise(this.promise);
+            }
+            if (isArray(input)) {
+              this.length = input.length;
+              this._remaining = input.length;
+              this._result = new Array(this.length);
+              if (this.length === 0) {
+                fulfill(this.promise, this._result);
+              } else {
+                this.length = this.length || 0;
+                this._enumerate(input);
+                if (this._remaining === 0) {
+                  fulfill(this.promise, this._result);
+                }
+              }
+            } else {
+              reject(this.promise, validationError());
+            }
+          }
+          Enumerator.prototype._enumerate = function _enumerate(input) {
+            for (var i = 0; this._state === PENDING && i < input.length; i++) {
+              this._eachEntry(input[i], i);
+            }
+          };
+          Enumerator.prototype._eachEntry = function _eachEntry(entry, i) {
+            var c = this._instanceConstructor;
+            var resolve$$1 = c.resolve;
+            if (resolve$$1 === resolve$1) {
+              var _then = void 0;
+              var error = void 0;
+              var didError = false;
+              try {
+                _then = entry.then;
+              } catch (e) {
+                didError = true;
+                error = e;
+              }
+              if (_then === then && entry._state !== PENDING) {
+                this._settledAt(entry._state, i, entry._result);
+              } else if (typeof _then !== 'function') {
+                this._remaining--;
+                this._result[i] = entry;
+              } else if (c === Promise$1) {
+                var promise = new c(noop);
+                if (didError) {
+                  reject(promise, error);
+                } else {
+                  handleMaybeThenable(promise, entry, _then);
+                }
+                this._willSettleAt(promise, i);
+              } else {
+                this._willSettleAt(new c(function (resolve$$1) {
+                  return resolve$$1(entry);
+                }), i);
+              }
+            } else {
+              this._willSettleAt(resolve$$1(entry), i);
+            }
+          };
+          Enumerator.prototype._settledAt = function _settledAt(state, i, value) {
+            var promise = this.promise;
+            if (promise._state === PENDING) {
+              this._remaining--;
+              if (state === REJECTED) {
+                reject(promise, value);
+              } else {
+                this._result[i] = value;
+              }
+            }
+            if (this._remaining === 0) {
+              fulfill(promise, this._result);
+            }
+          };
+          Enumerator.prototype._willSettleAt = function _willSettleAt(promise, i) {
+            var enumerator = this;
+            subscribe(promise, undefined, function (value) {
+              return enumerator._settledAt(FULFILLED, i, value);
+            }, function (reason) {
+              return enumerator._settledAt(REJECTED, i, reason);
+            });
+          };
+          return Enumerator;
+        }();
+        function all(entries) {
+          return new Enumerator(this, entries).promise;
+        }
+        function race(entries) {
+          var Constructor = this;
+          if (!isArray(entries)) {
+            return new Constructor(function (_, reject) {
+              return reject(new TypeError('You must pass an array to race.'));
+            });
+          } else {
+            return new Constructor(function (resolve, reject) {
+              var length = entries.length;
+              for (var i = 0; i < length; i++) {
+                Constructor.resolve(entries[i]).then(resolve, reject);
+              }
+            });
+          }
+        }
+        function reject$1(reason) {
+          var Constructor = this;
+          var promise = new Constructor(noop);
+          reject(promise, reason);
+          return promise;
+        }
+        function needsResolver() {
+          throw new TypeError('You must pass a resolver function as the first argument to the promise constructor');
+        }
+        function needsNew() {
+          throw new TypeError("Failed to construct 'Promise': Please use the 'new' operator, this object constructor cannot be called as a function.");
+        }
+        var Promise$1 = function () {
+          function Promise(resolver) {
+            this[PROMISE_ID] = nextId();
+            this._result = this._state = undefined;
+            this._subscribers = [];
+            if (noop !== resolver) {
+              typeof resolver !== 'function' && needsResolver();
+              this instanceof Promise ? initializePromise(this, resolver) : needsNew();
+            }
+          }
+          Promise.prototype.catch = function _catch(onRejection) {
+            return this.then(null, onRejection);
+          };
+          Promise.prototype.finally = function _finally(callback) {
+            var promise = this;
+            var constructor = promise.constructor;
+            if (isFunction(callback)) {
+              return promise.then(function (value) {
+                return constructor.resolve(callback()).then(function () {
+                  return value;
+                });
+              }, function (reason) {
+                return constructor.resolve(callback()).then(function () {
+                  throw reason;
+                });
+              });
+            }
+            return promise.then(callback, callback);
+          };
+          return Promise;
+        }();
+        Promise$1.prototype.then = then;
+        Promise$1.all = all;
+        Promise$1.race = race;
+        Promise$1.resolve = resolve$1;
+        Promise$1.reject = reject$1;
+        Promise$1._setScheduler = setScheduler;
+        Promise$1._setAsap = setAsap;
+        Promise$1._asap = asap;
+        function polyfill() {
+          var local = void 0;
+          if (typeof commonjsGlobal !== 'undefined') {
+            local = commonjsGlobal;
+          } else if (typeof self !== 'undefined') {
+            local = self;
+          } else {
+            try {
+              local = Function('return this')();
+            } catch (e) {
+              throw new Error('polyfill failed because global object is unavailable in this environment');
+            }
+          }
+          var P = local.Promise;
+          if (P) {
+            var promiseToString = null;
+            try {
+              promiseToString = Object.prototype.toString.call(P.resolve());
+            } catch (e) {
+            }
+            if (promiseToString === '[object Promise]' && !P.cast) {
+              return;
+            }
+          }
+          local.Promise = Promise$1;
+        }
+        Promise$1.polyfill = polyfill;
+        Promise$1.Promise = Promise$1;
+        return Promise$1;
+      });
+    });
+  
+    var easyXDM_1 = function () {
+      (function (O, d, q, L, l, I) {
+        var b = this || O;
+        var o = Math.floor(Math.random() * 10000);
+        var r = Function.prototype;
+        var R = /^((http.?:)\/\/([^:\/\s]+)(:\d+)*)/;
+        var S = /[\-\w]+\/\.\.\//;
+        var G = /([^:])\/\//g;
+        var J = "";
+        var p = {};
+        var N = O.easyXDM;
+        var V = "easyXDM_";
+        var F;
+        var z = false;
+        var j;
+        var i;
+        function D(Y, aa) {
+          var Z = _typeof(Y[aa]);
+          return Z == "function" || !!(Z == "object" && Y[aa]) || Z == "unknown";
+        }
+        function v(Y, Z) {
+          return !!(_typeof(Y[Z]) == "object" && Y[Z]);
+        }
+        function s(Y) {
+          return Object.prototype.toString.call(Y) === "[object Array]";
+        }
+        function c() {
+          var aa = "Shockwave Flash",
+              ae = "application/x-shockwave-flash";
+          if (!u(navigator.plugins) && _typeof(navigator.plugins[aa]) == "object") {
+            var ac = navigator.plugins[aa].description;
+            if (ac && !u(navigator.mimeTypes) && navigator.mimeTypes[ae] && navigator.mimeTypes[ae].enabledPlugin) {
+              j = ac.match(/\d+/g);
+            }
+          }
+          if (!j) {
+            var Z;
+            try {
+              Z = new ActiveXObject("ShockwaveFlash.ShockwaveFlash");
+              j = Array.prototype.slice.call(Z.GetVariable("$version").match(/(\d+),(\d+),(\d+),(\d+)/), 1);
+              Z = null;
+            } catch (ad) {}
+          }
+          if (!j) {
+            return false;
+          }
+          var Y = parseInt(j[0], 10),
+              ab = parseInt(j[1], 10);
+          i = Y > 9 && ab > 0;
+          return true;
+        }
+        var w, y;
+        if (D(O, "addEventListener")) {
+          w = function w(aa, Y, Z) {
+            aa.addEventListener(Y, Z, false);
+          };
+          y = function y(aa, Y, Z) {
+            aa.removeEventListener(Y, Z, false);
+          };
+        } else {
+          if (D(O, "attachEvent")) {
+            w = function w(Y, aa, Z) {
+              Y.attachEvent("on" + aa, Z);
+            };
+            y = function y(Y, aa, Z) {
+              Y.detachEvent("on" + aa, Z);
+            };
+          } else {
+            throw new Error("Browser not supported");
+          }
+        }
+        var X = false,
+            K = [],
+            M;
+        if ("readyState" in d) {
+          M = d.readyState;
+          X = M == "complete" || ~navigator.userAgent.indexOf("AppleWebKit/") && (M == "loaded" || M == "interactive");
+        } else {
+          X = !!d.body;
+        }
+        function t() {
+          if (X) {
+            return;
+          }
+          X = true;
+          for (var Y = 0; Y < K.length; Y++) {
+            K[Y]();
+          }
+          K.length = 0;
+        }
+        if (!X) {
+          if (D(O, "addEventListener")) {
+            w(d, "DOMContentLoaded", t);
+          } else {
+            w(d, "readystatechange", function () {
+              if (d.readyState == "complete") {
+                t();
+              }
+            });
+            if (d.documentElement.doScroll && O === top) {
+              var h = function h() {
+                if (X) {
+                  return;
+                }
+                try {
+                  d.documentElement.doScroll("left");
+                } catch (Y) {
+                  L(h, 1);
+                  return;
+                }
+                t();
+              };
+              h();
+            }
+          }
+          w(O, "load", t);
+        }
+        function H(Z, Y) {
+          if (X) {
+            Z.call(Y);
+            return;
+          }
+          K.push(function () {
+            Z.call(Y);
+          });
+        }
+        function n() {
+          var aa = parent;
+          if (J !== "") {
+            for (var Y = 0, Z = J.split("."); Y < Z.length; Y++) {
+              aa = aa[Z[Y]];
+            }
+          }
+          return aa.easyXDM;
+        }
+        function f(Y) {
+          O.easyXDM = N;
+          J = Y;
+          if (J) {
+            V = "easyXDM_" + J.replace(".", "_") + "_";
+          }
+          return p;
+        }
+        function A(Y) {
+          return Y.match(R)[3];
+        }
+        function g(Y) {
+          return Y.match(R)[4] || "";
+        }
+        function k(aa) {
+          if (aa.indexOf("file://") >= 0) {
+            return "file://";
+          }
+          var Y = aa.toLowerCase().match(R);
+          if (!Y) {
+            return "";
+          }
+          var ab = Y[2],
+              ac = Y[3],
+              Z = Y[4] || "";
+          if (ab == "http:" && Z == ":80" || ab == "https:" && Z == ":443") {
+            Z = "";
+          }
+          return ab + "//" + ac + Z;
+        }
+        function C(Y) {
+          Y = Y.replace(G, "$1/");
+          if (!Y.match(/^(http||https):\/\//)) {
+            var Z = Y.substring(0, 1) === "/" ? "" : q.pathname;
+            if (Z.substring(Z.length - 1) !== "/") {
+              Z = Z.substring(0, Z.lastIndexOf("/") + 1);
+            }
+            Y = q.protocol + "//" + q.host + Z + Y;
+          }
+          while (S.test(Y)) {
+            Y = Y.replace(S, "");
+          }
+          return Y;
+        }
+        function Q(Y, ab) {
+          var ad = "",
+              aa = Y.indexOf("#");
+          if (aa !== -1) {
+            ad = Y.substring(aa);
+            Y = Y.substring(0, aa);
+          }
+          var ac = [];
+          for (var Z in ab) {
+            if (ab.hasOwnProperty(Z)) {
+              ac.push(Z + "=" + I(ab[Z]));
+            }
+          }
+          return Y + (z ? "#" : Y.indexOf("?") == -1 ? "?" : "&") + ac.join("&") + ad;
+        }
+        var T = function (Y) {
+          Y = Y.substring(1).split("&");
+          var aa = {},
+              ab,
+              Z = Y.length;
+          while (Z--) {
+            ab = Y[Z].split("=");
+            aa[ab[0]] = l(ab[1]);
+          }
+          return aa;
+        }(/xdm_e=/.test(q.search) ? q.search : q.hash);
+        function u(Y) {
+          return typeof Y === "undefined";
+        }
+        var _P = function P() {
+          var Z = {};
+          var aa = {
+            a: [1, 2, 3]
+          },
+              Y = '{"a":[1,2,3]}';
+          if (typeof JSON != "undefined" && typeof JSON.stringify === "function" && JSON.stringify(aa).replace(/\s/g, "") === Y) {
+            return JSON;
+          }
+          if (Object.toJSON) {
+            if (Object.toJSON(aa).replace(/\s/g, "") === Y) {
+              Z.stringify = Object.toJSON;
+            }
+          }
+          if (typeof String.prototype.evalJSON === "function") {
+            aa = Y.evalJSON();
+            if (aa.a && aa.a.length === 3 && aa.a[2] === 3) {
+              Z.parse = function (ab) {
+                return ab.evalJSON();
+              };
+            }
+          }
+          if (Z.stringify && Z.parse) {
+            _P = function P() {
+              return Z;
+            };
+            return Z;
+          }
+          return null;
+        };
+        function U(Y, Z, aa) {
+          var ac;
+          for (var ab in Z) {
+            if (Z.hasOwnProperty(ab)) {
+              if (ab in Y) {
+                ac = Z[ab];
+                if (_typeof(ac) === "object") {
+                  U(Y[ab], ac, aa);
+                } else {
+                  if (!aa) {
+                    Y[ab] = Z[ab];
+                  }
+                }
+              } else {
+                Y[ab] = Z[ab];
+              }
+            }
+          }
+          return Y;
+        }
+        function a() {
+          var Z = d.body.appendChild(d.createElement("form")),
+              Y = Z.appendChild(d.createElement("input"));
+          Y.name = V + "TEST" + o;
+          F = Y !== Z.elements[Y.name];
+          d.body.removeChild(Z);
+        }
+        function B(Z) {
+          if (u(F)) {
+            a();
+          }
+          var ad;
+          if (F) {
+            ad = d.createElement('<iframe name="' + Z.props.name + '"/>');
+          } else {
+            ad = d.createElement("IFRAME");
+            ad.name = Z.props.name;
+          }
+          ad.id = ad.name = Z.props.name;
+          delete Z.props.name;
+          if (typeof Z.container == "string") {
+            Z.container = d.getElementById(Z.container);
+          }
+          if (!Z.container) {
+            U(ad.style, {
+              position: "absolute",
+              top: "-2000px",
+              left: "0px"
+            });
+            Z.container = d.body;
+          }
+          var ac = Z.props.src;
+          Z.props.src = "javascript:false";
+          U(ad, Z.props);
+          ad.border = ad.frameBorder = 0;
+          ad.allowTransparency = true;
+          Z.container.appendChild(ad);
+          if (Z.onLoad) {
+            w(ad, "load", Z.onLoad);
+          }
+          if (Z.usePost) {
+            var ab = Z.container.appendChild(d.createElement("form")),
+                Y;
+            ab.target = ad.name;
+            ab.action = ac;
+            ab.method = "POST";
+            if (_typeof(Z.usePost) === "object") {
+              for (var aa in Z.usePost) {
+                if (Z.usePost.hasOwnProperty(aa)) {
+                  if (F) {
+                    Y = d.createElement('<input name="' + aa + '"/>');
+                  } else {
+                    Y = d.createElement("INPUT");
+                    Y.name = aa;
+                  }
+                  Y.value = Z.usePost[aa];
+                  ab.appendChild(Y);
+                }
+              }
+            }
+            ab.submit();
+            ab.parentNode.removeChild(ab);
+          } else {
+            ad.src = ac;
+          }
+          Z.props.src = ac;
+          return ad;
+        }
+        function e(Y) {
+          return Y.replace(/[-[\]/{}()+.\^$|]/g, "\\$&").replace(/(\*)/g, ".$1").replace(/\?/g, ".");
+        }
+        function W(ac, aa) {
+          if (typeof ac == "string") {
+            ac = [ac];
+          }
+          var Z,
+              Y = ac.length;
+          while (Y--) {
+            var ab = ac[Y].substr(0, 1) === "^" && ac[Y].substr(ac[Y].length - 1, 1) === "$";
+            Z = ab ? ac[Y] : "^" + e(ac[Y]) + "$";
+            Z = new RegExp(Z);
+            if (Z.test(aa)) {
+              return true;
+            }
+          }
+          return false;
+        }
+        function m(aa) {
+          var af = aa.protocol,
+              Z;
+          aa.isHost = aa.isHost || u(T.xdm_p);
+          z = aa.hash || false;
+          if (!aa.props) {
+            aa.props = {};
+          }
+          if (!aa.isHost) {
+            aa.channel = T.xdm_c.replace(/["'<>\\]/g, "");
+            aa.secret = T.xdm_s;
+            aa.remote = T.xdm_e.replace(/["'<>\\]/g, "");
+            af = T.xdm_p;
+            if (aa.acl && !W(aa.acl, aa.remote)) {
+              throw new Error("Access denied for " + aa.remote);
+            }
+          } else {
+            aa.remote = C(aa.remote);
+            aa.channel = aa.channel || "default" + o++;
+            aa.secret = Math.random().toString(16).substring(2);
+            if (u(af)) {
+              if (k(q.href) == k(aa.remote)) {
+                af = "4";
+              } else {
+                if (D(O, "postMessage") || D(d, "postMessage")) {
+                  af = "1";
+                } else {
+                  if (aa.swf && D(O, "ActiveXObject") && c()) {
+                    af = "6";
+                  } else {
+                    if (navigator.product === "Gecko" && "frameElement" in O && navigator.userAgent.indexOf("WebKit") == -1) {
+                      af = "5";
+                    } else {
+                      if (aa.remoteHelper) {
+                        af = "2";
+                      } else {
+                        af = "0";
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          aa.protocol = af;
+          switch (af) {
+            case "0":
+              U(aa, {
+                interval: 100,
+                delay: 2000,
+                useResize: true,
+                useParent: false,
+                usePolling: false
+              }, true);
+              if (aa.isHost) {
+                if (!aa.local) {
+                  var ad = q.protocol + "//" + q.host,
+                      Y = d.body.getElementsByTagName("img"),
+                      ae;
+                  var ab = Y.length;
+                  while (ab--) {
+                    ae = Y[ab];
+                    if (ae.src.substring(0, ad.length) === ad) {
+                      aa.local = ae.src;
+                      break;
+                    }
+                  }
+                  if (!aa.local) {
+                    aa.local = O;
+                  }
+                }
+                var ac = {
+                  xdm_c: aa.channel,
+                  xdm_p: 0
+                };
+                if (aa.local === O) {
+                  aa.usePolling = true;
+                  aa.useParent = true;
+                  aa.local = q.protocol + "//" + q.host + q.pathname + q.search;
+                  ac.xdm_e = aa.local;
+                  ac.xdm_pa = 1;
+                } else {
+                  ac.xdm_e = C(aa.local);
+                }
+                if (aa.container) {
+                  aa.useResize = false;
+                  ac.xdm_po = 1;
+                }
+                aa.remote = Q(aa.remote, ac);
+              } else {
+                U(aa, {
+                  useParent: !u(T.xdm_pa),
+                  usePolling: !u(T.xdm_po),
+                  useResize: aa.useParent ? false : aa.useResize
+                });
+              }
+              Z = [new p.stack.HashTransport(aa), new p.stack.ReliableBehavior({}), new p.stack.QueueBehavior({
+                encode: true,
+                maxLength: 4000 - aa.remote.length
+              }), new p.stack.VerifyBehavior({
+                initiate: aa.isHost
+              })];
+              break;
+            case "1":
+              Z = [new p.stack.PostMessageTransport(aa)];
+              break;
+            case "2":
+              if (aa.isHost) {
+                aa.remoteHelper = C(aa.remoteHelper);
+              }
+              Z = [new p.stack.NameTransport(aa), new p.stack.QueueBehavior(), new p.stack.VerifyBehavior({
+                initiate: aa.isHost
+              })];
+              break;
+            case "3":
+              Z = [new p.stack.NixTransport(aa)];
+              break;
+            case "4":
+              Z = [new p.stack.SameOriginTransport(aa)];
+              break;
+            case "5":
+              Z = [new p.stack.FrameElementTransport(aa)];
+              break;
+            case "6":
+              if (!j) {
+                c();
+              }
+              Z = [new p.stack.FlashTransport(aa)];
+              break;
+          }
+          Z.push(new p.stack.QueueBehavior({
+            lazy: aa.lazy,
+            remove: true
+          }));
+          return Z;
+        }
+        function E(ab) {
+          var ac,
+              aa = {
+            incoming: function incoming(ae, ad) {
+              this.up.incoming(ae, ad);
+            },
+            outgoing: function outgoing(ad, ae) {
+              this.down.outgoing(ad, ae);
+            },
+            callback: function callback(ad) {
+              this.up.callback(ad);
+            },
+            init: function init() {
+              this.down.init();
+            },
+            destroy: function destroy() {
+              this.down.destroy();
+            }
+          };
+          for (var Z = 0, Y = ab.length; Z < Y; Z++) {
+            ac = ab[Z];
+            U(ac, aa, true);
+            if (Z !== 0) {
+              ac.down = ab[Z - 1];
+            }
+            if (Z !== Y - 1) {
+              ac.up = ab[Z + 1];
+            }
+          }
+          return ac;
+        }
+        function x(Y) {
+          Y.up.down = Y.down;
+          Y.down.up = Y.up;
+          Y.up = Y.down = null;
+        }
+        U(p, {
+          version: "2.5.00.1",
+          query: T,
+          stack: {},
+          apply: U,
+          getJSONObject: _P,
+          whenReady: H,
+          noConflict: f
+        });
+        p.DomHelper = {
+          on: w,
+          un: y,
+          requiresJSON: function requiresJSON(Y) {
+            if (!v(O, "JSON")) {
+              d.write('<script type="text/javascript" src="' + Y + '"><\/script>');
+            }
+          }
+        };
+        (function () {
+          var Y = {};
+          p.Fn = {
+            set: function set(Z, aa) {
+              Y[Z] = aa;
+            },
+            get: function get(aa, Z) {
+              if (!Y.hasOwnProperty(aa)) {
+                return;
+              }
+              var ab = Y[aa];
+              if (Z) {
+                delete Y[aa];
+              }
+              return ab;
+            }
+          };
+        })();
+        p.Socket = function (Z) {
+          var Y = E(m(Z).concat([{
+            incoming: function incoming(ac, ab) {
+              Z.onMessage(ac, ab);
+            },
+            callback: function callback(ab) {
+              if (Z.onReady) {
+                Z.onReady(ab);
+              }
+            }
+          }])),
+              aa = k(Z.remote);
+          this.origin = k(Z.remote);
+          this.destroy = function () {
+            Y.destroy();
+          };
+          this.postMessage = function (ab) {
+            Y.outgoing(ab, aa);
+          };
+          Y.init();
+        };
+        p.Rpc = function (aa, Z) {
+          if (Z.local) {
+            for (var ac in Z.local) {
+              if (Z.local.hasOwnProperty(ac)) {
+                var ab = Z.local[ac];
+                if (typeof ab === "function") {
+                  Z.local[ac] = {
+                    method: ab
+                  };
+                }
+              }
+            }
+          }
+          var Y = E(m(aa).concat([new p.stack.RpcBehavior(this, Z), {
+            callback: function callback(ad) {
+              if (aa.onReady) {
+                aa.onReady(ad);
+              }
+            }
+          }]));
+          this.origin = k(aa.remote);
+          this.context = aa.context || null;
+          this.destroy = function () {
+            Y.destroy();
+          };
+          Y.init();
+        };
+        p.stack.SameOriginTransport = function (Z) {
+          var aa, ac, ab, Y;
+          return aa = {
+            outgoing: function outgoing(ae, af, ad) {
+              ab(ae);
+              if (ad) {
+                ad();
+              }
+            },
+            destroy: function destroy() {
+              if (ac) {
+                ac.parentNode.removeChild(ac);
+                ac = null;
+              }
+            },
+            onDOMReady: function onDOMReady() {
+              Y = k(Z.remote);
+              if (Z.isHost) {
+                U(Z.props, {
+                  src: Q(Z.remote, {
+                    xdm_e: q.protocol + "//" + q.host + q.pathname,
+                    xdm_c: Z.channel,
+                    xdm_p: 4
+                  }),
+                  name: V + Z.channel + "_provider"
+                });
+                ac = B(Z);
+                p.Fn.set(Z.channel, function (ad) {
+                  ab = ad;
+                  L(function () {
+                    aa.up.callback(true);
+                  }, 0);
+                  return function (ae) {
+                    aa.up.incoming(ae, Y);
+                  };
+                });
+              } else {
+                ab = n().Fn.get(Z.channel, true)(function (ad) {
+                  aa.up.incoming(ad, Y);
+                });
+                L(function () {
+                  aa.up.callback(true);
+                }, 0);
+              }
+            },
+            init: function init() {
+              H(aa.onDOMReady, aa);
+            }
+          };
+        };
+        p.stack.FlashTransport = function (ab) {
+          var ad, Y, ae, Z, af;
+          function ag(ai, ah) {
+            L(function () {
+              ad.up.incoming(ai, ae);
+            }, 0);
+          }
+          function aa(ai) {
+            var ah = ab.swf + "?host=" + ab.isHost;
+            var ak = "easyXDM_swf_" + Math.floor(Math.random() * 10000);
+            p.Fn.set("flash_loaded" + ai.replace(/[\-.]/g, "_"), function () {
+              p.stack.FlashTransport[ai].swf = Z = af.firstChild;
+              var al = p.stack.FlashTransport[ai].queue;
+              for (var am = 0; am < al.length; am++) {
+                al[am]();
+              }
+              al.length = 0;
+            });
+            if (ab.swfContainer) {
+              af = typeof ab.swfContainer == "string" ? d.getElementById(ab.swfContainer) : ab.swfContainer;
+            } else {
+              af = d.createElement("div");
+              U(af.style, i && ab.swfNoThrottle ? {
+                height: "20px",
+                width: "20px",
+                position: "fixed",
+                right: 0,
+                top: 0
+              } : {
+                height: "1px",
+                width: "1px",
+                position: "absolute",
+                overflow: "hidden",
+                right: 0,
+                top: 0
+              });
+              d.body.appendChild(af);
+            }
+            var aj = "callback=flash_loaded" + I(ai.replace(/[\-.]/g, "_")) + "&proto=" + b.location.protocol + "&domain=" + I(A(b.location.href)) + "&port=" + I(g(b.location.href)) + "&ns=" + I(J);
+            af.innerHTML = "<object height='20' width='20' type='application/x-shockwave-flash' id='" + ak + "' data='" + ah + "'><param name='allowScriptAccess' value='always'></param><param name='wmode' value='transparent'><param name='movie' value='" + ah + "'></param><param name='flashvars' value='" + aj + "'></param><embed type='application/x-shockwave-flash' FlashVars='" + aj + "' allowScriptAccess='always' wmode='transparent' src='" + ah + "' height='1' width='1'></embed></object>";
+          }
+          return ad = {
+            outgoing: function outgoing(ai, aj, ah) {
+              Z.postMessage(ab.channel, ai.toString());
+              if (ah) {
+                ah();
+              }
+            },
+            destroy: function destroy() {
+              try {
+                Z.destroyChannel(ab.channel);
+              } catch (ah) {}
+              Z = null;
+              if (Y) {
+                Y.parentNode.removeChild(Y);
+                Y = null;
+              }
+            },
+            onDOMReady: function onDOMReady() {
+              ae = ab.remote;
+              p.Fn.set("flash_" + ab.channel + "_init", function () {
+                L(function () {
+                  ad.up.callback(true);
+                });
+              });
+              p.Fn.set("flash_" + ab.channel + "_onMessage", ag);
+              ab.swf = C(ab.swf);
+              var ai = A(ab.swf);
+              var ah = function ah() {
+                p.stack.FlashTransport[ai].init = true;
+                Z = p.stack.FlashTransport[ai].swf;
+                Z.createChannel(ab.channel, ab.secret, k(ab.remote), ab.isHost);
+                if (ab.isHost) {
+                  if (i && ab.swfNoThrottle) {
+                    U(ab.props, {
+                      position: "fixed",
+                      right: 0,
+                      top: 0,
+                      height: "20px",
+                      width: "20px"
+                    });
+                  }
+                  U(ab.props, {
+                    src: Q(ab.remote, {
+                      xdm_e: k(q.href),
+                      xdm_c: ab.channel,
+                      xdm_p: 6,
+                      xdm_s: ab.secret
+                    }),
+                    name: V + ab.channel + "_provider"
+                  });
+                  Y = B(ab);
+                }
+              };
+              if (p.stack.FlashTransport[ai] && p.stack.FlashTransport[ai].init) {
+                ah();
+              } else {
+                if (!p.stack.FlashTransport[ai]) {
+                  p.stack.FlashTransport[ai] = {
+                    queue: [ah]
+                  };
+                  aa(ai);
+                } else {
+                  p.stack.FlashTransport[ai].queue.push(ah);
+                }
+              }
+            },
+            init: function init() {
+              H(ad.onDOMReady, ad);
+            }
+          };
+        };
+        p.stack.PostMessageTransport = function (ac) {
+          var ae, af, aa, ab;
+          function Z(ag) {
+            if (ag.origin) {
+              return k(ag.origin);
+            }
+            if (ag.uri) {
+              return k(ag.uri);
+            }
+            if (ag.domain) {
+              return q.protocol + "//" + ag.domain;
+            }
+            throw "Unable to retrieve the origin of the event";
+          }
+          function ad(ah) {
+            if (typeof ah.data !== "string") {
+              return;
+            }
+            var ag = Z(ah);
+            if (ag == ab && typeof ah.data === "string" && ah.data.substring(0, ac.channel.length + 1) == ac.channel + " ") {
+              ae.up.incoming(ah.data.substring(ac.channel.length + 1), ag);
+            }
+          }
+          function Y(ag) {
+            if (ag.data == ac.channel + "-ready") {
+              aa = "postMessage" in af.contentWindow ? af.contentWindow : af.contentWindow.document;
+              y(O, "message", Y);
+              w(O, "message", ad);
+              L(function () {
+                ae.up.callback(true);
+              }, 0);
+            }
+          }
+          return ae = {
+            outgoing: function outgoing(ah, ai, ag) {
+              aa.postMessage(ac.channel + " " + ah, ai || ab);
+              if (ag) {
+                ag();
+              }
+            },
+            destroy: function destroy() {
+              y(O, "message", Y);
+              y(O, "message", ad);
+              if (af) {
+                aa = null;
+                af.parentNode.removeChild(af);
+                af = null;
+              }
+            },
+            onDOMReady: function onDOMReady() {
+              ab = k(ac.remote);
+              if (ab === "file://") {
+                ab = "*";
+              }
+              if (ac.isHost) {
+                w(O, "message", Y);
+                U(ac.props, {
+                  src: Q(ac.remote, {
+                    xdm_e: k(q.href),
+                    xdm_c: ac.channel,
+                    xdm_p: 1
+                  }),
+                  name: V + ac.channel + "_provider"
+                });
+                af = B(ac);
+              } else {
+                w(O, "message", ad);
+                aa = "postMessage" in O.parent ? O.parent : O.parent.document;
+                aa.postMessage(ac.channel + "-ready", ab);
+                L(function () {
+                  ae.up.callback(true);
+                }, 0);
+              }
+            },
+            init: function init() {
+              H(ae.onDOMReady, ae);
+            }
+          };
+        };
+        p.stack.FrameElementTransport = function (Z) {
+          var aa, ac, ab, Y;
+          return aa = {
+            outgoing: function outgoing(ae, af, ad) {
+              ab.call(this, ae);
+              if (ad) {
+                ad();
+              }
+            },
+            destroy: function destroy() {
+              if (ac) {
+                ac.parentNode.removeChild(ac);
+                ac = null;
+              }
+            },
+            onDOMReady: function onDOMReady() {
+              Y = k(Z.remote);
+              if (Z.isHost) {
+                U(Z.props, {
+                  src: Q(Z.remote, {
+                    xdm_e: k(q.href),
+                    xdm_c: Z.channel,
+                    xdm_p: 5
+                  }),
+                  name: V + Z.channel + "_provider"
+                });
+                ac = B(Z);
+                ac.fn = function (ad) {
+                  delete ac.fn;
+                  ab = ad;
+                  L(function () {
+                    aa.up.callback(true);
+                  }, 0);
+                  return function (ae) {
+                    aa.up.incoming(ae, Y);
+                  };
+                };
+              } else {
+                if (d.referrer && k(d.referrer) != T.xdm_e) {
+                  O.top.location = T.xdm_e;
+                }
+                ab = O.frameElement.fn(function (ad) {
+                  aa.up.incoming(ad, Y);
+                });
+                aa.up.callback(true);
+              }
+            },
+            init: function init() {
+              H(aa.onDOMReady, aa);
+            }
+          };
+        };
+        p.stack.NameTransport = function (ac) {
+          var ad;
+          var af, aj, ab, ah, ai, Z, Y;
+          function ag(am) {
+            var al = ac.remoteHelper + (af ? "#_3" : "#_2") + ac.channel;
+            aj.contentWindow.sendMessage(am, al);
+          }
+          function ae() {
+            if (af) {
+              if (++ah === 2 || !af) {
+                ad.up.callback(true);
+              }
+            } else {
+              ag("ready");
+              ad.up.callback(true);
+            }
+          }
+          function ak(al) {
+            ad.up.incoming(al, Z);
+          }
+          function aa() {
+            if (ai) {
+              L(function () {
+                ai(true);
+              }, 0);
+            }
+          }
+          return ad = {
+            outgoing: function outgoing(am, an, al) {
+              ai = al;
+              ag(am);
+            },
+            destroy: function destroy() {
+              aj.parentNode.removeChild(aj);
+              aj = null;
+              if (af) {
+                ab.parentNode.removeChild(ab);
+                ab = null;
+              }
+            },
+            onDOMReady: function onDOMReady() {
+              af = ac.isHost;
+              ah = 0;
+              Z = k(ac.remote);
+              ac.local = C(ac.local);
+              if (af) {
+                p.Fn.set(ac.channel, function (am) {
+                  if (af && am === "ready") {
+                    p.Fn.set(ac.channel, ak);
+                    ae();
+                  }
+                });
+                Y = Q(ac.remote, {
+                  xdm_e: ac.local,
+                  xdm_c: ac.channel,
+                  xdm_p: 2
+                });
+                U(ac.props, {
+                  src: Y + "#" + ac.channel,
+                  name: V + ac.channel + "_provider"
+                });
+                ab = B(ac);
+              } else {
+                ac.remoteHelper = ac.remote;
+                p.Fn.set(ac.channel, ak);
+              }
+              var al = function al() {
+                var am = aj || this;
+                y(am, "load", al);
+                p.Fn.set(ac.channel + "_load", aa);
+                (function an() {
+                  if (typeof am.contentWindow.sendMessage == "function") {
+                    ae();
+                  } else {
+                    L(an, 50);
+                  }
+                })();
+              };
+              aj = B({
+                props: {
+                  src: ac.local + "#_4" + ac.channel
+                },
+                onLoad: al
+              });
+            },
+            init: function init() {
+              H(ad.onDOMReady, ad);
+            }
+          };
+        };
+        p.stack.HashTransport = function (aa) {
+          var ad;
+          var ag,
+              ab,
+              Y,
+              ae,
+              an,
+              ac,
+              am;
+          var ah, Z;
+          function al(ap) {
+            if (!am) {
+              return;
+            }
+            var ao = aa.remote + "#" + an++ + "_" + ap;
+            (ag || !ah ? am.contentWindow : am).location = ao;
+          }
+          function af(ao) {
+            ae = ao;
+            ad.up.incoming(ae.substring(ae.indexOf("_") + 1), Z);
+          }
+          function ak() {
+            if (!ac) {
+              return;
+            }
+            var ao = ac.location.href,
+                aq = "",
+                ap = ao.indexOf("#");
+            if (ap != -1) {
+              aq = ao.substring(ap);
+            }
+            if (aq && aq != ae) {
+              af(aq);
+            }
+          }
+          function aj() {
+            ab = setInterval(ak, Y);
+          }
+          return ad = {
+            outgoing: function outgoing(ao, ap) {
+              al(ao);
+            },
+            destroy: function destroy() {
+              O.clearInterval(ab);
+              if (ag || !ah) {
+                am.parentNode.removeChild(am);
+              }
+              am = null;
+            },
+            onDOMReady: function onDOMReady() {
+              ag = aa.isHost;
+              Y = aa.interval;
+              ae = "#" + aa.channel;
+              an = 0;
+              ah = aa.useParent;
+              Z = k(aa.remote);
+              if (ag) {
+                U(aa.props, {
+                  src: aa.remote,
+                  name: V + aa.channel + "_provider"
+                });
+                if (ah) {
+                  aa.onLoad = function () {
+                    ac = O;
+                    aj();
+                    ad.up.callback(true);
+                  };
+                } else {
+                  var aq = 0,
+                      ao = aa.delay / 50;
+                  (function ap() {
+                    if (++aq > ao) {
+                      throw new Error("Unable to reference listenerwindow");
+                    }
+                    try {
+                      ac = am.contentWindow.frames[V + aa.channel + "_consumer"];
+                    } catch (ar) {}
+                    if (ac) {
+                      aj();
+                      ad.up.callback(true);
+                    } else {
+                      L(ap, 50);
+                    }
+                  })();
+                }
+                am = B(aa);
+              } else {
+                ac = O;
+                aj();
+                if (ah) {
+                  am = parent;
+                  ad.up.callback(true);
+                } else {
+                  U(aa, {
+                    props: {
+                      src: aa.remote + "#" + aa.channel + new Date(),
+                      name: V + aa.channel + "_consumer"
+                    },
+                    onLoad: function onLoad() {
+                      ad.up.callback(true);
+                    }
+                  });
+                  am = B(aa);
+                }
+              }
+            },
+            init: function init() {
+              H(ad.onDOMReady, ad);
+            }
+          };
+        };
+        p.stack.ReliableBehavior = function (Z) {
+          var ab, ad;
+          var ac = 0,
+              Y = 0,
+              aa = "";
+          return ab = {
+            incoming: function incoming(ag, ae) {
+              var af = ag.indexOf("_"),
+                  ah = ag.substring(0, af).split(",");
+              ag = ag.substring(af + 1);
+              if (ah[0] == ac) {
+                aa = "";
+                if (ad) {
+                  ad(true);
+                }
+              }
+              if (ag.length > 0) {
+                ab.down.outgoing(ah[1] + "," + ac + "_" + aa, ae);
+                if (Y != ah[1]) {
+                  Y = ah[1];
+                  ab.up.incoming(ag, ae);
+                }
+              }
+            },
+            outgoing: function outgoing(ag, ae, af) {
+              aa = ag;
+              ad = af;
+              ab.down.outgoing(Y + "," + ++ac + "_" + ag, ae);
+            }
+          };
+        };
+        p.stack.QueueBehavior = function (aa) {
+          var ad,
+              ae = [],
+              ah = true,
+              ab = "",
+              ag,
+              Y = 0,
+              Z = false,
+              ac = false;
+          function af() {
+            if (aa.remove && ae.length === 0) {
+              x(ad);
+              return;
+            }
+            if (ah || ae.length === 0 || ag) {
+              return;
+            }
+            ah = true;
+            var ai = ae.shift();
+            ad.down.outgoing(ai.data, ai.origin, function (aj) {
+              ah = false;
+              if (ai.callback) {
+                L(function () {
+                  ai.callback(aj);
+                }, 0);
+              }
+              af();
+            });
+          }
+          return ad = {
+            init: function init() {
+              if (u(aa)) {
+                aa = {};
+              }
+              if (aa.maxLength) {
+                Y = aa.maxLength;
+                ac = true;
+              }
+              if (aa.lazy) {
+                Z = true;
+              } else {
+                ad.down.init();
+              }
+            },
+            callback: function callback(aj) {
+              ah = false;
+              var ai = ad.up;
+              af();
+              ai.callback(aj);
+            },
+            incoming: function incoming(al, aj) {
+              if (ac) {
+                var ak = al.indexOf("_"),
+                    ai = parseInt(al.substring(0, ak), 10);
+                ab += al.substring(ak + 1);
+                if (ai === 0) {
+                  if (aa.encode) {
+                    ab = l(ab);
+                  }
+                  ad.up.incoming(ab, aj);
+                  ab = "";
+                }
+              } else {
+                ad.up.incoming(al, aj);
+              }
+            },
+            outgoing: function outgoing(am, aj, al) {
+              if (aa.encode) {
+                am = I(am);
+              }
+              var ai = [],
+                  ak;
+              if (ac) {
+                while (am.length !== 0) {
+                  ak = am.substring(0, Y);
+                  am = am.substring(ak.length);
+                  ai.push(ak);
+                }
+                while (ak = ai.shift()) {
+                  ae.push({
+                    data: ai.length + "_" + ak,
+                    origin: aj,
+                    callback: ai.length === 0 ? al : null
+                  });
+                }
+              } else {
+                ae.push({
+                  data: am,
+                  origin: aj,
+                  callback: al
+                });
+              }
+              if (Z) {
+                ad.down.init();
+              } else {
+                af();
+              }
+            },
+            destroy: function destroy() {
+              ag = true;
+              ad.down.destroy();
+            }
+          };
+        };
+        p.stack.VerifyBehavior = function (ac) {
+          var ad,
+              ab,
+              Z;
+          function Y() {
+            ab = Math.random().toString(16).substring(2);
+            ad.down.outgoing(ab);
+          }
+          return ad = {
+            incoming: function incoming(ag, ae) {
+              var af = ag.indexOf("_");
+              if (af === -1) {
+                if (ag === ab) {
+                  ad.up.callback(true);
+                } else {
+                  if (!Z) {
+                    Z = ag;
+                    if (!ac.initiate) {
+                      Y();
+                    }
+                    ad.down.outgoing(ag);
+                  }
+                }
+              } else {
+                if (ag.substring(0, af) === Z) {
+                  ad.up.incoming(ag.substring(af + 1), ae);
+                }
+              }
+            },
+            outgoing: function outgoing(ag, ae, af) {
+              ad.down.outgoing(ab + "_" + ag, ae, af);
+            },
+            callback: function callback(ae) {
+              if (ac.initiate) {
+                Y();
+              }
+            }
+          };
+        };
+        p.stack.RpcBehavior = function (ae, Z) {
+          var ab,
+              ag = Z.serializer || _P();
+          var af = 0,
+              ad = {};
+          function Y(ah) {
+            ah.jsonrpc = "2.0";
+            ab.down.outgoing(ag.stringify(ah));
+          }
+          function ac(ah, aj) {
+            var ai = Array.prototype.slice;
+            return function () {
+              var ak = arguments.length,
+                  am,
+                  al = {
+                method: aj
+              };
+              if (ak > 0 && typeof arguments[ak - 1] === "function") {
+                if (ak > 1 && typeof arguments[ak - 2] === "function") {
+                  am = {
+                    success: arguments[ak - 2],
+                    error: arguments[ak - 1]
+                  };
+                  al.params = ai.call(arguments, 0, ak - 2);
+                } else {
+                  am = {
+                    success: arguments[ak - 1]
+                  };
+                  al.params = ai.call(arguments, 0, ak - 1);
+                }
+                ad["" + ++af] = am;
+                al.id = af;
+              } else {
+                al.params = ai.call(arguments, 0);
+              }
+              if (ah.namedParams && al.params.length === 1) {
+                al.params = al.params[0];
+              }
+              Y(al);
+            };
+          }
+          function aa(ah, aj, an, al) {
+            if (!an) {
+              if (aj) {
+                Y({
+                  id: aj,
+                  error: {
+                    code: -32601,
+                    message: "Procedure not found."
+                  }
+                });
+              }
+              return;
+            }
+            var _ao, _am;
+            if (aj) {
+              _ao = function ao(aq) {
+                _ao = r;
+                Y({
+                  id: aj,
+                  result: aq
+                });
+              };
+              _am = function am(aq, ar) {
+                _am = r;
+                var at = {
+                  id: aj,
+                  error: {
+                    code: -32099,
+                    message: aq
+                  }
+                };
+                if (ar) {
+                  at.error.data = ar;
+                }
+                Y(at);
+              };
+            } else {
+              _ao = _am = r;
+            }
+            if (!s(al)) {
+              al = [al];
+            }
+            try {
+              var ak = ae.context || an.scope;
+              var ap = an.method.apply(ak, al.concat([_ao, _am]));
+              if (!u(ap)) {
+                _ao(ap);
+              }
+            } catch (ai) {
+              _am(ai.message);
+            }
+          }
+          return ab = {
+            incoming: function incoming(ai, ah) {
+              var aj = ag.parse(ai);
+              if (aj.method) {
+                if (Z.handle) {
+                  Z.handle(aj, Y);
+                } else {
+                  aa(aj.method, aj.id, Z.local[aj.method], aj.params);
+                }
+              } else {
+                var ak = ad[aj.id];
+                if (aj.error) {
+                  if (ak.error) {
+                    ak.error(aj.error);
+                  }
+                } else {
+                  if (ak.success) {
+                    ak.success(aj.result);
+                  }
+                }
+                delete ad[aj.id];
+              }
+            },
+            init: function init() {
+              if (Z.remote) {
+                for (var ah in Z.remote) {
+                  if (Z.remote.hasOwnProperty(ah)) {
+                    ae[ah] = ac(Z.remote[ah], ah);
+                  }
+                }
+              }
+              ab.down.init();
+            },
+            destroy: function destroy() {
+              for (var ah in Z.remote) {
+                if (Z.remote.hasOwnProperty(ah) && ae.hasOwnProperty(ah)) {
+                  delete ae[ah];
+                }
+              }
+              ab.down.destroy();
+            }
+          };
+        };
+        b.easyXDM = p;
+      })(window, document, location, window.setTimeout, decodeURIComponent, encodeURIComponent);
+      return easyXDM.noConflict('Kakao');
+    }();
+  
+    var CryptoJS = function () {
+      var CryptoJS = CryptoJS || function (u, p) {
+        var d = {},
+            l = d.lib = {},
+            s = function s() {},
+            t = l.Base = {
+          extend: function extend(a) {
+            s.prototype = this;
+            var c = new s();
+            a && c.mixIn(a);
+            c.hasOwnProperty("init") || (c.init = function () {
+              c.$super.init.apply(this, arguments);
+            });
+            c.init.prototype = c;
+            c.$super = this;
+            return c;
+          },
+          create: function create() {
+            var a = this.extend();
+            a.init.apply(a, arguments);
+            return a;
+          },
+          init: function init() {},
+          mixIn: function mixIn(a) {
+            for (var c in a) {
+              a.hasOwnProperty(c) && (this[c] = a[c]);
+            }
+            a.hasOwnProperty("toString") && (this.toString = a.toString);
+          },
+          clone: function clone() {
+            return this.init.prototype.extend(this);
+          }
+        },
+            r = l.WordArray = t.extend({
+          init: function init(a, c) {
+            a = this.words = a || [];
+            this.sigBytes = c != p ? c : 4 * a.length;
+          },
+          toString: function toString(a) {
+            return (a || v).stringify(this);
+          },
+          concat: function concat(a) {
+            var c = this.words,
+                e = a.words,
+                j = this.sigBytes;
+            a = a.sigBytes;
+            this.clamp();
+            if (j % 4) for (var k = 0; k < a; k++) {
+              c[j + k >>> 2] |= (e[k >>> 2] >>> 24 - 8 * (k % 4) & 255) << 24 - 8 * ((j + k) % 4);
+            } else if (65535 < e.length) for (k = 0; k < a; k += 4) {
+              c[j + k >>> 2] = e[k >>> 2];
+            } else c.push.apply(c, e);
+            this.sigBytes += a;
+            return this;
+          },
+          clamp: function clamp() {
+            var a = this.words,
+                c = this.sigBytes;
+            a[c >>> 2] &= 4294967295 << 32 - 8 * (c % 4);
+            a.length = u.ceil(c / 4);
+          },
+          clone: function clone() {
+            var a = t.clone.call(this);
+            a.words = this.words.slice(0);
+            return a;
+          },
+          random: function random(a) {
+            for (var c = [], e = 0; e < a; e += 4) {
+              c.push(4294967296 * u.random() | 0);
+            }
+            return new r.init(c, a);
+          }
+        }),
+            w = d.enc = {},
+            v = w.Hex = {
+          stringify: function stringify(a) {
+            var c = a.words;
+            a = a.sigBytes;
+            for (var e = [], j = 0; j < a; j++) {
+              var k = c[j >>> 2] >>> 24 - 8 * (j % 4) & 255;
+              e.push((k >>> 4).toString(16));
+              e.push((k & 15).toString(16));
+            }
+            return e.join("");
+          },
+          parse: function parse(a) {
+            for (var c = a.length, e = [], j = 0; j < c; j += 2) {
+              e[j >>> 3] |= parseInt(a.substr(j, 2), 16) << 24 - 4 * (j % 8);
+            }
+            return new r.init(e, c / 2);
+          }
+        },
+            b = w.Latin1 = {
+          stringify: function stringify(a) {
+            var c = a.words;
+            a = a.sigBytes;
+            for (var e = [], j = 0; j < a; j++) {
+              e.push(String.fromCharCode(c[j >>> 2] >>> 24 - 8 * (j % 4) & 255));
+            }
+            return e.join("");
+          },
+          parse: function parse(a) {
+            for (var c = a.length, e = [], j = 0; j < c; j++) {
+              e[j >>> 2] |= (a.charCodeAt(j) & 255) << 24 - 8 * (j % 4);
+            }
+            return new r.init(e, c);
+          }
+        },
+            x = w.Utf8 = {
+          stringify: function stringify(a) {
+            try {
+              return decodeURIComponent(escape(b.stringify(a)));
+            } catch (c) {
+              throw Error("Malformed UTF-8 data");
+            }
+          },
+          parse: function parse(a) {
+            return b.parse(unescape(encodeURIComponent(a)));
+          }
+        },
+            q = l.BufferedBlockAlgorithm = t.extend({
+          reset: function reset() {
+            this._data = new r.init();
+            this._nDataBytes = 0;
+          },
+          _append: function _append(a) {
+            "string" == typeof a && (a = x.parse(a));
+            this._data.concat(a);
+            this._nDataBytes += a.sigBytes;
+          },
+          _process: function _process(a) {
+            var c = this._data,
+                e = c.words,
+                j = c.sigBytes,
+                k = this.blockSize,
+                b = j / (4 * k),
+                b = a ? u.ceil(b) : u.max((b | 0) - this._minBufferSize, 0);
+            a = b * k;
+            j = u.min(4 * a, j);
+            if (a) {
+              for (var q = 0; q < a; q += k) {
+                this._doProcessBlock(e, q);
+              }
+              q = e.splice(0, a);
+              c.sigBytes -= j;
+            }
+            return new r.init(q, j);
+          },
+          clone: function clone() {
+            var a = t.clone.call(this);
+            a._data = this._data.clone();
+            return a;
+          },
+          _minBufferSize: 0
+        });
+        l.Hasher = q.extend({
+          cfg: t.extend(),
+          init: function init(a) {
+            this.cfg = this.cfg.extend(a);
+            this.reset();
+          },
+          reset: function reset() {
+            q.reset.call(this);
+            this._doReset();
+          },
+          update: function update(a) {
+            this._append(a);
+            this._process();
+            return this;
+          },
+          finalize: function finalize(a) {
+            a && this._append(a);
+            return this._doFinalize();
+          },
+          blockSize: 16,
+          _createHelper: function _createHelper(a) {
+            return function (b, e) {
+              return new a.init(e).finalize(b);
+            };
+          },
+          _createHmacHelper: function _createHmacHelper(a) {
+            return function (b, e) {
+              return new n.HMAC.init(a, e).finalize(b);
+            };
+          }
+        });
+        var n = d.algo = {};
+        return d;
+      }(Math);
+      (function () {
+        var u = CryptoJS,
+            p = u.lib.WordArray;
+        u.enc.Base64 = {
+          stringify: function stringify(d) {
+            var l = d.words,
+                p = d.sigBytes,
+                t = this._map;
+            d.clamp();
+            d = [];
+            for (var r = 0; r < p; r += 3) {
+              for (var w = (l[r >>> 2] >>> 24 - 8 * (r % 4) & 255) << 16 | (l[r + 1 >>> 2] >>> 24 - 8 * ((r + 1) % 4) & 255) << 8 | l[r + 2 >>> 2] >>> 24 - 8 * ((r + 2) % 4) & 255, v = 0; 4 > v && r + 0.75 * v < p; v++) {
+                d.push(t.charAt(w >>> 6 * (3 - v) & 63));
+              }
+            }
+            if (l = t.charAt(64)) for (; d.length % 4;) {
+              d.push(l);
+            }
+            return d.join("");
+          },
+          parse: function parse(d) {
+            var l = d.length,
+                s = this._map,
+                t = s.charAt(64);
+            t && (t = d.indexOf(t), -1 != t && (l = t));
+            for (var t = [], r = 0, w = 0; w < l; w++) {
+              if (w % 4) {
+                var v = s.indexOf(d.charAt(w - 1)) << 2 * (w % 4),
+                    b = s.indexOf(d.charAt(w)) >>> 6 - 2 * (w % 4);
+                t[r >>> 2] |= (v | b) << 24 - 8 * (r % 4);
+                r++;
+              }
+            }
+            return p.create(t, r);
+          },
+          _map: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="
+        };
+      })();
+      (function (u) {
+        function p(b, n, a, c, e, j, k) {
+          b = b + (n & a | ~n & c) + e + k;
+          return (b << j | b >>> 32 - j) + n;
+        }
+        function d(b, n, a, c, e, j, k) {
+          b = b + (n & c | a & ~c) + e + k;
+          return (b << j | b >>> 32 - j) + n;
+        }
+        function l(b, n, a, c, e, j, k) {
+          b = b + (n ^ a ^ c) + e + k;
+          return (b << j | b >>> 32 - j) + n;
+        }
+        function s(b, n, a, c, e, j, k) {
+          b = b + (a ^ (n | ~c)) + e + k;
+          return (b << j | b >>> 32 - j) + n;
+        }
+        for (var t = CryptoJS, r = t.lib, w = r.WordArray, v = r.Hasher, r = t.algo, b = [], x = 0; 64 > x; x++) {
+          b[x] = 4294967296 * u.abs(u.sin(x + 1)) | 0;
+        }
+        r = r.MD5 = v.extend({
+          _doReset: function _doReset() {
+            this._hash = new w.init([1732584193, 4023233417, 2562383102, 271733878]);
+          },
+          _doProcessBlock: function _doProcessBlock(q, n) {
+            for (var a = 0; 16 > a; a++) {
+              var c = n + a,
+                  e = q[c];
+              q[c] = (e << 8 | e >>> 24) & 16711935 | (e << 24 | e >>> 8) & 4278255360;
+            }
+            var a = this._hash.words,
+                c = q[n + 0],
+                e = q[n + 1],
+                j = q[n + 2],
+                k = q[n + 3],
+                z = q[n + 4],
+                r = q[n + 5],
+                t = q[n + 6],
+                w = q[n + 7],
+                v = q[n + 8],
+                A = q[n + 9],
+                B = q[n + 10],
+                C = q[n + 11],
+                u = q[n + 12],
+                D = q[n + 13],
+                E = q[n + 14],
+                x = q[n + 15],
+                f = a[0],
+                m = a[1],
+                g = a[2],
+                h = a[3],
+                f = p(f, m, g, h, c, 7, b[0]),
+                h = p(h, f, m, g, e, 12, b[1]),
+                g = p(g, h, f, m, j, 17, b[2]),
+                m = p(m, g, h, f, k, 22, b[3]),
+                f = p(f, m, g, h, z, 7, b[4]),
+                h = p(h, f, m, g, r, 12, b[5]),
+                g = p(g, h, f, m, t, 17, b[6]),
+                m = p(m, g, h, f, w, 22, b[7]),
+                f = p(f, m, g, h, v, 7, b[8]),
+                h = p(h, f, m, g, A, 12, b[9]),
+                g = p(g, h, f, m, B, 17, b[10]),
+                m = p(m, g, h, f, C, 22, b[11]),
+                f = p(f, m, g, h, u, 7, b[12]),
+                h = p(h, f, m, g, D, 12, b[13]),
+                g = p(g, h, f, m, E, 17, b[14]),
+                m = p(m, g, h, f, x, 22, b[15]),
+                f = d(f, m, g, h, e, 5, b[16]),
+                h = d(h, f, m, g, t, 9, b[17]),
+                g = d(g, h, f, m, C, 14, b[18]),
+                m = d(m, g, h, f, c, 20, b[19]),
+                f = d(f, m, g, h, r, 5, b[20]),
+                h = d(h, f, m, g, B, 9, b[21]),
+                g = d(g, h, f, m, x, 14, b[22]),
+                m = d(m, g, h, f, z, 20, b[23]),
+                f = d(f, m, g, h, A, 5, b[24]),
+                h = d(h, f, m, g, E, 9, b[25]),
+                g = d(g, h, f, m, k, 14, b[26]),
+                m = d(m, g, h, f, v, 20, b[27]),
+                f = d(f, m, g, h, D, 5, b[28]),
+                h = d(h, f, m, g, j, 9, b[29]),
+                g = d(g, h, f, m, w, 14, b[30]),
+                m = d(m, g, h, f, u, 20, b[31]),
+                f = l(f, m, g, h, r, 4, b[32]),
+                h = l(h, f, m, g, v, 11, b[33]),
+                g = l(g, h, f, m, C, 16, b[34]),
+                m = l(m, g, h, f, E, 23, b[35]),
+                f = l(f, m, g, h, e, 4, b[36]),
+                h = l(h, f, m, g, z, 11, b[37]),
+                g = l(g, h, f, m, w, 16, b[38]),
+                m = l(m, g, h, f, B, 23, b[39]),
+                f = l(f, m, g, h, D, 4, b[40]),
+                h = l(h, f, m, g, c, 11, b[41]),
+                g = l(g, h, f, m, k, 16, b[42]),
+                m = l(m, g, h, f, t, 23, b[43]),
+                f = l(f, m, g, h, A, 4, b[44]),
+                h = l(h, f, m, g, u, 11, b[45]),
+                g = l(g, h, f, m, x, 16, b[46]),
+                m = l(m, g, h, f, j, 23, b[47]),
+                f = s(f, m, g, h, c, 6, b[48]),
+                h = s(h, f, m, g, w, 10, b[49]),
+                g = s(g, h, f, m, E, 15, b[50]),
+                m = s(m, g, h, f, r, 21, b[51]),
+                f = s(f, m, g, h, u, 6, b[52]),
+                h = s(h, f, m, g, k, 10, b[53]),
+                g = s(g, h, f, m, B, 15, b[54]),
+                m = s(m, g, h, f, e, 21, b[55]),
+                f = s(f, m, g, h, v, 6, b[56]),
+                h = s(h, f, m, g, x, 10, b[57]),
+                g = s(g, h, f, m, t, 15, b[58]),
+                m = s(m, g, h, f, D, 21, b[59]),
+                f = s(f, m, g, h, z, 6, b[60]),
+                h = s(h, f, m, g, C, 10, b[61]),
+                g = s(g, h, f, m, j, 15, b[62]),
+                m = s(m, g, h, f, A, 21, b[63]);
+            a[0] = a[0] + f | 0;
+            a[1] = a[1] + m | 0;
+            a[2] = a[2] + g | 0;
+            a[3] = a[3] + h | 0;
+          },
+          _doFinalize: function _doFinalize() {
+            var b = this._data,
+                n = b.words,
+                a = 8 * this._nDataBytes,
+                c = 8 * b.sigBytes;
+            n[c >>> 5] |= 128 << 24 - c % 32;
+            var e = u.floor(a / 4294967296);
+            n[(c + 64 >>> 9 << 4) + 15] = (e << 8 | e >>> 24) & 16711935 | (e << 24 | e >>> 8) & 4278255360;
+            n[(c + 64 >>> 9 << 4) + 14] = (a << 8 | a >>> 24) & 16711935 | (a << 24 | a >>> 8) & 4278255360;
+            b.sigBytes = 4 * (n.length + 1);
+            this._process();
+            b = this._hash;
+            n = b.words;
+            for (a = 0; 4 > a; a++) {
+              c = n[a], n[a] = (c << 8 | c >>> 24) & 16711935 | (c << 24 | c >>> 8) & 4278255360;
+            }
+            return b;
+          },
+          clone: function clone() {
+            var b = v.clone.call(this);
+            b._hash = this._hash.clone();
+            return b;
+          }
+        });
+        t.MD5 = v._createHelper(r);
+        t.HmacMD5 = v._createHmacHelper(r);
+      })(Math);
+      (function () {
+        var u = CryptoJS,
+            p = u.lib,
+            d = p.Base,
+            l = p.WordArray,
+            p = u.algo,
+            s = p.EvpKDF = d.extend({
+          cfg: d.extend({
+            keySize: 4,
+            hasher: p.MD5,
+            iterations: 1
+          }),
+          init: function init(d) {
+            this.cfg = this.cfg.extend(d);
+          },
+          compute: function compute(d, r) {
+            for (var p = this.cfg, s = p.hasher.create(), b = l.create(), u = b.words, q = p.keySize, p = p.iterations; u.length < q;) {
+              n && s.update(n);
+              var n = s.update(d).finalize(r);
+              s.reset();
+              for (var a = 1; a < p; a++) {
+                n = s.finalize(n), s.reset();
+              }
+              b.concat(n);
+            }
+            b.sigBytes = 4 * q;
+            return b;
+          }
+        });
+        u.EvpKDF = function (d, l, p) {
+          return s.create(p).compute(d, l);
+        };
+      })();
+      CryptoJS.lib.Cipher || function (u) {
+        var p = CryptoJS,
+            d = p.lib,
+            l = d.Base,
+            s = d.WordArray,
+            t = d.BufferedBlockAlgorithm,
+            r = p.enc.Base64,
+            w = p.algo.EvpKDF,
+            v = d.Cipher = t.extend({
+          cfg: l.extend(),
+          createEncryptor: function createEncryptor(e, a) {
+            return this.create(this._ENC_XFORM_MODE, e, a);
+          },
+          createDecryptor: function createDecryptor(e, a) {
+            return this.create(this._DEC_XFORM_MODE, e, a);
+          },
+          init: function init(e, a, b) {
+            this.cfg = this.cfg.extend(b);
+            this._xformMode = e;
+            this._key = a;
+            this.reset();
+          },
+          reset: function reset() {
+            t.reset.call(this);
+            this._doReset();
+          },
+          process: function process(e) {
+            this._append(e);
+            return this._process();
+          },
+          finalize: function finalize(e) {
+            e && this._append(e);
+            return this._doFinalize();
+          },
+          keySize: 4,
+          ivSize: 4,
+          _ENC_XFORM_MODE: 1,
+          _DEC_XFORM_MODE: 2,
+          _createHelper: function _createHelper(e) {
+            return {
+              encrypt: function encrypt(b, k, d) {
+                return ("string" == typeof k ? c : a).encrypt(e, b, k, d);
+              },
+              decrypt: function decrypt(b, k, d) {
+                return ("string" == typeof k ? c : a).decrypt(e, b, k, d);
+              }
+            };
+          }
+        });
+        d.StreamCipher = v.extend({
+          _doFinalize: function _doFinalize() {
+            return this._process(!0);
+          },
+          blockSize: 1
+        });
+        var b = p.mode = {},
+            x = function x(e, a, b) {
+          var c = this._iv;
+          c ? this._iv = u : c = this._prevBlock;
+          for (var d = 0; d < b; d++) {
+            e[a + d] ^= c[d];
+          }
+        },
+            q = (d.BlockCipherMode = l.extend({
+          createEncryptor: function createEncryptor(e, a) {
+            return this.Encryptor.create(e, a);
+          },
+          createDecryptor: function createDecryptor(e, a) {
+            return this.Decryptor.create(e, a);
+          },
+          init: function init(e, a) {
+            this._cipher = e;
+            this._iv = a;
+          }
+        })).extend();
+        q.Encryptor = q.extend({
+          processBlock: function processBlock(e, a) {
+            var b = this._cipher,
+                c = b.blockSize;
+            x.call(this, e, a, c);
+            b.encryptBlock(e, a);
+            this._prevBlock = e.slice(a, a + c);
+          }
+        });
+        q.Decryptor = q.extend({
+          processBlock: function processBlock(e, a) {
+            var b = this._cipher,
+                c = b.blockSize,
+                d = e.slice(a, a + c);
+            b.decryptBlock(e, a);
+            x.call(this, e, a, c);
+            this._prevBlock = d;
+          }
+        });
+        b = b.CBC = q;
+        q = (p.pad = {}).Pkcs7 = {
+          pad: function pad(a, b) {
+            for (var c = 4 * b, c = c - a.sigBytes % c, d = c << 24 | c << 16 | c << 8 | c, l = [], n = 0; n < c; n += 4) {
+              l.push(d);
+            }
+            c = s.create(l, c);
+            a.concat(c);
+          },
+          unpad: function unpad(a) {
+            a.sigBytes -= a.words[a.sigBytes - 1 >>> 2] & 255;
+          }
+        };
+        d.BlockCipher = v.extend({
+          cfg: v.cfg.extend({
+            mode: b,
+            padding: q
+          }),
+          reset: function reset() {
+            v.reset.call(this);
+            var a = this.cfg,
+                b = a.iv,
+                a = a.mode;
+            if (this._xformMode == this._ENC_XFORM_MODE) var c = a.createEncryptor;else c = a.createDecryptor, this._minBufferSize = 1;
+            this._mode = c.call(a, this, b && b.words);
+          },
+          _doProcessBlock: function _doProcessBlock(a, b) {
+            this._mode.processBlock(a, b);
+          },
+          _doFinalize: function _doFinalize() {
+            var a = this.cfg.padding;
+            if (this._xformMode == this._ENC_XFORM_MODE) {
+              a.pad(this._data, this.blockSize);
+              var b = this._process(!0);
+            } else b = this._process(!0), a.unpad(b);
+            return b;
+          },
+          blockSize: 4
+        });
+        var n = d.CipherParams = l.extend({
+          init: function init(a) {
+            this.mixIn(a);
+          },
+          toString: function toString(a) {
+            return (a || this.formatter).stringify(this);
+          }
+        }),
+            b = (p.format = {}).OpenSSL = {
+          stringify: function stringify(a) {
+            var b = a.ciphertext;
+            a = a.salt;
+            return (a ? s.create([1398893684, 1701076831]).concat(a).concat(b) : b).toString(r);
+          },
+          parse: function parse(a) {
+            a = r.parse(a);
+            var b = a.words;
+            if (1398893684 == b[0] && 1701076831 == b[1]) {
+              var c = s.create(b.slice(2, 4));
+              b.splice(0, 4);
+              a.sigBytes -= 16;
+            }
+            return n.create({
+              ciphertext: a,
+              salt: c
+            });
+          }
+        },
+            a = d.SerializableCipher = l.extend({
+          cfg: l.extend({
+            format: b
+          }),
+          encrypt: function encrypt(a, b, c, d) {
+            d = this.cfg.extend(d);
+            var l = a.createEncryptor(c, d);
+            b = l.finalize(b);
+            l = l.cfg;
+            return n.create({
+              ciphertext: b,
+              key: c,
+              iv: l.iv,
+              algorithm: a,
+              mode: l.mode,
+              padding: l.padding,
+              blockSize: a.blockSize,
+              formatter: d.format
+            });
+          },
+          decrypt: function decrypt(a, b, c, d) {
+            d = this.cfg.extend(d);
+            b = this._parse(b, d.format);
+            return a.createDecryptor(c, d).finalize(b.ciphertext);
+          },
+          _parse: function _parse(a, b) {
+            return "string" == typeof a ? b.parse(a, this) : a;
+          }
+        }),
+            p = (p.kdf = {}).OpenSSL = {
+          execute: function execute(a, b, c, d) {
+            d || (d = s.random(8));
+            a = w.create({
+              keySize: b + c
+            }).compute(a, d);
+            c = s.create(a.words.slice(b), 4 * c);
+            a.sigBytes = 4 * b;
+            return n.create({
+              key: a,
+              iv: c,
+              salt: d
+            });
+          }
+        },
+            c = d.PasswordBasedCipher = a.extend({
+          cfg: a.cfg.extend({
+            kdf: p
+          }),
+          encrypt: function encrypt(b, c, d, l) {
+            l = this.cfg.extend(l);
+            d = l.kdf.execute(d, b.keySize, b.ivSize);
+            l.iv = d.iv;
+            b = a.encrypt.call(this, b, c, d.key, l);
+            b.mixIn(d);
+            return b;
+          },
+          decrypt: function decrypt(b, c, d, l) {
+            l = this.cfg.extend(l);
+            c = this._parse(c, l.format);
+            d = l.kdf.execute(d, b.keySize, b.ivSize, c.salt);
+            l.iv = d.iv;
+            return a.decrypt.call(this, b, c, d.key, l);
+          }
+        });
+      }();
+      (function () {
+        for (var u = CryptoJS, p = u.lib.BlockCipher, d = u.algo, l = [], s = [], t = [], r = [], w = [], v = [], b = [], x = [], q = [], n = [], a = [], c = 0; 256 > c; c++) {
+          a[c] = 128 > c ? c << 1 : c << 1 ^ 283;
+        }
+        for (var e = 0, j = 0, c = 0; 256 > c; c++) {
+          var k = j ^ j << 1 ^ j << 2 ^ j << 3 ^ j << 4,
+              k = k >>> 8 ^ k & 255 ^ 99;
+          l[e] = k;
+          s[k] = e;
+          var z = a[e],
+              F = a[z],
+              G = a[F],
+              y = 257 * a[k] ^ 16843008 * k;
+          t[e] = y << 24 | y >>> 8;
+          r[e] = y << 16 | y >>> 16;
+          w[e] = y << 8 | y >>> 24;
+          v[e] = y;
+          y = 16843009 * G ^ 65537 * F ^ 257 * z ^ 16843008 * e;
+          b[k] = y << 24 | y >>> 8;
+          x[k] = y << 16 | y >>> 16;
+          q[k] = y << 8 | y >>> 24;
+          n[k] = y;
+          e ? (e = z ^ a[a[a[G ^ z]]], j ^= a[a[j]]) : e = j = 1;
+        }
+        var H = [0, 1, 2, 4, 8, 16, 32, 64, 128, 27, 54],
+            d = d.AES = p.extend({
+          _doReset: function _doReset() {
+            for (var a = this._key, c = a.words, d = a.sigBytes / 4, a = 4 * ((this._nRounds = d + 6) + 1), e = this._keySchedule = [], j = 0; j < a; j++) {
+              if (j < d) e[j] = c[j];else {
+                var k = e[j - 1];
+                j % d ? 6 < d && 4 == j % d && (k = l[k >>> 24] << 24 | l[k >>> 16 & 255] << 16 | l[k >>> 8 & 255] << 8 | l[k & 255]) : (k = k << 8 | k >>> 24, k = l[k >>> 24] << 24 | l[k >>> 16 & 255] << 16 | l[k >>> 8 & 255] << 8 | l[k & 255], k ^= H[j / d | 0] << 24);
+                e[j] = e[j - d] ^ k;
+              }
+            }
+            c = this._invKeySchedule = [];
+            for (d = 0; d < a; d++) {
+              j = a - d, k = d % 4 ? e[j] : e[j - 4], c[d] = 4 > d || 4 >= j ? k : b[l[k >>> 24]] ^ x[l[k >>> 16 & 255]] ^ q[l[k >>> 8 & 255]] ^ n[l[k & 255]];
+            }
+          },
+          encryptBlock: function encryptBlock(a, b) {
+            this._doCryptBlock(a, b, this._keySchedule, t, r, w, v, l);
+          },
+          decryptBlock: function decryptBlock(a, c) {
+            var d = a[c + 1];
+            a[c + 1] = a[c + 3];
+            a[c + 3] = d;
+            this._doCryptBlock(a, c, this._invKeySchedule, b, x, q, n, s);
+            d = a[c + 1];
+            a[c + 1] = a[c + 3];
+            a[c + 3] = d;
+          },
+          _doCryptBlock: function _doCryptBlock(a, b, c, d, e, j, l, f) {
+            for (var m = this._nRounds, g = a[b] ^ c[0], h = a[b + 1] ^ c[1], k = a[b + 2] ^ c[2], n = a[b + 3] ^ c[3], p = 4, r = 1; r < m; r++) {
+              var q = d[g >>> 24] ^ e[h >>> 16 & 255] ^ j[k >>> 8 & 255] ^ l[n & 255] ^ c[p++],
+                  s = d[h >>> 24] ^ e[k >>> 16 & 255] ^ j[n >>> 8 & 255] ^ l[g & 255] ^ c[p++],
+                  t = d[k >>> 24] ^ e[n >>> 16 & 255] ^ j[g >>> 8 & 255] ^ l[h & 255] ^ c[p++],
+                  n = d[n >>> 24] ^ e[g >>> 16 & 255] ^ j[h >>> 8 & 255] ^ l[k & 255] ^ c[p++],
+                  g = q,
+                  h = s,
+                  k = t;
+            }
+            q = (f[g >>> 24] << 24 | f[h >>> 16 & 255] << 16 | f[k >>> 8 & 255] << 8 | f[n & 255]) ^ c[p++];
+            s = (f[h >>> 24] << 24 | f[k >>> 16 & 255] << 16 | f[n >>> 8 & 255] << 8 | f[g & 255]) ^ c[p++];
+            t = (f[k >>> 24] << 24 | f[n >>> 16 & 255] << 16 | f[g >>> 8 & 255] << 8 | f[h & 255]) ^ c[p++];
+            n = (f[n >>> 24] << 24 | f[g >>> 16 & 255] << 16 | f[h >>> 8 & 255] << 8 | f[k & 255]) ^ c[p++];
+            a[b] = q;
+            a[b + 1] = s;
+            a[b + 2] = t;
+            a[b + 3] = n;
+          },
+          keySize: 8
+        });
+        u.AES = p._createHelper(d);
+      })();
+      return CryptoJS;
+    }();
+  
+    function getAppKey() {
+      return getAppKey$1();
+    }
+    var accessToken$1 = null;
+    function getAccessToken() {
+      if (accessToken$1 === null) {
+        accessToken$1 = retrieveItem(getAccessTokenKey());
+      }
+      return accessToken$1;
+    }
+    function setAccessToken(token) {
+      var persist = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+      accessToken$1 = token;
+      if (token === null || persist === false) {
+        removeItem(getAccessTokenKey());
+      } else {
+        storeItem(getAccessTokenKey(), token);
+      }
+    }
+    function getRefreshToken() {
+      console.error('unsupported operation: Auth.getRefreshToken()');
+      return '';
+    }
+    function setRefreshToken(token) {
+      console.error('unsupported operation: Auth.setRefreshToken()');
+    }
+    function storeItem(key, value) {
+      var item = encrypt(value, getAppKey());
+      localStorage.setItem(key, item);
+    }
+    function retrieveItem(key) {
+      var item = localStorage.getItem(key);
+      return item ? decrypt(item, getAppKey()) : null;
+    }
+    function removeItem(key) {
+      localStorage.removeItem(key);
+    }
+    var tokenStorageKeys = {};
+    function getAccessTokenKey() {
+      if (!tokenStorageKeys.accessTokenKey) {
+        tokenStorageKeys.accessTokenKey = 'kakao_' + hash('kat' + getAppKey());
+      }
+      return tokenStorageKeys.accessTokenKey;
+    }
+    function hash(msg) {
+      return CryptoJS.MD5(msg).toString();
+    }
+    function encrypt(msg, passphrase) {
+      return CryptoJS.AES.encrypt(msg, passphrase).toString();
+    }
+    function decrypt(encrypted, passphrase) {
+      return CryptoJS.AES.decrypt(encrypted, passphrase).toString(CryptoJS.enc.Utf8);
+    }
+  
+    var secret = /*#__PURE__*/Object.freeze({
+      __proto__: null,
+      getAppKey: getAppKey,
+      getAccessToken: getAccessToken,
+      setAccessToken: setAccessToken,
+      getRefreshToken: getRefreshToken,
+      setRefreshToken: setRefreshToken
+    });
+  
+    function accessToken() {
+      return "Bearer ".concat(getAccessToken());
+    }
+    function appKey() {
+      return "KakaoAK ".concat(getAppKey());
+    }
+  
+    var postApiCommonParams = {
+      permission: isOneOf(['A', 'F', 'M']),
+      enable_share: isBoolean,
+      android_exec_param: isString,
+      ios_exec_param: isString,
+      android_market_param: isString,
+      ios_market_param: isString
+    };
+    var secureResource = {
+      secure_resource: isBoolean
+    };
+    function forceSecureResource(settings) {
+      if (settings.secure_resource === false) {
+        if (console) {
+          console.warn('KakaoWarning: The secure_resource parameter is deprecated.');
+        }
+        settings.secure_resource = true;
+      }
+    }
+    function storyActivityContentValidator(obj) {
+      if (!isString(obj)) {
+        return false;
+      }
+      if (obj.length === 0 || obj.length > 2048) {
+        throw new KakaoError('content length should be between 0 and 2048');
+      }
+      return true;
+    }
+    function kageImageUrlListValidator(obj) {
+      if (!isArray(obj)) {
+        return false;
+      }
+      return every(obj, function (path) {
+        if (!isString(path)) {
+          return false;
+        }
+        if (isURL(path)) {
+          throw new KakaoError("url in image_url_list should be a kage url, obtained from '/v1/api/story/upload/multi'.");
+        }
+        return true;
+      });
+    }
+    function hasHeaderBackgroundImage(obj) {
+      if (obj.header_image_url || obj.header_image_width || obj.header_image_height) {
+        delete obj.header_image_url;
+        delete obj.header_image_width;
+        delete obj.header_image_height;
+        if (console) {
+          var params = ['header_image_url', 'header_image_width', 'header_image_height'];
+          console.warn("KakaoWarning: The parameters (".concat(params.join(', '), ") for header background image are deprecated."));
+        }
+      }
+      return true;
+    }
+    var apiRules = {
+      '/v1/user/signup': {
+        method: 'post',
+        data: {
+          optional: {
+            properties: isObject
+          }
+        }
+      },
+      '/v1/user/unlink': {
+        method: 'post'
+      },
+      '/v2/user/me': {
+        method: 'get',
+        data: {
+          optional: assignIn({
+            property_keys: isArray
+          }, secureResource)
+        }
+      },
+      '/v1/user/logout': {
+        method: 'post',
+        data: {}
+      },
+      '/v1/user/update_profile': {
+        method: 'post',
+        data: {
+          required: {
+            properties: isObject
+          }
+        }
+      },
+      '/v1/user/access_token_info': {
+        method: 'get',
+        data: {}
+      },
+      '/v2/user/scopes': {
+        method: 'get',
+        data: {
+          optional: {
+            scopes: isArray
+          }
+        }
+      },
+      '/v2/user/revoke/scopes': {
+        method: 'post',
+        data: {
+          required: {
+            scopes: isArray
+          }
+        }
+      },
+      '/v1/user/service/terms': {
+        method: 'get'
+      },
+      '/v1/user/shipping_address': {
+        method: 'get',
+        data: {
+          optional: {
+            address_id: isInteger,
+            from_updated_at: isInteger,
+            page_size: isInteger
+          }
+        }
+      },
+      '/v1/api/talk/profile': {
+        method: 'get',
+        data: {
+          optional: secureResource,
+          after: forceSecureResource
+        }
+      },
+      '/v1/api/talk/friends': {
+        method: 'get',
+        data: {
+          optional: assignIn({
+            offset: isInteger,
+            limit: isInteger,
+            order: isString
+          }, secureResource),
+          after: forceSecureResource
+        }
+      },
+      '/v1/friends': {
+        method: 'get',
+        data: {
+          optional: assignIn({
+            offset: isInteger,
+            limit: isInteger,
+            order: isString,
+            friend_order: isString
+          }, secureResource),
+          after: forceSecureResource
+        }
+      },
+      '/v2/api/talk/memo/send': {
+        method: 'post',
+        data: {
+          required: {
+            template_id: isInteger
+          },
+          optional: {
+            template_args: isObject
+          }
+        }
+      },
+      '/v2/api/talk/memo/scrap/send': {
+        method: 'post',
+        data: {
+          required: {
+            request_url: isString
+          },
+          optional: {
+            template_id: isInteger,
+            template_args: isObject
+          }
+        }
+      },
+      '/v2/api/talk/memo/default/send': {
+        method: 'post',
+        data: {
+          required: {
+            template_object: function template_object(obj) {
+              return isObject(obj) && hasHeaderBackgroundImage(obj);
+            }
+          }
+        }
+      },
+      '/v1/api/talk/friends/message/send': {
+        method: 'post',
+        data: {
+          required: {
+            template_id: isInteger,
+            receiver_uuids: isArray,
+            receiver_id_type: isString
+          },
+          optional: {
+            template_args: isObject
+          },
+          defaults: function defaults() {
+            return {
+              receiver_id_type: 'uuid'
+            };
+          }
+        }
+      },
+      '/v1/api/talk/friends/message/scrap/send': {
+        method: 'post',
+        data: {
+          required: {
+            request_url: isString,
+            receiver_uuids: isArray,
+            receiver_id_type: isString
+          },
+          optional: {
+            template_id: isInteger,
+            template_args: isObject
+          },
+          defaults: function defaults() {
+            return {
+              receiver_id_type: 'uuid'
+            };
+          }
+        }
+      },
+      '/v1/api/talk/friends/message/default/send': {
+        method: 'post',
+        data: {
+          required: {
+            template_object: function template_object(obj) {
+              return isObject(obj) && hasHeaderBackgroundImage(obj);
+            },
+            receiver_uuids: isArray,
+            receiver_id_type: isString
+          },
+          defaults: function defaults() {
+            return {
+              receiver_id_type: 'uuid'
+            };
+          }
+        }
+      },
+      '/v2/api/kakaolink/talk/template/validate': {
+        method: 'get',
+        data: {
+          required: {
+            link_ver: isString,
+            template_id: isInteger
+          },
+          optional: {
+            template_args: isObject
+          }
+        },
+        authType: appKey
+      },
+      '/v2/api/kakaolink/talk/template/scrap': {
+        method: 'get',
+        data: {
+          required: {
+            link_ver: isString,
+            request_url: isString
+          },
+          optional: {
+            template_id: isInteger,
+            template_args: isObject
+          }
+        },
+        authType: appKey
+      },
+      '/v2/api/kakaolink/talk/template/default': {
+        method: 'get',
+        data: {
+          required: {
+            link_ver: isString,
+            template_object: isObject
+          }
+        },
+        authType: appKey
+      },
+      '/v2/api/talk/message/image/upload': {
+        method: 'post',
+        data: {
+          required: {
+            file: isObject
+          }
+        },
+        authType: appKey
+      },
+      '/v2/api/talk/message/image/delete': {
+        method: 'delete',
+        data: {
+          required: {
+            image_url: isString
+          }
+        },
+        authType: appKey
+      },
+      '/v2/api/talk/message/image/scrap': {
+        method: 'post',
+        data: {
+          required: {
+            image_url: isString
+          }
+        },
+        authType: appKey
+      },
+      '/v1/api/story/profile': {
+        method: 'get',
+        data: {
+          optional: secureResource
+        }
+      },
+      '/v1/api/story/isstoryuser': {
+        method: 'get'
+      },
+      '/v1/api/story/mystory': {
+        method: 'get',
+        data: {
+          required: {
+            id: isString
+          }
+        }
+      },
+      '/v1/api/story/mystories': {
+        method: 'get',
+        data: {
+          optional: {
+            last_id: isString
+          }
+        }
+      },
+      '/v1/api/story/linkinfo': {
+        method: 'get',
+        data: {
+          required: {
+            url: isString
+          }
+        }
+      },
+      '/v1/api/story/post/note': {
+        method: 'post',
+        data: {
+          required: {
+            content: storyActivityContentValidator
+          },
+          optional: postApiCommonParams
+        }
+      },
+      '/v1/api/story/post/photo': {
+        method: 'post',
+        data: {
+          required: {
+            image_url_list: kageImageUrlListValidator
+          },
+          optional: assignIn({
+            content: storyActivityContentValidator
+          }, postApiCommonParams)
+        }
+      },
+      '/v1/api/story/post/link': {
+        method: 'post',
+        data: {
+          required: {
+            link_info: isObject
+          },
+          optional: assignIn({
+            content: storyActivityContentValidator
+          }, postApiCommonParams)
+        }
+      },
+      '/v1/api/story/upload/multi': {
+        method: 'post',
+        data: {}
+      },
+      '/v1/api/story/delete/mystory': {
+        method: 'delete',
+        data: {
+          required: {
+            id: isString
+          }
+        }
+      },
+      '/v1/api/talk/channels': {
+        method: 'get',
+        data: {
+          optional: {
+            channel_public_ids: isArray
+          }
+        }
+      },
+      '/v1/api/talk/plusfriends': {
+        method: 'get',
+        data: {
+          optional: {
+            plus_friend_public_ids: isArray
+          }
+        }
+      }
+    };
+    var rules$7 = {
+      request: {
+        required: {
+          url: function url(_url) {
+            return isOneOf(keys(apiRules))(_url);
+          }
+        },
+        optional: {
+          data: isObject,
+          files: function files(obj) {
+            return passesOneOf([isArray, isFileList])(obj) && every(obj, passesOneOf([isFile, isBlob]));
+          },
+          file: isFile,
+          success: isFunction,
+          fail: isFunction,
+          always: isFunction
+        },
+        defaults: {
+          data: {},
+          success: emptyFunc,
+          fail: emptyFunc,
+          always: emptyFunc
+        }
+      },
+      api: apiRules
+    };
+  
+    var proxyForRequest = null;
+    function request$5(settings) {
+      settings = processRules(settings, rules$7.request, 'API.request');
+      var url = settings.url;
+      var urlRule = rules$7.api[url].data;
+      if (urlRule) {
+        settings.data = processRules(settings.data, urlRule, "API.request - ".concat(url));
+      }
+      if (!proxyForRequest) {
+        proxyForRequest = getProxy$1();
+        cleanups$6.push(function () {
+          proxyForRequest.destroy();
+          proxyForRequest = null;
+        });
+      }
+      return new es6Promise.Promise(function (resolve, reject) {
+        getConfig(settings).then(function (config) {
+          proxyForRequest.request(config, function (res) {
+            settings.success(res);
+            settings.always(res);
+            resolve(res);
+          }, function (xdmError) {
+            var error = parseXdmError(xdmError);
+            settings.fail(error);
+            settings.always(error);
+            reject(error);
+          });
+        }, function (error) {
+          reject(error);
+        });
+      });
+    }
+    function getProxy$1() {
+      return guardCreateEasyXDM(function () {
+        return new easyXDM_1.Rpc({
+          remote: URL.apiRemote
+        }, {
+          remote: {
+            request: {}
+          }
+        });
+      });
+    }
+    function parseXdmError(xdmError) {
+      try {
+        logDebug(xdmError);
+        return JSON.parse(xdmError.message.responseText);
+      } catch (e) {
+        return {
+          code: -777,
+          msg: 'Unknown error'
+        };
+      }
+    }
+    function getConfig(settings) {
+      var url = settings.url;
+      var urlSpec = rules$7.api[url];
+      var stringifiedData = {};
+      forEach(settings.data, function (value, key) {
+        stringifiedData[key] = isString(value) ? value : JSON.stringify(value);
+      });
+      var config = {
+        url: url,
+        method: urlSpec.method,
+        headers: {
+          KA: KAKAO_AGENT,
+          Authorization: (urlSpec.authType || accessToken)(),
+          'Cache-Control': 'no-cache',
+          Pragma: 'no-cache'
+        },
+        data: stringifiedData
+      };
+      return new es6Promise.Promise(function (resolve, reject) {
+        if (isFileRequired(url) || settings.data.file) {
+          var files = settings.files || settings.data.file;
+          if (!files) {
+            throw new KakaoError("'files' parameter should be set for ".concat(url));
+          }
+          getFileConfig(files).then(function (fileConfig) {
+            var searchParams = [];
+            for (var prop in stringifiedData) {
+              if (prop !== 'file') {
+                searchParams.push("".concat(prop, "=").concat(encodeURIComponent(stringifiedData[prop])));
+              }
+            }
+            if (searchParams.length > 0) {
+              config.url += "?".concat(searchParams.join('&'));
+            }
+            config.file = fileConfig;
+            resolve(config);
+          }, function (error) {
+            reject(error);
+          });
+        } else {
+          resolve(config);
+        }
+      });
+    }
+    function isFileRequired(url) {
+      return url === '/v1/api/story/upload/multi' || url === '/v2/api/talk/message/image/upload';
+    }
+    function getFileConfig(files) {
+      var serializePromises = map(files, function (file) {
+        return serializeFile(file).then(function (serialized) {
+          return {
+            name: file.name,
+            type: file.type,
+            str: serialized
+          };
+        });
+      });
+      return new es6Promise.Promise(function (resolve, reject) {
+        es6Promise.Promise.all(serializePromises).then(function (serializedFiles) {
+          resolve({
+            paramName: 'file',
+            data: serializedFiles
+          });
+        }, function (error) {
+          reject(error);
+        });
+      });
+    }
+    function serializeFile(file) {
+      return new es6Promise.Promise(function (resolve, reject) {
+        if (typeof FileReader === 'undefined') {
+          reject(new KakaoError('File API is not supported for this browser.'));
+        }
+        var fileReader = new FileReader();
+        fileReader.onload = function (e) {
+          try {
+            resolve(ab2str(e.target.result));
+          } catch (e) {
+            reject(e);
+          }
+        };
+        fileReader.onerror = function (e) {
+          reject(new KakaoError("Cannot read file: ".concat(file.name)));
+        };
+        fileReader.readAsArrayBuffer(file);
+      });
+    }
+    var cleanups$6 = [];
+    function cleanup$7() {
+      emptyCleanups(cleanups$6);
+    }
+  
+    var request$6 = /*#__PURE__*/Object.freeze({
+      __proto__: null,
+      request: request$5,
+      cleanup: cleanup$7
+    });
+  
+    function getProxy(config, onResponse) {
+      assignIn(config, {
+        remote: URL.loginWidget,
+        channel: getRandomString()
+      });
+      return guardCreateEasyXDM(function () {
+        var proxy = new easyXDM_1.Rpc(config, {
+          local: {
+            postResponse: onResponse,
+            getKakaoAgent: function getKakaoAgent() {
+              return KAKAO_AGENT;
+            }
+          },
+          remote: {
+            getCode: {},
+            getAccessToken: {},
+            setClient: {},
+            setStateToken: {},
+            deleteAuthCookie: {}
+          }
+        });
+        proxy.channel = config.channel;
+        return proxy;
+      });
+    }
+  
+    var POPUP_NAME = '_blank';
+    var POPUP_FEATURES$1 = 'width=380, height=520, scrollbars=yes';
+    var ANDROID_WV = /Version\/4.0/i.test(UA.ua) || /; wv\)/i.test(UA.ua);
+    var ANDROID_WV_ALLOWLIST = /naver\(inapp|fb_iab|daumapps|instagram|ebay/g.test(UA.ua) || (typeof daumApps === "undefined" ? "undefined" : _typeof(daumApps)) === 'object';
+    function login$2(stateToken, fallbackUrl, authParams, redirectUri) {
+      if (!isSupport()) {
+        return;
+      }
+      var popup = null;
+      if (UA.os.ios) {
+        var iosLoginScheme = getIosLoginScheme(stateToken, authParams);
+        var universalLink = "".concat(URL.universalKakaoLink).concat(encodeURIComponent(iosLoginScheme), "&web=").concat(encodeURIComponent(fallbackUrl));
+        if (redirectUri) {
+          location.href = universalLink;
+        } else {
+          popup = windowOpen(universalLink, POPUP_NAME, POPUP_FEATURES$1);
+        }
+      } else if (UA.os.android) {
+        var androidLoginIntent = getAndroidLoginIntent(stateToken, fallbackUrl, authParams);
+        if (redirectUri) {
+          location.href = androidLoginIntent;
+        } else if (UA.browser.version.major > 40 && (
+        !ANDROID_WV || ANDROID_WV && ANDROID_WV_ALLOWLIST)) {
+          popup = windowOpen(androidLoginIntent, POPUP_NAME, POPUP_FEATURES$1);
+        } else {
+          popup = windowOpen('', POPUP_NAME, POPUP_FEATURES$1);
+          if (popup) {
+            popup.addEventListener('unload', function () {
+              setTimeout(function () {
+                if (popup && popup.location) {
+                  popup.location.href = fallbackUrl;
+                }
+              }, 10);
+            });
+            popup.location.href = androidLoginIntent;
+          }
+        }
+      }
+      return popup;
+    }
+    function isSupport() {
+      if (UA.os.ios) {
+        var iOSBrowser = /safari|FxiOS|CriOS/.test(UA.ua);
+        var isInAppBrowser = !/KAKAOTALK/i.test(UA.ua);
+        return iOSBrowser || isInAppBrowser;
+      } else if (UA.os.android) {
+        return UA.browser.chrome && !/opr\//i.test(UA.ua) && UA.browser.version.major >= 30 && (
+        !ANDROID_WV || ANDROID_WV && ANDROID_WV_ALLOWLIST);
+      }
+      return false;
+    }
+    function getIosLoginScheme(stateToken, authParams) {
+      authParams.state = stateToken;
+      var params = {
+        client_id: getAppKey$1(),
+        redirect_uri: URL.redirectUri,
+        params: JSON.stringify(authParams)
+      };
+      return "".concat(URL.talkLoginScheme, "?").concat(buildQueryString(params));
+    }
+    function getAndroidLoginIntent(stateToken, fallbackUrl, authParams) {
+      return ['intent:#Intent', 'action=com.kakao.talk.intent.action.CAPRI_LOGGED_IN_ACTIVITY', 'launchFlags=0x08880000', "S.com.kakao.sdk.talk.appKey=".concat(getAppKey$1()), "S.com.kakao.sdk.talk.redirectUri=".concat(URL.talkLoginRedirectUri), "S.com.kakao.sdk.talk.state=".concat(stateToken), "S.com.kakao.sdk.talk.kaHeader=".concat(KAKAO_AGENT), "S.com.kakao.sdk.talk.extraparams=".concat(encodeURIComponent(JSON.stringify(authParams))), "S.browser_fallback_url=".concat(encodeURIComponent(fallbackUrl)), 'end;'].join(';');
+    }
+    var kakaotalk = {
+      login: login$2,
+      isSupport: isSupport
+    };
+  
+    var poller$1 = new Poller(1000, 600);
+    var RESERVED_REDIRECT_URI = 'kakaojs';
+    function createLoginButton(settings) {
+      settings = processRules(settings, rules$8.createLoginButton, 'Auth.createLoginButton');
+      var container$ = getElement(settings.container);
+      if (!container$) {
+        throw new KakaoError('container is required for Kakao login button: pass in element or id');
+      }
+      var buttonSize = settings.size === 'medium' ? '02' : settings.size === 'small' ? '03' : '01';
+      var buttonUrl = "".concat(URL.authDomain, "/public/widget/login/").concat(settings.lang, "/").concat(settings.lang, "_").concat(buttonSize, "_medium");
+      var buttonImage = "".concat(buttonUrl, ".png");
+      var hoverButtonImage = "".concat(buttonUrl, "_press.png");
+      container$.innerHTML = "<img\n    id=\"kakao-login-btn\"\n    src=".concat(buttonImage, "\n    onmouseover=this.src='").concat(hoverButtonImage, "'\n    onmouseout=this.src='").concat(buttonImage, "'\n    style=\"cursor: pointer\"\n  />");
+      var clickHandler = function clickHandler() {
+        doLogin(settings);
+      };
+      addEvent(container$, 'click', clickHandler);
+      cleanups$5.push(function () {
+        removeEvent(container$, 'click', clickHandler);
+      });
+    }
+    function login(settings) {
+      settings = processRules(settings, rules$8.login, 'Auth.login');
+      doLogin(settings);
+    }
+    function doLogin(settings) {
+      var stateToken = getRandomString() + getRandomString();
+      if (kakaotalk.isSupport() && settings.throughTalk) {
+        loginThroughTalk(settings, stateToken);
+      } else if (settings.redirectUri) {
+        location.href = redirectLoginThroughWeb(settings);
+      } else if (isNewerAndroidKakaoTalkWebView()) {
+        var params = assignIn({}, makeAuthParams(settings), makeAuthExtraParams(settings), {
+          redirect_uri: URL.talkLoginRedirectUri,
+          response_type: 'code',
+          state: stateToken,
+          ka: KAKAO_AGENT,
+          origin: origin
+        });
+        var loginUrl = makeAuthUrl(params);
+        loginThroughTalk(settings, stateToken, loginUrl);
+      } else {
+        if (!(UA.browser.msie && parseInt(UA.browser.version.major) <= 9)) {
+          addLoginEvent(settings);
+        }
+        var _loginUrl = loginThroughWeb(settings, stateToken);
+        openLoginPopup(_loginUrl);
+      }
+      eventObserver.dispatch('LOGIN_START');
+    }
+    function addLoginEvent(settings) {
+      var messageHandler = function messageHandler(_ref) {
+        var origin = _ref.origin,
+            data = _ref.data;
+        if (/\.kakao\.com$/.test(origin) && data && typeof data === 'string') {
+          var arr = data.split(' ');
+          if (arr[1] === 'postResponse') {
+            var resp = JSON.parse(decodeURIComponent(arr[2]));
+            handleAuthResponse(settings, resp);
+            removeEvent(window, 'message', messageHandler);
+          }
+        }
+      };
+      addEvent(window, 'message', messageHandler);
+      cleanups$5.push(function () {
+        removeEvent(window, 'message', messageHandler);
+      });
+    }
+    function loginForm(settings) {
+      settings = processRules(settings, rules$8.login, 'Auth.loginForm');
+      var stateToken = getRandomString() + getRandomString();
+      var reauthQueryString = '&prompt=login';
+      if (settings.redirectUri) {
+        location.href = "".concat(redirectLoginThroughWeb(settings)).concat(reauthQueryString);
+      } else {
+        var loginUrl = "".concat(loginThroughWeb(settings, stateToken)).concat(reauthQueryString);
+        openLoginPopup(loginUrl);
+      }
+    }
+    function autoLogin(settings) {
+      settings = processRules(settings, rules$8.autoLogin, 'Auth.autoLogin');
+      if (isIOSKakaoTalkWebView() || isAndroidKakaoTalkWebView()) {
+        var stateToken = getRandomString() + getRandomString();
+        var params = assignIn({}, makeAuthParams(settings), {
+          redirect_uri: URL.talkLoginRedirectUri,
+          response_type: 'code',
+          state: stateToken,
+          ka: KAKAO_AGENT,
+          origin: origin,
+          prompt: 'none'
+        });
+        var loginUrl = makeAuthUrl(params);
+        loginThroughTalk(settings, stateToken, loginUrl);
+      } else {
+        runAuthCallback(settings, {
+          error: 'auto_login',
+          error_description: 'Kakao.Auth.autoLogin is only supported by KakaoTalk InAppBrowser',
+          error_code: '400',
+          status: 'error'
+        });
+      }
+      eventObserver.dispatch('LOGIN_START');
+    }
+    var popupForTalk = null;
+    var closePopup = function closePopup() {
+      popupForTalk && popupForTalk.close && popupForTalk.close();
+      popupForTalk = null;
+    };
+    var proxyForTalk = null;
+    var prevCode = null;
+    function loginThroughTalk(settings, stateToken, talkLoginUrl) {
+      if (!proxyForTalk) {
+        proxyForTalk = getProxy({}, function (response) {
+          if (response.status === 'error' && (response.error_code === '500' || response.error_code === '600' || response.error_code === '700')) {
+            poller$1.stop();
+            if (response.error_code === '700') {
+              location.href = "".concat(URL.authDomain, "/error/network");
+            }
+            handleAuthResponse(settings, {
+              error: response.error,
+              error_description: response.error_description
+            });
+          }
+          if (response.status) {
+            if (response.status === 'ok') {
+              poller$1.stop();
+              if (prevCode === response.code) {
+                return;
+              } else {
+                prevCode = response.code;
+              }
+              proxyForTalk.getAccessToken(response.code, getAppKey$1(), UA.os.ios && !talkLoginUrl ? URL.redirectUri : URL.talkLoginRedirectUri, settings.approvalType);
+              closePopup();
+            } else {
+              if (UA.os.ios && popupForTalk.location.href === 'about:blank') {
+                closePopup();
+              }
+            }
+          } else {
+            handleAuthResponse(settings, response);
+          }
+        });
+        cleanups$5.push(function () {
+          proxyForTalk.destroy();
+          proxyForTalk = null;
+        });
+      }
+      var fallbackUrl = '';
+      if (talkLoginUrl) {
+        if (settings.redirectUri) {
+          location.href = talkLoginUrl;
+        } else {
+          openLoginPopup(talkLoginUrl);
+        }
+      } else {
+        fallbackUrl = settings.redirectUri ? redirectLoginThroughWeb(settings) : loginThroughWeb(settings, stateToken, UA.os.ios ? URL.redirectUri : URL.talkLoginRedirectUri);
+        var params = assignIn({}, makeAuthParams(settings), makeAuthExtraParams(settings));
+        setTimeout(function () {
+          popupForTalk = kakaotalk.login(stateToken, fallbackUrl, params, settings.redirectUri);
+        }, 500);
+      }
+      poller$1.start(function () {
+        if (stateToken) {
+          proxyForTalk.getCode(stateToken, getAppKey$1(), KAKAO_AGENT);
+        }
+      }, function () {
+        handleAuthResponse(settings, {
+          error: 'timeout',
+          description: 'Account login timed out. Please login again.',
+          error_description: 'Account login timed out. Please login again.'
+        });
+        if (settings.redirectUri) {
+          location.href = fallbackUrl;
+        } else {
+          openLoginPopup(fallbackUrl);
+        }
+      });
+    }
+    var proxyForWeb = null;
+    var savedSettingsForWeb = {};
+    function loginThroughWeb(settings, stateToken, fallbackUrl) {
+      if (!proxyForWeb) {
+        proxyForWeb = getProxy({}, function (response) {
+          var savedSettings = getSavedSettingsWithResponseState(response, savedSettingsForWeb);
+          handleAuthResponse(savedSettings, response);
+        });
+        cleanups$5.push(function () {
+          proxyForWeb.destroy();
+          proxyForWeb = null;
+        });
+      }
+      savedSettingsForWeb[stateToken] = settings;
+      var redirectUri = settings.redirectUri ? settings.redirectUri : fallbackUrl ? fallbackUrl : RESERVED_REDIRECT_URI;
+      var params = assignIn({}, makeAuthParams(settings), makeAuthExtraParams(settings), {
+        redirect_uri: redirectUri,
+        response_type: 'code',
+        state: stateToken,
+        proxy: "easyXDM_Kakao_".concat(proxyForWeb.channel, "_provider"),
+        ka: KAKAO_AGENT,
+        origin: origin
+      });
+      return makeAuthUrl(params);
+    }
+    function redirectLoginThroughWeb(settings) {
+      var params = assignIn({}, makeAuthParams(settings), makeAuthExtraParams(settings), {
+        redirect_uri: settings.redirectUri,
+        response_type: 'code',
+        ka: KAKAO_AGENT,
+        origin: origin
+      });
+      return makeAuthUrl(params);
+    }
+    function getSavedSettingsWithResponseState(response, settings) {
+      if (!settings[response.stateToken]) {
+        throw new KakaoError('security error: #CST2');
+      }
+      var savedSettings = settings[response.stateToken];
+      delete settings[response.stateToken];
+      delete response.stateToken;
+      return savedSettings;
+    }
+    function handleAuthResponse(settings, resp) {
+      if (resp.error) {
+        if (resp.error !== 'access_denied') {
+          setAccessToken(null);
+        }
+      } else {
+        setAccessToken(resp.access_token, settings.persistAccessToken);
+        eventObserver.dispatch('LOGIN');
+      }
+      runAuthCallback(settings, resp);
+    }
+    function logout() {
+      var callback = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : emptyFunc;
+      validate(callback, isFunction, 'Auth.logout');
+      request$5({
+        url: '/v1/user/logout',
+        always: function always() {
+          setAccessToken(null);
+          eventObserver.dispatch('LOGOUT');
+          callback(true);
+        }
+      });
+    }
+    var proxyForAccessToken = null;
+    function issueAccessToken(settings) {
+      settings = processRules(settings, rules$8.issueAccessToken, 'Auth.issueAccessToken');
+      if (!proxyForAccessToken) {
+        proxyForAccessToken = getProxy({}, function (response) {
+          handleAuthResponse(settings, response);
+        });
+        cleanups$5.push(function () {
+          proxyForAccessToken.destroy();
+          proxyForAccessToken = null;
+        });
+      }
+      proxyForAccessToken.getAccessToken(settings.code, getAppKey$1(), settings.redirectUri);
+    }
+    var cleanups$5 = [];
+    function cleanup$6() {
+      emptyCleanups(cleanups$5);
+    }
+  
+    var login$1 = /*#__PURE__*/Object.freeze({
+      __proto__: null,
+      createLoginButton: createLoginButton,
+      login: login,
+      loginForm: loginForm,
+      autoLogin: autoLogin,
+      logout: logout,
+      issueAccessToken: issueAccessToken,
+      cleanup: cleanup$6
+    });
+  
+    function getStatusInfo(callback) {
+      validate(callback, isFunction, 'Auth.getStatusInfo');
+      if (!getAccessToken()) {
+        callback({
+          status: 'not_connected'
+        });
+      } else {
+        request$5({
+          url: '/v2/user/me',
+          success: function success(res) {
+            callback({
+              status: 'connected',
+              user: res
+            });
+          },
+          fail: function fail() {
+            callback({
+              status: 'not_connected'
+            });
+          }
+        });
+      }
+    }
+  
+    var status = /*#__PURE__*/Object.freeze({
+      __proto__: null,
+      getStatusInfo: getStatusInfo
+    });
+  
+    var Auth = makeModule([oauth, login$1, secret, status]);
+  
+    var API = makeModule([request$6]);
+  
+    function capitalize(str) {
+      return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+    function stringifyLCBA(lcba) {
+      return isObject(lcba) ? JSON.stringify(lcba) : lcba;
+    }
+    function requestAPI(url, data) {
+      return request$5({
+        url: url,
+        data: data
+      });
+    }
+  
+    function partialValidator(settings, rule, propName) {
+      processRules(settings, rule, "parameter \"".concat(propName, "\" in Link"));
+      return true;
+    }
+    var linkRule = {
+      optional: {
+        webUrl: isString,
+        mobileWebUrl: isString,
+        androidExecutionParams: isString,
+        androidExecParams: isString,
+        iosExecutionParams: isString,
+        iosExecParams: isString
+      },
+      builder: makeLink
+    };
+    function makeLink(settings) {
+      return {
+        web_url: settings.webUrl,
+        mobile_web_url: settings.mobileWebUrl,
+        android_execution_params: settings.androidExecutionParams || settings.androidExecParams,
+        ios_execution_params: settings.iosExecutionParams || settings.iosExecParams
+      };
+    }
+    function makeButton(settings) {
+      return {
+        title: settings.title,
+        link: makeLink(settings.link)
+      };
+    }
+    function makeContent(settings) {
+      return {
+        title: settings.title,
+        image_url: settings.imageUrl,
+        link: makeLink(settings.link),
+        image_width: settings.imageWidth,
+        image_height: settings.imageHeight,
+        description: settings.description
+      };
+    }
+    function makeCommerce(settings) {
+      return {
+        regular_price: settings.regularPrice,
+        discount_price: settings.discountPrice,
+        discount_rate: settings.discountRate,
+        fixed_discount_price: settings.fixedDiscountPrice,
+        product_name: settings.productName
+      };
+    }
+    function makeSocial(settings) {
+      return {
+        like_count: settings.likeCount,
+        comment_count: settings.commentCount,
+        shared_count: settings.sharedCount,
+        view_count: settings.viewCount,
+        subscriber_count: settings.subscriberCount
+      };
+    }
+    var rules$6 = {
+      headerLink: linkRule,
+      link: linkRule,
+      button: {
+        required: {
+          title: isString,
+          link: function link(e) {
+            partialValidator(e, linkRule, 'link');
+          }
+        },
+        builder: makeButton
+      },
+      buttons: {
+        optional: {
+          0: function _(e) {
+            partialValidator(e, rules$6.button, 'button');
+          },
+          1: function _(e) {
+            partialValidator(e, rules$6.button, 'button');
+          }
+        },
+        builder: function builder(arr) {
+          return map(arr, makeButton);
+        }
+      },
+      content: {
+        required: {
+          title: isString,
+          imageUrl: isString,
+          link: function link(e) {
+            partialValidator(e, linkRule, 'link');
+          }
+        },
+        optional: {
+          imageWidth: isInteger,
+          imageHeight: isInteger,
+          description: isString
+        },
+        builder: makeContent
+      },
+      contents: {
+        optional: {
+          0: function _(e) {
+            partialValidator(e, rules$6.content, 'content');
+          },
+          1: function _(e) {
+            partialValidator(e, rules$6.content, 'content');
+          },
+          2: function _(e) {
+            partialValidator(e, rules$6.content, 'content');
+          }
+        },
+        builder: function builder(arr) {
+          return map(arr, makeContent);
+        }
+      },
+      commerce: {
+        required: {
+          regularPrice: isInteger
+        },
+        optional: {
+          discountPrice: isInteger,
+          discountRate: isInteger,
+          fixedDiscountPrice: isInteger,
+          productName: isString
+        },
+        builder: makeCommerce
+      },
+      social: {
+        optional: {
+          likeCount: isInteger,
+          commentCount: isInteger,
+          sharedCount: isInteger,
+          viewCount: isInteger,
+          subscriberCount: isInteger
+        },
+        builder: makeSocial
+      }
+    };
+    function create(settings, key, callerMsg) {
+      var linkPropRule = rules$6[key];
+      if (linkPropRule) {
+        settings = processRules(settings, linkPropRule, "parameter \"".concat(key, "\" in ").concat(callerMsg || 'Link'));
+        return linkPropRule.builder(settings);
+      }
+    }
+    var propGenerator = {
+      create: create
+    };
+  
+    var KakaoLink = function KakaoLink(settings, validatedResp) {
+      _classCallCheck(this, KakaoLink);
+      this.appkey = getAppKey$1();
+      this.appver = '1.0';
+      this.linkver = '4.0';
+      this.extras = assignIn({
+        KA: KAKAO_AGENT
+      }, settings.extras);
+      if (settings.serverCallbackArgs) {
+        this.extras.lcba = stringifyLCBA(settings.serverCallbackArgs);
+      }
+      this.template_json = validatedResp.template_msg;
+      this.template_args = validatedResp.template_args;
+      this.template_id = validatedResp.template_id;
+    };
+    function makeKakaoLink(settings, validatedResp) {
+      var kakaoLink = new KakaoLink(settings, validatedResp);
+      if (JSON.stringify(kakaoLink).length > 10000) {
+        throw new KakaoError('Failed to send message because it exceeds the message size limit. Please contact the app administrator.');
+      }
+      var linkScheme = UA.os.ios ? URL.talkLinkScheme : 'kakaolink://send';
+      return "".concat(linkScheme, "?").concat(buildQueryString(kakaoLink));
+    }
+    var DefaultLink = function DefaultLink(settings) {
+      var _this = this;
+      _classCallCheck(this, DefaultLink);
+      this.link_ver = '4.0';
+      this.template_object = {
+        object_type: settings.objectType,
+        button_title: settings.buttonTitle || ''
+      };
+      forEach(settings, function (setting, key) {
+        var prop = propGenerator.create(setting, key, 'defaultObject');
+        if (prop) {
+          _this.template_object[key] = prop;
+        }
+      });
+    };
+    var defaultLinks = {
+      FeedLink: DefaultLink,
+      CommerceLink: DefaultLink
+    };
+    defaultLinks['ListLink'] = function (_DefaultLink) {
+      _inherits(ListLink, _DefaultLink);
+      var _super = _createSuper(ListLink);
+      function ListLink(settings) {
+        var _this2;
+        _classCallCheck(this, ListLink);
+        _this2 = _super.call(this, settings);
+        var tpl = _this2.template_object;
+        tpl.header_title = settings.headerTitle || '';
+        tpl.header_link = tpl.headerLink || {};
+        delete tpl.headerLink;
+        if (console && (settings.headerImageUrl || settings.headerImageWidth || settings.headerImageHeight)) {
+          var params = ['headerImageUrl', 'headerImageWidth', 'headerImageHeight'];
+          console.warn("KakaoWarning: The parameters (".concat(params.join(', '), ") for header background image are deprecated."));
+        }
+        return _this2;
+      }
+      return ListLink;
+    }(DefaultLink);
+    defaultLinks['LocationLink'] = function (_DefaultLink2) {
+      _inherits(LocationLink, _DefaultLink2);
+      var _super2 = _createSuper(LocationLink);
+      function LocationLink(settings) {
+        var _this3;
+        _classCallCheck(this, LocationLink);
+        _this3 = _super2.call(this, settings);
+        var tpl = _this3.template_object;
+        tpl.address = settings.address || '';
+        tpl.address_title = settings.addressTitle || '';
+        return _this3;
+      }
+      return LocationLink;
+    }(DefaultLink);
+    defaultLinks['TextLink'] = function (_DefaultLink3) {
+      _inherits(TextLink, _DefaultLink3);
+      var _super3 = _createSuper(TextLink);
+      function TextLink(settings) {
+        var _this4;
+        _classCallCheck(this, TextLink);
+        _this4 = _super3.call(this, settings);
+        _this4.template_object.text = settings.text || '';
+        return _this4;
+      }
+      return TextLink;
+    }(DefaultLink);
+    var ScrapLink = function ScrapLink(settings) {
+      _classCallCheck(this, ScrapLink);
+      this.link_ver = '4.0';
+      this.request_url = settings.requestUrl;
+      if (settings.templateId) {
+        this.template_id = settings.templateId;
+      }
+      if (settings.templateArgs) {
+        this.template_args = settings.templateArgs;
+      }
+    };
+    var CustomLink = function CustomLink(settings) {
+      _classCallCheck(this, CustomLink);
+      this.link_ver = '4.0';
+      this.template_id = settings.templateId;
+      this.template_args = settings.templateArgs;
+    };
+    function makeDefaultLink(settings) {
+      var clazz = defaultLinks["".concat(capitalize(settings.objectType), "Link")];
+      return new clazz(settings);
+    }
+    function makeScrapLink(settings) {
+      return new ScrapLink(settings);
+    }
+    function makeCustomLink(settings) {
+      return new CustomLink(settings);
+    }
+  
+    var LINK_POPUP_NAME = 'kakao_link_web_sharer';
+    var LINK_POPUP_FEATURES = 'location=no,resizable=no,status=no,scrollbars=no,width=460,height=608';
+    var LINK_URL_LIMIT = 2084;
+    function send$1(settings, linkType, linkObj) {
+      var webLinkParams = {
+        app_key: getAppKey$1(),
+        ka: KAKAO_AGENT,
+        validation_action: linkType,
+        validation_params: JSON.stringify(linkObj)
+      };
+      if (settings.serverCallbackArgs) {
+        webLinkParams.lcba = stringifyLCBA(settings.serverCallbackArgs);
+      }
+      var webLinkUrl = "".concat(URL.sharerDomain, "/talk/friends/picker/easylink?").concat(buildQueryString(webLinkParams));
+      var linkPopup = null;
+      if (!(UA.browser.msie || UA.browser.spartan) && webLinkUrl.length < LINK_URL_LIMIT) {
+        linkPopup = windowOpen(webLinkUrl, LINK_POPUP_NAME, LINK_POPUP_FEATURES);
+        linkPopup.focus();
+      } else {
+        var popupParams = {
+          url: "".concat(URL.sharerDomain, "/talk/friends/picker/link"),
+          popupName: LINK_POPUP_NAME,
+          popupFeatures: LINK_POPUP_FEATURES
+        };
+        linkPopup = openPopupAndSubmitForm(webLinkParams, popupParams);
+      }
+      if (settings.callback) {
+        handleCallback(linkPopup, settings.callback);
+      }
+    }
+    function handleCallback(popup, callback) {
+      if (UA.browser.msie) {
+        if (console) {
+          console.warn('KakaoWarning: The callback parameter does not support the IE browser.');
+        }
+        return;
+      }
+      var linkCallback = function linkCallback(e) {
+        if (e.data === 'sent' && e.origin === URL.sharerDomain) {
+          callback();
+        }
+      };
+      addEvent(window, 'message', linkCallback);
+      var interval = setInterval(function () {
+        if (popup.closed) {
+          clearInterval(interval);
+          removeEvent(window, 'message', linkCallback);
+        }
+      }, 1000);
+    }
+    var webSender = {
+      send: send$1
+    };
+  
+    var web2app = function () {
+      var ua_parser$1 = ua_parser;
+      var TIMEOUT_IOS = 5 * 1000,
+          TIMEOUT_ANDROID = 3 * 100,
+          INTERVAL = 100,
+          ua = ua_parser$1(),
+          os = ua.os,
+          intentNotSupportedBrowserList = ['firefox', 'opr/'],
+          intentSupportCustomBrowserList = ['KAKAOTALK'
+      ];
+      function moveToStore(storeURL) {
+        window.top.location.replace(storeURL);
+      }
+      function web2app(context) {
+        var willInvokeApp = typeof context.willInvokeApp === 'function' ? context.willInvokeApp : function () {},
+            onAppMissing = typeof context.onAppMissing === 'function' ? context.onAppMissing : moveToStore,
+            onUnsupportedEnvironment = typeof context.onUnsupportedEnvironment === 'function' ? context.onUnsupportedEnvironment : function () {};
+        willInvokeApp();
+        if (os.android) {
+          if (isIntentSupportedBrowser() && context.intentURI && !context.useUrlScheme) {
+            web2appViaIntentURI(context.intentURI);
+          } else if (context.storeURL) {
+            web2appViaCustomUrlSchemeForAndroid(context.urlScheme, context.storeURL, onAppMissing);
+          }
+        } else if (os.ios && context.storeURL) {
+          web2appViaCustomUrlSchemeForIOS(context.urlScheme, context.storeURL, onAppMissing, context.universalLink);
+        } else {
+          setTimeout(function () {
+            onUnsupportedEnvironment();
+          }, 100);
+        }
+      }
+      function isIntentSupportedBrowser() {
+        var supportsIntent = ua.browser.chrome && +ua.browser.version.major >= 25;
+        var blackListRegexp = new RegExp(intentNotSupportedBrowserList.join('|'), "i");
+        var whiteListRegexp = new RegExp(intentSupportCustomBrowserList.join('|'), "i");
+        return supportsIntent && !blackListRegexp.test(ua.ua) || whiteListRegexp.test(ua.ua);
+      }
+      function web2appViaCustomUrlSchemeForAndroid(urlScheme, storeURL, fallback) {
+        deferFallback(TIMEOUT_ANDROID, storeURL, fallback);
+        launchAppViaHiddenIframe(urlScheme);
+      }
+      function deferFallback(timeout, storeURL, fallback) {
+        var clickedAt = new Date().getTime();
+        return setTimeout(function () {
+          var now = new Date().getTime();
+          if (isPageVisible() && now - clickedAt < timeout + INTERVAL) {
+            fallback(storeURL);
+          }
+        }, timeout);
+      }
+      function web2appViaIntentURI(launchURI) {
+        if (ua.browser.chrome) {
+          move();
+        } else {
+          setTimeout(move, 100);
+        }
+        function move() {
+          top.location.href = launchURI;
+        }
+      }
+      function web2appViaCustomUrlSchemeForIOS(urlScheme, storeURL, fallback, universalLink) {
+        var tid = deferFallback(TIMEOUT_IOS, storeURL, fallback);
+        if (parseInt(ua.os.version.major, 10) < 8) {
+          bindPagehideEvent(tid);
+        } else {
+          bindVisibilityChangeEvent(tid);
+        }
+        if (isSupportUniversalLinks()) {
+          if (universalLink === undefined) {
+            universalLink = urlScheme;
+          } else {
+            clearTimeout(tid);
+          }
+          launchAppViaChangingLocation(universalLink);
+        } else {
+          launchAppViaHiddenIframe(urlScheme);
+        }
+      }
+      function bindPagehideEvent(tid) {
+        window.addEventListener('pagehide', function clear() {
+          if (isPageVisible()) {
+            clearTimeout(tid);
+            window.removeEventListener('pagehide', clear);
+          }
+        });
+      }
+      function bindVisibilityChangeEvent(tid) {
+        document.addEventListener('visibilitychange', function clear() {
+          if (isPageVisible()) {
+            clearTimeout(tid);
+            document.removeEventListener('visibilitychange', clear);
+          }
+        });
+      }
+      function isPageVisible() {
+        var attrNames = ['hidden', 'webkitHidden'];
+        for (var i = 0, len = attrNames.length; i < len; i++) {
+          if (typeof document[attrNames[i]] !== 'undefined') {
+            return !document[attrNames[i]];
+          }
+        }
+        return true;
+      }
+      function launchAppViaChangingLocation(urlScheme) {
+        window.top.location.replace(urlScheme);
+      }
+      function launchAppViaHiddenIframe(urlScheme) {
+        setTimeout(function () {
+          var iframe = createHiddenIframe('appLauncher');
+          iframe.src = urlScheme;
+        }, 100);
+      }
+      function createHiddenIframe(id) {
+        var iframe = document.createElement('iframe');
+        iframe.id = id;
+        iframe.style.border = 'none';
+        iframe.style.width = '0';
+        iframe.style.height = '0';
+        iframe.style.display = 'none';
+        iframe.style.overflow = 'hidden';
+        document.body.appendChild(iframe);
+        return iframe;
+      }
+      function isSupportUniversalLinks() {
+        return parseInt(ua.os.version.major, 10) > 8 && ua.os.ios;
+      }
+      return web2app;
+    }();
+  
+    var poller = new Poller(100, 100);
+    var KAKAOTALK_IOS_APP_ID = '362057947';
+    function send(settings, requestUrl, linkObj) {
+      var onResponse = null;
+      if (UA.browser.iphone && /version/.test(UA.ua.toLowerCase())) {
+        var response = null;
+        onResponse = function onResponse(res) {
+          response = res;
+        };
+        poller.start(function () {
+          if (response !== null) {
+            poller.stop();
+            handleValidatedResp(response, settings);
+          }
+        }, function () {
+          var error = {
+            error: 'timeout',
+            error_description: 'LINK_TIMEOUT'
+          };
+          settings.fail(error);
+          settings.always(error);
+        });
+      } else {
+        onResponse = handleValidatedResp;
+      }
+      return requestAPI(requestUrl, linkObj).then(function (validatedResp) {
+        onResponse(validatedResp, settings);
+      }, function (error) {
+        settings.fail(error);
+        settings.always(error);
+      });
+    }
+    function handleValidatedResp(validatedResp, settings) {
+      var linkScheme = makeKakaoLink(settings, validatedResp);
+      callWeb2app$1(linkScheme, settings.fail, settings.installTalk);
+      var msg = {
+        template_msg: validatedResp.template_msg || {},
+        warning_msg: validatedResp.warning_msg || {},
+        argument_msg: validatedResp.argument_msg || {}
+      };
+      settings.success(msg);
+      settings.always(msg);
+    }
+    function callWeb2app$1(linkScheme, unsupportedCallback, shouldInstallTalk) {
+      var androidIntent = ["intent:".concat(linkScheme, "#Intent"), 'launchFlags=0x14008000', "".concat(shouldInstallTalk === true ? "package=".concat(URL.talkAndroidPackage, ";") : '', "end;")].join(';');
+      var web2appOptions = {
+        urlScheme: linkScheme,
+        intentURI: androidIntent,
+        appName: 'KakaoTalk',
+        storeURL: getInstallUrl(URL.talkAndroidPackage, KAKAOTALK_IOS_APP_ID),
+        onUnsupportedEnvironment: function onUnsupportedEnvironment() {
+          unsupportedCallback(linkScheme);
+        }
+      };
+      if (!shouldInstallTalk || isIOSKakaoTalkWebView() || isAndroidWebView()) {
+        web2appOptions.onAppMissing = emptyFunc;
+      }
+      if (isIOSKakaoTalkWebView()) {
+        web2appOptions.universalLink = undefined;
+      }
+      try {
+        web2app(web2appOptions);
+      } catch (error) {
+      }
+    }
+    var talkSender = {
+      send: send
+    };
+  
+    var commonLinkOptional = {
+      success: isFunction,
+      fail: isFunction,
+      always: isFunction,
+      callback: isFunction,
+      installTalk: isBoolean,
+      throughTalk: isBoolean,
+      extras: isObject,
+      serverCallbackArgs: passesOneOf([isJSONString, isObject])
+    };
+    var commonLinkDefaults = {
+      success: emptyFunc,
+      fail: emptyFunc,
+      always: emptyFunc,
+      installTalk: false,
+      throughTalk: true
+    };
+    function buttonsValidator(e) {
+      if (!isArray(e)) {
+        return false;
+      } else if (e.length > 2) {
+        throw new KakaoError('Illegal argument for "buttons" in Link: size of buttons should be up to 2');
+      }
+      return true;
+    }
+    var sendFeed = {
+      required: {
+        objectType: function objectType(type) {
+          return type === 'feed';
+        },
+        content: isObject
+      },
+      optional: assignIn({
+        social: isObject,
+        buttonTitle: isString,
+        buttons: buttonsValidator
+      }, commonLinkOptional),
+      defaults: commonLinkDefaults
+    };
+    var sendList = {
+      required: {
+        objectType: function objectType(type) {
+          return type === 'list';
+        },
+        headerTitle: isString,
+        headerLink: isObject,
+        contents: function contents(e) {
+          if (!isArray(e)) {
+            return false;
+          } else if (e.length < 2 || e.length > 3) {
+            throw new KakaoError('Illegal argument for "contents" in Link: size of contents should be more than 1 and up to 3');
+          }
+          return true;
+        }
+      },
+      optional: assignIn({
+        buttonTitle: isString,
+        buttons: buttonsValidator,
+        headerImageUrl: isString,
+        headerImageWidth: isInteger,
+        headerImageHeight: isInteger
+      }, commonLinkOptional),
+      defaults: commonLinkDefaults
+    };
+    var sendCommerce = {
+      required: {
+        objectType: function objectType(type) {
+          return type === 'commerce';
+        },
+        content: isObject,
+        commerce: isObject
+      },
+      optional: assignIn({
+        buttonTitle: isString,
+        buttons: buttonsValidator
+      }, commonLinkOptional),
+      defaults: commonLinkDefaults
+    };
+    var sendLocation = {
+      required: {
+        objectType: function objectType(type) {
+          return type === 'location';
+        },
+        content: isObject,
+        address: isString
+      },
+      optional: assignIn({
+        addressTitle: isString,
+        social: isObject,
+        buttonTitle: isString,
+        buttons: buttonsValidator
+      }, commonLinkOptional),
+      defaults: commonLinkDefaults
+    };
+    var sendText = {
+      required: {
+        objectType: function objectType(type) {
+          return type === 'text';
+        },
+        text: isString,
+        link: isObject
+      },
+      optional: assignIn({
+        buttonTitle: isString,
+        buttons: buttonsValidator
+      }, commonLinkOptional),
+      defaults: commonLinkDefaults
+    };
+    var sendScrap$1 = {
+      required: {
+        requestUrl: isString
+      },
+      optional: assignIn({
+        templateId: isInteger,
+        templateArgs: isObject
+      }, commonLinkOptional),
+      defaults: assignIn({
+        templateArgs: {}
+      }, commonLinkDefaults)
+    };
+    var sendCustom$1 = {
+      required: {
+        templateId: isInteger
+      },
+      optional: assignIn({
+        templateArgs: isObject
+      }, commonLinkOptional),
+      defaults: assignIn({
+        templateArgs: {}
+      }, commonLinkDefaults)
+    };
+    function extendRuleForContainer(rule) {
+      return defaults({
+        required: assignIn({
+          container: passesOneOf([isElement, isString])
+        }, rule.required)
+      }, rule);
+    }
+    var rules$5 = {
+      defaultObjectTypes: ['feed', 'list', 'commerce', 'location', 'text'],
+      sendFeed: sendFeed,
+      createFeedButton: extendRuleForContainer(sendFeed),
+      sendList: sendList,
+      createListButton: extendRuleForContainer(sendList),
+      sendCommerce: sendCommerce,
+      createCommerceButton: extendRuleForContainer(sendCommerce),
+      sendLocation: sendLocation,
+      createLocationButton: extendRuleForContainer(sendLocation),
+      sendText: sendText,
+      createTextButton: extendRuleForContainer(sendText),
+      sendScrap: sendScrap$1,
+      createScrapButton: extendRuleForContainer(sendScrap$1),
+      sendCustom: sendCustom$1,
+      createCustomButton: extendRuleForContainer(sendCustom$1),
+      uploadImage: {
+        required: {
+          file: isObject
+        }
+      },
+      deleteImage: {
+        required: {
+          imageUrl: isString
+        }
+      },
+      scrapImage: {
+        required: {
+          imageUrl: isString
+        }
+      }
+    };
+  
+    function createDefaultButton(settings) {
+      if (!settings.objectType || !isOneOf(rules$5.defaultObjectTypes)(settings.objectType)) {
+        throw new KakaoError("objectType should be one of (".concat(rules$5.defaultObjectTypes.join(', '), ")"));
+      }
+      var rule = rules$5["create".concat(capitalize(settings.objectType), "Button")];
+      settings = processRules(settings, rule, 'Link.createDefaultButton');
+      addClickEvent(settings, 'default');
+    }
+    function sendDefault(settings) {
+      if (!settings.objectType || !isOneOf(rules$5.defaultObjectTypes)(settings.objectType)) {
+        throw new KakaoError("objectType should be one of (".concat(rules$5.defaultObjectTypes.join(', '), ")"));
+      }
+      var rule = rules$5["send".concat(capitalize(settings.objectType))];
+      settings = processRules(settings, rule, 'Link.sendDefault');
+      doSend(settings, 'default');
+    }
+    function createScrapButton(settings) {
+      settings = processRules(settings, rules$5.createScrapButton, 'Link.createScrapButton');
+      addClickEvent(settings, 'scrap');
+    }
+    function sendScrap(settings) {
+      settings = processRules(settings, rules$5.sendScrap, 'Link.sendScrap');
+      doSend(settings, 'scrap');
+    }
+    function createCustomButton(settings) {
+      settings = processRules(settings, rules$5.createCustomButton, 'Link.createCustomButton');
+      addClickEvent(settings, 'custom');
+    }
+    function sendCustom(settings) {
+      settings = processRules(settings, rules$5.sendCustom, 'Link.sendCustom');
+      doSend(settings, 'custom');
+    }
+    function addClickEvent(settings, linkType) {
+      var container$ = getElement(settings.container);
+      if (!container$) {
+        throw new KakaoError('container is required for KakaoTalk Link: pass in element or id');
+      }
+      var clickHandler = function clickHandler(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        doSend(settings, linkType);
+      };
+      addEvent(container$, 'click', clickHandler);
+      cleanups$4.push(function () {
+        removeEvent(container$, 'click', clickHandler);
+      });
+    }
+    var linkTypeMapper = {
+      "default": {
+        makeLinkFunc: makeDefaultLink,
+        requestUrl: '/v2/api/kakaolink/talk/template/default'
+      },
+      scrap: {
+        makeLinkFunc: makeScrapLink,
+        requestUrl: '/v2/api/kakaolink/talk/template/scrap'
+      },
+      custom: {
+        makeLinkFunc: makeCustomLink,
+        requestUrl: '/v2/api/kakaolink/talk/template/validate'
+      }
+    };
+    function doSend(settings, linkType) {
+      var _linkTypeMapper$linkT = linkTypeMapper[linkType],
+          makeLinkFunc = _linkTypeMapper$linkT.makeLinkFunc,
+          requestUrl = _linkTypeMapper$linkT.requestUrl;
+      var linkObj = makeLinkFunc(settings);
+      var isIpad = UA.os.ios && UA.platform === 'tablet';
+      if (!settings.throughTalk || UA.platform !== 'mobile' && !isIpad) {
+        webSender.send(settings, linkType, linkObj);
+      } else {
+        talkSender.send(settings, requestUrl, linkObj);
+      }
+    }
+    var cleanups$4 = [];
+    function cleanup$5() {
+      emptyCleanups(cleanups$4);
+    }
+  
+    var linker = /*#__PURE__*/Object.freeze({
+      __proto__: null,
+      createDefaultButton: createDefaultButton,
+      sendDefault: sendDefault,
+      createScrapButton: createScrapButton,
+      sendScrap: sendScrap,
+      createCustomButton: createCustomButton,
+      sendCustom: sendCustom,
+      cleanup: cleanup$5
+    });
+  
+    function uploadImage(settings) {
+      settings = processRules(settings, rules$5.uploadImage, 'Link.uploadImage');
+      return requestAPI('/v2/api/talk/message/image/upload', {
+        file: settings.file
+      });
+    }
+    function deleteImage(settings) {
+      settings = processRules(settings, rules$5.deleteImage, 'Link.deleteImage');
+      return requestAPI('/v2/api/talk/message/image/delete', {
+        image_url: settings.imageUrl
+      });
+    }
+    function scrapImage(settings) {
+      settings = processRules(settings, rules$5.scrapImage, 'Link.scrapImage');
+      return requestAPI('/v2/api/talk/message/image/scrap', {
+        image_url: settings.imageUrl
+      });
+    }
+  
+    var imageAPI = /*#__PURE__*/Object.freeze({
+      __proto__: null,
+      uploadImage: uploadImage,
+      deleteImage: deleteImage,
+      scrapImage: scrapImage
+    });
+  
+    var Link = makeModule([linker, imageAPI]);
+  
+    var POPUP_FEATURES = 'width=350, height=510';
+    function createAnchorImage$1(settings, imgSrc, imgTitle) {
+      var a$ = document.createElement('a');
+      a$.setAttribute('href', '#');
+      var img$ = document.createElement('img');
+      img$.setAttribute('src', imgSrc);
+      img$.setAttribute('title', imgTitle);
+      img$.setAttribute('alt', imgTitle);
+      if (settings.supportMultipleDensities) {
+        img$.setAttribute('srcset', [imgSrc.replace('.png', '_2X.png 2x'), imgSrc.replace('.png', '_3X.png 3x')].join(', '));
+      }
+      a$.appendChild(img$);
+      return a$;
+    }
+    function makeChannelParams(apiVer) {
+      return buildQueryString({
+        api_ver: apiVer,
+        kakao_agent: KAKAO_AGENT,
+        app_key: getAppKey$1(),
+        referer: origin + location.pathname + location.search
+      });
+    }
+  
+    var sizes = ['small', 'large'];
+    var colors = ['yellow', 'mono'];
+    var shapes = ['pc', 'mobile'];
+    var titles = ['consult', 'question'];
+    var rules$4 = {
+      createAddChannelButton: {
+        required: {
+          container: passesOneOf([isElement, isString]),
+          channelPublicId: isString
+        },
+        optional: {
+          size: isOneOf(sizes),
+          supportMultipleDensities: isBoolean
+        },
+        defaults: {
+          size: sizes[0],
+          supportMultipleDensities: false
+        }
+      },
+      addChannel: {
+        required: {
+          channelPublicId: isString
+        }
+      },
+      createChatButton: {
+        required: {
+          container: passesOneOf([isElement, isString]),
+          channelPublicId: isString
+        },
+        optional: {
+          size: isOneOf(sizes),
+          color: isOneOf(colors),
+          shape: isOneOf(shapes),
+          title: isOneOf(titles),
+          supportMultipleDensities: isBoolean
+        },
+        defaults: {
+          size: sizes[0],
+          color: colors[0],
+          shape: shapes[0],
+          title: titles[0],
+          supportMultipleDensities: false
+        }
+      },
+      chat: {
+        required: {
+          channelPublicId: isString
+        }
+      }
+    };
+  
+    var API_VER$1 = '1.1';
+    var ADD_CHANNEL_POPUP_NAME = 'channel_add_social_plugin';
+    var CHAT_POPUP_NAME$1 = 'channel_chat_social_plugin';
+    function createAddChannelButton(settings) {
+      var container$ = getElement(settings.container);
+      if (!container$) {
+        throw new KakaoError('container is required for Channel.createAddChannelButton: pass in element or id');
+      } else {
+        applyAttributes(settings, container$, {
+          channelPublicId: 'data-channel-public-id',
+          size: 'data-size',
+          supportMultipleDensities: 'data-support-multiple-densities'
+        });
+      }
+      settings = processRules(settings, rules$4.createAddChannelButton, 'Channel.createAddChannelButton');
+      var imgSrc = getAddChannelImgSrc(settings);
+      var anchor$ = createAnchorImage$1(settings, imgSrc, '카카오톡 채널 추가 버튼');
+      container$.appendChild(anchor$);
+      var clickHandler = function clickHandler(e) {
+        e.preventDefault();
+        openAddChannelPopup(settings);
+      };
+      addEvent(anchor$, 'click', clickHandler);
+      cleanups$3.push(function () {
+        removeEvent(anchor$, 'click', clickHandler);
+        container$.removeChild(anchor$);
+      });
+    }
+    function addChannel(settings) {
+      settings = processRules(settings, rules$4.addChannel, 'Channel.addChannel');
+      openAddChannelPopup(settings);
+    }
+    function getAddChannelImgSrc(settings) {
+      var filename = "friendadd_".concat(settings.size, "_yellow_rect.png");
+      return "".concat(URL.channelIcon, "/channel/").concat(filename);
+    }
+    function openAddChannelPopup(settings) {
+      var addChannelUrl = "".concat(URL.channel, "/").concat(settings.channelPublicId, "/friend");
+      if (getAppKey$1() !== null) {
+        addChannelUrl += "?".concat(makeChannelParams(API_VER$1));
+      }
+      windowOpen(addChannelUrl, ADD_CHANNEL_POPUP_NAME, POPUP_FEATURES);
+    }
+    function createChatButton$1(settings) {
+      var container$ = getElement(settings.container);
+      if (!container$) {
+        throw new KakaoError('container is required for Channel.createChatButton: pass in element or id');
+      } else {
+        applyAttributes(settings, container$, {
+          channelPublicId: 'data-channel-public-id',
+          size: 'data-size',
+          color: 'data-color',
+          shape: 'data-shape',
+          title: 'data-title',
+          supportMultipleDensities: 'data-support-multiple-densities'
+        });
+      }
+      settings = processRules(settings, rules$4.createChatButton, 'Channel.createChatButton');
+      var imgSrc = getChatImgSrc$1(settings);
+      var anchor$ = createAnchorImage$1(settings, imgSrc, '카카오톡 채널 1:1 채팅 버튼');
+      container$.appendChild(anchor$);
+      var clickHandler = function clickHandler(e) {
+        e.preventDefault();
+        openChatPopup$1(settings);
+      };
+      addEvent(anchor$, 'click', clickHandler);
+      cleanups$3.push(function () {
+        removeEvent(anchor$, 'click', clickHandler);
+        container$.removeChild(anchor$);
+      });
+    }
+    function chat$1(settings) {
+      settings = processRules(settings, rules$4.chat, 'Channel.chat');
+      openChatPopup$1(settings);
+    }
+    function getChatImgSrc$1(settings) {
+      var filename = "".concat(settings.title, "_").concat(settings.size, "_").concat(settings.color, "_").concat(settings.shape, ".png");
+      return "".concat(URL.channelIcon, "/channel/").concat(filename);
+    }
+    function openChatPopup$1(settings) {
+      var chatUrl = "".concat(URL.channel, "/").concat(settings.channelPublicId, "/chat");
+      if (getAppKey$1() !== null) {
+        chatUrl += "?".concat(makeChannelParams(API_VER$1));
+      }
+      windowOpen(chatUrl, CHAT_POPUP_NAME$1, POPUP_FEATURES);
+    }
+    var cleanups$3 = [];
+    function cleanup$4() {
+      emptyCleanups(cleanups$3);
+    }
+  
+    var request$4 = /*#__PURE__*/Object.freeze({
+      __proto__: null,
+      createAddChannelButton: createAddChannelButton,
+      addChannel: addChannel,
+      createChatButton: createChatButton$1,
+      chat: chat$1,
+      cleanup: cleanup$4
+    });
+  
+    var Channel = makeModule([request$4]);
+  
+    var rules$3 = {
+      createAddFriendButton: {
+        required: {
+          container: passesOneOf([isElement, isString]),
+          plusFriendId: isString
+        },
+        optional: {
+          size: isOneOf(['small', 'large']),
+          color: isOneOf(['yellow', 'black']),
+          shape: isOneOf(['rect', 'round']),
+          supportMultipleDensities: isBoolean
+        },
+        defaults: {
+          size: 'small',
+          color: 'yellow',
+          shape: 'rect',
+          supportMultipleDensities: false
+        }
+      },
+      addFriend: {
+        required: {
+          plusFriendId: isString
+        }
+      },
+      createChatButton: {
+        required: {
+          container: passesOneOf([isElement, isString]),
+          plusFriendId: isString
+        },
+        optional: {
+          size: isOneOf(['small', 'large']),
+          color: isOneOf(['yellow', 'mono']),
+          shape: isOneOf(['pc', 'mobile']),
+          title: isOneOf(['consult', 'question']),
+          supportMultipleDensities: isBoolean
+        },
+        defaults: {
+          size: 'small',
+          color: 'yellow',
+          shape: 'pc',
+          title: 'consult',
+          supportMultipleDensities: false
+        }
+      },
+      chat: {
+        required: {
+          plusFriendId: isString
+        }
+      }
+    };
+  
+    var API_VER = '1.0';
+    var ADD_FRIEND_POPUP_NAME = 'plus_friend_add_social_plugin';
+    var CHAT_POPUP_NAME = 'plus_friend_chat_social_plugin';
+    function warnDeprecation() {
+      if (console) {
+        console.warn('KakaoWarning: Kakao.PlusFriend is deprecated. Please use Kakao.Channel instead.');
+      }
+    }
+    function createAddFriendButton(settings) {
+      warnDeprecation();
+      var container$ = getElement(settings.container);
+      if (!container$) {
+        throw new KakaoError('container is required for PlusFriend.createAddFriendButton: pass in element or id');
+      } else {
+        applyAttributes(settings, container$, {
+          plusFriendId: 'data-plusfriend-id',
+          size: 'data-size',
+          color: 'data-color',
+          shape: 'data-shape',
+          supportMultipleDensities: 'data-support-multiple-densities'
+        });
+      }
+      settings = processRules(settings, rules$3.createAddFriendButton, 'PlusFriend.createAddFriendButton');
+      var imgSrc = getAddFriendImgSrc(settings);
+      var anchor$ = createAnchorImage$1(settings, imgSrc, '플러스친구 친구 추가 버튼');
+      container$.appendChild(anchor$);
+      var clickHandler = function clickHandler(e) {
+        e.preventDefault();
+        openAddFriendPopup(settings);
+      };
+      addEvent(anchor$, 'click', clickHandler);
+      cleanups$2.push(function () {
+        removeEvent(anchor$, 'click', clickHandler);
+        container$.removeChild(anchor$);
+      });
+    }
+    function addFriend(settings) {
+      warnDeprecation();
+      settings = processRules(settings, rules$3.addFriend, 'PlusFriend.addFriend');
+      openAddFriendPopup(settings);
+    }
+    function getAddFriendImgSrc(settings) {
+      var filename = "friendadd_".concat(settings.size, "_").concat(settings.color, "_").concat(settings.shape, ".png");
+      return "".concat(URL.channelIcon, "/plusfriend/").concat(filename);
+    }
+    function openAddFriendPopup(settings) {
+      var addFriendUrl = "".concat(URL.channel, "/").concat(settings.plusFriendId, "/friend");
+      if (getAppKey$1() !== null) {
+        addFriendUrl += "?".concat(makeChannelParams(API_VER));
+      }
+      windowOpen(addFriendUrl, ADD_FRIEND_POPUP_NAME, POPUP_FEATURES);
+    }
+    function createChatButton(settings) {
+      warnDeprecation();
+      var container$ = getElement(settings.container);
+      if (!container$) {
+        throw new KakaoError('container is required for PlusFriend.createChatButton: pass in element or id');
+      } else {
+        applyAttributes(settings, container$, {
+          plusFriendId: 'data-plusfriend-id',
+          size: 'data-size',
+          color: 'data-color',
+          shape: 'data-shape',
+          title: 'data-title',
+          supportMultipleDensities: 'data-support-multiple-densities'
+        });
+      }
+      settings = processRules(settings, rules$3.createChatButton, 'PlusFriend.createChatButton');
+      var imgSrc = getChatImgSrc(settings);
+      var anchor$ = createAnchorImage$1(settings, imgSrc, '플러스친구 1:1 채팅 버튼');
+      container$.appendChild(anchor$);
+      var clickHandler = function clickHandler(e) {
+        e.preventDefault();
+        openChatPopup(settings);
+      };
+      addEvent(anchor$, 'click', clickHandler);
+      cleanups$2.push(function () {
+        removeEvent(anchor$, 'click', clickHandler);
+        container$.removeChild(anchor$);
+      });
+    }
+    function chat(settings) {
+      warnDeprecation();
+      settings = processRules(settings, rules$3.chat, 'PlusFriend.chat');
+      openChatPopup(settings);
+    }
+    function getChatImgSrc(settings) {
+      var filename = "".concat(settings.title, "_").concat(settings.size, "_").concat(settings.color, "_").concat(settings.shape, ".png");
+      return "".concat(URL.channelIcon, "/plusfriend/").concat(filename);
+    }
+    function openChatPopup(settings) {
+      var chatUrl = "".concat(URL.channel, "/").concat(settings.plusFriendId, "/chat");
+      if (getAppKey$1() !== null) {
+        chatUrl += "?".concat(makeChannelParams(API_VER));
+      }
+      windowOpen(chatUrl, CHAT_POPUP_NAME, POPUP_FEATURES);
+    }
+    var cleanups$2 = [];
+    function cleanup$3() {
+      emptyCleanups(cleanups$2);
+    }
+  
+    var request$3 = /*#__PURE__*/Object.freeze({
+      __proto__: null,
+      createAddFriendButton: createAddFriendButton,
+      addFriend: addFriend,
+      createChatButton: createChatButton,
+      chat: chat,
+      cleanup: cleanup$3
+    });
+  
+    var PlusFriend = makeModule([request$3]);
+  
+    var urlInfoRule = {
+      required: {
+        title: isString
+      },
+      optional: {
+        desc: isString,
+        name: isString,
+        images: isArray,
+        type: isString
+      },
+      defaults: {
+        type: 'website'
+      },
+      after: function after(settings) {
+        if (settings.images) {
+          settings.imageurl = settings.images;
+          delete settings.images;
+        }
+      }
+    };
+    var rules$2 = {
+      createShareButton: {
+        required: {
+          container: passesOneOf([isElement, isString])
+        },
+        optional: {
+          url: isString,
+          text: isString
+        },
+        defaults: {
+          url: location.href
+        }
+      },
+      share: {
+        optional: {
+          url: isString,
+          text: isString
+        },
+        defaults: {
+          url: location.href
+        }
+      },
+      open: {
+        optional: {
+          url: isString,
+          text: isString,
+          urlInfo: function urlInfo(obj) {
+            return isObject(obj) && !!processRules(obj, urlInfoRule, 'Story.open');
+          },
+          install: isBoolean
+        },
+        defaults: {
+          url: location.href,
+          install: false
+        }
+      },
+      createFollowButton: {
+        required: {
+          container: passesOneOf([isElement, isString]),
+          id: isString
+        },
+        optional: {
+          showFollowerCount: isBoolean,
+          type: isOneOf(['horizontal', 'vertical'])
+        },
+        defaults: {
+          showFollowerCount: true,
+          type: 'horizontal'
+        },
+        after: function after(settings) {
+          if (settings.id[0] !== '@') {
+            settings.id = "@".concat(settings.id);
+          }
+        }
+      }
+    };
+  
+    function createShareButton(settings) {
+      var container$ = getElement(settings.container);
+      if (!container$) {
+        throw new KakaoError('container is required for Story.createShareButton: pass in element or id');
+      } else {
+        applyAttributes(settings, container$, {
+          url: 'data-url'
+        });
+      }
+      settings = processRules(settings, rules$2.createShareButton, 'Story.createShareButton');
+      var anchor$ = createAnchorImage(URL.storyIcon, '카카오스토리 웹 공유 버튼');
+      container$.appendChild(anchor$);
+      var clickHandler = function clickHandler(e) {
+        e.preventDefault();
+        openSharePopup(settings);
+      };
+      addEvent(anchor$, 'click', clickHandler);
+      cleanups$1.push(function () {
+        removeEvent(anchor$, 'click', clickHandler);
+        container$.removeChild(anchor$);
+      });
+    }
+    function createAnchorImage(imgSrc, imgTitle) {
+      var a$ = document.createElement('a');
+      a$.setAttribute('href', '#');
+      var img$ = document.createElement('img');
+      img$.setAttribute('src', imgSrc);
+      img$.setAttribute('title', imgTitle);
+      img$.setAttribute('alt', imgTitle);
+      a$.appendChild(img$);
+      return a$;
+    }
+    function share$1(settings) {
+      settings = processRules(settings, rules$2.share, 'Story.share');
+      openSharePopup(settings);
+    }
+    function openSharePopup(settings) {
+      var params = assignIn({
+        url: settings.url
+      }, makeStoryParams());
+      if (settings.text) {
+        params.text = settings.text;
+      }
+      windowOpen("".concat(URL.storyShare, "?").concat(buildQueryString(params)), 'kakaostory_social_plugin', 'width=670, height=800, scrollbars=yes');
+    }
+    function open(settings) {
+      settings = processRules(settings, rules$2.open, 'Story.open');
+      var storyPostScheme = makeStoryPostScheme(settings);
+      var androidIntent = ["intent:".concat(storyPostScheme, "#Intent"), "".concat(settings.install ? 'package=com.kakao.story;' : '', "end;")].join(';');
+      var web2appOptions = {
+        urlScheme: storyPostScheme,
+        intentURI: androidIntent,
+        appName: 'KakaoStory',
+        storeURL: getInstallUrl('com.kakao.story', '486244601'),
+        onUnsupportedEnvironment: function onUnsupportedEnvironment() {
+          settings.fail && settings.fail();
+        }
+      };
+      try {
+        web2app(web2appOptions);
+      } catch (error) {
+      }
+    }
+    function makeStoryPostScheme(settings) {
+      var domain = location.hostname || '';
+      var params = assignIn({
+        apiver: '1.0',
+        appver: VERSION,
+        appid: domain,
+        appname: domain,
+        post: settings.text ? "".concat(settings.text, "\n").concat(settings.url) : settings.url
+      }, makeStoryParams());
+      if (settings.urlInfo) {
+        params.urlinfo = JSON.stringify(settings.urlInfo);
+        params.appname = settings.urlInfo.name || params.appname;
+      }
+      return "".concat(URL.storyPostScheme, "?").concat(buildQueryString(params));
+    }
+    function createFollowButton(settings) {
+      var container$ = getElement(settings.container);
+      if (!container$) {
+        throw new KakaoError('container is required for Story.createFollowButton: pass in element or id');
+      } else {
+        applyAttributes(settings, container$, {
+          id: 'data-id',
+          showFollowerCount: 'data-show-follower-count',
+          type: 'data-type'
+        });
+      }
+      settings = processRules(settings, rules$2.createFollowButton, 'Story.createFollowButton');
+      var _createStoryFollowIfr = createStoryFollowIframe(settings),
+          iframe$ = _createStoryFollowIfr.iframe$,
+          messageHandler = _createStoryFollowIfr.messageHandler;
+      container$.appendChild(iframe$);
+      addEvent(window, 'message', messageHandler);
+      cleanups$1.push(function () {
+        removeEvent(window, 'message', messageHandler);
+        container$.removeChild(iframe$);
+      });
+    }
+    var _storyFollowIframeId = 0;
+    function createStoryFollowIframe(settings) {
+      var iframeId = _storyFollowIframeId++;
+      var iframeWidth = settings.showFollowerCount && settings.type === 'horizontal' ? 85 : 59;
+      var iframeHeight = settings.showFollowerCount && settings.type === 'vertical' ? 46 : 20;
+      var iframe$ = document.createElement('iframe');
+      iframe$.src = makeStoryFollowUrl(settings, iframeId);
+      iframe$.setAttribute('frameborder', '0');
+      iframe$.setAttribute('marginwidth', '0');
+      iframe$.setAttribute('marginheight', '0');
+      iframe$.setAttribute('scrolling', 'no');
+      iframe$.setAttribute('style', "width:".concat(iframeWidth, "px; height:").concat(iframeHeight, "px;"));
+      var messageHandler = function messageHandler(e) {
+        if (e.data && /\.kakao\.com$/.test(e.origin) && typeof e.data === 'string') {
+          var _map = map(e.data.split(','), function (e) {
+            return parseInt(e, 10);
+          }),
+              _map2 = _slicedToArray(_map, 3),
+              originIframeId = _map2[0],
+              afterWidth = _map2[1],
+              afterHeight = _map2[2];
+          if (originIframeId === iframeId) {
+            if (iframeWidth !== afterWidth) {
+              iframe$.style.width = "".concat(afterWidth, "px");
+            }
+            if (iframeHeight !== afterHeight) {
+              iframe$.style.height = "".concat(afterHeight, "px");
+            }
+          }
+        }
+      };
+      return {
+        iframe$: iframe$,
+        messageHandler: messageHandler
+      };
+    }
+    function makeStoryFollowUrl(settings, iframeId) {
+      var params = assignIn({
+        id: settings.id,
+        type: settings.type,
+        hideFollower: !settings.showFollowerCount,
+        frameId: iframeId
+      }, makeStoryParams());
+      return "".concat(URL.storyChannelFollow, "?").concat(buildQueryString(params));
+    }
+    function makeStoryParams() {
+      var params = {
+        kakao_agent: KAKAO_AGENT
+      };
+      if (getAppKey$1() !== null) {
+        params.app_key = getAppKey$1();
+      }
+      return params;
+    }
+    var cleanups$1 = [];
+    function cleanup$2() {
+      emptyCleanups(cleanups$1);
+    }
+  
+    var request$2 = /*#__PURE__*/Object.freeze({
+      __proto__: null,
+      createShareButton: createShareButton,
+      share: share$1,
+      open: open,
+      createFollowButton: createFollowButton,
+      cleanup: cleanup$2
+    });
+  
+    var Story = makeModule([request$2]);
+  
+    var coordTypes = ['wgs84', 'katec'];
+    var vehicleTypes = [1, 2, 3, 4, 5, 6, 7];
+    var rpOptions = [1, 2, 3, 4, 5, 6, 8, 100];
+    var viaPointRule = {
+      required: {
+        name: isString,
+        x: isNumber,
+        y: isNumber
+      },
+      optional: {
+        rpflag: isString,
+        cid: isString
+      }
+    };
+    var rules$1 = {
+      start: {
+        required: {
+          name: isString,
+          x: isNumber,
+          y: isNumber
+        },
+        optional: {
+          coordType: isOneOf(coordTypes),
+          vehicleType: isOneOf(vehicleTypes),
+          rpOption: isOneOf(rpOptions),
+          routeInfo: isBoolean,
+          sX: isNumber,
+          sY: isNumber,
+          sAngle: isNumber,
+          returnUri: isString,
+          rpflag: isString,
+          cid: isString,
+          guideId: isNumber,
+          viaPoints: function viaPoints(points) {
+            if (!isArray(points)) {
+              return false;
+            } else if (points.length > 3) {
+              throw new KakaoError('Invalid parameter keys: via points should not be exceed 3. at Navi.start');
+            } else {
+              forEach(points, function (point) {
+                return processRules(point, viaPointRule, 'Navi.start');
+              });
+              return true;
+            }
+          }
+        },
+        defaults: {
+          coordType: 'katec',
+          vehicleType: 1,
+          rpOption: 100,
+          routeInfo: false
+        }
+      },
+      share: {
+        required: {
+          name: isString,
+          x: isNumber,
+          y: isNumber
+        },
+        optional: {
+          coordType: isOneOf(coordTypes),
+          rpflag: isString,
+          cid: isString,
+          guideId: isNumber
+        },
+        defaults: {
+          coordType: 'katec'
+        }
+      }
+    };
+  
+    function start(settings) {
+      settings = processRules(settings, rules$1.start, 'Navi.start');
+      var naviStartParams = buildQueryString(makeNaviStartParams(settings));
+      var naviScheme = "".concat(URL.naviStartScheme, "?").concat(naviStartParams);
+      var fallbackUrl = "".concat(URL.naviWeb, "?").concat(naviStartParams);
+      callWeb2app(naviScheme, fallbackUrl);
+    }
+    function makeNaviStartParams(settings) {
+      var destination = {
+        name: settings.name,
+        x: settings.x,
+        y: settings.y,
+        rpflag: settings.rpflag,
+        cid: settings.cid,
+        guide_id: settings.guideId
+      };
+      var option = {
+        coord_type: settings.coordType,
+        vehicle_type: settings.vehicleType,
+        rpoption: settings.rpOption,
+        route_info: settings.routeInfo,
+        s_x: settings.sX,
+        s_y: settings.sY,
+        s_angle: settings.sAngle,
+        return_uri: settings.returnUri
+      };
+      var params = makeNaviParams();
+      params.param = {
+        destination: destination,
+        option: option,
+        via_list: settings.viaPoints
+      };
+      return params;
+    }
+    function share(settings) {
+      settings = processRules(settings, rules$1.share, 'Navi.share');
+      var naviShareParams = buildQueryString(makeNaviShareParams(settings));
+      var naviScheme = "".concat(URL.naviShareScheme, "?").concat(naviShareParams);
+      var fallbackUrl = "".concat(URL.naviWeb, "?").concat(naviShareParams);
+      callWeb2app(naviScheme, fallbackUrl);
+    }
+    function makeNaviShareParams(settings) {
+      var destination = {
+        name: settings.name,
+        x: settings.x,
+        y: settings.y,
+        rpflag: settings.rpflag,
+        cid: settings.cid,
+        guide_id: settings.guideId
+      };
+      var option = {
+        coord_type: settings.coordType
+      };
+      var params = makeNaviParams();
+      params.param = {
+        destination: destination,
+        option: option
+      };
+      params.scheme_type = 'sharePoi';
+      return params;
+    }
+    function makeNaviParams() {
+      return {
+        appkey: getAppKey$1(),
+        apiver: '1.0',
+        extras: {
+          KA: KAKAO_AGENT
+        }
+      };
+    }
+    function callWeb2app(naviScheme, fallbackUrl) {
+      var androidIntent = ["intent:".concat(naviScheme, "#Intent"), 'package=com.locnall.KimGiSa', "S.browser_fallback_url=".concat(encodeURIComponent(fallbackUrl)), 'end;'].join(';');
+      var web2appOptions = {
+        urlScheme: naviScheme,
+        intentURI: androidIntent,
+        storeURL: fallbackUrl,
+        universalLink: fallbackUrl
+      };
+      try {
+        web2app(web2appOptions);
+      } catch (error) {
+      }
+    }
+  
+    var request$1 = /*#__PURE__*/Object.freeze({
+      __proto__: null,
+      start: start,
+      share: share
+    });
+  
+    var Navi = makeModule([request$1]);
+  
+    var pickerFriendFilters = ['none', 'invitable', 'registered'];
+    var pickerFriendTypes = ['talk', 'story', 'talkstory'];
+    var pickerFriendOrders = ['age'];
+    var osFilters = ['all', 'ios', 'android'];
+    var pickerProperties = {
+      optional: {
+        title: isString,
+        enableSearch: isBoolean,
+        searchPlaceHolderText: isString,
+        countryCodes: isArray,
+        usingOsFilter: isOneOf(osFilters),
+        showMyProfile: isBoolean,
+        showFavorite: isBoolean,
+        disableSelectReasons: isArray,
+        displayAllProfile: isBoolean
+      },
+      after: function after(settings) {
+        if (settings.countryCodes) {
+          settings.countryCodes = settings.countryCodes.join(',');
+        }
+        if (settings.disableSelectReasons) {
+          settings.disableSelectReasons = settings.disableSelectReasons.join(',');
+        }
+      }
+    };
+    var multiPickerProperties = {
+      optional: assignIn({
+        showPickedFriend: isBoolean,
+        maxPickableCount: isInteger,
+        minPickableCount: isInteger
+      }, pickerProperties.optional),
+      after: pickerProperties.after
+    };
+    var pickerOptionalSettings = {
+      returnUrl: isString,
+      success: isFunction,
+      fail: isFunction,
+      always: isFunction,
+      pickerFriendFilter: isOneOf(pickerFriendFilters),
+      pickerFriendType: isOneOf(pickerFriendTypes),
+      pickerFriendOrder: isOneOf(pickerFriendOrders)
+    };
+    var pickerDefaultSettings = {
+      success: emptyFunc,
+      fail: emptyFunc,
+      always: emptyFunc,
+      pickerFriendFilter: pickerFriendFilters[0],
+      pickerFriendType: pickerFriendTypes[0]
+    };
+    var rules = {
+      selectMultiple: {
+        optional: assignIn({
+          properties: function properties(obj) {
+            return isObject(obj) && !!processRules(obj, multiPickerProperties, 'FriendPicker.selectMultiple');
+          }
+        }, pickerOptionalSettings),
+        defaults: pickerDefaultSettings
+      },
+      selectSingle: {
+        optional: assignIn({
+          properties: function properties(obj) {
+            return isObject(obj) && !!processRules(obj, pickerProperties, 'FriendPicker.selectSingle');
+          }
+        }, pickerOptionalSettings),
+        defaults: pickerDefaultSettings
+      }
+    };
+  
+    function selectMultiple(settings) {
+      var multiplePickerSettings = processRules(settings, rules.selectMultiple, 'FriendPicker.selectMultiple');
+      openPickerPopup(multiplePickerSettings, 'multiple');
+    }
+    function selectSingle(settings) {
+      var pickerSettings = processRules(settings, rules.selectSingle, 'FriendPicker.selectSingle');
+      openPickerPopup(pickerSettings, 'single');
+    }
+    function openPickerPopup(settings, selectType) {
+      cleanup$1();
+      var transId = generateTxId();
+      var pickerParams = _objectSpread2({
+        transId: transId,
+        appKey: getAppKey$1(),
+        ka: KAKAO_AGENT,
+        pickerFriendFilter: settings.pickerFriendFilter,
+        pickerFriendType: settings.pickerFriendType
+      }, settings.properties);
+      if (getAccessToken() !== null) {
+        pickerParams.token = getAccessToken();
+      }
+      if (settings.pickerFriendOrder) {
+        pickerParams.pickerFriendOrder = settings.pickerFriendOrder;
+      }
+      if (settings.returnUrl) {
+        pickerParams.returnUrl = settings.returnUrl;
+        createAndSubmitForm(pickerParams, "".concat(URL.pickerDomain, "/redirect/select/").concat(selectType));
+      } else {
+        createHiddenIframe(transId);
+        addPickerMessageEvent(settings);
+        openPopupAndSubmitForm(pickerParams, {
+          url: "".concat(URL.pickerDomain, "/select/").concat(selectType),
+          popupName: 'friend_picker',
+          popupFeatures: 'location=no,resizable=no,status=no,scrollbars=no,width=460,height=608'
+        });
+      }
+    }
+    function createHiddenIframe(transId) {
+      var iframe = document.createElement('iframe');
+      iframe.id = iframe.name = transId;
+      iframe.src = "".concat(URL.pickerDomain, "/proxy?transId=").concat(transId);
+      iframe.style = "border:none; width:0; height:0; display:none; overflow:hidden;";
+      document.body.appendChild(iframe);
+      cleanups.push(function () {
+        document.body.removeChild(iframe);
+      });
+    }
+    function addPickerMessageEvent(settings) {
+      var pickerCallback = function pickerCallback(_ref) {
+        var data = _ref.data,
+            origin = _ref.origin;
+        if (data && origin === URL.pickerDomain) {
+          var resp = JSON.parse(data);
+          handlePickerCallback(settings, resp);
+        }
+      };
+      addEvent(window, 'message', pickerCallback);
+      cleanups.push(function () {
+        removeEvent(window, 'message', pickerCallback);
+      });
+    }
+    function handlePickerCallback(settings, resp) {
+      if (resp.code) {
+        settings.fail(resp);
+      } else {
+        settings.success(resp);
+      }
+      settings.always(resp);
+    }
+    var cleanups = [];
+    function cleanup$1() {
+      emptyCleanups(cleanups);
+    }
+  
+    var request = /*#__PURE__*/Object.freeze({
+      __proto__: null,
+      selectMultiple: selectMultiple,
+      selectSingle: selectSingle,
+      cleanup: cleanup$1
+    });
+  
+    var FriendPicker = makeModule([request]);
+  
+    if (typeof define === 'function' && define.amd) {
+      window.Kakao = exports;
+    }
+    if (typeof window.kakaoAsyncInit === 'function') {
+      setTimeout(function () {
+        window.kakaoAsyncInit();
+      }, 0);
+    }
+    function init(appKey) {
+      if (UA.browser.msie && UA.browser.version.major < 9) {
+        throw new KakaoError('Kakao.init: Unsupported browser');
+      }
+      if (isInitialized()) {
+        throw new KakaoError('Kakao.init: Already initialized');
+      }
+      if (!isString(appKey)) {
+        throw new KakaoError('Kakao.init: App key must be provided');
+      }
+      setAppKey(appKey);
+      {
+        this.Auth = Auth;
+        this.API = API;
+        this.Link = Link;
+        this.Channel = Channel;
+        this.PlusFriend = PlusFriend;
+        this.Story = Story;
+        this.Navi = Navi;
+        this.FriendPicker = FriendPicker;
+      }
+    }
+    function isInitialized() {
+      return getAppKey$1() !== null;
+    }
+    function cleanup() {
+      var _this = this;
+      forEach(['Auth', 'API', 'Link', 'Channel', 'PlusFriend', 'Story', 'Navi', 'FriendPicker'], function (e) {
+        return _this[e] && _this[e].cleanup();
+      });
+      setAppKey(null);
+    }
+  
+    exports.VERSION = VERSION;
+    exports.cleanup = cleanup;
+    exports.init = init;
+    exports.isInitialized = isInitialized;
+  
+    Object.defineProperty(exports, '__esModule', { value: true });
+  
+  })));

@@ -13,14 +13,12 @@ body, html {
 }
 
 .mainimg-1 {
-    background-image: url("../images/main-2.jpg");
-    background-attachment: fixed;
-    /* opacity: 0.65; */
+    /* background-attachment: fixed; */
     min-height: 100%;
+    max-width: 100%;
 }
 
 .mainimg-2 {
-    background-image: url("../images/rain.png");
     min-height: 100%;
     margin: 10em 2em 4em 0em!important;
 }
@@ -31,10 +29,16 @@ body, html {
     color: #000;
 }
 
+.caption > h3 {
+    font-weight: bold;
+}
+
 .mainimg-1 > .caption {
     left: 0;
     top: 10%;
     text-align: center;
+    color:white;
+    opacity: 0.9; 
 }
 
 .mainimg-2 > .caption {
@@ -83,10 +87,53 @@ body, html {
 }
 
 .notice {
-    background-color: whitesmoke;
+    padding: 5em 1em;
     text-align: center;
     font-weight: 300;
     font-size: 1em;
+}
+
+.notice-corona , .notice-onlinelive{
+    background-color: whitesmoke;
+}
+
+.guidedetail > .content > .place{
+    text-align: center;
+}
+
+.attendancedetail > .content > .form > span {
+    font-size: .8em; 
+}
+
+.gallery {
+    padding: 5em 0 5em 0;
+}
+
+.notice-money{
+    text-align: right;
+}
+
+.notice-money > img{
+    width: 75%;
+}
+.notice-money > .text{
+    margin-top: 2em;
+}
+
+.notice-money > .tab{
+    text-align: left;
+}
+
+.notice-money > .tab > .name{
+    font-weight: bold;
+}
+
+.notice-money > .tab > .number{
+    text-align: right;
+}
+
+.ui.items>.item>.content>.description{
+    color: lightgray;
 }
 
 .pay {
@@ -94,13 +141,12 @@ body, html {
     vertical-align: middle;
 }
 
-.gallery img{
-    width: 32%;
+.ui.modal{
+    width: 80%;
 }
-@media screen and (min-width:769px) {
-    .gallery img{
-        width: 24%;
-    }
+
+.ui.segment {
+    border: 0 !important;
 }
 
   /* Turn off parallax scrolling for tablets and phones */

@@ -4,12 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta property="og:image" content="image/mainimg-2" />
+
     <title>20210814 정성진.송민정</title>
 </head>
 <body>
 
     <!-- main image #1-->
-    <div class="ui mainimg-1">
+    <div class="ui mainimg-1" style="background-image: url('images/main-2.jpg');">
         <div class="caption" data-aos="fade up">
             <h1>
                 결혼합니다
@@ -17,18 +19,19 @@
             <!-- <h2>
                 정성진 <span class="small-space">그리고</span> 송민정
             </h2> -->
+            <br/><br/>
             <p>2021.8.14 토요일 오후2시</p>
             엘타워 7층 그랜드홀
         </div>
     </div>
 
     <!-- main image #2 -->
-    <div class="ui mainimg-2">
+    <div class="ui mainimg-2" style="background-image: url('images/rain.png');">
         <div class="caption" data-aos="fade up">
             <div class="shortbar"></div>
-            <h2>싱그러운 여름,
+            <h3>싱그러운 여름,
                 <br/>우리 결혼해요
-            </h2>
+            </h3>
         </div>
     </div>
 
@@ -38,8 +41,8 @@
             <div class="center aligned row">
                 <div class="column" data-aos="fade up">
                     <strong>Groom</strong>
-                    <img class="ui tiny circular image introduce" src="images/sj-2.jpg">
-                    <p>정 성 진</p>
+                    <img class="ui tiny circular image introduce" src="images/sungjini.jpg">
+                    <strong>정 성 진</strong> <br/><br/>
                     <span>
                         "<strong>정성</strong>과 <strong>진</strong>심을 다하는 사람, 정성진입니다."<br/><br/>
                         제가 만들어준 이름 삼행시에요. <br/> 
@@ -53,10 +56,11 @@
                 </div>
                 <div class="column" data-aos="fade up">
                     <strong>Bride</strong>
-                    <img class="ui tiny circular image introduce" src="images/mj-2.jpg">
-                    <p>송 민 정</p>
+                    <img class="ui tiny circular image introduce" src="images/minjeonge.jpg">
+                    <strong>송 민 정</strong><br/><br/>
                     <span>
                         함께 이야기하면 마음이 편안해지는 <br/>참 긍정적이고 속이 깊은 사람이에요. <br/><br/>
+                        스물 셋에 만나 서른이 된 지금까지 <br/>
                         20대의 모든 낭만과 기쁨, 좌절, 환희 <br/>
                         그 <strong>뜨거웠던 매 순간을 함께</strong>한 <br/>
                         민정이는 <strong>제 삶에 너무나 소중한 일부</strong>가 되었어요. <br/><br/>
@@ -70,13 +74,14 @@
     </div>
 
     <!-- main title (when, where) -->
-    <div class="ui containter date">
-        함께 한 나날이 고맙고 <br/>
-        함께 할 나날이 설레어 <br/>
-        모든 사람들 앞에서 사랑을 맹세하려 합니다. <br/><br/>
+    <div class="ui contianer date">
+        <p>함께 한 나날이 고맙고 </p>
+        <p>함께 할 나날이 설레어 </p>
+        <p>모든 사람들 앞에서 사랑을 맹세하려 합니다.</p> <br/><br/>
 
-        저희 두 사람의 새로운 시작을<br/>
-        따뜻한 마음으로 축복해주시면 감사하겠습니다. <br/><br/><br/><br/><br/>
+        <p>저희 두 사람의 새로운 시작을</p>
+        <p>따뜻한 마음으로 축복해주시면 감사하겠습니다. </p>
+        <br/><br/><br/>
 
         <p>2021.8.14 토요일 오후2시</p>
         엘타워 7층 그랜드홀<br/><br/>
@@ -88,222 +93,277 @@
     <div class="ui modal guidedetail">
         <div class="header">오시는 길</div>
         <div class="content">
-            <div id="map" style="width:70vw;height:250px;"></div>
-            <a id="navi" href="#" onclick="navi();">
-                <img
-                    src="https://developers.kakao.com/assets/img/about/buttons/navi/kakaonavi_btn_medium.png"
-                />
-            </a>
-            서울 서초구 강남대로 213 
-            엘타워 7층 컨벤션홀
-
-            지하철
-            3호선/신분당선 양재역 9번 출구 도보 1분
+            <p class="place">
+                <strong>엘타워</strong> <br/>
+                서울 서초구 강남대로 213 <br/>
+                <div id="map" style="width:70vw;height:250px;"></div>
+                <a href="https://map.kakao.com/link/map/18577297">카카오맵에서 보기</a><br/><br/>
+            </p>
             
-            버스
-            양재역태워빌딩 하차. 도보 1분
+            <strong>지하철</strong><br/>
+            3호선/신분당선 양재역 9번 출구 도보 1분<br/><br/>
+            
+            <strong>버스</strong><br/>
+            양재역태워빌딩 하차. 도보 1분<br/><br/>
+
+            <button class="ui button" id="guide">닫기</button>
+        </div>
+    </div>
+
+    <!-- 갤러리 -->
+    <div class="ui container gallery">
+        <div id="nanogallery2" data-nanogallery2='{ 
+                "viewerTools":{
+                        "topLeft"  : "pageCounter",
+                        "topRight" : "closeButton" 
+                    } 
+            }' >
+            <a href="images/prepare.jpeg" data-ngThumb="images/prepare.jpeg"></a>
+            <a href="images/kiss.JPG" data-ngThumb="images/kiss.JPG"></a>
+            <a href="images/bride-3.jpg" data-ngThumb="images/bride-3.jpg"></a>
+            <a href="images/groom.jpg" data-ngThumb="images/groom.jpg"></a>
+            <a href="images/wedding.jpeg" data-ngThumb="images/wedding.jpeg"></a>
+            <a href="images/long_dis_thumb.png" data-ngThumb="images/long_dis_thumb.png"></a>
+            <a href="images/couple.jpeg" data-ngThumb="images/couple.jpeg"></a>
         </div>
     </div>
 
     <!-- notice -->
-    <div class="ui containter notice">
-        <p>수도권 거리두기 2단계에 따른 안내</p>
-        <p>안내</p>
-        <p>안내</p>
-        <p>안내</p>
-        <p>안내</p>
-        <p>안내</p>
-        <p>안내</p>
-        <p>안내</p>
-        <p>안내</p>
+    <div class="ui contianer notice notice-corona">
+        <h4>모두에게 드리는 말씀</h4><br/><br/>
+
+        코로나19 확산으로 인해 <br/>
+        모두가 어려운 시기를 보내고 있는 요즘<br/>
+        결혼식을 올리는 것이 조심스럽기만 합니다.<br/>
+        작년부터 미뤄 온 결혼식을 언제까지나 미룰 수 없어<br/>
+        고민 끝에 최대한 건강하고 안전하게 <br/>
+        결혼식을 진행하기로 결정하였습니다.<br/>
+
+        <br/><br/>
+        결혼식 참석에 대한 부담은 갖지 마시고<br/>
+        마음 가득 축복해주세요.<br/>
+        감사합니다.<br/>
     </div>
 
-    <!-- photos -->
-    <div class="gallery"> 
-        <img class="lightboxed" 
-            rel="group1" 
-            src="images/kiss.JPG" />
-       <img class="lightboxed" 
-            rel="group1" 
-            src="images/prepare.png" />
-       <img class="lightboxed" 
-            rel="group1" 
-            src="images/couple.jpeg" />
-    </div> 
-    
+    <div class="ui contianer notice notice-attendance">
+        <h4>참석 여부 체크 안내</h4><br/><br/>
 
-    <!-- attendance -->
-    <div class="ui placeholder segment">
-        <div class="ui two column very relaxed unstackable grid">
-            <div class="column">
-                <div class="ui form">
-                    <div class="field">
-                        <label>성함</label>
-                        <div class="ui left icon input">
-                            <input type="text" placeholder="Username">
-                            <i class="user icon"></i>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label>Password</label>
-                        <div class="ui left icon input">
-                            <input type="password">
-                            <i class="lock icon"></i>
-                        </div>
-                    </div>
-                    <div class="ui blue submit button">참석</div>
+        <p>안전한 예식 준비를 위해 참석자 자리를</p>
+        <p>미리 마련하고자 합니다.</p>
+        <p>부담 갖지 마시고, </p>
+        <p>참석여부를 체크해 주시면 감사하겠습니다.</p>
+        <br/>
+
+        <button class="ui button attendance">참석 여부 체크하기</button>
+    </div>
+
+    <!-- 예식 참석 의사 전달 modal -->
+    <div class="ui modal attendancedetail">
+        <div class="header">참석 여부 체크 안내</div>
+        <div class="content">
+            <form class="ui small form">
+                <div class="field">
+                    <label>성함</label>
+                    <input type="text" name="name" placeholder="성함">
                 </div>
-            </div>
-            <div class="middle aligned column">
-                <div class="ui form">
+                <div class="field">
+                    <label>연락처</label>
+                    <input type="text" name="phone" placeholder="phone">
+                </div>
+                <div class="field">
+                    <label>동반 인원</label>
+                    <select class="ui fluid search dropdown" name="card[인원 수]">
+                        <option value="">없음</option>
+                        <option value="1">1명</option>
+                        <option value="2">2명</option>
+                        <option value="3">3명</option>
+                        <option value="4">4명</option>
+                        <option value="5">5명</option>
+                    </select>
+                </div>
+                <div class="inline field">
+                    <label for="meal">식사 여부</label>
                     <div class="field">
-                        <label>전화번호(선택)</label>
-                        <div class="ui left icon input">
-                            <input type="text" placeholder="Username">
-                            <i class="user icon"></i>
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="meal" checked="" tabindex="0" class="hidden">
+                            <label>식사함 </label>
+                        </div>
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="meal" checked="" tabindex="0" class="hidden">
+                            <label>식사하지 않음 </label>
+                        </div>
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="meal" checked="" tabindex="0" class="hidden">
+                            <label>미정 </label>
                         </div>
                     </div>
-                    <div class="ui blue submit button">비대면 참석</div>
                 </div>
-            </div>
+                <div class="field">
+                    <label>전달 사항</label>
+                    <textarea rows="2"></textarea>
+                </div>
+                <span>작성하신 정보는 신랑/신부님께만 전달됩니다.</span> <br/><br/>
+                <button class="ui button" type="submit" id="attendance">전달</button>
+            </form>
         </div>
-        <div class="ui vertical divider">
-            Or
+    </div>
+
+    <div class="ui contianer notice notice-onlinelive">
+        <h4>온라인 예식 생중계 안내</h4><br/><br/>
+
+        <p>유튜브를 통해 예식을 실시간으로 </p>
+        <p>시청하실 수 있습니다.</p>
+        <p>멀리서나마 함께 축복해 주시면</p>
+        <p>감사하겠습니다.</p>
+        <br/>
+
+        <button class="ui button onlinelive">온라인 생중계 보기</button>
+    </div>
+
+    <!-- 실시간 온라인 예식 보기 링크 modal -->
+    <div class="ui modal onlinelivedetail">
+        <div class="header">실시간 온라인 예식 보기</div>
+        <div class="content">
         </div>
     </div>
 
     <!-- money -->
-    <div class="ui fluid two item top attached tabular menu">
-        <a class="item active" data-tab="groom">신랑</a>
-        <a class="item" data-tab="bride">신부</a>
-    </div>
-    <div class="ui unstackable attached tab segment items divided active" data-tab="groom">
-        <div class="item">
-            <div class="ui tiny image circular">
-                <img src="images/sj-2.jpg">
+    <div class="ui container notice notice-money">
+        <img src="images/between.jpg"/>
+        <div class="text">
+            <h4>마음 전하실 곳</h4><br/><br/>
+
+            비대면으로 축하를 전하려는 분들을 위해<br/>
+            계좌번호를 남깁니다. <br/><br/>
+            진심으로 축하해주셔서 감사합니다.<br/><br/>
+        </div>
+
+        <div class="ui fluid two item top attached tabular menu">
+            <a class="item active" data-tab="groom">신랑</a>
+            <a class="item" data-tab="bride">신부</a>
+        </div>
+        <div class="ui unstackable attached tab segment items divided active" data-tab="groom">
+            <div class="item">
+                <div class="middle aligned content">
+                    <div class="meta">
+                        신랑 <span style="font-weight: bold;font-size: 1.2em">정성진</span>
+                        <span style="text-align: right;float:right"><a href="tel:010-1234-5678">010-1234-5678</a></span>
+                    </div>
+                    <div class="description">
+                        <p>지금 세상에서 가장 행복한 남자입니다. <br/>마음 가득 축복해 주세요!</p>
+                    </div>
+                    <div class="middle extra">
+                        우리은행 1000-222-123456
+                        <span style="float:right;margin:0">
+                            <a href="">
+                                <img class="pay" src="images/kakaopay.png" >
+                            </a>
+                        </span>
+                    </div>
+                </div>
             </div>
-            <div class="middle aligned content">
-                <div class="header">정성진</div>
-                <div class="meta">
-                    <span>신랑</span>
+            <div class="item">
+                <div class="middle aligned content">
+                    <div class="meta">
+                        신랑 아버지 <span style="font-weight: bold;font-size: 1.2em">정수영</span>
+                        <span style="text-align: right;float:right"><a href="tel:010-1234-5678">010-1234-5678</a></span>
+                    </div>
+                    <div class="description">
+                        <p>한분 한분 찾아뵙지 못해 송구합니다. <br/>축하해주셔서 감사합니다.</p>
+                    </div>
+                    <div class="extra">
+                        우리은행 1000-222-123456
+                        <span style="float:right;margin:0">
+                            <a href="">
+                                <img class="pay" src="images/kakaopay.png" >
+                            </a>
+                        </span>
+                    </div>
                 </div>
-                <div class="description">
-                    <p><a href="tel:010-3329-1062">010-3329-1062</a></p>
-                </div>
-                <div class="middle extra">
-                    우리은행 1000-222-123456
-                    <a href="">
-                        <img class="pay" src="images/kakaopay.png" >
-                    </a>
+            </div>
+            <div class="item">
+                <div class="middle aligned content">
+                    <div class="meta">
+                        신랑 어머니 <span style="font-weight: bold;font-size: 1.2em">김옥배</span>
+                        <span style="text-align: right;float:right"><a href="tel:010-1234-5678">010-1234-5678</a></span>
+                    </div>
+                    <div class="description">
+                        <p>세상에 이런 행복이 더 있을까요? <br/>소중한 날, 축하해주셔서 감사합니다.</p>
+                    </div>
+                    <div class="extra">
+                        우리은행 1000-222-123456
+                        <span style="float:right;margin:0">
+                            <a href="">
+                                <img class="pay" src="images/kakaopay.png" >
+                            </a>
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="item">
-            <div class="ui tiny image circular">
-                <img src="images/mj-2.jpg">
-            </div>
-            <div class="middle aligned content">
-                <div class="header">정수영</div>
-                <div class="meta">
-                    <span>신랑 아버지</span>
-                </div>
-                <div class="description">
-                    <p><a href="tel:010-3329-1062">010-3329-1062</a></p>
-                </div>
-                <div class="extra">
-                    우리은행 1000-222-123456
-                    <a href="">
-                        <img class="pay" src="images/kakaopay.png" >
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="ui tiny image circular">
-                <img src="images/sj-2.jpg">
-            </div>
-            <div class="middle aligned content">
-                <div class="header">김옥배</div>
-                <div class="meta">
-                    <span>신랑 어머니</span>
-                </div>
-                <div class="description">
-                    <p><a href="tel:010-3329-1062">010-3329-1062</a></p>
-                </div>
-                <div class="extra">
-                    우리은행 1000-222-123456
-                    <a href="">
-                        <img class="pay" src="images/kakaopay.png" >
-                    </a>
+        <div class="ui unstackable attached tab segment items divided" data-tab="bride">
+            <div class="item">
+                <div class="middle aligned content">
+                    <div class="meta">
+                        신부 <span style="font-weight: bold;font-size: 1.2em">송민정</span>
+                        <span style="text-align: right;float:right"><a href="tel:010-1234-5678">010-1234-5678</a></span>
+                    </div>
+                    <div class="description">
+                        <p>아낌없이 축하해 주시는 마음<br/>잊지 않겠습니다. 진심으로 감사합니다.</p>
+                    </div>
+                    <div class="extra">
+                        우리은행 1000-222-123456
+                        <span style="float:right;margin:0">
+                            <a href="">
+                                <img class="pay" src="images/kakaopay.png" >
+                            </a>
+                        </span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="ui unstackable attached tab segment items divided" data-tab="bride">
-        <div class="item">
-            <div class="ui tiny image circular">
-                <img src="images/sj-2.jpg">
-            </div>
-            <div class="middle aligned content">
-                <div class="header">송민정</div>
-                <div class="meta">
-                    <span>신부</span>
-                </div>
-                <div class="description">
-                    <p><a href="tel:010-3329-1062">010-3329-1062</a></p>
-                </div>
-                <div class="extra">
-                    우리은행 1000-222-123456
-                    <a href="">
-                        <img class="pay" src="images/kakaopay.png" >
-                    </a>
+            <div class="item">
+                <div class="middle aligned content">
+                    <div class="meta">
+                        신부 아버지 <span style="font-weight: bold;font-size: 1.2em">송태명</span>
+                        <span style="text-align: right;float:right"><a href="tel:010-1234-5678">010-1234-5678</a></span>
+                    </div>
+                    <div class="description">
+                        <p>축복해주신 고마운 마음 깊이 간직하겠습니다. <br/>항상 건강하시고 가정에 <br/>평안과 행복이 함께 하시길 기원합니다.</p>
+                    </div>
+                    <div class="extra">
+                        우리은행 1000-222-123456
+                        <span style="float:right;margin:0">
+                            <a href="">
+                                <img class="pay" src="images/kakaopay.png" >
+                            </a>
+                        </span>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="item">
-            <div class="ui tiny image circular">
-                <img src="images/mj-2.jpg">
-            </div>
-            <div class="middle aligned content">
-                <div class="header">송태명</div>
-                <div class="meta">
-                    <span>신부 아버지</span>
-                </div>
-                <div class="description">
-                    <p><a href="tel:010-3329-1062">010-3329-1062</a></p>
-                </div>
-                <div class="extra">
-                    우리은행 1000-222-123456
-                    <a href="">
-                        <img class="pay" src="images/kakaopay.png" >
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="ui tiny image circular">
-                <img src="images/sj-2.jpg">
-            </div>
-            <div class="middle aligned content">
-                <div class="header">김용길</div>
-                <div class="meta">
-                    <span>신부 어머니</span>
-                </div>
-                <div class="description">
-                    <p><a href="tel:010-3329-1062">010-3329-1062</a></p>
-                </div>
-                <div class="extra">
-                    우리은행 1000-222-123456
-                    <a href="">
-                        <img class="pay" src="images/kakaopay.png" >
-                    </a>
+            <div class="item">
+                <div class="middle aligned content">
+                    <div class="meta">
+                        신부 어머니 <span style="font-weight: bold;font-size: 1.2em">김용길</span>
+                        <span style="text-align: right;float:right"><a href="tel:010-1234-5678">010-1234-5678</a></span>
+                    </div>
+                    <div class="description">
+                        <p>가슴 벅차 오르는 저희 딸의 결혼<br/>축복해주셔서 감사합니다.</p>
+                    </div>
+                    <div class="extra">
+                        우리은행 1000-222-123456
+                        <span style="float:right;margin:0">
+                            <a href="">
+                                <img class="pay" src="images/kakaopay.png" >
+                            </a>
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- guest book -->
-    <!-- <div class="ui containter form guestbook">
+    <!-- <div class="ui contianer form guestbook">
         <div class="field">
             <textarea rows="2"></textarea>
         </div>
@@ -311,31 +371,56 @@
     </div> -->
 
     <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Song+Myung&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Song+Myung&display=swap">
     <link rel="stylesheet" type="text/css" href="css/story.css">
     <link rel="stylesheet" type="text/css" href="css/default-skin.css"> 
-    <link rel="stylesheet" type="text/css" href="css/lightboxed.css" />
+    <link rel="stylesheet" type="text/css" href="css/nanogallery2.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/nanogallery2.woff.min.css"/>
 
     <script
         src="https://code.jquery.com/jquery-3.1.1.min.js"
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=780292524a3db3ce37f3fa6fa5754481"></script>
     <script type="text/javascript" src="js/kakao.js"></script>
+    <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=780292524a3db3ce37f3fa6fa5754481"></script>
     <script src="js/semantic.min.js"></script>
     
     <!-- As A jQuery Plugin -->
-    <script src="js/lightboxed.js"></script>
+    <script src="js/jquery.nanogallery2.min.js"></script>
     <script src="js/story.js"></script>
     <script>
     
         $(".guide").click(function() {
             $(".guidedetail").modal("show");
+            map.relayout();
+            map.setCenter(new kakao.maps.LatLng(37.482336613011505, 127.03546346273512));
+            map.setLevel(4);
         });
 
+        $(".attendance").click(function() {
+            $(".attendancedetail").modal("show");
+        });
+
+        $(".onlinelive").click(function() {
+            $(".onlinelivedetail").modal("show");
+        });
+
+        $('.ui.radio.checkbox').checkbox();
+
         $(".menu .item").tab();
+
+        $("#guide").click(function(event){
+            event.preventDefault();
+            $(".guidedetail").modal("hide");
+        });
+
+        $("#attendance").click(function(event){
+            console.log('hide')
+            event.preventDefault();
+            $(".attendancedetail").modal("hide");
+        });
 
     </script>
 </body>
